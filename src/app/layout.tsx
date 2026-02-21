@@ -1,46 +1,60 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
 export const metadata: Metadata = {
-  title: "Claws — Agents IA autonomes",
+  metadataBase: new URL("https://claws.fr"),
+  title: {
+    default: "Claws — Agence d'agents IA autonomes en France",
+    template: "%s | Claws",
+  },
   description:
-    "Nous construisons des agents IA qui travaillent à votre place. Installation, configuration, maintenance — clé en main.",
+    "Claws installe, configure et maintient vos agents IA autonomes sur OpenClaw. Première agence française spécialisée en automatisation par agents IA — pour PME et entreprises.",
+  keywords: [
+    "installation OpenClaw",
+    "maintenance OpenClaw",
+    "agent IA autonome",
+    "agence automatisation IA",
+    "agence agent IA France",
+    "OpenClaw France",
+    "automatisation entreprise IA",
+  ],
   openGraph: {
-    title: "Claws — Agents IA autonomes",
+    title: "Claws — Agence d'agents IA autonomes en France",
     description:
-      "Nous construisons des agents IA qui travaillent à votre place.",
+      "Nous installons, configurons et maintenons vos agents IA autonomes. Première agence française spécialisée OpenClaw.",
     url: "https://claws.fr",
     siteName: "Claws",
     locale: "fr_FR",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Claws — Agents IA autonomes",
+    description: "Première agence française spécialisée en agents IA autonomes OpenClaw.",
+  },
+  alternates: { canonical: "https://claws.fr" },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Claws",
+  url: "https://claws.fr",
+  description: "Agence française spécialisée en installation, configuration et maintenance d'agents IA autonomes OpenClaw.",
+  address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
+  contactPoint: { "@type": "ContactPoint", email: "contact@claws.fr", contactType: "customer service" },
+  sameAs: [],
+  knowsAbout: ["OpenClaw", "agents IA autonomes", "automatisation par IA", "LLM", "Anthropic Claude"],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body
-        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased bg-brand text-ink`}
-      >
-        {children}
-      </body>
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

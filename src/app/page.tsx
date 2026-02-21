@@ -1,360 +1,219 @@
+import { getAllPosts } from "@/lib/posts";
+
+const differentiators = [
+  { icon: "🔒", title: "100 % local", desc: "Vos données restent sur votre machine. Aucun cloud tiers, conformité RGPD native." },
+  { icon: "⚡", title: "Opérationnel en 48h", desc: "Installation, configuration, premier agent actif — en moins de deux jours." },
+  { icon: "🇫🇷", title: "Support francophone", desc: "Un interlocuteur humain, en français, joignable directement. Pas de ticket anonyme." },
+  { icon: "🔧", title: "Sur mesure", desc: "Chaque agent est configuré selon votre workflow réel. Pas de template générique." },
+  { icon: "🛡️", title: "Sécurité d'abord", desc: "Audit de configuration, chiffrement, permissions strictes. On ne coupe pas les coins." },
+  { icon: "📈", title: "Évolutif", desc: "Votre agent s'adapte à votre croissance. On l'affine au fil du temps." },
+];
+
+const offers = [
+  {
+    code: "SETUP",
+    price: "199 €",
+    title: "Installation OpenClaw",
+    desc: "Installation et configuration d'OpenClaw sur votre machine. Canal Telegram ou WhatsApp connecté. Opérationnel en 48h.",
+    cta: "Démarrer",
+  },
+  {
+    code: "AGENT SUR MESURE",
+    price: "Sur devis",
+    title: "Agent pensé pour votre workflow",
+    desc: "Analyse de vos processus, configuration d'un agent entièrement personnalisé, intégrations avec vos outils, formation équipe.",
+    cta: "Nous contacter",
+    featured: true,
+  },
+  {
+    code: "RETAINER",
+    price: "149 €/mois",
+    title: "Maintenance et évolutions",
+    desc: "Maintenance, mises à jour, support direct. Un interlocuteur — pas un ticket. Votre agent évolue avec votre activité.",
+    cta: "En savoir plus",
+  },
+];
+
+const steps = [
+  { num: "01", title: "On écoute.", desc: "Appel de 30 min pour comprendre votre activité, vos outils, vos points de friction." },
+  { num: "02", title: "On installe.", desc: "Configuration complète sur votre machine. Sécurisé, local, aucune donnée dans le cloud." },
+  { num: "03", title: "Votre agent travaille.", desc: "Pendant que vous dormez, votre agent gère, planifie, répond. Vous vous concentrez sur l'essentiel." },
+];
+
 export default function Home() {
+  const posts = getAllPosts().slice(0, 3);
+
   return (
     <>
       {/* NAV */}
-      <nav
-        style={{
-          position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: "20px 48px",
-          backgroundColor: "rgba(245,242,238,0.95)",
-          backdropFilter: "blur(8px)",
-          borderBottom: "1px solid rgba(14,14,14,0.08)",
-        }}
-      >
-        <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "18px", letterSpacing: "-0.02em", color: "#0E0E0E" }}>
-          Claws
-        </span>
-        <a
-          href="#contact"
-          style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "14px", fontWeight: 500, color: "#E85D04", letterSpacing: "0.01em" }}
-        >
-          Contact →
-        </a>
+      <nav className="nav-bar">
+        <span className="nav-logo">Claws</span>
+        <div className="nav-links">
+          <a href="/blog" className="nav-link">Blog</a>
+          <a href="#contact" className="nav-cta">Contact →</a>
+        </div>
       </nav>
 
-      <main style={{ paddingTop: "80px" }}>
+      <main>
 
-        {/* 001 — OUVERTURE */}
-        <section style={{
-          padding: "80px 48px 96px",
-          borderBottom: "1px solid rgba(14,14,14,0.1)",
-          minHeight: "85vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-        }}>
-          <div style={{ marginBottom: "auto", paddingTop: "40px" }}>
-            <p style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "11px",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              color: "#6B6560",
-              marginBottom: "64px",
-            }}>
-              Paris &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Agents IA autonomes
-            </p>
+        {/* HERO */}
+        <section className="section hero-section">
+          <p className="eyebrow">Paris · 2025 · Première agence française d&apos;agents IA autonomes</p>
+          <h1 className="hero-title">
+            87 % des tâches répétitives de votre équipe{" "}
+            <span className="accent">sont automatisables.</span>
+          </h1>
+          <div className="hero-sub">
+            <p>Claws déploie des agents IA qui travaillent à votre place — 24h/24, sans supervision.</p>
           </div>
-
-          <div>
-            <h1 style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "clamp(52px, 9vw, 120px)",
-              fontWeight: 700,
-              lineHeight: 1.0,
-              letterSpacing: "-0.03em",
-              color: "#0E0E0E",
-              maxWidth: "1100px",
-              marginBottom: "48px",
-            }}>
-              87 % des tâches répétitives de votre équipe{" "}
-              <span style={{ color: "#E85D04" }}>sont automatisables.</span>
-            </h1>
-
-            <div style={{
-              borderLeft: "3px solid #E85D04",
-              paddingLeft: "24px",
-              maxWidth: "480px",
-            }}>
-              <p style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "22px",
-                fontWeight: 500,
-                color: "#0E0E0E",
-                lineHeight: 1.4,
-              }}>
-                Claws les automatise.
-              </p>
+          <div className="hero-actions">
+            <a href="#contact" className="btn-primary">Discutons →</a>
+            <a href="#offres" className="btn-secondary">Voir les offres</a>
+          </div>
+          <div className="hero-stats">
+            <div className="stat-item">
+              <span className="stat-num">+200%</span>
+              <span className="stat-label">de productivité mesurée</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-num">48h</span>
+              <span className="stat-label">pour être opérationnel</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-num">0</span>
+              <span className="stat-label">donnée dans le cloud</span>
             </div>
           </div>
         </section>
 
-        {/* 002 — LE PROBLÈME */}
-        <section style={{ padding: "96px 48px", borderBottom: "1px solid rgba(14,14,14,0.1)" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px", maxWidth: "1100px" }}>
-            <div>
-              <p style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: "11px",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "#6B6560",
-              }}>
-                002 / Le problème
-              </p>
+        {/* PROBLÈME */}
+        <section className="section">
+          <div className="section-header">
+            <p className="section-tag">002 / Le problème</p>
+            <h2 className="section-title">Ce que vos outils actuels ne font pas.</h2>
+          </div>
+          <div className="problem-grid">
+            <div className="problem-card problem-card-bad">
+              <p className="problem-label">ChatGPT, Copilot, Gemini</p>
+              <h3>Ils répondent.</h3>
+              <p>Vous posez une question. Ils donnent une réponse. Vous devez ensuite agir vous-même.</p>
+              <ul className="problem-list">
+                <li>❌ Pas d&apos;accès à vos outils</li>
+                <li>❌ Pas d&apos;autonomie</li>
+                <li>❌ Pas de mémoire de votre contexte</li>
+                <li>❌ Vos données dans le cloud</li>
+              </ul>
             </div>
-            <div>
-              <h2 style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "clamp(28px, 3.5vw, 44px)",
-                fontWeight: 700,
-                lineHeight: 1.1,
-                letterSpacing: "-0.02em",
-                color: "#0E0E0E",
-                marginBottom: "32px",
-              }}>
-                Ce que vos outils actuels ne font pas.
-              </h2>
-              <p style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "18px",
-                lineHeight: 1.7,
-                color: "rgba(14,14,14,0.65)",
-                marginBottom: "20px",
-                maxWidth: "600px",
-              }}>
-                ChatGPT répond. Votre agent Claws{" "}
-                <strong style={{ color: "#0E0E0E" }}>agit</strong>.
-                Il envoie, planifie, analyse et revient avec un résultat — sans que vous ayez ouvert un seul onglet.
-              </p>
-              <p style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "18px",
-                lineHeight: 1.7,
-                color: "rgba(14,14,14,0.65)",
-                maxWidth: "600px",
-              }}>
-                Un agent IA n&apos;est pas un chatbot. C&apos;est un collaborateur disponible 24h/24, connecté à vos outils, qui prend des initiatives et vous rend compte.
-              </p>
+            <div className="problem-card problem-card-good">
+              <p className="problem-label">Votre agent Claws</p>
+              <h3>Il <em>agit</em>.</h3>
+              <p>Il accède à vos outils, prend des décisions, exécute des tâches et vous rend compte.</p>
+              <ul className="problem-list">
+                <li>✓ Connecté à vos outils réels</li>
+                <li>✓ Autonomie complète sur les tâches déléguées</li>
+                <li>✓ Mémoire et contexte persistants</li>
+                <li>✓ 100 % local, vos données chez vous</li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* 003 — OFFRES */}
-        <section style={{ padding: "96px 48px", borderBottom: "1px solid rgba(14,14,14,0.1)" }}>
-          <div style={{ maxWidth: "1100px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px", marginBottom: "64px" }}>
-              <p style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: "11px",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "#6B6560",
-              }}>
-                003 / Offres
-              </p>
-              <h2 style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "clamp(28px, 3.5vw, 44px)",
-                fontWeight: 700,
-                lineHeight: 1.1,
-                letterSpacing: "-0.02em",
-              }}>
-                Ce qu&apos;on fait pour vous.
-              </h2>
-            </div>
-
-            {/* Fiche 1 */}
-            {[
-              { code: "SETUP", price: "199 €", title: "Installation OpenClaw", desc: "Installation et configuration d'OpenClaw sur votre machine. Canal Telegram ou WhatsApp connecté. Opérationnel en 48h." },
-              { code: "AGENT SUR MESURE", price: "Sur devis", title: "Un agent pensé pour votre workflow", desc: "Analyse de vos processus, configuration d'un agent entièrement personnalisé, intégrations avec vos outils existants, formation de votre équipe." },
-              { code: "RETAINER", price: "149 €/mois", title: "Maintenance et évolutions continues", desc: "Maintenance, mises à jour, support direct. Un interlocuteur — pas un ticket. Votre agent évolue avec votre activité." },
-            ].map((offer, i) => (
-              <div key={i} style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 2fr",
-                gap: "48px",
-                padding: "40px 0",
-                borderTop: "1px solid rgba(14,14,14,0.1)",
-              }}>
-                <div>
-                  <p style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "11px",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "#6B6560",
-                    marginBottom: "12px",
-                  }}>
-                    — {offer.code}
-                  </p>
-                  <p style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "32px",
-                    fontWeight: 700,
-                    color: "#E85D04",
-                    lineHeight: 1,
-                  }}>
-                    {offer.price}
-                  </p>
-                </div>
-                <div>
-                  <h3 style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "22px",
-                    fontWeight: 600,
-                    letterSpacing: "-0.01em",
-                    marginBottom: "16px",
-                  }}>
-                    {offer.title}
-                  </h3>
-                  <p style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "16px",
-                    lineHeight: 1.7,
-                    color: "rgba(14,14,14,0.6)",
-                    marginBottom: "24px",
-                  }}>
-                    {offer.desc}
-                  </p>
-                  <a href="#contact" className="claws-btn">
-                    Démarrer →
-                  </a>
-                </div>
+        {/* DIFFÉRENCIATEURS */}
+        <section className="section section-dark">
+          <div className="section-header">
+            <p className="section-tag light">003 / Pourquoi Claws</p>
+            <h2 className="section-title light">Ce qui nous distingue.</h2>
+          </div>
+          <div className="diff-grid">
+            {differentiators.map((d, i) => (
+              <div key={i} className="diff-card">
+                <span className="diff-icon">{d.icon}</span>
+                <h3 className="diff-title">{d.title}</h3>
+                <p className="diff-desc">{d.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* 004 — COMMENT */}
-        <section style={{ padding: "96px 48px", borderBottom: "1px solid rgba(14,14,14,0.1)" }}>
-          <div style={{ maxWidth: "1100px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px", marginBottom: "64px" }}>
-              <p style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: "11px",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "#6B6560",
-              }}>
-                004 / Process
-              </p>
-              <h2 style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "clamp(28px, 3.5vw, 44px)",
-                fontWeight: 700,
-                lineHeight: 1.1,
-                letterSpacing: "-0.02em",
-              }}>
-                Trois étapes. Pas plus.
-              </h2>
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0", borderTop: "1px solid rgba(14,14,14,0.1)" }}>
-              {[
-                { num: "01", title: "On écoute.", desc: "Appel de 30 minutes pour comprendre votre activité, vos outils, vos points de friction." },
-                { num: "02", title: "On installe.", desc: "Configuration complète de l'agent sur votre machine. Sécurisé, local, aucune donnée dans le cloud." },
-                { num: "03", title: "Votre agent travaille.", desc: "Pendant que vous dormez, votre agent gère, planifie, répond. Vous vous concentrez sur l'essentiel." },
-              ].map((step, i) => (
-                <div key={i} style={{
-                  padding: "40px 40px 40px 0",
-                  borderRight: i < 2 ? "1px solid rgba(14,14,14,0.1)" : "none",
-                  paddingRight: "40px",
-                  paddingLeft: i > 0 ? "40px" : "0",
-                }}>
-                  <p style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "48px",
-                    fontWeight: 700,
-                    color: "rgba(14,14,14,0.08)",
-                    marginBottom: "24px",
-                    lineHeight: 1,
-                  }}>
-                    {step.num}
-                  </p>
-                  <h3 style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "20px",
-                    fontWeight: 700,
-                    marginBottom: "12px",
-                    letterSpacing: "-0.01em",
-                  }}>
-                    {step.title}
-                  </h3>
-                  <p style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "15px",
-                    lineHeight: 1.7,
-                    color: "rgba(14,14,14,0.6)",
-                  }}>
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+        {/* OFFRES */}
+        <section id="offres" className="section">
+          <div className="section-header">
+            <p className="section-tag">004 / Offres</p>
+            <h2 className="section-title">Ce qu&apos;on fait pour vous.</h2>
+          </div>
+          <div className="offers-grid">
+            {offers.map((o, i) => (
+              <div key={i} className={`offer-card ${o.featured ? "offer-featured" : ""}`}>
+                {o.featured && <span className="offer-badge">Populaire</span>}
+                <p className="offer-code">— {o.code}</p>
+                <p className="offer-price">{o.price}</p>
+                <h3 className="offer-title">{o.title}</h3>
+                <p className="offer-desc">{o.desc}</p>
+                <a href="#contact" className={o.featured ? "btn-primary" : "btn-outline"}>{o.cta} →</a>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* 005 — CONTACT */}
-        <section id="contact" style={{ padding: "120px 48px 160px" }}>
-          <div style={{ maxWidth: "1100px", display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px" }}>
-            <p style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "11px",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              color: "#6B6560",
-              paddingTop: "12px",
-            }}>
-              005 / Contact
-            </p>
-            <div>
-              <h2 style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "clamp(52px, 7vw, 88px)",
-                fontWeight: 700,
-                letterSpacing: "-0.03em",
-                lineHeight: 1.0,
-                color: "#0E0E0E",
-                marginBottom: "32px",
-              }}>
-                Discutons.
-              </h2>
-              <a
-                href="mailto:contact@claws.fr"
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: "24px",
-                  fontWeight: 500,
-                  color: "#E85D04",
-                  display: "block",
-                  marginBottom: "16px",
-                  textDecoration: "underline",
-                  textUnderlineOffset: "4px",
-                }}
-              >
-                contact@claws.fr
+        {/* PROCESS */}
+        <section className="section">
+          <div className="section-header">
+            <p className="section-tag">005 / Process</p>
+            <h2 className="section-title">Trois étapes. Pas plus.</h2>
+          </div>
+          <div className="steps-grid">
+            {steps.map((s, i) => (
+              <div key={i} className="step-card">
+                <p className="step-num">{s.num}</p>
+                <h3 className="step-title">{s.title}</h3>
+                <p className="step-desc">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* BLOG PREVIEW */}
+        <section className="section">
+          <div className="section-header">
+            <p className="section-tag">006 / Ressources</p>
+            <h2 className="section-title">Ce qu&apos;on partage.</h2>
+          </div>
+          <div className="blog-grid">
+            {posts.map((post) => (
+              <a key={post.slug} href={`/blog/${post.slug}`} className="blog-card">
+                <p className="blog-category">{post.category}</p>
+                <h3 className="blog-title">{post.title}</h3>
+                <p className="blog-desc">{post.description}</p>
+                <p className="blog-meta">{post.readTime} de lecture</p>
               </a>
-              <p style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: "13px",
-                color: "#6B6560",
-              }}>
-                Réponse sous 24h.
-              </p>
-            </div>
+            ))}
+          </div>
+          <div style={{ textAlign: "center", marginTop: "40px" }}>
+            <a href="/blog" className="btn-outline">Voir tous les articles →</a>
           </div>
         </section>
+
+        {/* CONTACT */}
+        <section id="contact" className="section section-contact">
+          <div className="contact-inner">
+            <p className="section-tag light">007 / Contact</p>
+            <h2 className="contact-title">Discutons.</h2>
+            <a href="mailto:contact@claws.fr" className="contact-email">contact@claws.fr</a>
+            <p className="contact-note">Réponse sous 24h. Particuliers et entreprises.</p>
+          </div>
+        </section>
+
       </main>
 
       {/* FOOTER */}
-      <footer style={{
-        padding: "24px 48px",
-        borderTop: "1px solid rgba(14,14,14,0.1)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}>
-        <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px", color: "#6B6560" }}>
-          © 2025 Claws — Paris
-        </p>
-        <a
-          href="mailto:contact@claws.fr"
-          style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px", color: "#6B6560" }}
-        >
-          contact@claws.fr
-        </a>
+      <footer className="footer">
+        <p className="footer-copy">© 2025 Claws — Paris</p>
+        <div className="footer-links">
+          <a href="/blog">Blog</a>
+          <a href="mailto:contact@claws.fr">contact@claws.fr</a>
+        </div>
       </footer>
     </>
   );
