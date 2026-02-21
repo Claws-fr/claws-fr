@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #F5F2EE;
+  --color-ink: #0E0E0E;
+  --color-accent: #E85D04;
+  --color-muted: #6B6560;
+
+  --font-family-sans: var(--font-space-grotesk), 'Space Grotesk', system-ui, sans-serif;
+  --font-family-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -15,7 +23,6 @@ html {
 body {
   background-color: #F5F2EE;
   color: #0E0E0E;
-  font-family: var(--font-space-grotesk), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
