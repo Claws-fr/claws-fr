@@ -167,7 +167,7 @@ A : Oui. OpenClaw supporte Telegram, WhatsApp, Discord, Signal, iMessage et d'au
 
 L'installation d'OpenClaw sur Mac Mini est accessible en moins de 30 minutes en suivant ce guide. Vous disposez ensuite d'un agent IA autonome, sécurisé, disponible 24h/24, pour un coût d'infrastructure minimal.
 
-Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h** — configuration complète, sécurisation, et formation incluse pour 199€. [Contactez-nous.](/contact)
+Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h** — configuration complète, sécurisation, et formation incluse à partir de 189€. [Contactez-nous.](/contact)
 `,
   },
   {

@@ -52,7 +52,7 @@ const jsonLd = [
       "@type": "OfferCatalog",
       name: "Services Claws",
       itemListElement: [
-        { "@type": "Offer", name: "Installation OpenClaw", price: "199", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Installation OpenClaw", price: "189", priceCurrency: "EUR", description: "À partir de 189€ selon la configuration" },
         { "@type": "Offer", name: "Agent sur mesure", description: "Configuration personnalisée d'agent IA autonome" },
         { "@type": "Offer", name: "Retainer maintenance", price: "149", priceCurrency: "EUR", eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" } },
       ],
@@ -70,7 +70,7 @@ const jsonLd = [
       {
         "@type": "Question",
         name: "Combien coûte l'installation d'OpenClaw ?",
-        acceptedAnswer: { "@type": "Answer", text: "L'installation OpenClaw par Claws commence à 199€ pour une configuration complète sur votre machine existante, avec un canal Telegram ou WhatsApp connecté et opérationnel en 48h." },
+        acceptedAnswer: { "@type": "Answer", text: "L'installation OpenClaw par Claws commence à partir de 189€ pour une configuration complète sur votre machine existante, avec un canal Telegram ou WhatsApp connecté et opérationnel en 48h." },
       },
       {
         "@type": "Question",

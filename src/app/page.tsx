@@ -12,7 +12,7 @@ const differentiators = [
 const offers = [
   {
     code: "SETUP",
-    price: "199 €",
+    price: "À partir de 189 €",
     title: "Installation OpenClaw",
     desc: "Installation et configuration d'OpenClaw sur votre machine. Canal Telegram ou WhatsApp connecté. Opérationnel en 48h.",
     cta: "Démarrer",
@@ -205,7 +205,7 @@ export default function Home() {
             {[
               { q: "Qu'est-ce qu'OpenClaw ?", a: "OpenClaw est une plateforme open-source qui permet de déployer des agents IA autonomes directement sur votre machine locale. Vos données ne transitent par aucun serveur cloud tiers — conformité RGPD garantie." },
               { q: "Quelle est la différence entre un agent IA et ChatGPT ?", a: "ChatGPT répond à vos questions. Un agent IA autonome agit : il accède à vos outils (email, agenda, fichiers), exécute des tâches, prend des décisions et vous rend compte — sans supervision constante de votre part." },
-              { q: "Combien coûte l'installation d'OpenClaw ?", a: "L'installation par Claws démarre à 199€ pour une configuration complète sur votre machine existante, canal Telegram ou WhatsApp inclus, opérationnel en 48h." },
+              { q: "Combien coûte l'installation d'OpenClaw ?", a: "L'installation par Claws démarre à partir de 189€ pour une configuration complète sur votre machine existante, canal Telegram ou WhatsApp inclus, opérationnel en 48h." },
               { q: "Mes données sont-elles sécurisées ?", a: "Oui. OpenClaw fonctionne entièrement en local sur votre machine. Claws applique les meilleures pratiques : chiffrement disque, firewall, permissions strictes, zéro backdoor." },
               { q: "Sur quelle machine installer OpenClaw ?", a: "Le Mac Mini M4 est recommandé : silencieux, économe (10-20W), suffisamment puissant pour des agents IA en continu. Fonctionne aussi sur tout Mac ou serveur Linux." },
               { q: "Peut-on connecter plusieurs canaux (Telegram, WhatsApp) ?", a: "Oui. OpenClaw supporte Telegram, WhatsApp, Discord, Signal, iMessage et d'autres. Plusieurs canaux peuvent être actifs simultanément." },
