@@ -34,6 +34,10 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "https://claws.fr" },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/logo-claws.png",
+    apple: "/logo-claws.png",
+  },
 };
 
 const jsonLd = [
