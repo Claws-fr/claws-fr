@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://claws.fr"),
   title: {
-    default: "Claws — Agence d'agents IA autonomes en France",
+    default: "Claws | Agence d'agents IA autonomes en France",
     template: "%s | Claws",
   },
   description:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "automatisation entreprise IA",
   ],
   openGraph: {
-    title: "Claws — Agence d'agents IA autonomes en France",
+    title: "Claws | Agence d'agents IA autonomes en France",
     description:
       "Nous installons, configurons et maintenons vos agents IA autonomes. Première agence française spécialisée OpenClaw.",
     url: "https://claws.fr",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Claws — Agence d'agents IA autonomes en France",
+        alt: "Claws | Agence d'agents IA autonomes en France",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Claws — Agents IA autonomes",
+    title: "Claws | Agents IA autonomes",
     description: "Première agence française spécialisée en agents IA autonomes OpenClaw.",
     images: ["/og-image.png"],
   },

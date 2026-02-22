@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "Blog — Agents IA, OpenClaw, automatisation",
+  title: "Blog | Agents IA, OpenClaw, automatisation",
   description:
     "Guides pratiques et stratégiques sur l'installation OpenClaw, la maintenance d'agents IA, et l'automatisation d'entreprise en France.",
   keywords: ["blog OpenClaw", "guide installation OpenClaw", "agents IA France", "automatisation IA PME"],
   alternates: { canonical: "https://claws.fr/blog" },
   openGraph: {
-    title: "Blog Claws — Agents IA et OpenClaw",
+    title: "Blog Claws | Agents IA et OpenClaw",
     description: "Guides pratiques sur OpenClaw et l'automatisation par agents IA.",
     url: "https://claws.fr/blog",
     type: "website",
