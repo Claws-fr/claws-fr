@@ -50,9 +50,10 @@ export default function BlogPage() {
       </main>
 
       <footer className="footer">
-        <p className="footer-copy">© 2025 Claws — Paris</p>
+        <p className="footer-copy">© 2025 Claws, Paris</p>
         <div className="footer-links">
           <a href="/blog">Blog</a>
+          <a href="/a-propos">À propos</a>
           <a href="mailto:contact@claws.fr">contact@claws.fr</a>
         </div>
       </footer>

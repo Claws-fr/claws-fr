@@ -113,6 +113,7 @@ export default function Home() {
         <span className="nav-logo">Claws</span>
         <div className="nav-links">
           <a href="/blog" className="nav-link">Blog</a>
+          <a href="/a-propos" className="nav-link">À propos</a>
           <a href="#contact" className="nav-cta">Contact →</a>
         </div>
       </nav>
@@ -290,6 +291,7 @@ export default function Home() {
         <p className="footer-copy">© 2025 Claws, Paris</p>
         <div className="footer-links">
           <a href="/blog">Blog</a>
+          <a href="/a-propos">À propos</a>
           <a href="mailto:contact@claws.fr">contact@claws.fr</a>
         </div>
       </footer>

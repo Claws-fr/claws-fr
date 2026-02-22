@@ -36,23 +36,55 @@ export default async function PostPage({ params }: Props) {
 
   const html = await marked(post.content);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: { "@type": "Organization", name: "Claws", url: "https://claws.fr" },
-    publisher: { "@type": "Organization", name: "Claws", url: "https://claws.fr" },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://claws.fr/blog/${post.slug}` },
-    keywords: post.keywords.join(", "),
-    inLanguage: "fr-FR",
-  };
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { "@type": "Organization", name: "Claws", url: "https://claws.fr" },
+      publisher: { "@type": "Organization", name: "Claws", url: "https://claws.fr", logo: { "@type": "ImageObject", url: "https://claws.fr/favicon.ico" } },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `https://claws.fr/blog/${post.slug}` },
+      keywords: post.keywords.join(", "),
+      inLanguage: "fr-FR",
+      isPartOf: { "@type": "Blog", name: "Blog Claws", url: "https://claws.fr/blog" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://claws.fr" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://claws.fr/blog" },
+        { "@type": "ListItem", position: 3, name: post.title, item: `https://claws.fr/blog/${post.slug}` },
+      ],
+    },
+    ...(post.slug === "installer-openclaw-mac-mini-2025" ? [{
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: "Comment installer OpenClaw sur Mac Mini",
+      description: "Guide étape par étape pour installer et configurer OpenClaw sur Mac Mini en 2025.",
+      totalTime: "PT30M",
+      supply: [
+        { "@type": "HowToSupply", name: "Mac Mini M4" },
+        { "@type": "HowToSupply", name: "Clé API Anthropic" },
+        { "@type": "HowToSupply", name: "Node.js 20+" },
+      ],
+      step: [
+        { "@type": "HowToStep", position: 1, name: "Installer OpenClaw", text: "Exécuter npm install -g openclaw dans le Terminal" },
+        { "@type": "HowToStep", position: 2, name: "Configurer OpenClaw", text: "Lancer openclaw configure et suivre le wizard" },
+        { "@type": "HowToStep", position: 3, name: "Connecter Telegram", text: "Créer un bot via @BotFather et ajouter le token avec openclaw channels add --channel telegram --token TOKEN" },
+        { "@type": "HowToStep", position: 4, name: "Démarrer le gateway", text: "Lancer openclaw gateway install && openclaw gateway start" },
+      ],
+    }] : []),
+  ];
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
 
       <nav className="nav-bar">
         <a href="/" className="nav-logo">Claws</a>
@@ -90,9 +122,10 @@ export default async function PostPage({ params }: Props) {
       </main>
 
       <footer className="footer">
-        <p className="footer-copy">© 2025 Claws — Paris</p>
+        <p className="footer-copy">© 2025 Claws, Paris</p>
         <div className="footer-links">
           <a href="/blog">Blog</a>
+          <a href="/a-propos">À propos</a>
           <a href="mailto:contact@claws.fr">contact@claws.fr</a>
         </div>
       </footer>
