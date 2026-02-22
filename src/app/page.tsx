@@ -111,7 +111,7 @@ export default function Home() {
       {/* NAV */}
       <nav className="nav-bar">
         <span className="nav-logo">
-          <img src="/logo-claws.png" alt="Claws" style={{height: '28px', width: 'auto', mixBlendMode: 'multiply', verticalAlign: 'middle', marginRight: '8px'}} />Claws</span>
+          <img src="/logo-claws.png" alt="Claws" style={{height: '28px', width: 'auto', verticalAlign: 'middle', marginRight: '8px'}} />Claws</span>
         <div className="nav-links">
           <a href="/blog" className="nav-link">Blog</a>
           <a href="/a-propos" className="nav-link">À propos</a>
@@ -289,7 +289,7 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        <img src="/logo-claws.png" alt="Claws" style={{height: '36px', width: 'auto', mixBlendMode: 'multiply', marginBottom: '12px', display: 'block', margin: '0 auto 12px'}} />
+        <img src="/logo-claws.png" alt="Claws" style={{height: '36px', width: 'auto', display: 'block', margin: '0 auto 12px'}} />
         <p className="footer-copy">© 2025 Claws, Paris</p>
         <div className="footer-links">
           <a href="/blog">Blog</a>
