@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Claws — Agence d'agents IA autonomes en France",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Claws — Agents IA autonomes",
     description: "Première agence française spécialisée en agents IA autonomes OpenClaw.",
-    images: ["/opengraph-image"],
+    images: ["/og-image.png"],
   },
   alternates: { canonical: "https://claws.fr" },
   robots: { index: true, follow: true },
