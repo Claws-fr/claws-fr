@@ -104,7 +104,7 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
             <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
               {s.useCases.map((uc, i) => (
                 <div key={i} style={{ display: "grid", gridTemplateColumns: "48px 1fr", gap: 20, padding: "32px 0", borderBottom: "1px solid #F0EDE9", alignItems: "start" }}>
-                  <div style={{ fontSize: "1.8rem", lineHeight: 1 }}>{uc.emoji}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.75rem", color: "#E85D04", letterSpacing: "0.1em", paddingTop: 3 }}>{uc.emoji}</div>
                   <div>
                     <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0E0E0E", margin: "0 0 10px" }}>{uc.title}</h3>
                     <p style={{ fontSize: "0.9rem", color: "#666", lineHeight: 1.75, margin: "0 0 14px" }}>{uc.desc}</p>

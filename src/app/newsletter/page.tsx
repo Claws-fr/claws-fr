@@ -30,18 +30,15 @@ export const metadata: Metadata = {
 };
 
 const previews = [
-  {
-    emoji: "🤖",
+  { emoji: "01",
     title: "Nouveautés des modèles IA",
     desc: "GPT, Claude, Gemini : ce qui change vraiment et ce que ça implique pour votre travail.",
   },
-  {
-    emoji: "⚡",
+  { emoji: "02",
     title: "Mises à jour OpenClaw",
     desc: "Les nouvelles fonctionnalités, bugs corrigés et améliorations à connaître chaque semaine.",
   },
-  {
-    emoji: "🏢",
+  { emoji: "03",
     title: "Use cases métiers concrets",
     desc: "BTP, santé, retail, professions libérales : comment des entreprises automatisent avec des agents IA.",
   },
@@ -93,7 +90,7 @@ export default function NewsletterPage() {
                 border: "1px solid #E8E4DF",
               }}
             >
-              <span style={{ fontSize: "1.5rem", flexShrink: 0 }}>{item.emoji}</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", flexShrink: 0, paddingTop: 2 }}>{item.emoji}</span>
               <div>
                 <p style={{ fontWeight: 700, margin: "0 0 4px", color: "var(--ink)", fontSize: "0.95rem" }}>{item.title}</p>
                 <p style={{ margin: 0, color: "#666", fontSize: "0.875rem", lineHeight: 1.6 }}>{item.desc}</p>

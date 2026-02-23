@@ -207,13 +207,13 @@ export default function Home() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 0, border: "1px solid rgba(255,255,255,0.07)", marginBottom: 40 }}>
             {[
-              { icon: "🔒", title: "Gateway loopback uniquement", desc: "Jamais exposé sur le réseau." },
-              { icon: "🔑", title: "Clés API en variables d'env", desc: "Jamais en clair dans les fichiers." },
-              { icon: "👁️", title: "Zéro backdoor, zéro monitoring", desc: "La machine est 100% à vous après le setup." },
-              { icon: "✅", title: "Skills officiels uniquement", desc: "Aucun code tiers non audité." },
+              { icon: "01", title: "Gateway loopback uniquement", desc: "Jamais exposé sur le réseau." },
+              { icon: "02", title: "Clés API en variables d'env", desc: "Jamais en clair dans les fichiers." },
+              { icon: "03", title: "Zéro backdoor, zéro monitoring", desc: "La machine est 100% à vous après le setup." },
+              { icon: "04", title: "Skills officiels uniquement", desc: "Aucun code tiers non audité." },
             ].map((item, i) => (
               <div key={i} style={{ padding: "28px 24px", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
-                <p style={{ fontSize: "1.4rem", marginBottom: 12 }}>{item.icon}</p>
+                <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", marginBottom: 12 }}>{item.icon}</p>
                 <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 6px" }}>{item.title}</p>
                 <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.4)", margin: 0, lineHeight: 1.6 }}>{item.desc}</p>
               </div>
