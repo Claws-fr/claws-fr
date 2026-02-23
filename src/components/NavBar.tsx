@@ -30,7 +30,12 @@ export default function NavBar() {
           {links.map((l) => (
             <a key={l.href} href={l.href} className="nav-link">{l.label}</a>
           ))}
-          <a href="/#contact" className="nav-cta">Contact →</a>
+          <a href="/#contact" className="nav-cta" onClick={(e) => {
+          if (window.location.pathname === "/") {
+            e.preventDefault();
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+          }
+        }}>Contact →</a>
         </div>
 
         {/* Mobile — hamburger */}
@@ -57,7 +62,13 @@ export default function NavBar() {
             </a>
           ))}
           <a href="/#contact"
-            onClick={() => setOpen(false)}
+            onClick={(e) => {
+              setOpen(false);
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
             style={{ fontSize: "2rem", fontWeight: 800, color: "#E85D04", padding: "20px 0", textDecoration: "none", marginTop: 8, letterSpacing: "-0.5px" }}>
             Contact →
           </a>
