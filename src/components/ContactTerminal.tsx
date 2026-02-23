@@ -99,7 +99,7 @@ export default function ContactTerminal() {
         borderRadius: 8,
         padding: "0",
         fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
-        maxWidth: 580,
+        maxWidth: 640,
         width: "100%",
         cursor: "text",
         overflow: "hidden",

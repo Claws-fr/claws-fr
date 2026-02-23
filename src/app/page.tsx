@@ -309,18 +309,22 @@ export default function Home() {
 
         {/* CONTACT */}
         <section id="contact" className="section section-contact">
-          <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 48, alignItems: "center" }}>
-            <div>
+          <div style={{ maxWidth: 840, margin: "0 auto", padding: "0 24px" }}>
+            {/* Header */}
+            <div style={{ marginBottom: 48 }}>
               <p className="section-tag light">Contact</p>
-              <h2 className="contact-title">Discutons.</h2>
-              <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.75, marginBottom: 24 }}>
+              <h2 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-1.5px", lineHeight: 1.1, margin: "12px 0 16px" }}>
+                Discutons.
+              </h2>
+              <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, maxWidth: 420, margin: 0 }}>
                 Une question, un projet, une installation à prévoir. On répond dans la journée.
               </p>
-              <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.25)", margin: 0 }}>
-                Ou directement : <a href="mailto:contact@claws.fr" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "underline" }}>contact@claws.fr</a>
-              </p>
             </div>
+            {/* Terminal centré */}
             <ContactTerminal />
+            <p style={{ marginTop: 16, fontSize: "0.8rem", color: "rgba(255,255,255,0.2)" }}>
+              Ou directement : <a href="mailto:contact@claws.fr" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "underline" }}>contact@claws.fr</a>
+            </p>
           </div>
         </section>
 
