@@ -1,6 +1,7 @@
 import { getAllPosts } from "@/lib/posts";
 import ContactTerminal from "@/components/ContactTerminal";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const differentiators = [
   {
@@ -319,17 +320,7 @@ export default function Home() {
         </section>
 
       </main>
-
-      <footer className="footer">
-        <img src="/logo-claws.png" alt="Claws" style={{height: '36px', width: 'auto', display: 'block', margin: '0 auto 12px'}} />
-        <p className="footer-copy">© 2025 Claws, Paris</p>
-        <div className="footer-links">
-          <a href="/blog">Blog</a>
-          <a href="/faq">FAQ</a>
-          <a href="/a-propos">À propos</a>
-          <a href="mailto:contact@claws.fr">contact@claws.fr</a>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

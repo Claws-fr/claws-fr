@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -281,16 +282,7 @@ export default function SecuritePage() {
         </section>
 
       </main>
-
-      <footer className="footer">
-        <p className="footer-copy">© 2025 Claws, Paris</p>
-        <div className="footer-links">
-          <a href="/blog">Blog</a>
-          <a href="/faq">FAQ</a>
-          <a href="/a-propos">À propos</a>
-          <a href="mailto:contact@claws.fr">contact@claws.fr</a>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import FAQClient from "./FAQClient";
 
@@ -20,6 +21,7 @@ export default function FAQPage() {
     <>
       <NavBar />
       <FAQClient />
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { marked } from "marked";
@@ -137,15 +138,7 @@ export default async function PostPage({ params }: Props) {
           </section>
         )}
       </main>
-
-      <footer className="footer">
-        <p className="footer-copy">© 2025 Claws, Paris</p>
-        <div className="footer-links">
-          <a href="/blog">Blog</a>
-          <a href="/a-propos">À propos</a>
-          <a href="mailto:contact@claws.fr">contact@claws.fr</a>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

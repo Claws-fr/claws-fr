@@ -268,3 +268,23 @@ details[open] .faq-question::after { content: "−"; }
 /* Comparatif sector links */
 .sector-card-link { display: block; padding: 16px 20px; border: 1.5px solid #E8E4DF; color: #0E0E0E; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: border-color 0.2s; }
 .sector-card-link:hover { border-color: #E85D04; }
+
+/* ── Site Footer ────────────────────────────────────────── */
+.site-footer { background: #0E0E0E; padding: 64px 24px 0; margin-top: 0; }
+.site-footer-inner { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1.2fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+@media (max-width: 768px) { .site-footer-inner { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .site-footer-inner { grid-template-columns: 1fr; } }
+
+.site-footer-brand {}
+.site-footer-logo { font-family: var(--font-sans); font-size: 1.3rem; font-weight: 800; color: #F5F2EE; text-decoration: none; letter-spacing: -0.5px; display: inline-block; margin-bottom: 14px; }
+.site-footer-logo:hover { color: #E85D04; }
+.site-footer-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.65; margin: 0; max-width: 260px; }
+
+.site-footer-col {}
+.site-footer-heading { font-family: var(--font-mono); font-size: 0.65rem; color: #E85D04; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 14px; }
+.site-footer-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.site-footer-list a { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s; line-height: 1.4; }
+.site-footer-list a:hover { color: #F5F2EE; }
+
+.site-footer-bottom { max-width: 1040px; margin: 0 auto; padding: 20px 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.site-footer-bottom p { font-family: var(--font-mono); font-size: 0.7rem; color: rgba(255,255,255,0.2); margin: 0; }
