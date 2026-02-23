@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/posts";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -21,13 +22,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <nav className="nav-bar">
-        <a href="/" className="nav-logo">Claws</a>
-        <div className="nav-links">
-          <a href="/blog" className="nav-link" style={{ color: "var(--accent)" }}>Blog</a>
-          <a href="/#contact" className="nav-cta">Contact →</a>
-        </div>
-      </nav>
+      <NavBar />
 
       <main className="blog-page">
         <header className="blog-page-header">

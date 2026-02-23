@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/NewsletterForm";
 
@@ -49,13 +50,7 @@ const previews = [
 export default function NewsletterPage() {
   return (
     <>
-      <nav className="nav-bar">
-        <a href="/" className="nav-logo">Claws</a>
-        <div className="nav-links">
-          <a href="/blog" className="nav-link">Blog</a>
-          <a href="/#contact" className="nav-cta">Contact →</a>
-        </div>
-      </nav>
+      <NavBar />
 
       <main style={{ maxWidth: "640px", margin: "0 auto", padding: "80px 24px 120px" }}>
 

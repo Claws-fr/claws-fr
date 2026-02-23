@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -79,13 +80,7 @@ export default function AboutPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <nav className="nav-bar">
-        <a href="/" className="nav-logo">Claws</a>
-        <div className="nav-links">
-          <a href="/blog" className="nav-link">Blog</a>
-          <a href="/#contact" className="nav-cta">Contact →</a>
-        </div>
-      </nav>
+      <NavBar />
 
       <main style={{ paddingTop: "100px", maxWidth: "800px", margin: "0 auto", padding: "100px 24px 80px" }}>
 

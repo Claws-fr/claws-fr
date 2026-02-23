@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { marked } from "marked";
@@ -93,13 +94,7 @@ export default async function PostPage({ params }: Props) {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
 
-      <nav className="nav-bar">
-        <a href="/" className="nav-logo">Claws</a>
-        <div className="nav-links">
-          <a href="/blog" className="nav-link">Blog</a>
-          <a href="/#contact" className="nav-cta">Contact →</a>
-        </div>
-      </nav>
+      <NavBar />
 
       <main className="article-page">
         <a href="/blog" className="back-link">← Retour au blog</a>

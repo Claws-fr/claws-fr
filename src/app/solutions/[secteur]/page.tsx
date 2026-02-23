@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { sectors, sectorSlugs } from "./sectorData";
@@ -42,14 +43,7 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <nav className="nav-bar">
-        <a href="/" className="nav-logo">Claws</a>
-        <div className="nav-links">
-          <a href="/blog" className="nav-link">Blog</a>
-          <a href="/faq" className="nav-link">FAQ</a>
-          <a href="/#contact" className="nav-cta">Contact →</a>
-        </div>
-      </nav>
+      <NavBar />
 
       <main style={{ background: "#F5F2EE", minHeight: "100vh", paddingTop: "72px" }}>
 

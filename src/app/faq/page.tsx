@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import FAQClient from "./FAQClient";
 
@@ -17,13 +18,7 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return (
     <>
-      <nav className="nav-bar">
-        <a href="/" className="nav-logo">Claws</a>
-        <div className="nav-links">
-          <a href="/blog" className="nav-link">Blog</a>
-          <a href="/#contact" className="nav-cta">Contact →</a>
-        </div>
-      </nav>
+      <NavBar />
       <FAQClient />
     </>
   );

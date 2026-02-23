@@ -1,5 +1,6 @@
 import { getAllPosts } from "@/lib/posts";
 import ContactTerminal from "@/components/ContactTerminal";
+import NavBar from "@/components/NavBar";
 
 const differentiators = [
   {
@@ -109,18 +110,7 @@ export default function Home() {
 
   return (
     <>
-      {/* NAV */}
-      <nav className="nav-bar">
-        <span className="nav-logo">
-          <img src="/logo-claws.png" alt="Claws" style={{height: '28px', width: 'auto', verticalAlign: 'middle', marginRight: '8px'}} />Claws</span>
-        <div className="nav-links">
-          <a href="/blog" className="nav-link">Blog</a>
-          <a href="/faq" className="nav-link">FAQ</a>
-          <a href="/securite" className="nav-link">Sécurité</a>
-          <a href="/a-propos" className="nav-link">À propos</a>
-          <a href="#contact" className="nav-cta">Contact →</a>
-        </div>
-      </nav>
+      <NavBar />
 
       <main>
 
