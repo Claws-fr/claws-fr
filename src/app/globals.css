@@ -264,3 +264,7 @@ details[open] .faq-question::after { content: "−"; }
 .newsletter-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .newsletter-success { color: #16a34a; font-size: 15px; font-weight: 600; margin-top: 16px; }
 .newsletter-error { color: var(--accent); font-size: 13px; margin-top: 8px; }
+
+/* Comparatif sector links */
+.sector-card-link { display: block; padding: 16px 20px; border: 1.5px solid #E8E4DF; color: #0E0E0E; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: border-color 0.2s; }
+.sector-card-link:hover { border-color: #E85D04; }
