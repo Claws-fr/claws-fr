@@ -263,17 +263,17 @@ export default function Home() {
         </section>
 
         {/* DIFFÉRENCIATEURS */}
-        <section className="section section-dark">
+        <section className="section">
           <div className="section-header">
-            <p className="section-tag light">004 / Pourquoi Claws</p>
-            <h2 className="section-title light">Ce qui nous distingue vraiment.</h2>
+            <p className="section-tag">004 / Pourquoi Claws</p>
+            <h2 className="section-title">Ce qui nous distingue vraiment.</h2>
           </div>
-          <div className="diff-grid">
+          <div className="diff-grid-light">
             {differentiators.map((d, i) => (
-              <div key={i} className="diff-card">
-                <span className="diff-icon">{d.icon}</span>
-                <h3 className="diff-title">{d.title}</h3>
-                <p className="diff-desc">{d.desc}</p>
+              <div key={i} className="diff-card-light">
+                <span className="diff-icon-light">{d.icon}</span>
+                <h3 className="diff-title-light">{d.title}</h3>
+                <p className="diff-desc-light">{d.desc}</p>
               </div>
             ))}
           </div>
@@ -308,7 +308,7 @@ export default function Home() {
           </a>
         </section>
 
-        {/* OFFRES */}
+        {/* OFFRES + PROCESS */}
         <section id="offres" className="section">
           <div className="section-header">
             <p className="section-tag">006 / Offres</p>
@@ -326,71 +326,55 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
-
-        {/* PROCESS */}
-        <section className="section">
-          <div className="section-header">
-            <p className="section-tag">007 / Process</p>
-            <h2 className="section-title">Comment ça se passe.</h2>
-          </div>
-          <div className="steps-grid">
-            {steps.map((s, i) => (
-              <div key={i} className="step-card">
-                <p className="step-num">{s.num}</p>
-                <h3 className="step-title">{s.title}</h3>
-                <p className="step-desc">{s.desc}</p>
-              </div>
-            ))}
+          {/* Process intégré */}
+          <div style={{ marginTop: 64, borderTop: "1px solid var(--border)", paddingTop: 48 }}>
+            <p className="section-tag" style={{ marginBottom: 32 }}>Comment ça se passe</p>
+            <div className="steps-grid">
+              {steps.map((s, i) => (
+                <div key={i} className="step-card">
+                  <p className="step-num">{s.num}</p>
+                  <h3 className="step-title">{s.title}</h3>
+                  <p className="step-desc">{s.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* TÉMOIGNAGES */}
-        <section style={{ background: "#0E0E0E", padding: "80px 24px" }}>
+        {/* TÉMOIGNAGES — style magazine */}
+        <section style={{ background: "#F5F2EE", padding: "80px 24px", borderTop: "1px solid #E8E4DF" }}>
           <div style={{ maxWidth: "var(--max)", margin: "0 auto" }}>
-            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>
-              008 / Ils l&apos;utilisent
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 40 }}>
+              007 / Ils l&apos;utilisent
             </p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-1px", margin: "0 0 56px", lineHeight: 1.1 }}>
-              OpenClaw au quotidien.
-            </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 1, background: "rgba(255,255,255,0.06)" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 48 }}>
 
-              {/* Témoignage 1 */}
-              <div style={{ background: "#0E0E0E", padding: "36px 32px" }}>
-                <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.8, margin: "0 0 28px", fontStyle: "italic" }}>
-                  &quot;La réconciliation Stripe-Qonto se fait toute seule chaque matin. Les factures partent en fin de mois avec les bons montants, les bons clients, sans que je touche à rien. J&apos;ai récupéré 6h par semaine sur des tâches que je ne supportais plus de faire.&quot;
-                </p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 20 }}>
-                  <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 4px" }}>Ahmad C.</p>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "#E85D04", margin: 0, letterSpacing: "0.05em" }}>Fondateur, Libcare</p>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "rgba(255,255,255,0.25)", margin: "4px 0 0", letterSpacing: "0.04em" }}>Automatisation Stripe · Facturation · Qonto</p>
+              {[
+                {
+                  quote: "La réconciliation Stripe-Qonto se fait toute seule chaque matin. Les factures partent en fin de mois avec les bons montants, les bons clients, sans que je touche à rien. 6h récupérées par semaine.",
+                  name: "Ahmad C.", role: "Fondateur, Libcare", tags: "Stripe · Facturation · Qonto"
+                },
+                {
+                  quote: "Je pensais que c'était un outil pour les développeurs. En 48h mon agent relançait mes devis non signés et gérait mes emails de prospection. Mon taux de signature a clairement progressé.",
+                  name: "Sophie M.", role: "Consultante indépendante, Paris", tags: "Relances · Prospection · Onboarding"
+                },
+                {
+                  quote: "Le vendredi matin j'ai le reporting de la semaine dans ma boite mail, sans avoir rien fait. La veille arrive le lundi. Je passe moins de temps à chercher et plus à conseiller.",
+                  name: "Marc D.", role: "Directeur, agence conseil (Paris)", tags: "Reporting · Veille · Comptes-rendus"
+                },
+              ].map((t, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column" }}>
+                  <p style={{ fontSize: "3rem", color: "#E85D04", lineHeight: 1, margin: "0 0 16px", fontFamily: "Georgia, serif" }}>&ldquo;</p>
+                  <p style={{ fontSize: "clamp(1rem, 1.4vw, 1.15rem)", color: "#0E0E0E", lineHeight: 1.75, margin: "0 0 28px", fontWeight: 500 }}>
+                    {t.quote}
+                  </p>
+                  <div style={{ marginTop: "auto", borderTop: "1px solid #E8E4DF", paddingTop: 20 }}>
+                    <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#0E0E0E", margin: "0 0 4px" }}>{t.name}</p>
+                    <p style={{ fontSize: "0.82rem", color: "#666", margin: "0 0 6px" }}>{t.role}</p>
+                    <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "#E85D04", margin: 0, letterSpacing: "0.04em" }}>{t.tags}</p>
+                  </div>
                 </div>
-              </div>
-
-              {/* Témoignage 2 */}
-              <div style={{ background: "#0E0E0E", padding: "36px 32px" }}>
-                <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.8, margin: "0 0 28px", fontStyle: "italic" }}>
-                  &quot;Je pensais que c&apos;était un outil pour les développeurs. En 48h mon agent relançait mes devis non signés et gérait mes emails de prospection. Mon taux de signature a clairement progressé depuis.&quot;
-                </p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 20 }}>
-                  <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 4px" }}>Sophie M.</p>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "#E85D04", margin: 0, letterSpacing: "0.05em" }}>Consultante indépendante, Paris</p>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "rgba(255,255,255,0.25)", margin: "4px 0 0", letterSpacing: "0.04em" }}>Relances devis · Prospection · Onboarding clients</p>
-                </div>
-              </div>
-
-              {/* Témoignage 3 */}
-              <div style={{ background: "#0E0E0E", padding: "36px 32px" }}>
-                <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.8, margin: "0 0 28px", fontStyle: "italic" }}>
-                  &quot;Le vendredi matin j&apos;ai le reporting de la semaine dans ma boite mail, sans avoir rien fait. La veille concurrentielle arrive le lundi. Je passe moins de temps à chercher des infos et plus à conseiller mes clients.&quot;
-                </p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 20 }}>
-                  <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 4px" }}>Marc D.</p>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "#E85D04", margin: 0, letterSpacing: "0.05em" }}>Directeur, agence conseil (Paris)</p>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "rgba(255,255,255,0.25)", margin: "4px 0 0", letterSpacing: "0.04em" }}>Reporting clients · Veille · Comptes-rendus</p>
-                </div>
-              </div>
+              ))}
 
             </div>
           </div>
@@ -417,23 +401,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ */}
+        {/* FAQ — 3 questions */}
         <section className="section">
           <div className="section-header">
-            <p className="section-tag">010 / Questions</p>
+            <p className="section-tag">009 / Questions</p>
             <h2 className="section-title">Ce qu&apos;on nous demande souvent.</h2>
           </div>
           <div className="faq-list">
-            {faqItems.map((item, i) => (
+            {faqItems.slice(0, 3).map((item, i) => (
               <details key={i} className="faq-item">
                 <summary className="faq-question">{item.q}</summary>
                 <p className="faq-answer">{item.a}</p>
               </details>
             ))}
           </div>
-          <div style={{ marginTop: 32 }}>
+          <div style={{ marginTop: 32, display: "flex", gap: 24, alignItems: "center" }}>
             <a href="/faq" style={{ fontFamily: "var(--font-mono)", fontSize: "0.78rem", color: "var(--accent)", textDecoration: "none" }}>
-              Voir toutes les questions →
+              Voir les 48 questions →
+            </a>
+            <a href="/comparatif" style={{ fontFamily: "var(--font-mono)", fontSize: "0.78rem", color: "var(--muted)", textDecoration: "none" }}>
+              Comparatif outils →
             </a>
           </div>
         </section>
@@ -443,16 +430,34 @@ export default function Home() {
           <div style={{ maxWidth: 840, margin: "0 auto", padding: "0 24px" }}>
             <div style={{ marginBottom: 48 }}>
               <p className="section-tag light">Contact</p>
-              <h2 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-1.5px", lineHeight: 1.1, margin: "12px 0 16px" }}>
+              <h2 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-1.5px", lineHeight: 1.1, margin: "12px 0 24px" }}>
                 Discutons.
               </h2>
+              {/* Julie */}
+              <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 32 }}>
+                <div style={{
+                  width: 52, height: 52, borderRadius: "50%",
+                  background: "#E85D04", flexShrink: 0,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "1rem", fontWeight: 800, color: "#fff", letterSpacing: "-0.5px"
+                }}>
+                  JD
+                </div>
+                <div>
+                  <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 3px" }}>Julie Decroix</p>
+                  <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.45)", margin: "0 0 3px" }}>Co-fondatrice, Claws</p>
+                  <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.3)", margin: 0, fontStyle: "italic" }}>
+                    Répond personnellement sous 24h.
+                  </p>
+                </div>
+              </div>
               <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, maxWidth: 420, margin: 0 }}>
-                Une question, un projet, une installation OpenClaw à prévoir. On répond dans la journée.
+                Une question, un projet, une installation OpenClaw à prévoir.
               </p>
             </div>
             <ContactTerminal />
             <p style={{ marginTop: 16, fontSize: "0.8rem", color: "rgba(255,255,255,0.2)" }}>
-              Ou directement : <a href="mailto:contact@claws.fr" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "underline" }}>contact@claws.fr</a>
+              Ou directement : <a href="mailto:contact@claws.fr" style={{ color: "rgba(255,255,255,0.35)", textDecoration: "underline" }}>contact@claws.fr</a>
             </p>
           </div>
         </section>
