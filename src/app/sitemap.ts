@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://claws.fr", lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: "https://claws.fr/blog", lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: "https://claws.fr/a-propos", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://claws.fr/faq", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: "https://claws.fr/newsletter", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     ...blogEntries,
   ];
 }

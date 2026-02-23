@@ -114,6 +114,7 @@ export default function Home() {
           <img src="/logo-claws.png" alt="Claws" style={{height: '28px', width: 'auto', verticalAlign: 'middle', marginRight: '8px'}} />Claws</span>
         <div className="nav-links">
           <a href="/blog" className="nav-link">Blog</a>
+          <a href="/faq" className="nav-link">FAQ</a>
           <a href="/a-propos" className="nav-link">À propos</a>
           <a href="#contact" className="nav-cta">Contact →</a>
         </div>
@@ -293,6 +294,7 @@ export default function Home() {
         <p className="footer-copy">© 2025 Claws, Paris</p>
         <div className="footer-links">
           <a href="/blog">Blog</a>
+          <a href="/faq">FAQ</a>
           <a href="/a-propos">À propos</a>
           <a href="mailto:contact@claws.fr">contact@claws.fr</a>
         </div>
