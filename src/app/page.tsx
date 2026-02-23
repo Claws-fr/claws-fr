@@ -335,10 +335,61 @@ export default function Home() {
           </div>
         </section>
 
+        {/* TÉMOIGNAGES */}
+        <section style={{ background: "#0E0E0E", padding: "80px 24px" }}>
+          <div style={{ maxWidth: "var(--max)", margin: "0 auto" }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>
+              008 / Ils l&apos;utilisent
+            </p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-1px", margin: "0 0 56px", lineHeight: 1.1 }}>
+              OpenClaw au quotidien.
+            </h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 1, background: "rgba(255,255,255,0.06)" }}>
+
+              {/* Témoignage 1 */}
+              <div style={{ background: "#0E0E0E", padding: "36px 32px" }}>
+                <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.8, margin: "0 0 28px", fontStyle: "italic" }}>
+                  &quot;La réconciliation Stripe-Qonto se fait toute seule chaque matin. Les factures partent en fin de mois avec les bons montants, les bons clients, sans que je touche à rien. J&apos;ai récupéré 6h par semaine sur des tâches que je ne supportais plus de faire.&quot;
+                </p>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 20 }}>
+                  <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 4px" }}>Ahmad C.</p>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "#E85D04", margin: 0, letterSpacing: "0.05em" }}>Fondateur, Libcare</p>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "rgba(255,255,255,0.25)", margin: "4px 0 0", letterSpacing: "0.04em" }}>Automatisation Stripe · Facturation · Qonto</p>
+                </div>
+              </div>
+
+              {/* Témoignage 2 */}
+              <div style={{ background: "#0E0E0E", padding: "36px 32px" }}>
+                <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.8, margin: "0 0 28px", fontStyle: "italic" }}>
+                  &quot;Je pensais que c&apos;était un outil pour les développeurs. En 48h mon agent relançait mes devis non signés et gérait mes emails de prospection. Mon taux de signature a clairement progressé depuis.&quot;
+                </p>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 20 }}>
+                  <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 4px" }}>Sophie M.</p>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "#E85D04", margin: 0, letterSpacing: "0.05em" }}>Consultante indépendante, Paris</p>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "rgba(255,255,255,0.25)", margin: "4px 0 0", letterSpacing: "0.04em" }}>Relances devis · Prospection · Onboarding clients</p>
+                </div>
+              </div>
+
+              {/* Témoignage 3 */}
+              <div style={{ background: "#0E0E0E", padding: "36px 32px" }}>
+                <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.8, margin: "0 0 28px", fontStyle: "italic" }}>
+                  &quot;Le vendredi matin j&apos;ai le reporting de la semaine dans ma boite mail, sans avoir rien fait. La veille concurrentielle arrive le lundi. Je passe moins de temps à chercher des infos et plus à conseiller mes clients.&quot;
+                </p>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 20 }}>
+                  <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 4px" }}>Marc D.</p>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "#E85D04", margin: 0, letterSpacing: "0.05em" }}>Directeur, agence conseil (Paris)</p>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "rgba(255,255,255,0.25)", margin: "4px 0 0", letterSpacing: "0.04em" }}>Reporting clients · Veille · Comptes-rendus</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* BLOG PREVIEW */}
         <section className="section">
           <div className="section-header">
-            <p className="section-tag">008 / Ressources</p>
+            <p className="section-tag">009 / Ressources</p>
             <h2 className="section-title">Ce qu&apos;on partage.</h2>
           </div>
           <div className="blog-grid">
@@ -359,7 +410,7 @@ export default function Home() {
         {/* FAQ */}
         <section className="section">
           <div className="section-header">
-            <p className="section-tag">009 / Questions</p>
+            <p className="section-tag">010 / Questions</p>
             <h2 className="section-title">Ce qu&apos;on nous demande souvent.</h2>
           </div>
           <div className="faq-list">
