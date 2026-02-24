@@ -33,7 +33,7 @@ export default function ContactForm() {
         setStatus("done");
         // Google Ads conversion
         if (typeof window !== "undefined" && (window as any).gtag) {
-          (window as any).gtag("event", "conversion", { send_to: "AW-17974041887" });
+          (window as any).gtag("event", "conversion", { send_to: "AW-17974041887/DYp3Cl2woP4bEJ-62PpC" });
           (window as any).gtag("event", "generate_lead", { currency: "EUR", value: 189 });
         }
       } else {
