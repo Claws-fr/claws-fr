@@ -149,7 +149,7 @@ export default async function PostPage({ params }: Props) {
           <div style={{ margin: "32px 0", padding: "20px 24px", background: "rgba(232,93,4,0.06)", borderLeft: "3px solid #E85D04" }}>
             <p style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono)", color: "#E85D04", margin: "0 0 6px", letterSpacing: "0.06em" }}>PAGE DÉDIÉE</p>
             <a href={sectorLink.href} style={{ fontSize: "0.95rem", fontWeight: 600, color: "#0E0E0E", textDecoration: "none" }}>
-              {sectorLink.label} — cas d&apos;usage, automatisations et FAQ sectorielles →
+              {sectorLink.label} : cas d&apos;usage, automatisations et FAQ sectorielles →
             </a>
           </div>
         )}

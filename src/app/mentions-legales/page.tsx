@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Mentions légales | Claws",
-  description: "Mentions légales du site claws.fr — éditeur, hébergeur, données personnelles, propriété intellectuelle.",
+  description: "Mentions légales du site claws.fr : éditeur, hébergeur, données personnelles, propriété intellectuelle.",
   alternates: { canonical: "https://claws.fr/mentions-legales" },
   robots: { index: true, follow: false },
 };
@@ -79,7 +79,7 @@ export default function MentionsLegalesPage() {
                 <li><strong>Newsletter :</strong> adresse email uniquement. Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque email.</li>
               </ul>
               <p style={{ marginTop: 16 }}>
-                Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement et de portabilité de vos données personnelles.
+                Conformément au Règlement Général sur la Protection des Données (RGPD, Règlement UE 2016/679), vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement et de portabilité de vos données personnelles.
               </p>
               <p style={{ marginTop: 12 }}>
                 Pour exercer ces droits ou pour toute question relative à vos données : <strong>contact@claws.fr</strong>

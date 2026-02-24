@@ -341,7 +341,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TÉMOIGNAGES — style magazine */}
+        {/* TÉMOIGNAGES - style magazine */}
         <section style={{ background: "#F5F2EE", padding: "80px 24px", borderTop: "1px solid #E8E4DF" }}>
           <div style={{ maxWidth: "var(--max)", margin: "0 auto" }}>
             <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 40 }}>
@@ -401,7 +401,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ — 3 questions */}
+        {/* FAQ - 3 questions */}
         <section className="section">
           <div className="section-header">
             <p className="section-tag">009 / Questions</p>

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Claws — Installation OpenClaw en France, agents IA locaux à partir de 189€",
+        alt: "Claws : Installation OpenClaw en France, agents IA locaux à partir de 189€",
       },
     ],
   },
@@ -161,7 +161,7 @@ const jsonLd = [
         name: "Quelle est la différence entre un agent IA autonome et ChatGPT ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ChatGPT est un chatbot : il répond à vos questions quand vous lui parlez, mais il n'agit pas de façon autonome. Un agent IA autonome comme OpenClaw est un programme qui surveille, décide et agit sans que vous interveniez à chaque étape. Par exemple, OpenClaw peut lire vos emails entrants, identifier ceux qui nécessitent une relance, rédiger la réponse dans votre style et l'envoyer, puis noter l'action dans votre CRM — tout ça pendant que vous travaillez sur autre chose. De plus, OpenClaw fonctionne en local : vos données ne quittent jamais votre machine, contrairement à ChatGPT, Copilot ou Gemini qui envoient vos requêtes sur des serveurs américains.",
+          text: "ChatGPT est un chatbot : il répond à vos questions quand vous lui parlez, mais il n'agit pas de façon autonome. Un agent IA autonome comme OpenClaw est un programme qui surveille, décide et agit sans que vous interveniez à chaque étape. Par exemple, OpenClaw peut lire vos emails entrants, identifier ceux qui nécessitent une relance, rédiger la réponse dans votre style et l'envoyer, puis noter l'action dans votre CRM, tout ça pendant que vous travaillez sur autre chose. De plus, OpenClaw fonctionne en local : vos données ne quittent jamais votre machine, contrairement à ChatGPT, Copilot ou Gemini qui envoient vos requêtes sur des serveurs américains.",
         },
       },
       {
