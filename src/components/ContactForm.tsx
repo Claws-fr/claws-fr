@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", sector: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", sector: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   const sectors = [
@@ -26,7 +26,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
-          message: `Secteur : ${form.sector}\n\n${form.message}`,
+          message: `Secteur : ${form.sector}\nTéléphone : ${form.phone || "non renseigné"}\n\n${form.message}`,
         }),
       });
       if (res.ok) {
@@ -91,6 +91,7 @@ export default function ContactForm() {
             value={form.name}
             onChange={e => setForm({ ...form, name: e.target.value })}
             style={inputStyle}
+            className="contact-input"
           />
         </div>
         <div>
@@ -104,8 +105,23 @@ export default function ContactForm() {
             value={form.email}
             onChange={e => setForm({ ...form, email: e.target.value })}
             style={inputStyle}
+            className="contact-input"
           />
         </div>
+      </div>
+
+      <div>
+        <label style={{ display: "block", fontSize: "0.78rem", fontWeight: 600, color: "#0E0E0E", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+          Téléphone
+        </label>
+        <input
+          type="tel"
+          placeholder="+33 6 12 34 56 78"
+          value={form.phone}
+          onChange={e => setForm({ ...form, phone: e.target.value })}
+          style={inputStyle}
+          className="contact-input"
+        />
       </div>
 
       <div>
