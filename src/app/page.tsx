@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/posts";
-import ContactTerminal from "@/components/ContactTerminal";
+import ContactForm from "@/components/ContactForm";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AgentDemo from "@/components/AgentDemo";
@@ -455,7 +455,9 @@ export default function Home() {
                 Une question, un projet, une installation OpenClaw à prévoir.
               </p>
             </div>
-            <ContactTerminal />
+            <div style={{ background: "#fff", padding: "36px", maxWidth: 640, width: "100%" }}>
+              <ContactForm />
+            </div>
             <p style={{ marginTop: 16, fontSize: "0.8rem", color: "rgba(255,255,255,0.2)" }}>
               Ou directement : <a href="mailto:contact@claws.fr" style={{ color: "rgba(255,255,255,0.35)", textDecoration: "underline" }}>contact@claws.fr</a>
             </p>
