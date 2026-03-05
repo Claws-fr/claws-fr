@@ -44,7 +44,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://claws.fr" },
   robots: { index: true, follow: true },
   icons: {
-    icon: "/logo-claws.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
     apple: "/logo-claws.png",
   },
 };
