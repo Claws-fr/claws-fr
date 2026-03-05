@@ -1744,7 +1744,7 @@ Les agents IA ne remplacent pas les agents immobiliers. Ils leur permettent de r
 
 ## Démarrez votre installation
 
-Claws.fr accompagne les agences immobilières françaises dans l'installation d'OpenClaw depuis 2024. Nous gérons la partie technique (installation, configuration, intégrations CRM) pour que vous vous concentriez sur votre métier.
+Claws.fr accompagne les agences immobilières françaises dans l'installation d'OpenClaw depuis 2025. Nous gérons la partie technique (installation, configuration, intégrations CRM) pour que vous vous concentriez sur votre métier.
 
 Première étape : [un diagnostic gratuit de 30 minutes](/#contact) pour analyser vos flux actuels et identifier les gains rapides.
 
@@ -1839,7 +1839,7 @@ Vous pouvez découvrir d'autres automatisations dans notre article sur les [10 a
 
 ## Résultats mesurés chez nos clients français
 
-Nous accompagnons depuis 2024 des entreprises françaises dans l'installation d'OpenClaw. Voici les améliorations moyennes constatées après 90 jours :
+Nous accompagnons depuis 2025 des entreprises françaises dans l'installation d'OpenClaw. Voici les améliorations moyennes constatées après 90 jours :
 
 **Taux de réponse aux devis :**
 - Avant OpenClaw : 47%
