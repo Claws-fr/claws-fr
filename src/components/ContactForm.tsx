@@ -140,7 +140,7 @@ export default function ContactForm() {
 
       <div>
         <label style={{ display: "block", fontSize: "0.78rem", fontWeight: 600, color: "#0E0E0E", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-          Votre besoin (optionnel)
+          Votre besoin
         </label>
         <textarea
           rows={3}
