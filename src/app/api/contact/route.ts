@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
     // ── Honeypot : doit être vide (les bots le remplissent) ───────────────
     if (_hp && _hp !== "") {
       // Simuler un succès pour ne pas alerter le bot
-      return NextResponse.json({ ok: true });
+      return NextResponse.json({ ok: true, qualified: false });
     }
 
     // ── Validation basique ────────────────────────────────────────────────
@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
     // ── Détection bot ─────────────────────────────────────────────────────
     if (looksLikeBot(name, email, message)) {
       // Simuler un succès silencieux
-      return NextResponse.json({ ok: true });
+      return NextResponse.json({ ok: true, qualified: false });
     }
 
     const BREVO_API_KEY = process.env.BREVO_API_KEY;
@@ -112,7 +112,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Erreur envoi" }, { status: 500 });
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, qualified: true });
   } catch {
     return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
   }

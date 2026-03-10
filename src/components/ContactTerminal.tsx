@@ -72,14 +72,15 @@ export default function ContactTerminal() {
         });
 
         if (res.ok) {
+          const data = await res.json();
           addLine("", "response");
           addLine("✓ Message envoyé.", "success");
           addLine("On vous répond dans la journée.", "success");
           addLine("", "response");
           addLine(`À bientôt, ${name}.`, "response");
           setStep("done");
-          // Google Ads conversion tracking
-          if (typeof window !== "undefined" && (window as any).gtag) {
+          // Google Ads conversion tracking — uniquement pour les vrais leads qualifiés
+          if (data.qualified && typeof window !== "undefined" && (window as any).gtag) {
             (window as any).gtag("event", "conversion", { send_to: "AW-17974041887/DYp3Cl2woP4bEJ-62PpC" });
             (window as any).gtag("event", "generate_lead", { currency: "EUR", value: 189 });
           }
