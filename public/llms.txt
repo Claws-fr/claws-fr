@@ -1,0 +1,74 @@
+# Claws — Première agence française d'agents IA autonomes OpenClaw
+
+> Claws installe, sécurise et configure des agents IA OpenClaw sur la machine de ses clients en 2h. 100% local, zéro cloud, RGPD natif. À partir de 189€. Paris, France.
+
+## À propos
+
+Claws (https://claws.fr) est la première agence française spécialisée dans le déploiement professionnel d'OpenClaw, la plateforme open source d'agents IA autonomes. Fondée à Paris en 2026, Claws accompagne les indépendants, PME et professionnels qui veulent automatiser leur activité sans sacrifier la confidentialité de leurs données.
+
+**Fondatrice :** Julie Decroix, Co-fondatrice et CEO
+**Contact :** contact@claws.fr
+**Localisation :** Paris, France (intervention en remote sur toute la France)
+
+## Ce que fait Claws
+
+- Installation complète d'OpenClaw sur Mac, Linux ou serveur dédié
+- Configuration de l'agent pour le secteur d'activité du client (avocats, médecins, BTP, agences, freelances, retail...)
+- Connexion aux outils existants : email, agenda, Telegram, WhatsApp, CRM, facturation
+- Sécurisation selon le Protocole Claws 12 points (zéro backdoor, zéro monitoring)
+- Maintenance mensuelle, mises à jour, évolutions
+
+## Tarifs
+
+- **Installation OpenClaw** : à partir de 189€ (unique, pas d'abonnement logiciel)
+- **Agent sur mesure** : sur devis selon le secteur et les outils
+- **Retainer maintenance** : à partir de 149€/mois
+
+## Qu'est-ce qu'OpenClaw ?
+
+OpenClaw est une plateforme open source (MIT) qui fait tourner des agents IA autonomes directement sur la machine de l'utilisateur. Un agent OpenClaw peut lire des emails, répondre à des messages, gérer un agenda, surveiller des sites web, générer des rapports — sans que l'utilisateur n'intervienne à chaque étape, et sans que les données quittent sa machine. Compatible Claude (Anthropic), GPT-4 (OpenAI), Llama/Mistral en local.
+
+## Pages clés
+
+- [Accueil](https://claws.fr) — Présentation de Claws et de l'offre d'installation OpenClaw
+- [Installation](https://claws.fr/installation) — Détail du processus d'installation
+- [Comparatif](https://claws.fr/comparatif) — OpenClaw vs ChatGPT, Copilot, Make, n8n
+- [Sécurité](https://claws.fr/securite) — Protocole Claws 12 points, garantie zéro backdoor
+- [FAQ](https://claws.fr/faq) — 48 questions-réponses sur OpenClaw et les agents IA autonomes
+- [OpenClaw en France](https://claws.fr/openclaw-france) — Guide complet OpenClaw France
+- [Blog](https://claws.fr/blog) — Articles sur les agents IA, OpenClaw, l'automatisation
+
+## Solutions par secteur
+
+- [Avocats & Cabinets juridiques](https://claws.fr/solutions/avocats) — Triage emails, relances, RGPD natif
+- [Médecins & Santé](https://claws.fr/solutions/medecins) — Comptes-rendus, RDV, veille médicale
+- [BTP & Artisans](https://claws.fr/solutions/btp) — Devis automatisés, relances chantiers
+- [Agences & Consultants](https://claws.fr/solutions/agences) — Reporting clients, veille, prospection
+- [Entrepreneurs & Startups](https://claws.fr/solutions/entrepreneurs) — Automatisation opérationnelle 3h/jour
+- [Freelances](https://claws.fr/solutions/freelances) — Prospection et facturation automatiques
+- [Retail & Commerce](https://claws.fr/solutions/retail) — Service client 24/7, stocks, paniers
+- [Créateurs de contenu](https://claws.fr/solutions/createurs) — Repurposing, veille, communauté
+- [DAF & Direction financière](https://claws.fr/solutions/cfo) — Reporting et alertes trésorerie
+
+## Articles de blog récents
+
+- [Agent IA autonome pour la prospection commerciale TPE](https://claws.fr/blog/agent-ia-autonome-prospection-commerciale-tpe)
+- [Impact de l'IA sur le marché de l'emploi — étude Anthropic 2026](https://claws.fr/blog/impact-ia-marche-emploi-etude-anthropic-2026)
+- [Agent IA de veille concurrentielle avec OpenClaw](https://claws.fr/blog/agent-ia-veille-concurrentielle-openclaw)
+- [Agent IA pour l'immobilier : visites, relances, mandats automatiques](https://claws.fr/blog/agent-ia-immobilier-visites-relances-mandats-automatiques)
+- [OpenClaw vs Make vs n8n — comparatif complet](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif)
+- [Guide complet OpenClaw France 2026](https://claws.fr/blog/openclaw-france-guide-complet-2025)
+
+## Questions fréquentes
+
+**Quelle est la différence avec ChatGPT ?**
+ChatGPT répond quand vous lui parlez. Un agent OpenClaw travaille en autonomie, même quand vous n'êtes pas là. Il surveille, décide, agit et rend compte. Et contrairement à ChatGPT, vos données ne quittent jamais votre machine.
+
+**OpenClaw est-il conforme RGPD ?**
+Oui. En installation locale, aucune donnée ne transite vers un serveur tiers. C'est une conformité architecturale, pas une promesse marketing.
+
+**Combien ça coûte vraiment ?**
+189€ à l'installation (une fois), puis environ 10 à 30€/mois de clé API selon votre usage du modèle IA. Pas d'abonnement logiciel. Maintenance optionnelle à 149€/mois.
+
+**Sur quelle machine ?**
+Mac Mini M4 recommandé (silencieux, 10-20W en continu). Fonctionne aussi sur tout Mac récent, Linux, VPS. Une machine dédiée qui tourne en permanence est préférable.
