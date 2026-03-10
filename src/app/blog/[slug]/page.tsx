@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import AuthorBio from "@/components/AuthorBio";
 import type { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { getArticleFaq } from "@/lib/articleFaq";
 import { marked } from "marked";
 
 // Liens sectoriels par catégorie/keyword pour le maillage interne
@@ -59,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://claws.fr/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
-      authors: ["Claws"],
+      authors: ["Julie Decroix"],
     },
   };
 }
@@ -72,6 +74,7 @@ export default async function PostPage({ params }: Props) {
   const html = await marked(post.content);
   const relatedPosts = getRelatedPosts(slug, post);
   const sectorLink = getSectorLink(post);
+  const faqItems = getArticleFaq(post);
 
   const jsonLd = [
     {
@@ -81,7 +84,14 @@ export default async function PostPage({ params }: Props) {
       description: post.description,
       datePublished: post.date,
       dateModified: post.date,
-      author: { "@type": "Organization", name: "Claws", url: "https://claws.fr" },
+      author: {
+        "@type": "Person",
+        name: "Julie Decroix",
+        url: "https://claws.fr/a-propos",
+        sameAs: "https://www.linkedin.com/in/julie-d-712868181",
+        jobTitle: "Co-fondatrice et CEO",
+        worksFor: { "@type": "Organization", name: "Claws", url: "https://claws.fr" },
+      },
       publisher: { "@type": "Organization", name: "Claws", url: "https://claws.fr", "@id": "https://claws.fr/#organization", logo: { "@type": "ImageObject", url: "https://claws.fr/icon.png", width: 512, height: 512 } },
       wordCount: Math.round(post.content.split(/\s+/).length),
       speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".post-description", "h2"] },
@@ -99,6 +109,17 @@ export default async function PostPage({ params }: Props) {
         { "@type": "ListItem", position: 3, name: post.title, item: `https://claws.fr/blog/${post.slug}` },
       ],
     },
+    // FAQPage schema dynamique par article
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+
     ...(post.slug === "installer-openclaw-mac-mini-2025" ? [{
       "@context": "https://schema.org",
       "@type": "HowTo",
@@ -140,6 +161,20 @@ export default async function PostPage({ params }: Props) {
           </div>
         </header>
 
+        {/* Auteur — visible pour E-E-A-T */}
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "32px" }}>
+          <div style={{
+            width: 32, height: 32, borderRadius: "50%",
+            background: "linear-gradient(135deg, #E85D04 0%, #9a3c02 100%)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            fontSize: "12px", fontWeight: 700, color: "#fff", flexShrink: 0,
+            fontFamily: "var(--font-mono, monospace)",
+          }}>JD</div>
+          <span style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.45)" }}>
+            Par <a href="https://www.linkedin.com/in/julie-d-712868181" target="_blank" rel="noopener noreferrer" style={{ color: "#E85D04", textDecoration: "none" }}>Julie Decroix</a>, co-fondatrice Claws
+          </span>
+        </div>
+
         <div
           className="article-body"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -153,6 +188,53 @@ export default async function PostPage({ params }: Props) {
             </a>
           </div>
         )}
+
+        {/* Bio auteure complète */}
+        <AuthorBio />
+
+        {/* FAQ section */}
+        <section style={{ margin: "48px 0" }}>
+          <h2 style={{ fontSize: "1.1rem", fontFamily: "var(--font-mono, monospace)", color: "#E85D04", marginBottom: "24px", letterSpacing: "0.04em" }}>
+            // Questions fréquentes
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            {faqItems.map((faq, i) => (
+              <details key={i} style={{
+                background: "rgba(255,255,255,0.02)",
+                border: "1px solid rgba(255,255,255,0.07)",
+                borderRadius: "6px",
+                padding: "0",
+              }}>
+                <summary style={{
+                  padding: "16px 20px",
+                  cursor: "pointer",
+                  fontSize: "0.9rem",
+                  fontWeight: 600,
+                  color: "#F5F2EE",
+                  listStyle: "none",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "12px",
+                }}>
+                  {faq.question}
+                  <span style={{ color: "#E85D04", flexShrink: 0, fontSize: "1rem" }}>+</span>
+                </summary>
+                <p style={{
+                  padding: "0 20px 16px",
+                  fontSize: "0.875rem",
+                  color: "rgba(255,255,255,0.55)",
+                  lineHeight: 1.7,
+                  margin: 0,
+                  borderTop: "1px solid rgba(255,255,255,0.05)",
+                  paddingTop: "16px",
+                }}>
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
 
         <div className="article-cta">
           <h3>Vous souhaitez un agent OpenClaw pour votre entreprise ?</h3>
