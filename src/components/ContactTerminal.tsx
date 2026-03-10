@@ -68,7 +68,7 @@ export default function ContactTerminal() {
         const res = await fetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email: email, message: val }),
+          body: JSON.stringify({ name, email: email, message: val, _hp: "" }),
         });
 
         if (res.ok) {
