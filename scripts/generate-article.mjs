@@ -79,6 +79,7 @@ CONSIGNES STRICTES :
 - Écris en français impeccable, sans fautes
 - Évite les tirets cadratins (—)
 - Markdown : ## pour sections, ### pour sous-sections
+- Ne commence PAS le contenu par un titre H1 ou H2 reprenant le titre de l'article (il est déjà affiché par le template)
 
 Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown autour) :
 {
