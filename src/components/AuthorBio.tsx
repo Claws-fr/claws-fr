@@ -5,8 +5,8 @@ export default function AuthorBio() {
       alignItems: "flex-start",
       gap: "16px",
       padding: "24px",
-      background: "rgba(255,255,255,0.03)",
-      border: "1px solid rgba(255,255,255,0.07)",
+      background: "rgba(0,0,0,0.03)",
+      border: "1px solid rgba(0,0,0,0.08)",
       borderRadius: "8px",
       margin: "40px 0 32px",
     }}>
@@ -31,7 +31,7 @@ export default function AuthorBio() {
       {/* Info */}
       <div>
         <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap", marginBottom: "4px" }}>
-          <span style={{ fontWeight: 700, fontSize: "0.95rem", color: "#F5F2EE" }}>Julie Decroix</span>
+          <span style={{ fontWeight: 700, fontSize: "0.95rem", color: "#1a1a1a" }}>Julie Decroix</span>
           <span style={{
             fontSize: "0.7rem",
             fontFamily: "var(--font-mono, monospace)",
@@ -44,7 +44,7 @@ export default function AuthorBio() {
             CO-FONDATRICE CLAWS
           </span>
         </div>
-        <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", margin: "0 0 10px", lineHeight: 1.6 }}>
+        <p style={{ fontSize: "0.85rem", color: "rgba(0,0,0,0.55)", margin: "0 0 10px", lineHeight: 1.6 }}>
           Spécialiste OpenClaw et agents IA autonomes. Co-fondatrice de Claws, première agence française dédiée à l&apos;installation et la configuration professionnelle d&apos;OpenClaw.
         </p>
         <div style={{ display: "flex", gap: "12px" }}>
@@ -58,7 +58,7 @@ export default function AuthorBio() {
           </a>
           <a
             href="https://claws.fr"
-            style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.35)", textDecoration: "none", fontFamily: "var(--font-mono, monospace)" }}
+            style={{ fontSize: "0.78rem", color: "rgba(0,0,0,0.35)", textDecoration: "none", fontFamily: "var(--font-mono, monospace)" }}
           >
             claws.fr
           </a>
