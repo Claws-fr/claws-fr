@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", sector: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", sector: "", message: "", _hp: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   const sectors = [
@@ -18,6 +18,8 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    // Honeypot : si le champ caché est rempli = bot
+    if (form._hp) return;
     setStatus("sending");
     try {
       const res = await fetch("/api/contact", {
@@ -31,7 +33,12 @@ export default function ContactForm() {
       });
       if (res.ok) {
         setStatus("done");
-        // Google Ads conversion
+        // dataLayer push pour GTM (déclencher sur 'form_success' uniquement après 200)
+        if (typeof window !== "undefined") {
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).dataLayer.push({ event: "form_success" });
+        }
+        // Google Ads conversion directe (fallback sans GTM)
         if (typeof window !== "undefined" && (window as any).gtag) {
           (window as any).gtag("event", "conversion", { send_to: "AW-17974041887/DYp3Cl2woP4bEJ-62PpC" });
           (window as any).gtag("event", "generate_lead", { currency: "EUR", value: 189 });
@@ -74,6 +81,17 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      {/* Honeypot anti-bot — invisible pour les humains */}
+      <input
+        type="text"
+        name="_hp"
+        value={form._hp}
+        onChange={e => setForm({ ...form, _hp: e.target.value })}
+        style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none", tabIndex: -1 } as React.CSSProperties}
+        aria-hidden="true"
+        autoComplete="off"
+        tabIndex={-1}
+      />
       <style>{`
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         @media (max-width: 600px) { .contact-grid { grid-template-columns: 1fr !important; } }
