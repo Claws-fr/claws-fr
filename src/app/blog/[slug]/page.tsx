@@ -200,8 +200,8 @@ export default async function PostPage({ params }: Props) {
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {faqItems.map((faq, i) => (
               <details key={i} style={{
-                background: "rgba(255,255,255,0.02)",
-                border: "1px solid rgba(255,255,255,0.07)",
+                background: "rgba(0,0,0,0.03)",
+                border: "1px solid rgba(0,0,0,0.08)",
                 borderRadius: "6px",
                 padding: "0",
               }}>
@@ -210,7 +210,7 @@ export default async function PostPage({ params }: Props) {
                   cursor: "pointer",
                   fontSize: "0.9rem",
                   fontWeight: 600,
-                  color: "#F5F2EE",
+                  color: "#1a1a1a",
                   listStyle: "none",
                   display: "flex",
                   justifyContent: "space-between",
@@ -223,10 +223,10 @@ export default async function PostPage({ params }: Props) {
                 <p style={{
                   padding: "0 20px 16px",
                   fontSize: "0.875rem",
-                  color: "rgba(255,255,255,0.55)",
+                  color: "rgba(0,0,0,0.6)",
                   lineHeight: 1.7,
                   margin: 0,
-                  borderTop: "1px solid rgba(255,255,255,0.05)",
+                  borderTop: "1px solid rgba(0,0,0,0.06)",
                   paddingTop: "16px",
                 }}>
                   {faq.answer}
