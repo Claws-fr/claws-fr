@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", sector: "", message: "", _hp: "" });
+  const [mountedAt] = useState(() => Date.now());
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   const sectors = [
@@ -29,6 +30,8 @@ export default function ContactForm() {
           name: form.name,
           email: form.email,
           message: `Secteur : ${form.sector}\nTéléphone : ${form.phone || "non renseigné"}\n\n${form.message}`,
+          _hp: form._hp,
+          _elapsed: Date.now() - mountedAt,
         }),
       });
       if (res.ok) {

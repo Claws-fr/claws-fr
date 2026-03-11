@@ -34,7 +34,11 @@ function looksLikeBot(name: string, email: string, message: string): boolean {
   if (message.length > 5000) return true;
 
   // Contenu spam classique
-  const spamKeywords = ["buy now", "click here", "free money", "casino", "viagra", "crypto investment"];
+  const spamKeywords = [
+    "buy now", "click here", "free money", "casino", "viagra", "crypto investment",
+    "prêt rapide", "gagner de l'argent", "investissement garanti", "bitcoin", "forex",
+    "référencement pas cher", "backlink", "seo pas cher", "guest post",
+  ];
   const lower = message.toLowerCase();
   if (spamKeywords.some((kw) => lower.includes(kw))) return true;
 
@@ -54,11 +58,15 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { name, email, message, _hp } = body;
+    const { name, email, message, _hp, _elapsed } = body;
 
     // ── Honeypot : doit être vide (les bots le remplissent) ───────────────
     if (_hp && _hp !== "") {
-      // Simuler un succès pour ne pas alerter le bot
+      return NextResponse.json({ ok: true, qualified: false });
+    }
+
+    // ── Timing check : < 3 secondes = bot ────────────────────────────────
+    if (typeof _elapsed === "number" && _elapsed < 3000) {
       return NextResponse.json({ ok: true, qualified: false });
     }
 
