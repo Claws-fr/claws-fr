@@ -2943,6 +2943,154 @@ Les cabinets qui adoptent cette approche dès maintenant prennent une longueur d
 [Contactez Claws](https://claws.fr/contact) pour un audit gratuit de votre cabinet.
 `,
   },
+  {
+    slug: "automatiser-comptabilite-agent-ia-openclaw",
+    title: "Comment automatiser sa comptabilité avec un agent IA OpenClaw",
+    description:
+      "Factures, relances, rapprochements bancaires, notes de frais : découvrez comment un agent OpenClaw prend en charge votre comptabilité courante, sans risque et sans logiciel supplémentaire.",
+    date: "2026-03-15",
+    category: "Automatisation",
+    readTime: "9 min",
+    keywords: [
+      "automatiser comptabilité IA",
+      "agent IA comptabilité",
+      "OpenClaw comptabilité",
+      "automatisation facturation PME",
+      "relances clients automatiques",
+    ],
+    content: `
+## La comptabilité : le poste qui dévore le temps des dirigeants
+
+Selon une étude BPI France, les dirigeants de TPE-PME consacrent en moyenne **6 heures par semaine** à des tâches comptables et administratives : saisie de factures, relances clients en retard, préparation des notes de frais, rapprochement des relevés bancaires. Six heures qui ne servent ni à vendre, ni à produire, ni à développer.
+
+La bonne nouvelle : ces tâches sont précisément celles qu'un agent IA autonome excelle à automatiser. Répétitives, structurées, à faible valeur ajoutée humaine — elles correspondent exactement au profil des automatisations que [OpenClaw](https://openclaw.ai) gère le mieux.
+
+Voici comment mettre en place, concrètement, un agent comptable autonome pour votre entreprise.
+
+
+## Ce qu'un agent OpenClaw peut automatiser dans votre comptabilité
+
+### 1. La saisie et le suivi des factures clients
+
+Chaque fois qu'une facture est émise (depuis votre logiciel de facturation, votre CRM ou même un template Word), l'agent peut :
+
+- **Enregistrer la facture** dans un tableau de suivi centralisé (Notion, Airtable, Google Sheets)
+- **Suivre la date d'échéance** et déclencher des alertes internes à J-7
+- **Générer automatiquement les relances** par email à J+1, J+8 et J+15 après l'échéance, avec un ton progressivement plus ferme
+- **Mettre à jour le statut** dès réception du paiement (via webhook Stripe, Pennylane ou virement détecté)
+
+Résultat : zéro facture oubliée, zéro relance manquante, cash flow maîtrisé.
+
+
+### 2. Le rapprochement bancaire semi-automatique
+
+L'agent récupère votre relevé bancaire (export CSV/OFX depuis votre banque), le compare à vos factures en attente, et :
+
+- **Identifie les paiements reçus** et les associe automatiquement aux factures correspondantes
+- **Signale les écarts ou paiements inconnus** pour validation humaine
+- **Met à jour votre tableau de trésorerie** en temps réel
+
+Ce qui prenait 2 heures en fin de mois se réduit à une validation de 10 minutes.
+
+
+### 3. La collecte et le traitement des notes de frais
+
+Vos collaborateurs envoient leurs justificatifs par email ou Telegram. L'agent :
+
+- **Extrait le montant, la date, la catégorie et le fournisseur** grâce à la vision IA (Claude Sonnet)
+- **Crée l'entrée dans votre outil comptable** (Pennylane, QuickBooks, Sage...)
+- **Archive le justificatif** dans le bon dossier classé par mois et par employé
+- **Notifie le manager** pour validation avant export
+
+Fini les tickets perdus et les fins de mois chaotiques.
+
+
+### 4. Les rapports financiers hebdomadaires
+
+Chaque vendredi matin, l'agent génère et envoie un rapport automatique récapitulant :
+
+- Le chiffre d'affaires facturé vs encaissé de la semaine
+- Les factures impayées et leur ancienneté
+- L'état de la trésorerie prévisionnelle sur 30 jours
+- Les dépenses par catégorie vs budget
+
+Vous ouvrez votre Telegram ou email, vous lisez le résumé en 2 minutes, vous prenez vos décisions. Simple.
+
+
+## Exemple de workflow complet : de la facture au rapport
+
+Voici un scénario concret pour une agence de conseil avec 10 clients actifs :
+
+**Lundi 9h** : L'agent détecte que 3 nouvelles factures ont été créées dans Pennylane via l'API. Il les enregistre dans le suivi Notion et programme les alertes d'échéance.
+
+**Mercredi** : Une facture émise il y a 32 jours n'a toujours pas été réglée. L'agent envoie une relance email professionnelle et notifie le dirigeant sur Telegram.
+
+**Jeudi** : Un collaborateur envoie 4 reçus de restaurant via WhatsApp. L'agent extrait les données, crée 4 lignes dans le fichier de notes de frais, et archive les photos.
+
+**Vendredi 8h** : Le rapport hebdomadaire arrive automatiquement par email. Le dirigeant voit que le CA encaissé est en retard de 15% sur l'objectif — il peut agir immédiatement.
+
+**Fin du mois** : L'agent génère le rapprochement bancaire, associe 95% des transactions automatiquement, et présente les 5% restants pour validation humaine.
+
+
+## Quelle configuration technique ?
+
+Ce type d'automatisation ne nécessite pas de développement sur mesure. L'architecture standard chez Claws pour un agent comptable comprend :
+
+**Infrastructure :**
+- Mac Mini M4 ou M2 Pro (500 à 1 000€, amorti en 12 mois)
+- OpenClaw installé et configuré
+- Canal de communication : Telegram ou email
+
+**Intégrations :**
+- **Pennylane / QuickBooks** via API REST pour la lecture des factures et dépenses
+- **Google Sheets ou Notion** pour le tableau de suivi partagé
+- **Brevo / Mailgun** pour l'envoi automatique des relances clients
+- **Dropbox ou Google Drive** pour l'archivage des justificatifs
+
+**Sécurité :**
+- Toutes les données restent sur votre infrastructure locale
+- L'agent ne peut que lire et écrire dans les dossiers autorisés
+- Journaux d'audit complets de chaque action effectuée
+
+
+## Ce que l'agent ne fait pas (et ne doit pas faire)
+
+Un agent IA comptable n'est pas un expert-comptable. Il automatise les tâches mécaniques, mais ne remplace pas :
+
+- **Le conseil fiscal** : optimisation, choix du régime, déclarations complexes
+- **La validation finale** : tout export vers votre expert-comptable passe par votre validation
+- **Les décisions stratégiques** : investissement, croissance, financement
+
+L'objectif est simple : **donner à votre expert-comptable des données propres, à jour et complètes**, sans que vous passiez des heures à les préparer. Votre comptable gagne du temps, vous aussi, et sa facture baisse souvent en proportion.
+
+
+## Combien ça coûte, combien ça rapporte ?
+
+**Coût d'un agent comptable Claws :**
+- Installation et configuration : à partir de 189€ (une seule fois)
+- Maintenance mensuelle : à partir de 149€/mois (inclut les mises à jour et le support)
+- Infrastructure : Mac Mini existant ou acheté (~50€/mois amorti)
+
+**Ce que vous récupérez :**
+- 6 heures/semaine × 50€/heure = **1 200€/mois** de temps dirigeant libéré
+- Réduction des erreurs de saisie et des relances oubliées
+- Cash flow amélioré grâce aux relances systématiques (en moyenne +8 jours de DSO)
+- Facture expert-comptable réduite (moins de temps passé sur la saisie courante)
+
+**ROI typique : 3 à 4 semaines.**
+
+
+## Par où commencer ?
+
+La mise en place d'un agent comptable commence par un audit de votre flux actuel : quels outils utilisez-vous, quelles tâches vous prennent le plus de temps, quelles intégrations sont nécessaires.
+
+Chez Claws, cet audit est **gratuit et sans engagement**. En 30 minutes d'appel, nous identifions les 3 automatisations qui auront le plus d'impact pour votre activité.
+
+[Demandez votre audit gratuit →](https://claws.fr/contact)
+
+Parce que votre temps vaut mieux que de saisir des factures.
+`,
+  },
 ];
 
 export function getPostBySlug(slug: string): Post | undefined {
