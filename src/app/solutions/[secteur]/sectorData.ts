@@ -560,7 +560,7 @@ export const sectors: Record<string, Sector> = {
     ],
     faq: [
       { q: "Les données de santé de mes patients sont-elles sécurisées ?", a: "Oui. L'agent tourne sur votre propre machine, dans votre domicile ou cabinet. Aucune donnée de santé ne transite par un cloud externe. C'est architecturalement conforme aux exigences RGPD pour les données de santé de catégorie sensible." },
-      { q: "L'agent est-il compatible avec mon logiciel de télétransmission (Alaxione, Pyxvital, iDEAS) ?", a: "Partiellement. L'agent peut travailler avec les exports de ces logiciels. L'intégration directe dépend des APIs disponibles et est étudiée lors de l'installation." },
+      { q: "L'agent peut-il se connecter à mon logiciel de gestion infirmière (Winip, Infi-System, Alino…) ?", a: "Non, ces logiciels sont des applications locales fermées sans API. L'agent ne les remplace pas et ne s'y connecte pas. Il travaille en parallèle : gestion des communications, des relances, de la coordination, tout ce qui n'est pas dans votre logiciel de facturation." },
       { q: "Puis-je utiliser l'agent sur mon téléphone pendant les tournées ?", a: "Oui. L'agent est accessible via Telegram ou WhatsApp sur votre téléphone. Vous pouvez lui envoyer des mises à jour de patients depuis chez eux, il met à jour vos dossiers en temps réel." },
       { q: "L'agent peut-il gérer plusieurs infirmiers dans un cabinet de groupe ?", a: "Oui. La configuration multi-utilisateurs est possible. Chaque infirmier a son propre planning, ses propres patients, mais l'agent peut coordonner les tournées du cabinet et alerter l'ensemble de l'équipe en cas d'urgence." },
     ],
