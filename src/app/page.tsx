@@ -44,6 +44,7 @@ const sectors = [
   { slug: "cfo",           name: "DAF & Direction financière", tag: "Reporting et alertes trésorerie" },
   { slug: "avocats",       name: "Avocats & Cabinets juridiques", tag: "Triage emails, relances, RGPD natif" },
   { slug: "medecins",      name: "Médecins & Santé",         tag: "Comptes-rendus, RDV, veille médicale" },
+  { slug: "medecins-liberaux", name: "Médecins libéraux",    tag: "Courriers, comptes-rendus dictés, veille HAS" },
   { slug: "infirmiers-liberaux", name: "Infirmiers & Infirmières libéraux", tag: "Tournées, facturation CPAM, suivi patients" },
   { slug: "kines",         name: "Kinésithérapeutes",        tag: "Relances, observance, comptes-rendus" },
   { slug: "sages-femmes",  name: "Sages-femmes libérales",   tag: "Suivi grossesse, coordination, post-natal" },

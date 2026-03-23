@@ -510,6 +510,66 @@ export const sectors: Record<string, Sector> = {
     ],
   },
 
+  "medecins-liberaux": {
+    slug: "medecins-liberaux",
+    name: "Médecins libéraux",
+    headline: "Rendez 30% de votre temps aux patients. Pas aux formulaires.",
+    subheadline: "Claws installe OpenClaw sur votre machine et le configure pour votre cabinet libéral. Courriers, comptes-rendus, relances, veille médicale. Vos données de santé restent sur votre infrastructure, jamais sur un cloud.",
+    metaTitle: "OpenClaw pour médecins libéraux | Automatisation cabinet médical | Claws",
+    metaDesc: "Claws installe OpenClaw pour les médecins libéraux. Comptes-rendus dictés, courriers aux correspondants, relances patients, veille médicale. Données 100% locales. À partir de 189€.",
+    stat1: { value: "30%", label: "du temps médical absorbé par l'administratif" },
+    stat2: { value: "0", label: "donnée patient transmise à un cloud tiers" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
+    painPoints: [
+      { title: "Les comptes-rendus et courriers prennent vos soirées", desc: "Comptes-rendus de consultation, lettres aux médecins correspondants, courriers aux spécialistes, certificats. Entre 30 minutes et 2 heures de rédaction par jour, souvent en fin de journée quand vous êtes le plus fatigué." },
+      { title: "La gestion des résultats est chaotique", desc: "Résultats de biologie, comptes-rendus d'imagerie, retours des spécialistes. Les récupérer, les associer au bon dossier, contacter le patient quand c'est nécessaire, une organisation qui absorbe du temps et génère des oublis." },
+      { title: "Les données de santé sur des outils cloud, c'est risqué", desc: "Dicter vos consultations sur un outil cloud américain, passer par ChatGPT pour rédiger vos courriers, c'est une violation potentielle du secret médical. Un risque déontologique et juridique que vous ne pouvez pas ignorer." },
+      { title: "La veille médicale ne se fait jamais correctement", desc: "Recommandations HAS, nouvelles études, mises à jour des référentiels de bonne pratique. Vous savez qu'il faudrait faire une veille régulière. Vous n'avez pas le temps. Les abonnements coûtent cher. Et l'essentiel vous échappe." },
+    ],
+    useCases: [
+      {
+        emoji: "01",
+        title: "Comptes-rendus dictés en 3 minutes",
+        desc: "Après chaque consultation, dictez vos observations sur votre téléphone. L'agent transcrit, structure en compte-rendu médical formaté (motif, antécédents, examen clinique, conclusion, prescriptions, suivi), et le verse au dossier. Le tout sans toucher un clavier.",
+        result: "20 min de frappe → 3 min de dictée.",
+      },
+      {
+        emoji: "02",
+        title: "Courriers aux médecins correspondants",
+        desc: "Vous avez besoin d'adresser un patient à un cardiologue, un dermatologue, un spécialiste. Dictez le motif, l'agent rédige le courrier de liaison structuré dans les règles de l'art, avec les antécédents pertinents et les éléments cliniques. Vous relisez et signez.",
+        result: "Courrier rédigé en 2 min. Qualité constante.",
+      },
+      {
+        emoji: "03",
+        title: "Suivi des résultats et relances patients",
+        desc: "L'agent surveille les résultats attendus (biologie, imagerie, retours de spécialistes) et vous alerte si un résultat n'est pas rentré sous X jours. Pour les résultats anormaux que vous avez marqués, il peut envoyer une convocation au patient automatiquement.",
+        result: "Aucun résultat critique qui passe sans action.",
+      },
+      {
+        emoji: "04",
+        title: "Gestion des renouvellements d'ordonnances",
+        desc: "Pour les patients chroniques, l'agent surveille les dates de renouvellement et vous présente chaque semaine la liste des ordonnances à renouveler avec le contexte clinique du patient. Vous validez, il prépare le document.",
+        result: "Continuité du traitement garantie. Moins d'appels en urgence.",
+      },
+      {
+        emoji: "05",
+        title: "Veille médicale hebdomadaire",
+        desc: "Chaque lundi matin, l'agent vous envoie un résumé des nouvelles recommandations HAS, des alertes de pharmacovigilance ANSM et des études pertinentes dans vos domaines de pratique. Filtré, résumé, exploitable en 5 minutes.",
+        result: "Restez à jour sans abonnement coûteux ni soirées sacrifiées.",
+      },
+    ],
+    faq: [
+      { q: "Mon logiciel médical (Doctolib Médecin, HelloDoc, Weda, Medistory, AxiSanté…) est-il compatible ?", a: "Ces logiciels sont des systèmes fermés sans API publique. L'agent ne s'y connecte pas et ne les remplace pas. Il travaille en parallèle sur tout ce qu'ils ne couvrent pas : rédaction de courriers, comptes-rendus dictés, veille médicale, suivi des résultats, communications patients." },
+      { q: "Le secret médical est-il respecté ?", a: "Oui. L'agent tourne sur votre propre machine, dans votre cabinet. Aucune donnée patient ne transite par un serveur externe. C'est la différence fondamentale avec les outils cloud : votre infrastructure, vos données, votre contrôle." },
+      { q: "L'agent peut-il rédiger des prescriptions ou faire des diagnostics ?", a: "Non, et ce n'est pas son rôle. L'agent est un outil de rédaction, d'organisation et de communication. Le diagnostic, la prescription et la décision clinique restent intégralement de votre responsabilité médicale." },
+      { q: "Est-ce que ça fonctionne pour un cabinet de groupe ou une MSP ?", a: "Oui. La configuration multi-utilisateurs est possible. Chaque médecin a son propre agent, configuré selon sa spécialité et ses habitudes, avec des données strictement cloisonnées entre praticiens." },
+    ],
+    relatedPosts: [
+      { slug: "openclaw-rgpd-donnees-locales", title: "OpenClaw et RGPD : vos données restent chez vous" },
+      { slug: "agent-ia-gestion-emails-professionnels", title: "Agent IA pour gérer vos communications professionnelles" },
+    ],
+  },
+
   "infirmiers-liberaux": {
     slug: "infirmiers-liberaux",
     name: "Infirmiers & Infirmières libéraux",
