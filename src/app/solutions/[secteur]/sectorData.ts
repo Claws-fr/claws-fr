@@ -509,6 +509,186 @@ export const sectors: Record<string, Sector> = {
       { slug: "automatiser-relances-commerciales-agent-ia", title: "Automatiser les relances commerciales" },
     ],
   },
+
+  "infirmiers-liberaux": {
+    slug: "infirmiers-liberaux",
+    name: "Infirmiers & Infirmières libéraux",
+    headline: "Moins de paperasse. Plus de patients. Zéro donnée sur le cloud.",
+    subheadline: "Claws installe OpenClaw sur votre machine et le configure pour votre cabinet de soins infirmiers. Gestion des tournées, facturation CPAM, relances, plannings. Vos données de santé restent chez vous.",
+    metaTitle: "OpenClaw pour infirmiers et infirmières libéraux | Installation Claws",
+    metaDesc: "Claws installe OpenClaw pour les infirmiers et infirmières libéraux. Tournées optimisées, facturation CPAM automatisée, relances patients. Données de santé 100% locales. À partir de 189€.",
+    stat1: { value: "2h", label: "perdues par jour en administratif" },
+    stat2: { value: "0", label: "donnée patient sur un cloud externe" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
+    painPoints: [
+      { title: "La facturation CPAM prend vos soirées", desc: "Saisir les actes, coder les cotations NGAP, télétransmettre, gérer les rejets, le suivi des remboursements. Entre 30 et 60 minutes par jour pour un cabinet solo, c'est du temps pris sur votre vie personnelle." },
+      { title: "Les tournées sont difficiles à optimiser", desc: "Gérer l'ordre de passage, les priorités médicales, les nouvelles prescriptions arrivées dans la nuit, les annulations de dernière minute. Chaque matin recommence le même puzzle." },
+      { title: "Les ordonnances et renouvellements passent à la trappe", desc: "Surveiller les dates de fin d'ordonnance pour chaque patient, relancer le médecin prescripteur, s'assurer que la continuité des soins est garantie. Impossible à tenir manuellement pour 40+ patients." },
+      { title: "La coordination avec les autres soignants est chaotique", desc: "Médecin traitant, kinésithérapeute, aide à domicile, famille, informer tout le monde des évolutions de l'état de santé du patient prend du temps et génère des oublis." },
+    ],
+    useCases: [
+      {
+        emoji: "01",
+        title: "Optimisation des tournées",
+        desc: "L'agent organise chaque matin votre tournée en tenant compte des priorités médicales, des horaires de prise de médicaments, des contraintes géographiques et des nouvelles prescriptions reçues. Il vous envoie le planning sur votre téléphone avant 7h.",
+        result: "30 min de préparation de tournée → 5 minutes.",
+      },
+      {
+        emoji: "02",
+        title: "Suivi des ordonnances et renouvellements",
+        desc: "L'agent surveille les dates de fin d'ordonnance de chaque patient et vous alerte 7 jours avant l'échéance. Il peut contacter automatiquement le cabinet médical pour demander le renouvellement selon vos instructions.",
+        result: "Zéro interruption de soins pour cause d'ordonnance expirée.",
+      },
+      {
+        emoji: "03",
+        title: "Aide à la facturation CPAM",
+        desc: "L'agent pré-remplit vos feuilles de soins à partir de vos actes de la journée, vérifie la cohérence des cotations NGAP et identifie les risques de rejet avant transmission. Vous validez, il prépare.",
+        result: "Temps de facturation réduit de 50%. Moins de rejets.",
+      },
+      {
+        emoji: "04",
+        title: "Coordination soignants et famille",
+        desc: "L'agent envoie des mises à jour régulières aux médecins référents et aux aidants de vos patients selon les protocoles que vous définissez. Évolution de l'état, incidents, changements de traitement transmis automatiquement.",
+        result: "Coordination fluide sans appels chronophages.",
+      },
+      {
+        emoji: "05",
+        title: "Gestion des absences et remplacements",
+        desc: "En cas d'absence (vacances, maladie), l'agent prépare le dossier de passation pour votre remplaçant : liste des patients, protocoles de soins, particularités, contacts d'urgence. Un document complet généré en quelques minutes.",
+        result: "Passation complète en 15 min. Remplaçant opérationnel dès le premier jour.",
+      },
+    ],
+    faq: [
+      { q: "Les données de santé de mes patients sont-elles sécurisées ?", a: "Oui. L'agent tourne sur votre propre machine, dans votre domicile ou cabinet. Aucune donnée de santé ne transite par un cloud externe. C'est architecturalement conforme aux exigences RGPD pour les données de santé de catégorie sensible." },
+      { q: "L'agent est-il compatible avec mon logiciel de télétransmission (Alaxione, Pyxvital, iDEAS) ?", a: "Partiellement. L'agent peut travailler avec les exports de ces logiciels. L'intégration directe dépend des APIs disponibles et est étudiée lors de l'installation." },
+      { q: "Puis-je utiliser l'agent sur mon téléphone pendant les tournées ?", a: "Oui. L'agent est accessible via Telegram ou WhatsApp sur votre téléphone. Vous pouvez lui envoyer des mises à jour de patients depuis chez eux, il met à jour vos dossiers en temps réel." },
+      { q: "L'agent peut-il gérer plusieurs infirmiers dans un cabinet de groupe ?", a: "Oui. La configuration multi-utilisateurs est possible. Chaque infirmier a son propre planning, ses propres patients, mais l'agent peut coordonner les tournées du cabinet et alerter l'ensemble de l'équipe en cas d'urgence." },
+    ],
+    relatedPosts: [
+      { slug: "agent-ia-gestion-emails-professionnels", title: "Agent IA pour gérer vos communications" },
+      { slug: "openclaw-rgpd-donnees-locales", title: "OpenClaw et RGPD : vos données restent chez vous" },
+    ],
+  },
+
+  kines: {
+    slug: "kines",
+    name: "Kinésithérapeutes libéraux",
+    headline: "L'agent IA qui remplit votre agenda et réduit les abandons de traitement.",
+    subheadline: "Claws installe OpenClaw pour votre cabinet de kinésithérapie. Relances patients, gestion des séries de soins, suivi d'observance, comptes-rendus. Données patients 100% locales.",
+    metaTitle: "OpenClaw pour kinésithérapeutes libéraux | Installation Claws",
+    metaDesc: "Claws installe OpenClaw pour les kinésithérapeutes libéraux. Relances patients, suivi des séries, comptes-rendus automatiques. Données 100% locales. À partir de 189€.",
+    stat1: { value: "30%", label: "des patients abandonnent avant la fin des séances" },
+    stat2: { value: "0", label: "donnée patient sur un serveur externe" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
+    painPoints: [
+      { title: "Les patients abandonnent les séries de soins", desc: "En kinésithérapie, l'abandon en cours de traitement compromet les résultats et vide l'agenda. 30% des patients ne finissent pas leur série prescrite. Relancer chacun manuellement est chronophage." },
+      { title: "Les comptes-rendus aux médecins prennent du temps", desc: "Après chaque bilan initial et en fin de série, rédiger un compte-rendu structuré pour le médecin prescripteur prend 20 à 30 minutes. Multiplié par le volume de patients, c'est une heure ou deux chaque semaine." },
+      { title: "La gestion des créneaux et annulations est chaotique", desc: "Les annulations de dernière minute laissent des trous dans l'agenda. Gérer une liste d'attente, joindre le bon patient au bon moment pour combler le créneau vide, c'est du temps passé au téléphone." },
+      { title: "Le suivi des exercices à domicile n'existe pas", desc: "Vous prescrivez des exercices inter-séances. Vous ne saurez jamais si le patient les fait. Résultat : les progrès sont plus lents, le traitement dure plus longtemps, la frustration monte des deux côtés." },
+    ],
+    useCases: [
+      {
+        emoji: "06",
+        title: "Relances et suivi d'observance",
+        desc: "L'agent surveille les présences et envoie une relance douce aux patients qui n'ont pas repris RDV après 10 jours. Pour les séries en cours, il envoie un rappel de motivation entre les séances avec les exercices prescrits.",
+        result: "Réduction de 40% des abandons de traitement.",
+      },
+      {
+        emoji: "07",
+        title: "Gestion des annulations et liste d'attente",
+        desc: "Dès qu'une annulation arrive, l'agent contacte automatiquement le prochain patient de votre liste d'attente pour proposer le créneau libéré. Plus de trous dans votre agenda, plus de temps passé au téléphone.",
+        result: "Agenda plein à 95%. Zéro appel pour combler les trous.",
+      },
+      {
+        emoji: "08",
+        title: "Comptes-rendus de bilan et de fin de série",
+        desc: "Dictez vos observations après le bilan initial ou en fin de traitement. L'agent structure en compte-rendu kinésithérapique formaté, avec les objectifs atteints, les déficits résiduels et les recommandations, prêt à envoyer au prescripteur.",
+        result: "Compte-rendu en 3 min de dictée au lieu de 25 min de saisie.",
+      },
+      {
+        emoji: "09",
+        title: "Programme d'exercices personnalisé",
+        desc: "L'agent génère un programme d'exercices illustré à partir de vos prescriptions et l'envoie au patient par email après chaque séance. Le patient a toujours son programme à portée de main, avec les fréquences et les points d'attention.",
+        result: "Meilleure observance inter-séances. Progrès accélérés.",
+      },
+      {
+        emoji: "10",
+        title: "Rappels de RDV et réduction des no-shows",
+        desc: "L'agent envoie automatiquement un rappel 48h et 2h avant chaque séance. Les patients peuvent confirmer ou annuler directement. Le taux de no-show chute immédiatement.",
+        result: "Réduction des no-shows de 60%.",
+      },
+    ],
+    faq: [
+      { q: "Les données de mes patients sont-elles protégées ?", a: "Oui. L'agent tourne sur votre propre machine, dans votre cabinet. Aucune donnée de santé ne transite par un serveur externe. Conforme aux exigences RGPD pour les données de santé." },
+      { q: "L'agent est-il compatible avec mon logiciel de gestion (Doctolib, Desmos, Cliniciel) ?", a: "Partiellement selon les outils et leurs APIs disponibles. Claws étudie les intégrations possibles lors de l'installation. Dans tous les cas, l'agent fonctionne en parallèle de votre logiciel existant sans le remplacer." },
+      { q: "L'agent peut-il contacter les patients directement ?", a: "Oui, par email ou SMS (selon la configuration). Les messages partent de votre adresse ou numéro, dans le ton que vous avez défini. Chaque message peut être soumis à votre validation avant envoi si vous préférez." },
+      { q: "Est-ce que l'agent peut aider à la télékine ?", a: "L'agent peut gérer la logistique de la télékine : rappels de connexion, envoi du lien de visio, recueil du questionnaire pré-séance. Le soin lui-même reste évidemment de votre responsabilité." },
+    ],
+    relatedPosts: [
+      { slug: "agent-ia-gestion-emails-professionnels", title: "Agent IA pour gérer vos communications" },
+      { slug: "openclaw-rgpd-donnees-locales", title: "OpenClaw et RGPD : vos données restent chez vous" },
+    ],
+  },
+
+  "sages-femmes": {
+    slug: "sages-femmes",
+    name: "Sages-femmes libérales",
+    headline: "Plus de temps pour accompagner. Moins de temps à administrer.",
+    subheadline: "Claws installe OpenClaw pour votre cabinet de sage-femme libérale. Suivi de grossesse, rappels prénataux, coordination avec les maternités, comptes-rendus. Données de santé 100% locales.",
+    metaTitle: "OpenClaw pour sages-femmes libérales | Installation Claws",
+    metaDesc: "Claws installe OpenClaw pour les sages-femmes libérales. Suivi de grossesse, rappels prénataux, coordination maternités, comptes-rendus. Données 100% locales. À partir de 189€.",
+    stat1: { value: "45min", label: "d'admin par patiente par mois en moyenne" },
+    stat2: { value: "0", label: "donnée de santé sur un cloud externe" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
+    painPoints: [
+      { title: "Le suivi de grossesse est complexe à coordonner", desc: "Chaque patiente a son propre calendrier de consultations, d'examens, d'analyses. S'assurer que rien ne manque, que les résultats sont reçus, que les prochaines étapes sont planifiées, c'est un suivi permanent." },
+      { title: "La coordination avec les maternités et les médecins est chronophage", desc: "Transmissions, comptes-rendus de consultations, résultats d'examens à partager, informer le pédiatre ou l'obstétricien d'une situation particulière. Chaque communication prend du temps." },
+      { title: "Les séances de préparation à l'accouchement demandent de l'organisation", desc: "Gérer les groupes, les absences, les rattrapage individuels, envoyer les supports, s'assurer que chaque couple suit l'intégralité du programme. Un vrai travail de logistique." },
+      { title: "Le suivi post-natal est difficile à maintenir", desc: "Après l'accouchement, le suivi des nouvelles mamans (rééducation périnéale, allaitement, dépression post-partum) requiert des relances régulières que la charge de travail rend difficiles à maintenir." },
+    ],
+    useCases: [
+      {
+        emoji: "11",
+        title: "Suivi de grossesse personnalisé",
+        desc: "L'agent gère le calendrier de suivi de chaque patiente : rappels des consultations obligatoires, alertes pour les examens de biologie ou d'imagerie à prévoir, vérification que les résultats ont bien été reçus. Rien ne passe à la trappe.",
+        result: "Zéro examen oublié. Grossesse suivie à 100%.",
+      },
+      {
+        emoji: "12",
+        title: "Rappels et communications prénatales",
+        desc: "L'agent envoie automatiquement les rappels de RDV, les informations importantes par trimestre (documents à préparer, examens à planifier, droits à connaître) et les séances de préparation à l'accouchement. Votre patiente ne rate rien.",
+        result: "Mieux informées. Moins de questions en urgence.",
+      },
+      {
+        emoji: "13",
+        title: "Coordination avec l'équipe médicale",
+        desc: "L'agent prépare les transmissions aux maternités, les comptes-rendus pour le médecin traitant ou l'obstétricien, et les courriers de situations particulières. Vous dictez, il formate et envoie.",
+        result: "Coordination fluide sans délai de rédaction.",
+      },
+      {
+        emoji: "14",
+        title: "Suivi post-natal et rééducation",
+        desc: "Après l'accouchement, l'agent envoie un message de suivi à J+3, J+7 et J+30, propose les RDV de rééducation périnéale au bon moment et envoie les ressources sur l'allaitement ou les premiers soins selon les besoins.",
+        result: "Continuité du soin après la maternité sans surcharge.",
+      },
+      {
+        emoji: "15",
+        title: "Comptes-rendus de consultation",
+        desc: "Dictez vos observations après chaque consultation. L'agent structure en compte-rendu de sage-femme formaté, avec les constantes, l'évolution de la grossesse, les prescriptions et les prochaines étapes.",
+        result: "Compte-rendu en 3 min au lieu de 20 min de saisie.",
+      },
+    ],
+    faq: [
+      { q: "Les données de santé de mes patientes sont-elles sécurisées ?", a: "Oui. L'agent tourne sur votre propre machine. Aucune donnée de santé périnatale ne transite par un cloud externe. Conforme aux exigences RGPD pour les données de santé à caractère sensible." },
+      { q: "L'agent peut-il s'intégrer à mon logiciel de suivi (Perinat, Natéla) ?", a: "Selon les APIs disponibles. Claws évalue les possibilités lors de l'appel de configuration. Dans tous les cas, l'agent peut travailler depuis vos exports et en parallèle de vos outils existants." },
+      { q: "L'agent peut-il gérer les urgences ou les situations à risque ?", a: "L'agent n'est pas un outil de triage médical. Il peut vous alerter si une patiente ne répond pas à un suivi ou manque un RDV critique, mais la décision médicale reste toujours de votre responsabilité." },
+      { q: "Est-ce que ça fonctionne pour une sage-femme qui se déplace à domicile ?", a: "Oui. L'agent est accessible via Telegram ou WhatsApp. Vous pouvez lui envoyer des mises à jour depuis le domicile de la patiente, il met à jour les dossiers en temps réel et vous prépare la prochaine visite." },
+    ],
+    relatedPosts: [
+      { slug: "agent-ia-gestion-emails-professionnels", title: "Agent IA pour gérer vos communications" },
+      { slug: "openclaw-rgpd-donnees-locales", title: "OpenClaw et RGPD : vos données restent chez vous" },
+    ],
+  },
 };
 
 export const sectorSlugs = Object.keys(sectors);
