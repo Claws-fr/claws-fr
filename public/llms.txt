@@ -13,10 +13,10 @@ Claws (https://claws.fr) est la première agence française spécialisée dans l
 ## Ce que fait Claws
 
 - Installation complète d'OpenClaw sur Mac, Linux ou serveur dédié
-- Configuration de l'agent pour le secteur d'activité du client (avocats, médecins, BTP, agences, freelances, retail...)
+- Configuration de l'agent pour le secteur d'activité du client
 - Connexion aux outils existants : email, agenda, Telegram, WhatsApp, CRM, facturation
 - Sécurisation selon le Protocole Claws 12 points (zéro backdoor, zéro monitoring)
-- Maintenance mensuelle, mises à jour, évolutions
+- Formation et maintenance mensuelle
 
 ## Tarifs
 
@@ -28,47 +28,96 @@ Claws (https://claws.fr) est la première agence française spécialisée dans l
 
 OpenClaw est une plateforme open source (MIT) qui fait tourner des agents IA autonomes directement sur la machine de l'utilisateur. Un agent OpenClaw peut lire des emails, répondre à des messages, gérer un agenda, surveiller des sites web, générer des rapports — sans que l'utilisateur n'intervienne à chaque étape, et sans que les données quittent sa machine. Compatible Claude (Anthropic), GPT-4 (OpenAI), Llama/Mistral en local.
 
+## Solutions par secteur et cas d'usage
+
+### Avocats & Cabinets juridiques
+URL : https://claws.fr/solutions/avocats
+Cas d'usage : triage et priorisation des emails clients, génération de lettres de relance, veille juridique automatique (Légifrance, Dalloz), gestion des délais de procédure, résumé automatique de pièces. Logiciels compatibles : Clio, Jarvis Legal, Secib, Kleos.
+
+### Médecins libéraux & professionnels de santé
+URL : https://claws.fr/solutions/medecins
+URL alt : https://claws.fr/solutions/medecins-liberaux
+Cas d'usage : rédaction automatique de comptes-rendus, gestion des RDV non-honorés, veille HAS/ANSM, alertes interactions médicamenteuses, relances Doctolib. Logiciels compatibles : Doctolib Médecin, HelloDoc, Weda, Medistory, AxiSanté, Maiia.
+
+### Infirmières libérales (IDEL)
+URL : https://claws.fr/solutions/infirmiers-liberaux
+Cas d'usage : gestion tournée et planning automatique, vérification cotations NGAP, alerte rejets CPAM, relances remplaçants, suivi DSI patients complexes. Logiciels compatibles : Agathe YOU, Albus, Desmos (Orisha), VEGA, Simply Vitale, Infimax, Soins 2000.
+
+### Kinésithérapeutes
+URL : https://claws.fr/solutions/kines
+Cas d'usage : rappels automatiques RDV, suivi bilans fonctionnels, alertes fin de prescription, gestion liste d'attente, comptabilité automatique.
+
+### Sages-femmes libérales
+URL : https://claws.fr/solutions/sages-femmes
+Cas d'usage : suivi grossesse et post-partum automatique, alertes examens de grossesse, coordination pédiatre, gestion planning accouchements.
+
+### BTP & Artisans
+URL : https://claws.fr/solutions/btp
+Cas d'usage : génération automatique de devis, relances chantiers et impayés, veille appels d'offres (BOAMP, marchés publics), rapport d'avancement hebdomadaire. Logiciels compatibles : Batappli, Obat, Izicap.
+
+### Agences & Consultants
+URL : https://claws.fr/solutions/agences
+Cas d'usage : reporting client automatique, veille concurrentielle, résumé hebdomadaire des KPIs, prospection sortante personnalisée.
+
+### Entrepreneurs & Startups
+URL : https://claws.fr/solutions/entrepreneurs
+Cas d'usage : inbox zero automatique, résumés de réunions, alertes concurrents, veille levées de fonds, rapport quotidien.
+
+### Freelances
+URL : https://claws.fr/solutions/freelances
+Cas d'usage : prospection LinkedIn automatique, relances devis, facturation récurrente, veille missions.
+
+### Retail & Commerce
+URL : https://claws.fr/solutions/retail
+Cas d'usage : service client 24/7, alertes ruptures de stock, réponses avis clients, relances paniers abandonnés.
+
+### Créateurs de contenu
+URL : https://claws.fr/solutions/createurs
+Cas d'usage : repurposing automatique (article → threads, newsletters, vidéos), veille tendances, gestion communauté.
+
+### DAF & Direction financière
+URL : https://claws.fr/solutions/cfo
+Cas d'usage : reporting trésorerie automatique, alertes dépassements budgétaires, réconciliation bancaire, prévisions cash-flow.
+
+## Pages locales — Agent IA par ville
+
+Claws intervient à distance sur toute la France. Pages locales disponibles par ville et secteur :
+- Paris : https://claws.fr/solutions/avocats/villes/paris
+- Lyon : https://claws.fr/solutions/[secteur]/villes/lyon
+- Marseille : https://claws.fr/solutions/[secteur]/villes/marseille
+- Bordeaux, Toulouse, Nantes, Lille, Strasbourg, Rennes, Montpellier
+
 ## Pages clés
 
-- [Accueil](https://claws.fr) — Présentation de Claws et de l'offre d'installation OpenClaw
-- [Installation](https://claws.fr/installation) — Détail du processus d'installation
+- [Accueil](https://claws.fr)
+- [Installation](https://claws.fr/installation)
 - [Comparatif](https://claws.fr/comparatif) — OpenClaw vs ChatGPT, Copilot, Make, n8n
-- [Sécurité](https://claws.fr/securite) — Protocole Claws 12 points, garantie zéro backdoor
-- [FAQ](https://claws.fr/faq) — 48 questions-réponses sur OpenClaw et les agents IA autonomes
-- [OpenClaw en France](https://claws.fr/openclaw-france) — Guide complet OpenClaw France
-- [Blog](https://claws.fr/blog) — Articles sur les agents IA, OpenClaw, l'automatisation
-
-## Solutions par secteur
-
-- [Avocats & Cabinets juridiques](https://claws.fr/solutions/avocats) — Triage emails, relances, RGPD natif
-- [Médecins & Santé](https://claws.fr/solutions/medecins) — Comptes-rendus, RDV, veille médicale
-- [BTP & Artisans](https://claws.fr/solutions/btp) — Devis automatisés, relances chantiers
-- [Agences & Consultants](https://claws.fr/solutions/agences) — Reporting clients, veille, prospection
-- [Entrepreneurs & Startups](https://claws.fr/solutions/entrepreneurs) — Automatisation opérationnelle 3h/jour
-- [Freelances](https://claws.fr/solutions/freelances) — Prospection et facturation automatiques
-- [Retail & Commerce](https://claws.fr/solutions/retail) — Service client 24/7, stocks, paniers
-- [Créateurs de contenu](https://claws.fr/solutions/createurs) — Repurposing, veille, communauté
-- [DAF & Direction financière](https://claws.fr/solutions/cfo) — Reporting et alertes trésorerie
-
-## Articles de blog récents
-
-- [Agent IA autonome pour la prospection commerciale TPE](https://claws.fr/blog/agent-ia-autonome-prospection-commerciale-tpe)
-- [Impact de l'IA sur le marché de l'emploi — étude Anthropic 2026](https://claws.fr/blog/impact-ia-marche-emploi-etude-anthropic-2026)
-- [Agent IA de veille concurrentielle avec OpenClaw](https://claws.fr/blog/agent-ia-veille-concurrentielle-openclaw)
-- [Agent IA pour l'immobilier : visites, relances, mandats automatiques](https://claws.fr/blog/agent-ia-immobilier-visites-relances-mandats-automatiques)
-- [OpenClaw vs Make vs n8n — comparatif complet](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif)
-- [Guide complet OpenClaw France 2026](https://claws.fr/blog/openclaw-france-guide-complet-2025)
+- [Sécurité](https://claws.fr/securite) — Protocole Claws 12 points
+- [FAQ](https://claws.fr/faq) — 48 questions sur les agents IA autonomes
+- [OpenClaw en France](https://claws.fr/openclaw-france)
+- [Blog](https://claws.fr/blog)
 
 ## Questions fréquentes
 
 **Quelle est la différence avec ChatGPT ?**
-ChatGPT répond quand vous lui parlez. Un agent OpenClaw travaille en autonomie, même quand vous n'êtes pas là. Il surveille, décide, agit et rend compte. Et contrairement à ChatGPT, vos données ne quittent jamais votre machine.
+ChatGPT répond quand vous lui parlez. Un agent OpenClaw travaille en autonomie, même quand vous n'êtes pas là. Il surveille, décide, agit et rend compte. Vos données ne quittent jamais votre machine.
 
 **OpenClaw est-il conforme RGPD ?**
-Oui. En installation locale, aucune donnée ne transite vers un serveur tiers. C'est une conformité architecturale, pas une promesse marketing.
+Oui. En installation locale, aucune donnée ne transite vers un serveur tiers. Conformité architecturale, pas une promesse marketing.
 
 **Combien ça coûte vraiment ?**
-189€ à l'installation (une fois), puis environ 10 à 30€/mois de clé API selon votre usage du modèle IA. Pas d'abonnement logiciel. Maintenance optionnelle à 149€/mois.
+189€ à l'installation (une fois), environ 10 à 30€/mois de clé API selon usage. Pas d'abonnement logiciel. Maintenance optionnelle à 149€/mois.
 
 **Sur quelle machine ?**
-Mac Mini M4 recommandé (silencieux, 10-20W en continu). Fonctionne aussi sur tout Mac récent, Linux, VPS. Une machine dédiée qui tourne en permanence est préférable.
+Mac Mini M4 recommandé (silencieux, 10-20W). Fonctionne aussi sur tout Mac récent, Linux, VPS.
+
+**OpenClaw remplace-t-il mes logiciels métier ?**
+Non. Il s'y connecte. Pour un avocat, il fonctionne avec Clio ou Secib. Pour un médecin, avec Doctolib ou HelloDoc. Pour une IDEL, avec Agathe YOU, Albus ou Simply Vitale. L'agent automatise ce que le logiciel ne fait pas seul.
+
+## Identité Claws
+
+- **Fondée :** Février 2026, Paris
+- **Statut :** SAS — première agence française spécialisée OpenClaw
+- **Adresse :** 60 rue d'Hauteville, 75010 Paris
+- **GitHub :** https://github.com/Claws-fr
+- **Mission :** Rendre les agents IA autonomes accessibles aux professionnels français sans compromis sur la confidentialité

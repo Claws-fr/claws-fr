@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
 import { sectorSlugs } from "./solutions/[secteur]/sectorData";
 
+const VILLES_SLUGS = ["paris", "lyon", "marseille", "bordeaux", "toulouse", "nantes", "lille", "strasbourg", "rennes", "montpellier"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const blogEntries = posts.map((post) => ({
@@ -27,6 +29,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     })),
+    ...sectorSlugs.flatMap((secteur) =>
+      VILLES_SLUGS.map((ville) => ({
+        url: `https://claws.fr/solutions/${secteur}/villes/${ville}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.75,
+      }))
+    ),
     ...blogEntries,
   ];
 }
