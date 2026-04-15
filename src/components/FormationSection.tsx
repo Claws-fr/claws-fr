@@ -27,7 +27,7 @@ const modules = [
   },
   {
     num: "02",
-    title: "n8n — Automatiser sans coder",
+    title: "Make — Automatiser sans coder",
     duration: "3h",
     desc: "Workflows, triggers, intégrations API. Zéro ligne de code, résultats concrets.",
   },
