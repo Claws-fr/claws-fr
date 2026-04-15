@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AgentDemo from "@/components/AgentDemo";
+import FormationSection from "@/components/FormationSection";
 
 const differentiators = [
   {
@@ -343,6 +344,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* FORMATIONS IA */}
+        <FormationSection />
 
         {/* TÉMOIGNAGES - style magazine */}
         <section style={{ background: "#F5F2EE", padding: "80px 24px", borderTop: "1px solid #E8E4DF" }}>

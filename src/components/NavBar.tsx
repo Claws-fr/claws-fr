@@ -12,6 +12,7 @@ export default function NavBar() {
 
   const links = [
     { href: "/#secteurs", label: "Solutions" },
+    { href: "/#formations", label: "Formations" },
     { href: "/comparatif", label: "Comparatif" },
     { href: "/blog", label: "Blog" },
     { href: "/securite", label: "Sécurité" },
