@@ -7088,6 +7088,190 @@ En 30 minutes, nous identifions les trois tâches où un agent IA vous ferait é
 [Prendre rendez-vous pour un audit gratuit](/#contact) ou consulter notre page sur la [sécurité et confidentialité](/securite) pour comprendre comment nous protégeons vos données.
 `,
   },
+  {
+    slug: "openclaw-make-automatisation-api",
+    title: "Make.com + OpenClaw : piloter vos automatisations via API",
+    description: "Apprenez à connecter OpenClaw à Make.com via l'API REST pour créer des agents IA capables de déclencher et gérer vos automatisations de façon autonome.",
+    date: "2026-05-11",
+    category: "Guide",
+    readTime: "8 min",
+    keywords: [
+      "Make.com API",
+      "OpenClaw automatisation",
+      "agent IA Make",
+      "no-code IA",
+      "automatisation pilotée par IA",
+      "Make OpenClaw intégration",
+      "agent IA workflows",
+    ],
+    content: `
+Make.com compte aujourd'hui plus de 200 000 utilisateurs actifs et propose des connexions vers plus de 1 800 applications. C'est l'une des plateformes d'automatisation no-code les plus complètes du marché. Pourtant, elle souffre d'une limitation fondamentale : tout est pensé pour être manipulé à la main, depuis une interface graphique. Un scénario ne se déclenche pas de lui-même en réponse à un raisonnement. Il attend une instruction.
+
+C'est exactement là qu'intervient [OpenClaw](https://openclaw.ai). En donnant à un agent IA un accès direct à l'API REST de Make.com, on crée un système où la machine ne se contente plus d'exécuter des tâches prédéfinies : elle décide lesquelles lancer, à quel moment, avec quels paramètres.
+
+Ce guide explique comment configurer cette connexion, quels endpoints utiliser, et dans quels cas concrets cette combinaison génère un retour sur investissement mesurable.
+
+## Pourquoi connecter Make.com à un agent IA
+
+Make.com est construit autour d'un paradoxe. La plateforme peut orchestrer des flux complexes entre des dizaines d'applications, mais elle reste passive : un scénario attend un déclencheur externe, qu'il soit planifié, webhook, ou manuel. Elle ne peut pas observer une situation, en déduire une action, puis s'exécuter.
+
+Un agent OpenClaw, de son côté, peut raisonner. Il analyse des données, pose des hypothèses, sélectionne des outils. Mais sans intégrations natives vers chaque application métier, son champ d'action reste limité.
+
+La combinaison des deux résout ce problème proprement. Make.com devient la couche d'exécution, capable de parler à Slack, HubSpot, Google Sheets, Stripe ou n'importe lequel de ses 1 800 connecteurs. L'agent OpenClaw devient la couche de décision, qui choisit quand et comment déclencher chaque scénario.
+
+Pour aller plus loin sur l'architecture d'OpenClaw, consultez le [guide complet OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet).
+
+## L'API Make.com : ce qu'elle permet réellement
+
+Make.com expose une [API REST documentée](https://developers.make.com) qui couvre la quasi-totalité des opérations disponibles dans l'interface. Les endpoints les plus utiles pour un agent IA sont les suivants.
+
+### Lister et déclencher des scénarios
+
+\`\`\`
+GET  /scenarios?teamId={teamId}
+POST /scenarios/{scenarioId}/run
+\`\`\`
+
+L'endpoint \`run\` accepte un corps JSON avec les données d'entrée du scénario. Si votre scénario Make commence par un module "Webhook" ou "Router", vous pouvez lui envoyer n'importe quelle structure de données depuis l'agent. C'est la base de tout le système.
+
+### Consulter les exécutions
+
+\`\`\`
+GET /scenarios/{scenarioId}/executions
+GET /executions/{executionId}
+\`\`\`
+
+Ces endpoints permettent à l'agent de vérifier si un scénario s'est bien exécuté, combien de temps il a pris, et si des erreurs ont été levées. Un agent sérieux ne déclenche pas à l'aveugle : il contrôle le résultat.
+
+### Gérer les webhooks et connexions
+
+\`\`\`
+GET  /hooks
+POST /hooks
+DELETE /hooks/{hookId}
+\`\`\`
+
+La gestion programmatique des webhooks ouvre des possibilités avancées : créer un point d'entrée temporaire pour recevoir une réponse externe, l'utiliser, puis le supprimer. Utile pour des flux où l'agent attend une validation humaine ou une confirmation tierce avant de continuer.
+
+L'authentification se fait via un token API généré depuis les paramètres de votre compte Make.com, passé dans le header \`Authorization: Token {votre_token}\`.
+
+## Configurer OpenClaw avec une skill Make
+
+Dans OpenClaw, une skill est un outil que l'agent peut appeler. La configuration se fait en YAML ou via l'interface, selon votre mode d'installation. Si vous n'avez pas encore installé OpenClaw, le guide d'[installation sur Mac Mini](/blog/installer-openclaw-mac-mini-2025) couvre les étapes complètes.
+
+### Déclaration de la skill
+
+Voici un exemple de déclaration pour une skill Make basique :
+
+\`\`\`yaml
+skills:
+  - name: make_run_scenario
+    description: "Déclenche un scénario Make.com avec des données d'entrée optionnelles"
+    parameters:
+      scenarioId:
+        type: string
+        required: true
+        description: "L'identifiant numérique du scénario Make"
+      inputData:
+        type: object
+        required: false
+        description: "Les données à envoyer au scénario"
+    endpoint:
+      method: POST
+      url: "https://eu1.make.com/api/v2/scenarios/{scenarioId}/run"
+      headers:
+        Authorization: "Token \${MAKE_API_TOKEN}"
+        Content-Type: "application/json"
+      body: "{inputData}"
+\`\`\`
+
+L'agent peut maintenant appeler \`make_run_scenario\` comme il appellerait n'importe quel autre outil. Il choisit le bon \`scenarioId\` en fonction du contexte, construit les données d'entrée, et déclenche l'exécution.
+
+### Récupérer le résultat
+
+Pour que l'agent vérifie le résultat d'une exécution, ajoutez une skill \`make_get_execution\` :
+
+\`\`\`yaml
+  - name: make_get_execution
+    description: "Récupère le statut et le résultat d'une exécution Make"
+    parameters:
+      executionId:
+        type: string
+        required: true
+    endpoint:
+      method: GET
+      url: "https://eu1.make.com/api/v2/executions/{executionId}"
+      headers:
+        Authorization: "Token \${MAKE_API_TOKEN}"
+\`\`\`
+
+Avec ces deux skills, l'agent peut déclencher un scénario, attendre quelques secondes, puis interroger son état. Si le scénario a échoué, l'agent peut relancer, escalader vers un humain via Slack, ou choisir une autre route.
+
+Pour des architectures plus complexes impliquant HubSpot ou Salesforce, l'article sur l'[intégration CRM avec OpenClaw](/blog/openclaw-integration-crm-hubspot-salesforce) donne des exemples complémentaires.
+
+## Trois cas d'usage avec des chiffres concrets
+
+### Cas 1 : Qualification et routage de leads en temps réel
+
+Une agence de marketing reçoit en moyenne 120 formulaires par semaine depuis plusieurs sources (LinkedIn Ads, site web, événements). Avant l'automatisation, une assistante passait 6 heures par semaine à trier, enrichir et router ces leads vers les bons commerciaux dans HubSpot.
+
+Avec OpenClaw + Make : à chaque soumission de formulaire, un webhook Make envoie les données à l'agent. L'agent analyse le profil (secteur, taille d'entreprise, message), attribue un score, puis déclenche le bon scénario Make selon le cas : création de contact HubSpot, assignation au commercial approprié, envoi d'un email de suivi personnalisé dans les 3 minutes.
+
+Résultat mesuré sur 8 semaines : 5,5 heures économisées par semaine, taux de réponse aux leads sous 5 minutes passé de 12 % à 89 %, taux de conversion premier contact amélioré de 23 %.
+
+### Cas 2 : Reporting financier hebdomadaire automatisé
+
+Une PME de 40 personnes avait un processus manuel chaque lundi matin : extraire les données Stripe de la semaine, les consolider dans Google Sheets, calculer les métriques clés, rédiger un résumé pour la direction, l'envoyer par email.
+
+Durée moyenne du processus : 2h30 par semaine, soit 130 heures par an.
+
+Avec OpenClaw, un agent planifié chaque lundi à 7h00 déclenche un scénario Make qui extrait les données Stripe, les écrit dans Google Sheets, et déclenche ensuite un second scénario Make qui génère le rapport. L'agent rédige le résumé narratif en analysant les chiffres, détecte les anomalies (baisse de MRR supérieure à 5 %, churn inhabituel), et envoie l'email avec ses observations.
+
+Temps humain résiduel : 10 minutes de lecture. Économie annuelle estimée : 120 heures, soit environ 6 000 euros au coût horaire interne.
+
+### Cas 3 : Gestion des incidents e-commerce
+
+Une boutique en ligne traitant 300 commandes par jour faisait face à un problème récurrent : les commandes bloquées en statut "payment pending" pendant plus de 2 heures passaient inaperçues, ce qui dégradait l'expérience client et générait des abandons de commande.
+
+L'agent OpenClaw surveille un webhook Stripe et déclenche, toutes les 30 minutes, un scénario Make qui interroge les commandes WooCommerce en statut "pending" depuis plus de 2 heures. Si l'agent détecte des cas anormaux, il analyse le profil client et l'historique, puis choisit parmi trois scénarios Make : relance email automatique, notification Slack pour intervention manuelle, ou annulation et remboursement automatique selon des critères définis.
+
+Sur les 3 premiers mois : 94 % des incidents résolus sans intervention humaine, temps de résolution moyen réduit de 4h20 à 18 minutes, taux de satisfaction client (CSAT) amélioré de 11 points.
+
+## Limites et arbitrages
+
+Cette architecture n'est pas universelle. Trois situations méritent de s'interroger avant de choisir Make comme couche d'exécution.
+
+**Volume d'opérations élevé.** Make facture à l'opération. Un scénario qui traite 10 000 enregistrements par jour peut rapidement représenter un coût mensuel significatif. Au-delà de quelques dizaines de milliers d'opérations quotidiennes, une intégration native via les SDK des services concernés est souvent plus économique.
+
+**Latence critique.** L'API Make ajoute une latence d'environ 1 à 3 secondes pour déclencher un scénario. Pour des applications temps réel (trading, alertes sous la seconde), ce n'est pas adapté.
+
+**Logique métier complexe.** Make excelle pour connecter des services existants. Si votre logique nécessite des transformations de données très spécifiques ou des boucles conditionnelles complexes, il est parfois plus propre de les coder directement dans une skill OpenClaw plutôt que de les reproduire en modules Make.
+
+Pour les cas où Make n'est pas le bon outil, la comparaison [OpenClaw vs Make vs n8n](/blog/openclaw-vs-make-vs-n8n-comparatif) aide à choisir la bonne architecture selon votre contexte.
+
+Enfin, la stabilité de l'ensemble du système dépend de la qualité de maintenance des agents. L'article sur la [maintenance des agents OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) couvre les pratiques essentielles pour éviter les dérives de comportement en production.
+
+## Mise en production : points de vigilance
+
+Avant de déployer cette combinaison en production, quelques points concrets à vérifier.
+
+Premier point : les tokens API Make ont des permissions granulaires. Créez un token dédié à OpenClaw avec uniquement les scopes nécessaires (lecture des scénarios, déclenchement, lecture des exécutions). Ne donnez pas un token administrateur à votre agent.
+
+Deuxième point : gérez les erreurs côté agent. Make peut retourner des codes 429 (rate limit), 503 (service indisponible) ou des erreurs métier dans les exécutions. Votre agent doit être capable de les interpréter et d'adopter un comportement de repli défini.
+
+Troisième point : loggez tout. Chaque déclenchement de scénario par l'agent doit être tracé avec un timestamp, les paramètres envoyés, et le résultat retourné. C'est indispensable pour auditer le comportement de l'agent et identifier les cas limites.
+
+Make.com propose une [documentation API complète](https://make.com) et des environnements de test (scénarios en mode draft) qui permettent de valider vos intégrations sans consommer d'opérations de production.
+
+## Prochaine étape
+
+Make.com est un outil mature et fiable pour l'automatisation no-code. OpenClaw lui apporte ce qui lui manque : la capacité de décision. Ensemble, ils forment une architecture où un agent IA peut non seulement raisonner sur une situation, mais aussi agir sur l'ensemble de votre stack applicative via les 1 800 connecteurs de Make.
+
+La configuration technique est accessible - quelques skills déclarées en YAML et un token API - mais l'essentiel du travail réside dans la définition claire des cas d'usage, des critères de décision de l'agent, et des comportements de repli.
+
+Si vous souhaitez mettre en place cette architecture pour votre organisation, l'équipe de Claws.fr peut vous accompagner de la conception au déploiement. [Prenez contact avec nous](/#contact) ou accédez directement à la [page d'installation OpenClaw](/installation) pour démarrer.
+`,
+  },
 ];
 
 export function getPostBySlug(slug: string): Post | undefined {
