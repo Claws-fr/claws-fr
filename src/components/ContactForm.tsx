@@ -34,17 +34,20 @@ export default function ContactForm() {
           _elapsed: Date.now() - mountedAt,
         }),
       });
+      const data = res.ok ? await res.json() : null;
       if (res.ok) {
         setStatus("done");
-        // dataLayer push pour GTM (déclencher sur 'form_success' uniquement après 200)
-        if (typeof window !== "undefined") {
-          (window as any).dataLayer = (window as any).dataLayer || [];
-          (window as any).dataLayer.push({ event: "form_success" });
-        }
-        // Google Ads conversion directe (fallback sans GTM)
-        if (typeof window !== "undefined" && (window as any).gtag) {
-          (window as any).gtag("event", "conversion", { send_to: "AW-17974041887/DYp3Cl2woP4bEJ-62PpC" });
-          (window as any).gtag("event", "generate_lead", { currency: "EUR", value: 189 });
+        if (data?.qualified) {
+          // dataLayer push pour GTM (déclencher sur 'form_success' uniquement pour vrais leads)
+          if (typeof window !== "undefined") {
+            (window as any).dataLayer = (window as any).dataLayer || [];
+            (window as any).dataLayer.push({ event: "form_success" });
+          }
+          // Google Ads conversion directe (fallback sans GTM)
+          if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", "conversion", { send_to: "AW-17974041887/DYp3Cl2woP4bEJ-62PpC" });
+            (window as any).gtag("event", "generate_lead", { currency: "EUR", value: 189 });
+          }
         }
       } else {
         setStatus("error");
