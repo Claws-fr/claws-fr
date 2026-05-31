@@ -138,7 +138,31 @@ const jsonLd = [
     },
   },
 
-  // 3. FAQPage avec réponses longues et factuelles pour GEO
+  // 3. Person — Julie Decroix (fondatrice, auteure des articles)
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://claws.fr/#julie-decroix",
+    name: "Julie Decroix",
+    jobTitle: "Co-fondatrice et CEO",
+    worksFor: { "@id": "https://claws.fr/#organization" },
+    url: "https://claws.fr/a-propos",
+    sameAs: [
+      "https://www.linkedin.com/in/julie-d-712868181",
+      "https://github.com/Claws-fr",
+    ],
+    knowsAbout: [
+      "OpenClaw",
+      "agents IA autonomes",
+      "automatisation par IA",
+      "RGPD IA",
+      "déploiement local LLM",
+      "Mac Mini IA",
+    ],
+    description: "Julie Decroix est co-fondatrice et CEO de Claws, la première agence française spécialisée dans l'installation d'OpenClaw. Elle accompagne les professionnels et PME françaises dans le déploiement d'agents IA autonomes locaux depuis 2026.",
+  },
+
+  // 4. FAQPage avec réponses longues et factuelles pour GEO
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
