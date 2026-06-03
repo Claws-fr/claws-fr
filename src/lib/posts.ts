@@ -11,6 +11,105 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "microsoft-scout-openclaw-microsoft-build-2026",
+    title: "Microsoft intègre OpenClaw à Windows : ce que l'annonce de la Build 2026 change pour vous",
+    description: "À la Microsoft Build 2026, Satya Nadella a officialisé l'intégration native d'OpenClaw dans Windows. Scout, l'agent autonome de Microsoft, s'inspire directement du modèle OpenClaw. Ce que cela signifie concrètement pour les entreprises françaises.",
+    date: "2026-06-03",
+    category: "Actualité",
+    readTime: "8 min",
+    keywords: [
+      "Microsoft Build 2026",
+      "OpenClaw Microsoft",
+      "Scout Microsoft agent IA",
+      "OpenClaw Windows",
+      "Microsoft Execution Containers",
+      "agent IA autonome",
+      "OpenClaw intégration Windows",
+      "Microsoft Scout OpenClaw",
+      "agents IA entreprise France",
+      "Claws OpenClaw France",
+    ],
+    content: `
+## La validation que personne n'attendait si vite
+
+Le 2 juin 2026, Satya Nadella montait sur scène à San Francisco pour la Microsoft Build 2026. Au programme : de nouveaux modèles d'IA, une puce quantique, et une annonce qui a immédiatement fait réagir l'écosystème français de l'IA.
+
+**OpenClaw s'intègre désormais nativement à Windows.**
+
+Numerama l'a formulé sans détour dans son compte-rendu : *"OpenClaw, l'outil star qui permet à une IA d'agir seule sur un ordinateur, s'intègre désormais nativement à Windows via une technologie maison, les Microsoft Execution Containers, qui sécurise ces agents."*
+
+Et LeBigData.fr a titré son article sur Scout, le nouvel agent autonome de Microsoft : *"le nouveau OpenClaw de Microsoft qui automatise tout"*.
+
+En quelques heures, le projet OpenClaw est passé du statut de référence technique dans les cercles avertis à celui de standard sur lequel s'aligne le plus grand éditeur de logiciels au monde.
+
+---
+
+## Scout : l'agent autonome de Microsoft directement inspiré d'OpenClaw
+
+Scout est la grande annonce de la Build 2026. C'est un agent IA intégré à Windows et à Copilot, capable d'agir de façon autonome pour son utilisateur : préparer des réunions, gérer un agenda, traiter des tâches répétitives dans Teams ou Outlook, sans attendre qu'on lui demande à chaque fois.
+
+Le parallèle avec OpenClaw est immédiat. OpenClaw a popularisé précisément ce concept depuis début 2026 : un agent qui tourne en permanence sur votre machine, apprend vos habitudes, et agit sans que vous ayez besoin de lui formuler une instruction à chaque étape.
+
+Microsoft l'a reconnu implicitement en construisant Scout sur ce modèle. La différence, c'est que Scout vit dans l'écosystème Microsoft 365, avec tout ce que cela implique en termes d'intégration aux outils d'entreprise. OpenClaw, lui, fonctionne en local, indépendamment de tout cloud, et s'adapte à n'importe quel environnement.
+
+---
+
+## Ce que Microsoft Execution Containers change pour la sécurité
+
+L'un des points les plus importants de l'annonce concerne la sécurité. Microsoft a développé les **Microsoft Execution Containers** spécifiquement pour encapsuler et sécuriser les actions des agents OpenClaw dans Windows.
+
+C'est une reconnaissance directe d'un enjeu que nous traitons au quotidien chez [Claws.fr](https://claws.fr) : un agent autonome qui accède à vos fichiers, vos emails et vos outils métier doit opérer dans un cadre strict. Les Execution Containers de Microsoft apportent une couche d'isolation au niveau système, ce qui représente une avancée concrète pour les entreprises qui hésitaient encore à franchir le pas.
+
+Pour les déploiements OpenClaw en environnement Windows, cette intégration native simplifie également la mise en production. Les équipes IT n'ont plus à configurer manuellement les périmètres d'action de chaque agent.
+
+---
+
+## Microsoft se libère d'OpenAI et mise sur ses propres modèles
+
+La Build 2026 a aussi marqué un tournant plus large dans la stratégie de Microsoft. Pour la première fois depuis la fin de son accord exclusif avec OpenAI, l'entreprise a présenté ses propres modèles d'IA : les **MAI**, une famille de sept modèles développés en interne couvrant le raisonnement, la génération d'images, la voix et le code.
+
+Ce mouvement a une implication directe pour OpenClaw et ses utilisateurs. OpenClaw est conçu pour fonctionner avec n'importe quel modèle sous-jacent, Claude, GPT-4, Mistral, Llama, ou désormais les MAI de Microsoft. L'architecture agnostique d'OpenClaw prend tout son sens dans un marché où chaque grand acteur développe maintenant ses propres modèles.
+
+Vous n'êtes jamais captif d'un seul fournisseur. C'est précisément l'un des principes fondateurs d'OpenClaw, et Microsoft vient de confirmer que c'est la bonne direction.
+
+---
+
+## Ce que cela change pour les entreprises françaises
+
+Chez [Claws.fr](https://claws.fr), nous déployons OpenClaw pour des PME et ETI françaises depuis le début 2026. L'annonce de la Build 2026 nous donne trois signaux clairs.
+
+**Premier signal : la technologie est validée au plus haut niveau.** Quand Microsoft construit son agent phare en s'inspirant d'OpenClaw et intègre OpenClaw nativement à Windows, la question de la maturité technologique ne se pose plus. C'est une validation industrielle.
+
+**Deuxième signal : l'intégration Windows va s'améliorer.** Pour les entreprises qui tournent sur des environnements Microsoft, les Microsoft Execution Containers simplifient le déploiement et renforcent la posture de sécurité. Nos équipes suivent cette intégration de près pour en faire bénéficier nos clients.
+
+**Troisième signal : le timing est bon pour agir.** Les organisations qui déploient OpenClaw aujourd'hui ont une longueur d'avance. Elles maîtrisent déjà les workflows, les agents, et la supervision avant que ces outils ne deviennent des standards imposés par les grandes plateformes.
+
+---
+
+## Scout vs OpenClaw : deux visions complémentaires, pas concurrentes
+
+Une question revient depuis l'annonce : est-ce que Scout va remplacer OpenClaw ?
+
+Non. Et pour une raison simple : ils ne répondent pas au même besoin.
+
+Scout est un agent intégré à l'écosystème Microsoft 365, conçu pour les utilisateurs de cet environnement, disponible via GitHub Copilot. Il est cloud, géré par Microsoft, et opère dans les limites définies par la plateforme.
+
+OpenClaw est une plateforme d'agents locaux, open source, déployable sur votre propre infrastructure, compatible avec tous les modèles, et entièrement configurable. Vos données ne quittent pas votre machine. Vous pouvez créer des agents métier sur mesure, adaptés à vos processus spécifiques, sans dépendre d'un abonnement tiers.
+
+Pour les entreprises françaises soucieuses de souveraineté des données et de conformité RGPD, OpenClaw reste la solution de référence. Scout et OpenClaw peuvent d'ailleurs coexister dans une même organisation, l'un gérant l'environnement collaboratif Microsoft, l'autre pilotant les automatisations métier critiques.
+
+---
+
+## Commencer avec OpenClaw aujourd'hui
+
+Si vous souhaitez déployer OpenClaw dans votre entreprise avant que cela ne devienne un standard incontournable, [Claws.fr](https://claws.fr) accompagne les organisations françaises de bout en bout : audit des processus, installation, configuration des agents, formation des équipes.
+
+Consultez notre [guide d'installation OpenClaw](https://claws.fr/installation) ou [contactez-nous directement](https://claws.fr/contact) pour un premier échange.
+
+La conférence Build 2026 a envoyé un message fort à l'industrie. OpenClaw n'est pas une tendance. C'est l'architecture sur laquelle se construit l'IA de demain.
+`,
+  },
+  {
     slug: "hermes-vs-openclaw-comparatif-agents-ia-2026",
     title: "Hermes vs OpenClaw : quel framework choisir pour vos agents IA en 2026 ?",
     description: "Comparatif complet entre Hermes et OpenClaw : architecture, cas d'usage, performance, déploiement local, intégrations. Quel framework d'agents IA est le plus adapté aux entreprises françaises en 2026 ?",
