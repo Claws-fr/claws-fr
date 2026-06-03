@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AuthorBio from "@/components/AuthorBio";
+import ROISimulator from "@/components/ROISimulator";
 import type { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { getArticleFaq } from "@/lib/articleFaq";
@@ -71,7 +72,13 @@ export default async function PostPage({ params }: Props) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const html = await marked(post.content);
+  const SIMULATOR_MARKER = "[SIMULATOR]";
+  const hasSimulator = post.content.includes(SIMULATOR_MARKER);
+  const [contentBefore, contentAfter] = hasSimulator
+    ? post.content.split(SIMULATOR_MARKER)
+    : [post.content, ""];
+  const html = await marked(contentBefore);
+  const htmlAfter = hasSimulator ? await marked(contentAfter) : "";
   const relatedPosts = getRelatedPosts(slug, post);
   const sectorLink = getSectorLink(post);
   const faqItems = getArticleFaq(post);
@@ -177,6 +184,13 @@ export default async function PostPage({ params }: Props) {
           className="article-body"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        {hasSimulator && <ROISimulator />}
+        {hasSimulator && htmlAfter && (
+          <div
+            className="article-body"
+            dangerouslySetInnerHTML={{ __html: htmlAfter }}
+          />
+        )}
 
         {sectorLink && (
           <div style={{ margin: "32px 0", padding: "20px 24px", background: "rgba(232,93,4,0.06)", borderLeft: "3px solid #E85D04" }}>
