@@ -109,7 +109,7 @@ export async function POST(req: NextRequest) {
       headers: { "api-key": BREVO_API_KEY, "Content-Type": "application/json" },
       body: JSON.stringify({
         sender: { name: "Claws Contact", email: "newsletter@claws.fr" },
-        to: [{ email: "julie.decroix.pro@gmail.com", name: "Julie" }],
+        to: [{ email: "contact@claws.fr", name: "Claws" }],
         replyTo: { email, name },
         subject: `Nouveau contact : ${name}`,
         htmlContent: html,

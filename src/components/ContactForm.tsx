@@ -196,7 +196,7 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p style={{ color: "#e00", fontSize: "0.85rem", margin: 0 }}>
-          Erreur lors de l'envoi. Écrivez directement à julie.decroix.pro@gmail.com
+          Erreur lors de l'envoi. Écrivez directement à contact@claws.fr
         </p>
       )}
 
