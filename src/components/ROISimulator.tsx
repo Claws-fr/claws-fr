@@ -62,50 +62,50 @@ export default function ROISimulator() {
   }
 
   const accent = "#E85D04";
-  const accentLight = "rgba(232,93,4,0.12)";
-  const accentBorder = "rgba(232,93,4,0.25)";
+  const accentLight = "rgba(232,93,4,0.18)";
+  const accentBorder = "rgba(232,93,4,0.45)";
 
   const S: Record<string, React.CSSProperties> = {
     wrap: {
-      background: "rgba(255,255,255,0.03)", border: `1px solid ${accentBorder}`,
+      background: "#1a1512", border: `1px solid ${accentBorder}`,
       borderRadius: 16, padding: "28px 28px 24px", margin: "40px 0", position: "relative", overflow: "hidden",
     },
-    glow: { position: "absolute", top: -50, right: -50, width: 180, height: 180, background: `radial-gradient(circle,rgba(232,93,4,0.12) 0%,transparent 70%)`, pointerEvents: "none" },
+    glow: { position: "absolute", top: -50, right: -50, width: 220, height: 220, background: `radial-gradient(circle,rgba(232,93,4,0.22) 0%,transparent 70%)`, pointerEvents: "none" },
     inner: { position: "relative", zIndex: 1 },
     hdr: { marginBottom: 24 },
-    badge: { display: "inline-block", background: accentLight, border: `1px solid ${accentBorder}`, color: accent, fontSize: 9, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", padding: "4px 10px", borderRadius: 100, marginBottom: 10, fontFamily: "var(--font-mono,monospace)" },
+    badge: { display: "inline-block", background: accentLight, border: `1px solid ${accentBorder}`, color: "#ff8c47", fontSize: 9, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", padding: "4px 10px", borderRadius: 100, marginBottom: 10, fontFamily: "var(--font-mono,monospace)" },
     h3: { fontSize: "clamp(16px,2.5vw,20px)", fontWeight: 800, color: "#fff", marginBottom: 4, letterSpacing: "-0.02em" },
-    sub: { fontSize: 13, color: "rgba(255,255,255,0.45)" },
+    sub: { fontSize: 13, color: "rgba(255,255,255,0.65)" },
     dotsRow: { display: "flex", gap: 6, marginBottom: 22 },
-    stepLbl: { fontSize: 9, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: accent, marginBottom: 5, fontFamily: "var(--font-mono,monospace)" },
+    stepLbl: { fontSize: 9, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "#ff8c47", marginBottom: 5, fontFamily: "var(--font-mono,monospace)" },
     slideTitle: { fontSize: 16, fontWeight: 800, color: "#fff", marginBottom: 3 },
-    slideSub: { fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 20 },
+    slideSub: { fontSize: 12, color: "rgba(255,255,255,0.6)", marginBottom: 20 },
     taskGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 22 },
-    taskCard: { background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 10, padding: "12px", cursor: "pointer", transition: "all .15s" },
+    taskCard: { background: "#252018", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 10, padding: "12px", cursor: "pointer", transition: "all .15s" },
     taskCardActive: { background: accentLight, border: `1px solid ${accentBorder}` },
-    taskLabel: { fontSize: 11, color: "rgba(255,255,255,0.7)", marginBottom: 8, lineHeight: 1.4 },
+    taskLabel: { fontSize: 11, color: "rgba(255,255,255,0.85)", marginBottom: 8, lineHeight: 1.4 },
     counterRow: { display: "flex", alignItems: "center", gap: 8 },
-    counterBtn: { width: 24, height: 24, borderRadius: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", color: "#fff", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "inherit" },
-    counterVal: { fontSize: 16, fontWeight: 900, color: accent, minWidth: 20, textAlign: "center", fontVariantNumeric: "tabular-nums" },
+    counterBtn: { width: 26, height: 26, borderRadius: 6, background: "#333", border: "1px solid rgba(255,255,255,0.25)", color: "#fff", fontSize: 15, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "inherit" },
+    counterVal: { fontSize: 17, fontWeight: 900, color: "#ff8c47", minWidth: 22, textAlign: "center", fontVariantNumeric: "tabular-nums" },
     labelRow: { display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 13, fontWeight: 600, color: "#fff", marginBottom: 12 },
-    valBig: { fontSize: 20, fontWeight: 900, color: accent, fontVariantNumeric: "tabular-nums" },
-    rangeLabels: { display: "flex", justifyContent: "space-between", fontSize: 11, color: "rgba(255,255,255,0.35)", marginTop: 5 },
+    valBig: { fontSize: 20, fontWeight: 900, color: "#ff8c47", fontVariantNumeric: "tabular-nums" },
+    rangeLabels: { display: "flex", justifyContent: "space-between", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 5 },
     btnPrimary: { width: "100%", padding: "13px", borderRadius: 10, border: "none", fontSize: 14, fontWeight: 700, cursor: "pointer", background: `linear-gradient(135deg,${accent},#f97316)`, color: "#fff", fontFamily: "inherit", transition: "all .2s" },
-    btnGhost: { width: "100%", padding: "10px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, fontWeight: 600, cursor: "pointer", background: "transparent", color: "rgba(255,255,255,0.4)", marginTop: 8, fontFamily: "inherit" },
+    btnGhost: { width: "100%", padding: "10px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", fontSize: 12, fontWeight: 600, cursor: "pointer", background: "transparent", color: "rgba(255,255,255,0.65)", marginTop: 8, fontFamily: "inherit" },
     resGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 },
     resCard: { borderRadius: 10, padding: "14px" },
-    resLabel: { fontSize: 9, fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: 5, fontFamily: "var(--font-mono,monospace)" },
+    resLabel: { fontSize: 9, fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginBottom: 5, fontFamily: "var(--font-mono,monospace)" },
     resVal: { fontSize: 20, fontWeight: 900, fontVariantNumeric: "tabular-nums", lineHeight: 1.1 },
-    resSub: { fontSize: 10, color: "rgba(255,255,255,0.35)", marginTop: 3 },
-    ctaBox: { background: `linear-gradient(135deg,${accentLight},rgba(249,115,22,0.06))`, border: `1px solid ${accentBorder}`, borderRadius: 12, padding: "20px", textAlign: "center" },
+    resSub: { fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 3 },
+    ctaBox: { background: "linear-gradient(135deg,rgba(232,93,4,0.2),rgba(249,115,22,0.1))", border: `1px solid ${accentBorder}`, borderRadius: 12, padding: "20px", textAlign: "center" },
     ctaForm: { display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" as const },
-    ctaInput: { flex: 1, minWidth: 0, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: "10px 12px", color: "#fff", fontSize: 13, outline: "none", fontFamily: "inherit" },
+    ctaInput: { flex: 1, minWidth: 0, background: "#252018", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 8, padding: "10px 12px", color: "#fff", fontSize: 13, outline: "none", fontFamily: "inherit" },
     ctaBtn: { padding: "10px 16px", background: `linear-gradient(135deg,${accent},#f97316)`, color: "#fff", border: "none", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "inherit", whiteSpace: "nowrap" as const },
   };
 
   const dotStyle = (i: number): React.CSSProperties => ({
     height: 3, flex: 1, maxWidth: 70, borderRadius: 2,
-    background: i < step ? "#f97316" : i === step ? accent : "rgba(255,255,255,0.1)",
+    background: i < step ? "#f97316" : i === step ? accent : "rgba(255,255,255,0.2)",
     transition: "background .3s",
   });
 
@@ -130,10 +130,10 @@ export default function ROISimulator() {
         @keyframes roi-fall { to { transform: translateY(105vh) rotate(720deg); opacity: 0; } }
         @keyframes roi-in { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
         .roi-slide { animation: roi-in .28s ease; }
-        input[type=range].roi-range { -webkit-appearance:none; width:100%; height:5px; border-radius:3px; background:rgba(255,255,255,0.1); outline:none; cursor:pointer; margin-bottom:5px; }
-        input[type=range].roi-range::-webkit-slider-thumb { -webkit-appearance:none; width:20px; height:20px; border-radius:50%; background:${accent}; border:2px solid #0E0E0E; box-shadow:0 0 10px rgba(232,93,4,.5); cursor:pointer; }
+        input[type=range].roi-range { -webkit-appearance:none; width:100%; height:6px; border-radius:3px; background:#333; outline:none; cursor:pointer; margin-bottom:5px; }
+        input[type=range].roi-range::-webkit-slider-thumb { -webkit-appearance:none; width:22px; height:22px; border-radius:50%; background:${accent}; border:2px solid #1a1512; box-shadow:0 0 12px rgba(232,93,4,.7); cursor:pointer; }
         .roi-task-card:hover { background: ${accentLight} !important; border-color: ${accentBorder} !important; }
-        .roi-counter-btn:hover { background: ${accentLight} !important; border-color: ${accentBorder} !important; color: ${accent} !important; }
+        .roi-counter-btn:hover { background: ${accentLight} !important; border-color: ${accentBorder} !important; color: #ff8c47 !important; }
       `}</style>
 
       <div style={S.inner}>
@@ -213,22 +213,22 @@ export default function ROISimulator() {
             </div>
 
             <div style={S.resGrid}>
-              <div style={{ ...S.resCard, background: "rgba(232,93,4,0.07)", border: `1px solid rgba(232,93,4,0.25)` }}>
+              <div style={{ ...S.resCard, background: "rgba(232,93,4,0.18)", border: `1px solid rgba(232,93,4,0.45)` }}>
                 <div style={S.resLabel}>Heures perdues / an</div>
-                <div style={{ ...S.resVal, color: accent }}>{fmt(totalHoursPerYear)}h</div>
+                <div style={{ ...S.resVal, color: "#ff8c47" }}>{fmt(totalHoursPerYear)}h</div>
                 <div style={S.resSub}>pour toute l&apos;équipe</div>
               </div>
-              <div style={{ ...S.resCard, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <div style={{ ...S.resCard, background: "#252018", border: "1px solid rgba(255,255,255,0.2)" }}>
                 <div style={S.resLabel}>Coût annuel</div>
                 <div style={{ ...S.resVal, color: "#fbbf24" }}>{fmt(costPerYear)} €</div>
                 <div style={S.resSub}>à charge salariale</div>
               </div>
-              <div style={{ ...S.resCard, background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.2)" }}>
+              <div style={{ ...S.resCard, background: "rgba(34,197,94,0.12)", border: "1px solid rgba(34,197,94,0.35)" }}>
                 <div style={S.resLabel}>Heures récupérables</div>
                 <div style={{ ...S.resVal, color: "#4ade80" }}>{fmt(savedHours)}h</div>
                 <div style={S.resSub}>72% automatisables par IA</div>
               </div>
-              <div style={{ ...S.resCard, background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.2)" }}>
+              <div style={{ ...S.resCard, background: "rgba(34,197,94,0.12)", border: "1px solid rgba(34,197,94,0.35)" }}>
                 <div style={S.resLabel}>Économie potentielle</div>
                 <div style={{ ...S.resVal, color: "#4ade80" }}>{fmt(savedCost)} €</div>
                 <div style={S.resSub}>sur 12 mois</div>
@@ -236,14 +236,14 @@ export default function ROISimulator() {
             </div>
 
             {/* ROI meter */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 10, padding: "14px 16px", marginBottom: 16 }}>
+            <div style={{ background: "#252018", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 10, padding: "14px 16px", marginBottom: 16 }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
-                <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-mono,monospace)", textTransform: "uppercase", letterSpacing: "1px" }}>ROI estimé</span>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.7)", fontFamily: "var(--font-mono,monospace)", textTransform: "uppercase", letterSpacing: "1px" }}>ROI estimé</span>
                 <span style={{ fontSize: 18, fontWeight: 900, color: roi > 0 ? "#4ade80" : "#f87171" }}>
                   {roi > 0 ? "+" : ""}{fmt(roi)}%
                 </span>
               </div>
-              <div style={{ display: "flex", gap: 20, fontSize: 12, color: "rgba(255,255,255,0.45)" }}>
+              <div style={{ display: "flex", gap: 20, fontSize: 12, color: "rgba(255,255,255,0.65)" }}>
                 <span>Retour sur investissement en <strong style={{ color: "#fff" }}>{paybackWeeks < 1 ? "moins de 1 sem." : `${paybackWeeks} sem.`}</strong></span>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function ROISimulator() {
                 <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", marginBottom: 4 }}>
                   Voyez comment déployer ces automatisations
                 </div>
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)" }}>
+                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.65)" }}>
                   Recevez un plan d&apos;automatisation personnalisé pour votre équipe.
                 </div>
                 <div style={S.ctaForm}>
