@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 // Tasks that are typically automatable
 const TASKS = [
@@ -24,6 +24,7 @@ export default function ROISimulator() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const ctaShownAt = useRef<number | null>(null);
   const [confetti, setConfetti] = useState<{ id: number; x: number; c: string; s: number; d: number; dl: number; r: boolean }[]>([]);
 
   const totalHoursPerWeekPerRep = TASKS.reduce(
@@ -54,9 +55,34 @@ export default function ROISimulator() {
     setTimeout(() => setConfetti([]), 4000);
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
     if (!email || !email.includes("@")) { setEmailError(true); return; }
     setEmailError(false);
+
+    const elapsed = ctaShownAt.current ? Date.now() - ctaShownAt.current : 5000;
+    const message =
+      `Simulation ROI automatisation CRM\n` +
+      `Commerciaux : ${reps} · Coût horaire : ${hourlyRate}€/h\n` +
+      `Heures perdues/an : ${fmt(totalHoursPerYear)}h · Coût annuel : ${fmt(costPerYear)}€\n` +
+      `Économie potentielle : ${fmt(savedCost)}€ · ROI estimé : ${roi > 0 ? "+" : ""}${fmt(roi)}%\n` +
+      `Retour sur investissement : ${paybackWeeks < 1 ? "< 1 sem." : `${paybackWeeks} sem.`}`;
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: email.split("@")[0],
+          email,
+          message,
+          _hp: "",
+          _elapsed: elapsed,
+        }),
+      });
+    } catch {
+      // silencieux côté UX
+    }
+
     setSubmitted(true);
     triggerConfetti();
   }
@@ -199,7 +225,7 @@ export default function ROISimulator() {
               <div style={S.rangeLabels}><span>20€</span><span>200€</span></div>
             </div>
 
-            <button style={S.btnPrimary} onClick={() => { setStep(3); triggerConfetti(); }}>⚡ Calculer mon ROI</button>
+            <button style={S.btnPrimary} onClick={() => { setStep(3); ctaShownAt.current = Date.now(); triggerConfetti(); }}>⚡ Calculer mon ROI</button>
             <button style={S.btnGhost} onClick={() => setStep(0)}>← Retour</button>
           </div>
         )}
