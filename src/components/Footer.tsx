@@ -48,6 +48,11 @@ export default function Footer() {
             <li><a href="/comparatif">Comparatif outils IA</a></li>
             <li><a href="/#contact">Contact</a></li>
             <li><a href="/mentions-legales">Mentions légales</a></li>
+            <li><a href="/cgv">CGV</a></li>
+            <li><a href="/politique-confidentialite">Confidentialité</a></li>
+            <li><a href="/politique-cookies">Cookies</a></li>
+            <li><a href="/dpa">DPA</a></li>
+            <li><a href="/cgu">CGU</a></li>
           </ul>
         </div>
 

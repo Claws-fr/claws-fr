@@ -1,12 +1,13 @@
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Mentions légales | Claws",
   description: "Mentions légales du site claws.fr : éditeur, hébergeur, données personnelles, propriété intellectuelle.",
   alternates: { canonical: "https://claws.fr/mentions-legales" },
-  robots: { index: true, follow: false },
+  robots: { index: false, follow: false },
 };
 
 const section = (title: string, children: React.ReactNode) => (
@@ -34,76 +35,60 @@ export default function MentionsLegalesPage() {
             Mentions légales
           </h1>
           <p style={{ fontSize: "0.85rem", color: "#999", marginBottom: 56, fontFamily: "'JetBrains Mono', monospace" }}>
-            Dernière mise à jour : février 2026
+            Dernière mise à jour : juin 2026
           </p>
 
           <div style={{ borderTop: "1px solid #E8E4DF", paddingTop: 48 }}>
 
             {section("1. Éditeur du site", <>
-              <p><strong>Raison sociale :</strong> Claws</p>
-              <p><strong>Site web :</strong> https://claws.fr</p>
-              <p><strong>Email :</strong> contact@claws.fr</p>
-              <p><strong>Localisation :</strong> Paris, France</p>
-              <p style={{ marginTop: 12 }}>
-                Claws est une agence spécialisée dans l&apos;installation, la configuration et la maintenance d&apos;agents IA autonomes OpenClaw pour les professionnels et entreprises.
-              </p>
+              <p>Claws est une marque exploitée par <strong>ThalerTech SAS</strong>, société par actions simplifiée au capital de 1 000 €.</p>
+              <ul style={{ marginTop: 12, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
+                <li><strong>RCS Nanterre :</strong> 834 785 610</li>
+                <li><strong>SIREN :</strong> 834 785 610</li>
+                <li><strong>TVA intracommunautaire :</strong> FR75834785610</li>
+                <li><strong>Siège social :</strong> 116 rue Danton, 92300 Levallois-Perret, France</li>
+                <li><strong>Email :</strong> contact@claws.fr</li>
+              </ul>
             </>)}
 
             {section("2. Hébergement", <>
-              <p><strong>Hébergeur :</strong> OVHcloud</p>
-              <p><strong>Adresse :</strong> 2 rue Kellermann, 59100 Roubaix, France</p>
-              <p><strong>Site :</strong> https://www.ovhcloud.com</p>
-              <p style={{ marginTop: 12 }}>
-                Le site claws.fr est hébergé sur l&apos;infrastructure OVHcloud, dont les datacenters sont situés en France et en Europe.
-              </p>
+              <p><strong>Hébergeur :</strong> Vercel Inc.</p>
+              <p><strong>Adresse :</strong> 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis</p>
+              <p><strong>Site :</strong> https://vercel.com</p>
             </>)}
 
             {section("3. Propriété intellectuelle", <>
               <p>
-                L&apos;ensemble du contenu de ce site (textes, visuels, structure, code source) est la propriété exclusive de Claws, sauf mention contraire.
+                L&apos;ensemble du contenu de ce site (textes, visuels, structure, code source) est la propriété exclusive de ThalerTech SAS, sauf mention contraire.
               </p>
               <p style={{ marginTop: 12 }}>
-                OpenClaw est un logiciel open source distribué sous licence MIT. Le nom et la marque OpenClaw sont la propriété de leurs détenteurs respectifs. Claws est une agence de services indépendante, non affiliée à l&apos;éditeur d&apos;OpenClaw.
+                OpenClaw est un logiciel open source distribué sous licence MIT. Claws est une agence de services indépendante qui propose des prestations autour de ce framework.
               </p>
               <p style={{ marginTop: 12 }}>
-                Toute reproduction, même partielle, du contenu de ce site sans autorisation préalable écrite de Claws est interdite.
+                Toute reproduction, même partielle, du contenu de ce site sans autorisation préalable écrite de ThalerTech SAS est interdite.
               </p>
             </>)}
 
-            {section("4. Données personnelles", <>
+            {section("4. Données personnelles et cookies", <>
               <p>
-                Claws collecte des données personnelles uniquement dans les cas suivants :
-              </p>
-              <ul style={{ marginTop: 12, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
-                <li><strong>Formulaire de contact :</strong> prénom ou nom de société, email, message. Ces données sont utilisées exclusivement pour répondre à votre demande.</li>
-                <li><strong>Newsletter :</strong> adresse email uniquement. Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque email.</li>
-              </ul>
-              <p style={{ marginTop: 16 }}>
-                Conformément au Règlement Général sur la Protection des Données (RGPD, Règlement UE 2016/679), vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement et de portabilité de vos données personnelles.
+                La collecte et le traitement de vos données personnelles sont décrits dans notre{" "}
+                <a href="/politique-confidentialite" style={{ color: "#E85D04", textDecoration: "none" }}>Politique de confidentialité</a>.
               </p>
               <p style={{ marginTop: 12 }}>
-                Pour exercer ces droits ou pour toute question relative à vos données : <strong>contact@claws.fr</strong>
+                Les informations relatives aux cookies déposés sur ce site sont disponibles dans notre{" "}
+                <a href="/politique-cookies" style={{ color: "#E85D04", textDecoration: "none" }}>Politique de cookies</a>.
               </p>
             </>)}
 
-            {section("5. Cookies", <>
+            {section("5. Droit applicable", <>
               <p>
-                Ce site n&apos;utilise pas de cookies à des fins publicitaires ou de tracking tiers. Les seuls cookies éventuellement déposés sont des cookies techniques nécessaires au fonctionnement du site (session, préférences).
-              </p>
-              <p style={{ marginTop: 12 }}>
-                Aucune donnée de navigation n&apos;est transmise à des régies publicitaires ou des plateformes d&apos;analytics tierces.
+                Les présentes mentions légales sont régies par le droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux de Nanterre seront seuls compétents.
               </p>
             </>)}
 
-            {section("6. Liens externes", <>
+            {section("6. Contact", <>
               <p>
-                Ce site peut contenir des liens vers des sites tiers. Claws n&apos;est pas responsable du contenu ou des pratiques de confidentialité de ces sites externes.
-              </p>
-            </>)}
-
-            {section("7. Droit applicable", <>
-              <p>
-                Les présentes mentions légales sont régies par le droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.
+                Pour toute question relative au présent site : <strong>contact@claws.fr</strong>
               </p>
             </>)}
 
