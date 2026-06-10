@@ -273,6 +273,11 @@ export default function ComparatifPage() {
           <p style={{ fontSize: "1.1rem", color: "#555", lineHeight: 1.8, maxWidth: 640, marginBottom: 32 }}>
             La plupart des comparatifs IA sont écrits par des gens qui n'ont jamais installé ces outils sur une machine réelle. Celui-ci non. On installe et maintient OpenClaw au quotidien, voici ce qu'on sait vraiment.
           </p>
+          {/* Lien comparatif agences */}
+          <a href="/comparatif/agences-openclaw-france" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#0E0E0E", color: "#F5F2EE", padding: "10px 18px", fontSize: "0.85rem", fontWeight: 700, textDecoration: "none", marginBottom: 24, borderRadius: 4 }}>
+            <span style={{ color: "#E85D04" }}>→</span> Comparatif agences OpenClaw en France 2026
+          </a>
+
           {/* Anchor nav */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 8 }}>
             {[
