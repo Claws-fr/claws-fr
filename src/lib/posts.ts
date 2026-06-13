@@ -37,7 +37,7 @@ L'administration Trump vient de rendre officielle la restriction d'accès aux mo
 
 ## Ce qui vient de se passer
 
-L'accès aux modèles Fable et Mythos d'OpenAI est désormais conditionné par la juridiction de l'entreprise cliente. Les sociétés européennes se voient restreindre ou bloquer l'accès à ces modèles dans le cadre de nouvelles règles d'exportation technologique de l'administration Trump.
+L'accès aux modèles Fable et Mythos d'Anthropic est désormais conditionné par la juridiction de l'entreprise cliente. Les sociétés européennes se voient restreindre ou bloquer l'accès à ces modèles dans le cadre de nouvelles règles d'exportation technologique de l'administration Trump.
 
 C'est la concrétisation d'un risque que beaucoup avaient théorisé mais que peu avaient anticipé en pratique : **la dépendance à une infrastructure IA hébergée aux États-Unis expose les entreprises européennes à des décisions politiques sur lesquelles elles n'ont aucun levier.**
 
