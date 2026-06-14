@@ -11,6 +11,118 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-relances-clients-automatiques-pme",
+    title: "Votre agent IA relance vos clients pendant que vous dormez",
+    description: "Devis sans réponse, prospects qui s'évaporent, clients silencieux après une commande. Un agent IA local peut gérer toutes ces relances automatiquement, dans votre style, sans aucune intervention de votre part.",
+    date: "2026-06-14",
+    category: "Cas d'usage",
+    readTime: "6 min",
+    keywords: [
+      "agent IA relance client automatique PME",
+      "automatiser relances commerciales IA",
+      "agent IA devis sans réponse",
+      "suivi client automatique intelligence artificielle",
+      "OpenClaw relance automatique",
+      "IA locale PME France",
+      "automatisation commerciale agent autonome",
+      "relance email automatique IA 2026",
+    ],
+    content: `Vous avez envoyé un devis lundi. Mercredi, silence. Vendredi, toujours rien. Vous avez d'autres choses à gérer, alors vous laissez passer. Deux semaines plus tard, vous apprenez que le client est parti chez un concurrent.
+
+Ce scénario se répète dans des centaines de PME françaises chaque semaine. Pas par manque d'intérêt — par manque de temps pour faire le suivi.
+
+Un agent IA local change ça.
+
+---
+
+## Ce que fait concrètement un agent de relance
+
+Un agent IA configuré pour les relances commerciales surveille en permanence votre pipeline. Il sait qu'un devis envoyé sans réponse sous 48h mérite un premier suivi. Il sait qu'un client qui n'a pas commandé depuis 3 mois mérite un message de réactivation. Il sait qu'une livraison effectuée il y a une semaine mérite un message de satisfaction.
+
+Et il agit.
+
+**Sans vous demander la permission.** Sans oublier. Sans se fatiguer.
+
+Voilà à quoi ressemble une journée type pour un agent de relance :
+
+- 08h00 : scan de votre messagerie et de votre CRM — identification des devis sans réponse depuis plus de 48h
+- 08h05 : rédaction et envoi d'un email de suivi personnalisé pour chaque prospect concerné, dans votre ton, avec les détails du devis
+- 10h30 : un prospect répond avec une question. L'agent lit la réponse, y répond si c'est dans son périmètre, vous transfère si ça nécessite votre expertise
+- 14h00 : détection d'un client inactif depuis 6 semaines — envoi d'un message de réactivation discret avec une valeur ajoutée (article utile, nouveauté, offre ponctuelle)
+- 18h00 : rapport synthétique envoyé sur votre téléphone : X relances envoyées, X réponses reçues, X à traiter de votre côté
+
+Vous finissez votre journée en vous occupant uniquement des conversations qui nécessitent votre jugement.
+
+---
+
+## Les 4 types de relances qu'un agent gère seul
+
+### 1. Relance de devis
+
+C'est le cas d'usage le plus immédiat. Un devis envoyé sans réponse sous un délai que vous définissez (48h, 72h, 1 semaine selon votre secteur) déclenche automatiquement un message de suivi.
+
+Le message n'est pas générique. L'agent reprend le nom du prospect, le sujet du devis, et adapte le ton selon le contexte. Premier relance : ton chaleureux et curieux ("avez-vous eu l'occasion de regarder notre proposition ?"). Deuxième relance si toujours sans réponse : ton direct ("souhaitez-vous qu'on discute d'aménagements ?"). Troisième tentative : clôture propre ("je ferme ce dossier sauf signe de votre part").
+
+Taux de réponse moyen observé chez nos clients après implémentation : **+40% sur les devis sans suivi manuel.**
+
+### 2. Réactivation de clients dormants
+
+Votre base client est une mine inexploitée. Des gens qui vous ont déjà fait confiance, qui connaissent la qualité de votre travail, qui sont partis non pas par insatisfaction mais par habitude ou par manque de déclencheur.
+
+L'agent identifie ces clients silencieux et leur envoie un message au bon moment — pas trop tôt (harcèlement), pas trop tard (oubli). Un message qui apporte quelque chose : une information utile sur votre secteur, une nouveauté dans votre offre, une question simple sur leurs besoins actuels.
+
+### 3. Suivi post-livraison
+
+Un client satisfait qui ne dit rien ne vous aide pas. Un client satisfait qui laisse un avis, qui vous recommande, qui achète à nouveau : c'est votre meilleur commercial.
+
+L'agent envoie automatiquement un message de satisfaction 5 à 7 jours après une livraison ou prestation. Il invite à laisser un avis Google si le retour est positif. Il vous alerte immédiatement si le retour est négatif pour que vous puissiez gérer la situation avant qu'elle n'escalade.
+
+### 4. Relance d'impayés
+
+Le sujet que personne n'aime gérer. L'agent envoie les premiers rappels de règlement de manière factuelle et professionnelle. Pas de gêne, pas d'hésitation, pas d'oubli. Si après deux relances automatiques l'impayé persiste, il vous transfère le dossier avec l'historique complet.
+
+---
+
+## Ce que l'agent ne remplace pas
+
+Soyons précis sur ce que ce type d'outil fait et ce qu'il ne fait pas.
+
+**Il ne remplace pas votre relation client.** Les conversations complexes, les négociations, les situations sensibles : l'agent vous les transfère. Il gère le volume, pas la subtilité.
+
+**Il ne crée pas de contenu de prospection à froid.** Ce n'est pas un outil de spam. Il travaille sur votre base existante — prospects qui ont déjà eu un contact avec vous, clients actuels ou anciens.
+
+**Il ne prend pas de décisions commerciales.** Si un client demande une réduction de 30%, l'agent vous transfère la conversation. Les décisions qui engagent votre marge restent les vôtres.
+
+Ce qu'il fait : il s'assure que **aucune opportunité ne passe à travers les mailles** par manque de temps ou d'organisation.
+
+---
+
+## Combien ça coûte et comment ça s'installe
+
+L'infrastructure technique (OpenClaw + un Mac mini d'occasion ou un petit serveur) représente un investissement unique de 100 à 200 euros. Le coût mensuel d'usage des tokens API pour des relances quotidiennes est inférieur à 20 euros pour la plupart des PME.
+
+L'installation et la configuration de l'agent par Claws se fait en une session de 2 à 3 heures. À l'issue de cette session, l'agent est connecté à votre messagerie, calibré sur votre ton, et opérationnel.
+
+Nous configurons avec vous :
+- Les délais de déclenchement des relances (selon votre secteur et vos habitudes)
+- Le ton et le style des messages (que vous approuvez avant le démarrage)
+- Les règles d'escalade (quand l'agent vous transfère vs. quand il gère seul)
+- Les intégrations avec vos outils existants (Gmail, Outlook, CRM)
+
+Il n'y a pas d'abonnement SaaS. Pas de données qui quittent votre machine. L'agent tourne localement, sur votre infrastructure, sous votre contrôle.
+
+---
+
+## Pour commencer
+
+Si vous perdez régulièrement des opportunités par manque de suivi, ou si vos relances manuelles prennent trop de temps, c'est le cas d'usage à prioriser.
+
+[Prenez contact avec nous](/contact) pour une session de diagnostic. On regarde ensemble votre processus commercial actuel, on identifie les points de fuite, et on vous montre ce qu'un agent de relance peut concrètement faire dans votre contexte.
+
+Pas de promesses génériques. Un cas d'usage concret, une installation rapide, un résultat mesurable dans les deux premières semaines.
+`,
+  },
+  {
     slug: "restrictions-ia-americaine-europe-trump-souverainete-claws",
     title: "L'administration Trump coupe l'accès aux IA américaines en Europe. On l'avait anticipé.",
     description: "L'administration Trump vient de restreindre l'accès aux modèles IA américains Fable et Mythos pour les entreprises européennes. Chez Claws, on avait fait le choix inverse dès le début : infrastructure souveraine, déploiement local, Mistral. Ce que ça change pour votre stack IA.",
