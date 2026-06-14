@@ -17,32 +17,28 @@ const POSTS_FILE = join(REPO_ROOT, "src/lib/posts.ts");
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
 
-if (!ANTHROPIC_API_KEY) {
-  console.error("❌ ANTHROPIC_API_KEY manquant");
-  process.exit(1);
-}
 
 const TOPICS = [
-  "Comment un agent IA autonome peut gérer la prospection commerciale d'une TPE",
-  "OpenClaw vs Microsoft Copilot : quel assistant IA pour les PME françaises ?",
-  "Agent IA pour les cabinets d'avocats : automatiser sans violer le secret professionnel",
-  "Comment automatiser sa comptabilité avec un agent IA OpenClaw",
-  "Les 5 signes que votre PME est prête pour un agent IA autonome",
-  "Agent IA pour les agences web : gérer les briefs, relances et reporting automatiquement",
-  "OpenClaw et la souveraineté des données : pourquoi le local est indispensable en 2026",
-  "Comment un agent IA peut doubler le taux de réponse de vos devis",
-  "Agent IA pour les franchises : standardiser sans uniformiser",
-  "Automatiser l'onboarding client avec OpenClaw : guide pratique",
-  "Agent IA pour les recruteurs : sourcing, tri de CV et relances automatisées",
-  "OpenClaw pour les e-commerçants : gérer le SAV et les retours sans équipe dédiée",
-  "Comment les agents IA réduisent le burn-out des équipes commerciales",
-  "Agent IA et CRM : comment OpenClaw s'intègre à HubSpot et Salesforce",
-  "Les agents IA autonomes vont-ils remplacer les assistants virtuels classiques ?",
-  "Comment mesurer le ROI d'un agent IA dans une petite entreprise",
-  "Agent IA pour les consultants indépendants : facturer plus, gérer moins",
-  "OpenClaw pour les notaires : confidentialité et automatisation des actes",
-  "Agent IA dans l'immobilier : visites, relances et mandats en automatique",
-  "Comment créer un agent IA de veille concurrentielle avec OpenClaw",
+  "Agent IA pour les cabinets d'avocats : automatiser la gestion des dossiers sans violer le secret professionnel",
+  "Agent IA dans l'immobilier : qualifier les leads, planifier les visites et relancer les prospects en automatique",
+  "Agent IA pour les médecins libéraux : gérer les rappels patients et l'agenda sans secrétaire",
+  "Agent IA pour les agences de communication : briefs clients, relances et reporting hebdomadaire sans effort",
+  "Agent IA pour les e-commerçants : SAV, gestion des retours et relance des paniers abandonnés",
+  "Agent IA pour les recruteurs : sourcing, tri de CV et relances candidats en un seul workflow",
+  "Agent IA pour les notaires : automatiser les actes répétitifs tout en respectant la confidentialité",
+  "Agent IA pour les franchises : standardiser les process locaux sans perdre l'identité du franchisé",
+  "Agent IA pour les consultants indépendants : facturer plus en gérant moins d'administratif",
+  "Agent IA pour les agences immobilières : traitement automatique des leads entrants et suivi acquéreurs",
+  "Agent IA pour les restaurants : réservations, réponse aux avis clients et gestion des réassorts",
+  "Agent IA pour les coachs et formateurs : automatiser le suivi pédagogique et les relances apprenants",
+  "Agent IA pour les artisans : générer des devis, relancer les prospects et gérer le planning de chantier",
+  "Agent IA pour les cabinets comptables : automatiser le lettrage, les relances clients et le reporting mensuel",
+  "Agent IA pour les établissements de santé : optimiser le parcours patient et rester conforme RGPD",
+  "Agent IA pour les agences de voyage : personnalisation des offres et suivi client post-séjour",
+  "Agent IA pour les startups SaaS : automatiser l'onboarding utilisateur et réduire le churn",
+  "Agent IA pour les associations : gestion des adhérents, relances de cotisation et campagnes de don",
+  "Agent IA pour les architectes et maîtres d'oeuvre : suivi de chantier et coordination des corps de métier",
+  "Agent IA pour les gestionnaires de patrimoine : veille réglementaire automatisée et reporting client hebdomadaire",
 ];
 
 const dayIndex = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 2));
@@ -134,8 +130,8 @@ ${article.content}
   },`;
 
   const updated = postsContent.replace(
-    /^];\s*\nexport function getPostBySlug/m,
-    `${newPost}\n];\n\nexport function getPostBySlug`
+    /^export const posts: Post\[\] = \[/m,
+    `export const posts: Post[] = [\n${newPost}`
   );
 
   if (updated === postsContent) throw new Error("Pattern non trouvé dans posts.ts");
@@ -151,12 +147,6 @@ function gitPush(slug) {
   console.log("✅ Git push OK");
 }
 
-function deployVercel() {
-  if (!VERCEL_TOKEN) { console.warn("⚠️  VERCEL_TOKEN manquant, skip deploy"); return; }
-  execSync(`cd "${REPO_ROOT}" && npx vercel --prod --token ${VERCEL_TOKEN} --yes`, { stdio: "inherit", timeout: 180000 });
-  console.log("✅ Deploy Vercel OK");
-}
-
 (async () => {
   try {
     console.log("🤖 Génération de l'article...");
@@ -165,8 +155,8 @@ function deployVercel() {
     const injected = injectPost(article);
     if (!injected) process.exit(0);
     gitPush(article.slug);
-    deployVercel();
-    console.log(`\n🎉 Publié : https://claws.fr/blog/${article.slug}`);
+    console.log(`slug: ${article.slug}`);
+    console.log(`\n🎉 Push OK : https://claws.fr/blog/${article.slug}`);
   } catch (err) {
     console.error("❌ Erreur :", err.message);
     process.exit(1);
