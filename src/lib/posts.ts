@@ -11,6 +11,156 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-kinesitherapie-gestion-crenaux-rappels-prescriptions",
+    title: "Agent IA pour kinésithérapie : automatiser gestion et rappels",
+    description: "Découvrez comment un agent IA OpenClaw optimise les cabinets de kinésithérapie : gestion des créneaux, rappels patients et suivi des prescriptions.",
+    date: "2026-06-25",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA kinésithérapie","gestion créneaux cabinet kiné","rappels patients automatisés","OpenClaw healthcare","suivi prescriptions numériques"],
+    content: `
+Les cabinets de kinésithérapie font face à un défi croissant : gérer efficacement les créneaux, relancer les patients qui oublient leurs rendez-vous et suivre les prescriptions médicales sans surcharger le personnel administratif. Ces tâches répétitives consomment entre 5 et 10 heures par semaine dans un cabinet de taille moyenne, détournant les kinés de leur cœur de métier et impactant directement la rentabilité.
+
+Depuis 2025, Claws.fr accompagne les professionnels de santé français qui adoptent OpenClaw pour automatiser ces processus critiques. Cet article détaille comment un agent IA peut transformer la gestion administrative d'un cabinet de kinésithérapie, avec des exemples concrets et des chiffres mesurables.
+
+## Le problème : surcharge administrative dans les cabinets de kiné
+
+Un cabinet de kinésithérapie moyen traite 80 à 120 patients par semaine. Chaque patient demande :
+
+- Un créneau à fixer ou à reprogrammer
+- Un rappel 24h ou 48h avant le rendez-vous (pour réduire les absences qui coûtent 15 à 20% des revenus)
+- Un suivi de la prescription médicale et des séances restantes
+- Une relance en cas de fin de traitement
+
+Sans automatisation, cette gestion requiert un secrétaire à temps plein ou demi-plein. Les erreurs sont courantes : oublis de rappels, créneaux doublement réservés, patients perdus de vue après une prescription terminée.
+
+Le coût réel : en France, un cabinet perd en moyenne 3 à 4 patients par mois faute de suivi adequat. Sur un an, c'est 36 à 48 rendez-vous perdus, soit 2 000 à 3 000 euros de chiffre d'affaires non généré.
+
+## La solution : un agent IA OpenClaw dédié à la gestion kiné
+
+Un agent IA autonome déployé via OpenClaw peut piloter l'ensemble de cette chaîne en s'intégrant à votre logiciel de gestion (Logiciel de Gestion de Cabinet, LGC) existant.
+
+Voici comment :
+
+### Gestion intelligente des créneaux
+
+L'agent accède en temps réel au calendrier du cabinet et gère les réservations selon des règles que vous définissez :
+
+- Créneaux réservés selon la spécialité demandée (massage, rééducation, bilan)
+- Respect des délais entre deux patients (10 min pour les transitions)
+- Détection automatique des surcharges et proposition de créneaux alternatifs
+- Gestion des annulations : l'agent libère le créneau et propose automatiquement le prochain disponible au patient qui reporte
+
+Dans un cabinet fonctionnant à 85% de taux d'occupation, cela représente 2 à 3 créneaux supplémentaires activables par semaine, soit 100 à 150 euros de chiffre d'affaires additionnel chaque semaine.
+
+### Rappels patients automatisés et contextualisés
+
+C'est l'une des applications les plus impactantes. L'agent envoie :
+
+- SMS ou email 48h avant le rendez-vous (le patient choisit son canal)
+- Message incluant la date, heure, type de soin et praticien assigné
+- Option de confirmation ou d'annulation en un clic
+- Rappel additionnel 2h avant pour les patients à risque d'absence (identification basée sur l'historique)
+
+Les chiffres : les cabinets ayant implémenté ce type de rappel réduisent les taux d'absence de 40 à 50%. Sur 100 patients par semaine avec un taux d'absence initial de 12%, cela représente 5 à 6 rendez-vous économisés chaque semaine.
+
+### Suivi des prescriptions et des séances
+
+Chaque patient a une prescription médicale indiquant un nombre de séances sur une période donnée (ex : 10 séances sur 6 semaines). L'agent :
+
+- Suit le nombre de séances consommées vs restantes
+- Envoie une relance automatique au patient et au médecin prescripteur quand 70% des séances sont consommées
+- Propose une nouvelle prescription si le patient souhaite continuer
+- Génère des rapports mensuels sur les prescriptions en cours et finalisées
+
+Cet outil élimine l'oubli administratif qui fait que certains patients arrêtent le traitement faute de nouvelle prescription. Claws.fr a observé chez ses clients une augmentation de 8 à 12% des séances finalisées par rapport à celles prescrites.
+
+## Architecture technique : comment OpenClaw s'intègre
+
+L'agent IA fonctionne selon un modèle autonome et continu. Voici sa structure simplifiée :
+
+1. **Connexion au LGC** : l'agent accède aux données de rendez-vous, patients et prescriptions via API sécurisée
+
+2. **Triggers automatiques** : chaque jour à minuit, l'agent exécute ses tâches :
+   - Vérifier quels patients ont un RDV dans 48h et envoyer le rappel
+   - Analyser les prescriptions et identifier celles arrivant à terme
+   - Identifier les créneaux disponibles et les proposer aux patients en attente
+
+3. **Interactions bidirectionnelles** : le patient peut répondre au SMS ou email, et l'agent met à jour automatiquement le calendrier
+
+4. **Rapports et alertes** : le kané reçoit un tableau de bord quotidien avec les absences prévues, les prescriptions qui finissent, les créneaux à optimiser
+
+Pour comprendre en détail ce qu'est OpenClaw et comment il fonctionne techniquement, consultez notre [guide complet OpenClaw](https://claws.fr/blog/quest-ce-qu-openclaw-guide-complet).
+
+Si vous comparez OpenClaw avec d'autres solutions (Make, n8n, Zapier), nous avons préparé un [comparatif approfondi](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif) montrant pourquoi OpenClaw est particulièrement adapté aux usages healthcare.
+
+## Cas concret : cabinet de 2 kinés + 1 secrétaire
+
+Nom fictif : Kiné Wellness, Toulouse (3 000 patients actifs).
+
+Situation avant OpenClaw :
+- 1 secrétaire à 0.8 ETP
+- 15% de taux d'absence
+- 30 min/jour de gestion des rappels par SMS manuel
+- 2 à 3 patients perdus par mois faute de suivi prescription
+
+3 mois après déploiement d'un agent OpenClaw :
+- Taux d'absence réduit à 8% (gain : 3-4 rendez-vous/semaine)
+- Rappels entièrement automatisés (libération de 2h30/semaine pour la secrétaire)
+- Zéro patient perdu pour raison administrative
+- Chiffre d'affaires additionnel estimé : +1 800 euros/mois
+- Coût de l'agent : 300 euros/mois tout inclus
+
+ROI réalisé en 2 mois.
+
+## Sécurité et conformité RGPD
+
+Un point critique : les données patients sont sensibles. OpenClaw, utilisé via Claws.fr, respecte :
+
+- Chiffrement end-to-end des données
+- Conformité RGPD (droit à l'oubli, portabilité)
+- Pas de transmission de données hors UE
+- Audit de sécurité annuel
+
+Pour plus de détails, consultez notre [page sécurité](https://claws.fr/securite).
+
+## Mise en œuvre : combien de temps pour déployer ?
+
+Claws.fr accompagne depuis 2025 des cabinets de kiné dans ce déploiement. Le processus :
+
+1. **Audit initial** (2-3 jours) : analyse de votre LGC actuel, des workflows, des besoins spécifiques
+2. **Configuration de l'agent** (1 semaine) : mise en place des règles, des templates de messages, des intégrations
+3. **Tests en mode bac à sable** (3-5 jours) : vérification que tout fonctionne sans impacter les patients réels
+4. **Go-live progressif** (1 semaine) : déploiement sur une partie de la base patient, puis montée en charge complète
+5. **Formation et support** (en continu) : votre équipe apprend à utiliser le tableau de bord, à ajuster les règles
+
+Délai total : 3-4 semaines. Trois cabinets partenaires de Claws.fr témoignent d'une adoption sans friction.
+
+## Points clés à retenir
+
+- Un agent IA réduit les tâches administratives de 60 à 80% dans un cabinet kiné
+- Le ROI est réalisé en 2 à 3 mois grâce aux rendez-vous économisés et aux absences évitées
+- OpenClaw intégré via Claws.fr garantit la sécurité des données patients
+- La mise en œuvre est rapide (3-4 semaines) et non disruptive
+
+## Pour aller plus loin
+
+Si vous utilisez un Mac mini pour héberger vos outils d'automatisation, découvrez [comment installer OpenClaw sur Mac mini en 2025](https://claws.fr/blog/installer-openclaw-mac-mini-2025).
+
+Vous vous demandez aussi comment maintenir votre agent IA en bon état de fonctionnement sur la durée ? Consultez notre guide sur la [maintenance d'OpenClaw pour des agents IA stables](https://claws.fr/blog/maintenance-openclaw-agents-ia-stables).
+
+Les questions fréquentes ? Notre [FAQ](https://claws.fr/faq) couvre les cas les plus courants.
+
+## Prochaines étapes
+
+Si votre cabinet de kinésithérapie rencontre l'un de ces défis (créneaux mal gérés, taux d'absence élevé, patients perdus de vue), une solution existe.
+
+Claws.fr propose une session de diagnostic gratuite pour évaluer votre situation et quantifier les gains potentiels. Nous analyserons votre LGC actuel, vos workflows et proposerons une architecture d'agent IA adaptée.
+
+[Demander une démonstration](https://claws.fr/#contact) ou [consulter nos offres d'installation](https://claws.fr/installation).
+`,
+  },
+  {
     slug: "agent-ia-mutuelles-assureurs-sinistres-rgpd",
     title: "Agent IA pour assureurs : sinistres, relances et RGPD",
     description: "Découvrez comment les agents IA OpenClaw optimisent le traitement des sinistres et la conformité RGPD pour les mutuelles et assureurs français.",
