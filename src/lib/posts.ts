@@ -12,7 +12,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     slug: "openclaw-ios-android-app-disponible",
-    title: "OpenClaw est maintenant sur iOS et Android — l'application vient de sortir",
+    title: "Application mobile OpenClaw : contrôlez vos agents IA depuis iOS et Android",
     description: "OpenClaw lance son application mobile sur iOS et Android. Gérez vos agents IA autonomes depuis votre smartphone, où que vous soyez.",
     date: "2026-06-29",
     category: "Actualité",
