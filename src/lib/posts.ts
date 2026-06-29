@@ -11,6 +11,46 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "openclaw-ios-android-app-disponible",
+    title: "OpenClaw est maintenant sur iOS et Android — l'application vient de sortir",
+    description: "OpenClaw lance son application mobile sur iOS et Android. Gérez vos agents IA autonomes depuis votre smartphone, où que vous soyez.",
+    date: "2026-06-29",
+    category: "Actualité",
+    readTime: "4 min",
+    keywords: ["OpenClaw iOS", "OpenClaw Android", "application mobile agent IA", "OpenClaw app", "agents IA smartphone"],
+    content: `
+C'est officiel : OpenClaw est désormais disponible sur iOS et Android. Après des mois de développement, l'application mobile est là — et elle change concrètement la façon dont vous interagissez avec vos agents IA autonomes.
+
+## Ce que ça change pour vous
+
+Jusqu'à présent, OpenClaw était une solution desktop-first. Vous configuriez vos agents depuis votre Mac ou PC, et ils travaillaient en arrière-plan. Puissant, mais limité dès que vous étiez loin de votre machine.
+
+Avec l'application mobile, vous pouvez désormais :
+
+- **Consulter l'activité de vos agents en temps réel** — ce qu'ils ont fait, ce qu'ils sont en train de faire, ce qui est en attente
+- **Déclencher des workflows à la demande** — envoyer une commande vocale ou textuelle à votre agent depuis n'importe où
+- **Recevoir les notifications importantes** — un agent qui a besoin de votre validation, une tâche terminée, une anomalie détectée
+- **Approuver ou rejeter des actions** — le mode "humain dans la boucle" devient naturel sur mobile
+- **Consulter les comptes-rendus et rapports** générés automatiquement par vos agents
+
+## Pourquoi c'est important
+
+La promesse des agents IA autonomes, c'est qu'ils travaillent pendant que vous faites autre chose. Mais "autre chose", ça inclut être en déplacement, en réunion client, ou simplement loin de votre bureau.
+
+L'application mobile ferme ce gap. Votre agent qui gère vos relances commerciales peut vous notifier qu'un prospect vient de répondre. Votre agent de reporting peut vous envoyer le récapitulatif de la semaine directement sur votre téléphone. Et si quelque chose nécessite votre validation avant d'agir, vous l'approuvez en un tap.
+
+## Compatible avec vos agents existants
+
+Aucune reconfiguration nécessaire. Si vous avez déjà des agents OpenClaw en place, ils apparaissent automatiquement dans l'application. Vous retrouvez vos workflows, vos historiques, vos paramètres — tout est synchronisé.
+
+## Télécharger l'application
+
+L'application OpenClaw est disponible dès maintenant sur l'App Store et le Google Play Store. Gratuite pour les utilisateurs OpenClaw existants.
+
+Si vous n'avez pas encore déployé OpenClaw dans votre structure et que vous voulez en savoir plus, [contactez-nous](/contact) — nous accompagnons les entreprises et indépendants de l'installation à la mise en production.
+    `,
+  },
+  {
     slug: "agent-ia-collectivites-locales-openclaw",
     title: "Agent IA pour collectivités : automatiser demandes et reporting",
     description: "Découvrez comment les agents IA OpenClaw automatisent la gestion des demandes citoyennes et le reporting pour les collectivités locales.",
