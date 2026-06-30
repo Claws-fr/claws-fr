@@ -16,13 +16,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: "https://claws.fr", lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: "https://claws.fr/blog", lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: "https://claws.fr/a-propos", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: "https://claws.fr/faq", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: "https://claws.fr/newsletter", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: "https://claws.fr/openclaw-france", lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     { url: "https://claws.fr/securite", lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     { url: "https://claws.fr/comparatif", lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
+    { url: "https://claws.fr/faq", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: "https://claws.fr/a-propos", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://claws.fr/newsletter", lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: "https://claws.fr/mentions-legales", lastModified: new Date(), changeFrequency: "yearly", priority: 0.2 },
-    { url: "https://claws.fr/openclaw-france", lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
+    ...blogEntries,
     ...sectorSlugs.map((slug) => ({
       url: `https://claws.fr/solutions/${slug}`,
       lastModified: new Date(),
@@ -34,9 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `https://claws.fr/solutions/${secteur}/villes/${ville}`,
         lastModified: new Date(),
         changeFrequency: "monthly" as const,
-        priority: 0.75,
+        priority: 0.6,
       }))
     ),
-    ...blogEntries,
   ];
 }
