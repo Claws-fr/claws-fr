@@ -11,7 +11,7 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    slug: "agent-ia-cabinet-psychologues-thérapeutes-rgpd",
+    slug: "agent-ia-cabinet-psychologues-therapeutes-rgpd",
     title: "Agent IA pour cabinets psy : rappels et RGPD santé",
     description: "Automatisez les rappels de séances et le suivi patient avec un agent IA conforme RGPD. Guide complet pour psychologues et thérapeutes.",
     date: "2026-07-03",
