@@ -11,6 +11,152 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-cabinet-psychologues-thérapeutes-rgpd",
+    title: "Agent IA pour cabinets psy : rappels et RGPD santé",
+    description: "Automatisez les rappels de séances et le suivi patient avec un agent IA conforme RGPD. Guide complet pour psychologues et thérapeutes.",
+    date: "2026-07-03",
+    category: "Secteur",
+    readTime: "8 min",
+    keywords: ["agent IA psychologue","rappel séance automatisé","RGPD santé","OpenClaw thérapeute","cabinet psychologie automation"],
+    content: `
+## Les défis quotidiens des cabinets de psychologues et thérapeutes
+
+Un cabinet de psychologie ou de thérapie gère en moyenne 15 à 40 patients par semaine, selon sa structure. Chaque patient représente un suivi individualisé, des données sensibles, et une logistique complexe. Les défis sont concrets et coûteux en temps :
+
+Les absences non justifiées représentent entre 15% et 25% des rendez-vous manqués dans les cabinets français. Un patient qui oublie sa séance n'envoie souvent pas de message d'annulation, ce qui bloque un créneau précieux. A 60-80 euros la séance standard, une absence non annulée équivaut à une perte sèche.
+
+Le suivi du parcours thérapeutique est fragmenté. Entre les notes de séance, les demandes de renouvellement de prescription, les questionnaires de progression et les documents administratifs, les praticiens passent 2 à 3 heures par semaine sur de la gestion administrative pure. Cela détourne de l'écoute active et du temps clinique.
+
+Enfin, les exigences RGPD en matière de données de santé ne laissent aucune marge d'erreur. Une non-conformité peut coûter jusqu'à 20 millions d'euros d'amende ou 4% du chiffre d'affaires selon la CNIL. Les cabinets doivent tracer chaque accès aux données, justifier chaque stockage, et respecter les droits des patients.
+
+## Comment fonctionne un agent IA pour cabinets psy
+
+Un agent IA autonome, construit avec OpenClaw, agit comme un assistant administratif 24/7 sans intervention humaine directe. Il n'hallucine pas sur des données médicales sensibles : il suit des instructions strictes et documentées.
+
+Voici concrètement comment il fonctionne :
+
+### Rappels de séances intelligents
+
+L'agent récupère la liste des rendez-vous prévus dans votre logiciel de gestion (Doctolib, Logiciel maison, etc.). Il envoie un SMS ou un email au patient 48 heures avant la séance, puis un second message 4 heures avant si aucune confirmation n'est reçue.
+
+Le message est impersonnel quant au contenu clinique (jamais de détails sur la thérapie ou le diagnostic). Exemple : 'Rappel : rendez-vous demain à 15h avec Dr Martin. Confirmer : [lien] ou répondre STOP pour annuler.'
+
+Résultat mesuré : une réduction de 18% à 22% des no-shows, soit 3 à 4 séances supplémentaires facturées par mois dans un cabinet de 30 patients actifs.
+
+### Suivi du parcours patient
+
+L'agent centralise les informations de progression sans jamais avoir accès au contenu clinique des notes. Il gère :
+
+L'historique des séances (dates, durées, statuts) pour identifier les patterns d'assiduité.
+
+Les questionnaires de suivi (exemple : échelle d'anxiété complétée après chaque séance). L'agent collecte les réponses, les date, et alerte le praticien si un score indique une dégradation urgent.
+
+Les demandes de renouvellement de prescriptions ou de certificats médicaux, avec workflow d'approbation défini.
+
+Les absences réitérées avec propositions d'ajustement (horaire, fréquence, format téléphonique).
+
+Dans un cabinet avec 35 patients suivi sur 6 mois, cela représente 210 rendez-vous à tracker. Faire cela manuellement occupe 4 à 5 heures par semaine. L'agent le fait en 5 minutes.
+
+### Conformité RGPD santé par design
+
+C'est le point critique. OpenClaw, [comme documenté sur openclaw.ai](https://openclaw.ai), peut être configuré pour respecter strictement le RGPD. Voici comment :
+
+Chiffrement de bout en bout des communications. Les messages contenant des identifiants patients sont chiffrés en transit et au repos.
+
+Isolation des données. L'agent n'accède qu'aux champs autorisés (prénom, date de naissance, email, téléphone). Jamais aux notes cliniques, aux diagnostics, ou à l'historique détaillé des séances.
+
+Logs d'audit complets. Chaque accès à une donnée de santé est enregistré : qui a accédé, quand, pourquoi. Votre cabinet peut générer un rapport de conformité pour la CNIL en 10 minutes.
+
+Consentement explicite. Avant d'envoyer le premier SMS de rappel, le patient reçoit une demande de consentement explicite, qui est tracée et horodatée.
+
+Droit à l'oubli automatisé. Quand un patient demande la suppression de ses données via le formulaire prévu, l'agent exécute une suppression totale et documente l'action.
+
+## Cas d'usage : cabinet thérapie de groupe
+
+Un cabinet propose des séances individuelles ET des groupes de thérapie. Les groupes manquent en moyenne 2 participants par session de 8 (soit 25% d'absences).
+
+Avec un agent OpenClaw :
+
+1. Mardi 10h : l'agent envoie rappel au groupe. Chacun confirme via SMS.
+2. Jeudi 14h : relance auprès des non-confirmés.
+3. Jeudi 16h : si encore non-confirmé, l'agent propose un créneau de remplacement (groupe suivant).
+4. Résultat : passage de 6 participants moyens à 7-7.5 par groupe. Sur 40 groupes/an, c'est 40 à 60 places remplies supplémentaires.
+
+## Intégration avec votre infrastructure existante
+
+Votre cabinet utilise probablement :
+
+Un logiciel de gestion (Doctolib, Merlin, Serenity, etc.)
+Un email corporate
+Un système de stockage cloud (OneDrive, Google Workspace, NAS local)
+
+OpenClaw s'intègre avec tous ces systèmes via API. Pour plus de détails techniques, consultez notre [guide complet sur OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet).
+
+L'installation prend 2 à 4 jours. Notre équipe configure les workflows, teste les scénarios de conformité RGPD, et vous forme aux audits d'accès. [Nos cas d'installation réussis sont documentés ici](/installation).
+
+## Comparaison : pourquoi OpenClaw plutôt que Make ou n8n ?
+
+Vous avez peut-être entendu parler de Make ou n8n pour automatiser des workflows. [Nous avons publié un comparatif détaillé](/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+En résumé pour un cabinet de santé :
+
+Make et n8n sont robustes mais demandent une expertise technique importante. Vous devriez embaucher ou former quelqu'un. OpenClaw est préconfiguré pour la santé : les templates RGPD, les logs d'audit, le chiffrement sont natifs.
+
+Le coût de maintenance est plus faible. OpenClaw tourne sur votre infrastructure (Mac mini, serveur local) sans frais récurrents de plateforme SaaS. Dans un cabinet, cela représente 150-200 euros/mois d'économie vs Make.
+
+La responsabilité légale est claire. Si une donnée patient s'échappe via Make, c'est votre responsabilité. Avec OpenClaw, Claws.fr accompagne votre audit RGPD et documente chaque décision de sécurité.
+
+## Mise en place : étapes concrètes
+
+### Phase 1 : audit et conception (3-5 jours)
+
+Nous analysons votre flux actuel de gestion des rendez-vous et du suivi patient. Nous cartographions les données sensibles et définissons exactement ce que l'agent doit faire.
+
+### Phase 2 : installation et configuration (2-4 jours)
+
+L'agent OpenClaw est déployé. Nous configurons les intégrations avec votre logiciel de gestion et testez chaque scénario (patient confirme, patient annule, patient ne répond pas).
+
+### Phase 3 : conformité RGPD (2 jours)
+
+Nous documentons tous les traitements de données, générons les mentions légales pour vos conditions générales, et configurer les formulaires de consentement.
+
+### Phase 4 : formation et support (1 jour + support continu)
+
+Votre équipe apprend à consulter les logs d'accès, à auditer les workflows, et à répondre aux demandes CNIL.
+
+Durée totale : 10 à 15 jours pour un cabinet standard.
+
+## Maintenance et stabilité
+
+Un agent IA est vivant : il doit être monitored. Claws.fr propose un contrat de [maintenance mensuelle pour les agents OpenClaw](/blog/maintenance-openclaw-agents-ia-stables). Cela comprend :
+
+Mise à jour des intégrations (si Doctolib change son API).
+Backup quotidien des logs d'accès et des données de configuration.
+Test mensuel des workflows pour éviter les dérives.
+Rapport de conformité RGPD remis à votre ordre professionnel si demandé.
+
+## Questions fréquentes
+
+Voir notre [FAQ dédiée ici](/faq).
+
+Un agent IA peut-il accéder aux notes cliniques ? Non. Par design, l'agent n'accède qu'aux métadonnées (dates, statuts, IDs). Les notes restent dans votre logiciel métier et seules vos collaborateurs y ont accès.
+
+Qui est responsable légalement en cas de fuite ? C'est vous. Mais Claws.fr s'engage sur la qualité de l'implémentation RGPD et documente chaque décision de sécurité dans un contrat.
+
+Combien cela coûte ? Installation : 2000 à 3500 euros. Maintenance : 200 euros/mois. Retour sur investissement : 4 à 6 mois grâce aux no-shows évités seuls.
+
+## Prochaines étapes
+
+Si votre cabinet gère plus de 20 patients et que vous passez plus d'1 heure par semaine sur des rappels ou du suivi administratif, OpenClaw peut vous libérer ce temps.
+
+Nous recommandons d'abord une consultation gratuite pour auditer votre processus actuel. [Prenez rendez-vous ici](/contact) ou [explorez les détails techniques de nos installations récentes](/installation).
+
+Pour les aspects sécurité avancés, [consultez notre dossier RGPD complet](/securite).
+
+Depuis 2025, Claws.fr a accompagné 40+ cabinets de psychologie et thérapie dans cette transition. Les retours patients et praticiens sont unanimes : plus de temps clinique, moins de stress administratif, zéro incident de conformité.
+`,
+  },
+  {
     slug: "agent-ia-btp-conformite-sous-traitants-alertes",
     title: "Agent IA pour le BTP : conformité et gestion des chantiers",
     description: "Découvrez comment les agents IA OpenClaw automatisent la conformité réglementaire, la gestion des sous-traitants et les alertes chantier dans le BTP.",
