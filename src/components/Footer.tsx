@@ -54,6 +54,11 @@ export default function Footer() {
             <li><a href="/dpa">DPA</a></li>
             <li><a href="/cgu">CGU</a></li>
           </ul>
+          <p className="site-footer-heading" style={{ marginTop: 28 }}>Communauté</p>
+          <ul className="site-footer-list">
+            <li><a href="https://github.com/openclaw" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://discord.com/invite/openclaw" target="_blank" rel="noopener noreferrer">Discord</a></li>
+          </ul>
         </div>
 
       </div>
