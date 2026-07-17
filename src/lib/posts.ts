@@ -11,6 +11,165 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-recrutement-sourcing-tri-cv-relances",
+    title: "Agent IA recrutement : sourcing, tri CV et relances automatisés",
+    description: "Découvrez comment un agent IA OpenClaw automatise le sourcing, le tri de CV et les relances candidats. Workflow complet pour recruteurs.",
+    date: "2026-07-17",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA recrutement","sourcing automatisé","tri CV","relances candidats","OpenClaw recruteurs"],
+    content: `
+## Pourquoi les recruteurs perdent du temps sur les tâches répétitives
+
+En France, un recruteur passe en moyenne 40% de son temps sur des tâches administratives qui n'ajoutent aucune valeur : consulter les CV, envoyer des relances, qualifier les profils, mettre à jour les bases de données. Pendant ce temps, les candidats attendent, les délais d'embauche s'allongent, et les meilleures chances s'envoleent.
+
+Les solutions traditionnelles (ATS classiques, outils de mailing en masse) manquent de flexibilité. Un recruteur doit jongler entre 5 ou 6 outils différents : LinkedIn, son ATS, son email, un gestionnaire de tâches. C'est fragmenté, c'est lent, et les erreurs s'accumulent.
+
+C'est exactement le problème qu'un agent IA autonome résout. Depuis 2025, les équipes qui ont adopté OpenClaw et ses workflows d'agents constatent une réduction du temps de sourcing de 60 à 70%, tout en améliorant la qualité des candidatures traitées.
+
+## Comment un agent IA transforme le processus de recrutement
+
+Un agent IA pour le recrutement n'est pas un simple formulaire ou un chatbot. C'est un système autonome capable de :
+
+- Parcourir plusieurs sources de candidats (LinkedIn, CV reçus par email, jobs boards)
+- Analyser les CV selon vos critères métier spécifiques
+- Classer les candidats en temps réel
+- Envoyer des relances personnalisées aux profils ciblés
+- Mettre à jour votre ATS sans intervention manuelle
+- Adapter son comportement en fonction des réponses reçues
+
+Contrairement à un simple script d'automatisation, un agent IA comprend le contexte. Il ne se contente pas de déclencher des actions : il décide quand agir, comment adapter son approche, et quand escalader vers un recruteur humain.
+
+### Étape 1 : Sourcing intelligent et continu
+
+Votre agent IA commence par surveiller vos sources de candidatures. Vous pouvez le configurer pour :
+
+- Extraire les CV des emails entrants et les structurer automatiquement
+- Interroger les APIs de jobs boards et LinkedIn (dans le cadre légal)
+- Rechercher des profils correspondant à des mots-clés définis
+- Filtrer par localisation, expérience, secteur d'activité
+
+Prenons un exemple concret : vous recrutez un développeur backend Python avec 5 ans d'expérience en région PACA. L'agent IA peut scanner 200 CV par jour, extraire les informations pertinentes (langages, années d'expérience, localisation), et les scorer automatiquement selon votre matrice de qualité. Résultat : un recruteur trouve d'emblée 15 profils pré-qualifiés au lieu de 200 CV bruts.
+
+### Étape 2 : Tri et qualification des CV en contexte
+
+C'est ici que la différence se joue. Un agent IA utilise les modèles de langage avancés (comme ceux d'[Anthropic](https://anthropic.com)) pour comprendre les nuances des profils, pas juste pour faire du matching de mots-clés.
+
+L'agent peut :
+
+- Identifier les hard skills ET les soft skills pertinents
+- Évaluer la pertinence d'une mobilité de secteur
+- Détecter les signaux cachés (« a mangé un passif de 18 mois ? Pourquoi ? »)
+- Comparer les CV selon vos critères métier spécifiques
+
+Par exemple, un CV qui mentionne « gestion d'équipe agile » avec une "expérience en scaling » est mieux scoré qu'un CV avec juste « manager ».
+
+Chaque CV reçoit un score et une fiche de synthèse que votre recruteur peut consulter en 30 secondes. Les profils en-dessous du seuil de qualité sont automatiquement rejetés (avec une relance courtoise).
+
+### Étape 3 : Relances personnalisées et suivi autonome
+
+Un agent IA ne relance pas avec un template unique. Il génère des messages adapatés au contexte du candidat :
+
+- Mention précise des technos du CV du candidat
+- Alignement avec son expérience antérieure
+- Réduction du délai de réponse attendu
+- Ton adapté au secteur (startup vs banque)
+
+Par exemple :
+
+*Relance classique :* "Bonjour, nous avons une offre qui pourrait vous intéresser. Êtes-vous disponible ?"
+
+*Relance personnalisée par agent IA :* "Bonjour [Nom], j'ai lu votre expérience avec Kubernetes et les architectures microservices chez [Ancienne Boîte]. Nous construisons une plateforme SaaS avec des contraintes similaires. Nous pensons que votre profil pourrait être intéressant pour notre équipe backend. Auriez-vous 15 min pour échanger cette semaine ?"
+
+La seconde génère 3x plus de réponses. L'agent IA envoie ces relances au bon moment (mardi-jeudi, 10h-14h), avec un délai entre chaque pour éviter le spam.
+
+Si un candidat répond, l'agent IA enregistre la réponse, peut poser des questions de qualification simples (localisation confirmée ? délai de disponibilité ?), et fait remonter les profils chauds à votre recruteur.
+
+## Cas d'usage concret : workflow complet d'une PME en croissance
+
+Imagez une PME tech en Île-de-France qui recrute 5 développeurs en 3 mois. Avant : 400 CV à traiter manuellement, 60 jours de délai moyen, taux de réponse aux relances de 12%.
+
+Avec un agent IA OpenClaw configuré et déployé en 48 heures :
+
+- Jour 1 : L'agent reçoit 150 CV sur 2 semaines. Il les analyse, les score, génère des synthèses.
+- Jour 3 : 35 profils "pré-qualifiés" sont identifiés et triés par priorité. Les 115 autres reçoivent une relance de refus courtoise et honnête ("Votre profil ne correspond pas à nos besoins actuels, mais on vous contactera si une autre offre convient").
+- Jour 5-6 : L'agent relance les 35 candidats avec messages personnalisés. 15 répondent.
+- Jour 7-10 : L'agent pose automatiquement les questions de qualification (disponibilité, prétentions salariales, localisation). Les réponses alimentent l'ATS en temps réel.
+- Jour 15 : Votre recruteur n'a plus à traiter que 8 profils vraiment chauds, avec dossier complet et contexte personnalisé. Il appelle les candidats.
+
+Résultat : délai réduit de 60%, taux de réponse passé à 43%, gain de 30 heures pour votre équipe sur le mois.
+
+## Intégration avec votre écosystème existant
+
+La beauté d'[OpenClaw](https://openclaw.ai), c'est sa flexibilité. Vous pouvez connecter votre agent IA à :
+
+- Votre ATS (Bullhorn, Beager, Workable...)
+- Votre email (Gmail, Outlook)
+- Votre calendrier
+- LinkedIn (via API officielles)
+- Slack pour les notifications en temps réel
+- Votre base de données de candidats historiques
+
+Le workflow s'exécute de manière autonome, 24h/24, sans intervention manuelle. Vous recevez des rapports quotidiens : CV traités, qualité moyenne, candidats en attente de relance, taux de réponse.
+
+Si vous hésitez entre les solutions d'automatisation disponibles, consultez notre [comparatif détaillé OpenClaw vs Make vs N8N](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif) pour comprendre comment OpenClaw se démarque pour les workflows de recrutement.
+
+## Les garde-fous : qualité et conformité
+
+Un agent IA qui envoie des milliers de messages doit être encadré. Voici les points essentiels :
+
+### Contrôle de qualité des relances
+Chaque message généré peut être examiné avant envoi (mode révision). Vous définissez les règles : pas de promesses impossibles, respect du ton de votre marque, vérification des adresses email valides.
+
+### Conformité RGPD et légale
+L'agent IA doit respecter les règles de consentement email, les lois de la protection des données, et les conditions d'utilisation des plateformes (LinkedIn, etc.). Une configuration mal faite peut vous exposer à des blocages de compte. Claws.fr accompagne ses clients depuis 2025 sur ces enjeux : nous sécurisons vos workflows. Pour en savoir plus sur la sécurité et la conformité, consultez notre [guide dédié à la sécurité OpenClaw](https://claws.fr/securite).
+
+### Monitoring et alertes
+Votre agent doit signaler les anomalies : trop de bounces, taux de désinscription inhabituels, demandes de suppression de données. Aucun agent n'est 100% autonome ; il doit remonter les décisions difficiles.
+
+## Mise en place : de la théorie à la pratique
+
+Installer un agent IA de recrutement ne demande pas de développeur interne. Vous configurez :
+
+1. **Vos sources de données** : où viennent les CV ?
+2. **Vos critères de qualification** : que cherchez-vous vraiment ?
+3. **Vos templates de relance** : quel ton, quel timing ?
+4. **Vos intégrations** : avec quel ATS, quel email ?
+5. **Vos alertes** : quand intervenir manuellement ?
+
+Le tout peut être opérationnel en 2 à 5 jours. Pour comprendre les prérequis techniques et les cas d'installation, consultez [notre guide complet sur OpenClaw](https://claws.fr/blog/quest-ce-qu-openclaw-guide-complet) et explorez [l'installation sur Mac Mini 2025](https://claws.fr/blog/installer-openclaw-mac-mini-2025) si vous envisagez une infrastructure locale.
+
+## Maintenance et évolution de votre agent
+
+Un agent n'est pas un logiciel « install and forget ». Il doit être entretenu :
+
+- Vérifier mensuellement que les scores de qualification restent pertinents
+- Ajuster les critères si le marché bouge (compétences devenues rares, secteurs en mutation)
+- Analyser les retours : vos recruteurs confirmaient-ils les scores de l'agent ?
+- Enrichir les templates de relance avec les meilleurs messages selon les réponses
+
+Pour approfondir ce sujet, lisez notre article sur la [maintenance des agents IA OpenClaw pour des workflows stables](https://claws.fr/blog/maintenance-openclaw-agents-ia-stables).
+
+## Le ROI réel : au-delà des chiffres
+
+Résumer un agent IA de recrutement à un gain de temps est réducteur. Voici ce que les clients Claws.fr constatent vraiment :
+
+- **Qualité des embauches** : les recruteurs ont plus de temps pour converser avec les vrais candidats, moins de biais, meilleures décisions
+- **Expérience candidat** : relances honnêtes et rapides, feedback à tous (pas de candidat laissé dans le silence)
+- **Coûts** : réduction du coût par embauche (moins de jours à pourvoir, moins d'outils nécessaires)
+- **Scalabilité** : passer de 1 à 5 recruteurs sans multiplier les tâches répétitives
+- **Données** : vous avez enfin un historique propre de qui vous avez contacté, quand, et les réponses
+
+## Prochaines étapes
+
+Si votre équipe de recrutement rêve de récupérer du temps, de traiter plus de candidats sans surcharger les recruteurs, et d'avoir des workflows prévisibles, un agent IA est la réponse.
+
+Claws.fr peut installer et configurer votre agent OpenClaw en quelques jours. Nous gérons les intégrations, la sécurité, et l'ajustement des critères selon votre réalité métier.
+
+[Contactez-nous pour explorer votre solution](https://claws.fr/#contact) ou [consultez directement nos options d'installation](https://claws.fr/installation).
+`,
+  },
+  {
     slug: "agent-ia-ecommerce-sav-retours-paniers-abandonnes",
     title: "Agent IA pour e-commerçants : SAV, retours et paniers abandonnés",
     description: "Découvrez comment les agents IA OpenClaw automatisent le SAV, gèrent les retours et relancent les paniers abandonnés pour vos ventes e-commerce.",
