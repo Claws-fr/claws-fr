@@ -19,6 +19,7 @@ const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
 
 
 const TOPICS = [
+  // Batch 1 — Verticales métier
   "Agent IA pour les cabinets d'avocats : automatiser la gestion des dossiers sans violer le secret professionnel",
   "Agent IA dans l'immobilier : qualifier les leads, planifier les visites et relancer les prospects en automatique",
   "Agent IA pour les médecins libéraux : gérer les rappels patients et l'agenda sans secrétaire",
@@ -59,11 +60,41 @@ const TOPICS = [
   "Agent IA pour les entreprises du BTP : conformité réglementaire, gestion des sous-traitants et alertes chantier",
   "Agent IA pour les cabinets de psychologues et thérapeutes : rappels de séances, suivi du parcours et RGPD santé",
   "Agent IA pour les agences d'architecture d'intérieur : devis automatisés, suivi fournisseurs et coordination de projet",
+  // Batch 2 — Nouveaux sujets (juillet 2026+)
+  "Comment construire un agent IA de veille concurrentielle avec OpenClaw : guide pas à pas pour les PME",
+  "Agent IA et conformité RGPD : comment traiter des données personnelles sans risque juridique avec OpenClaw",
+  "Automatiser sa prospection B2B avec un agent OpenClaw : LinkedIn, email froid et suivi en un seul workflow",
+  "Agent IA pour les dentistes : rappels automatiques, gestion des créneaux et suivi post-soin sans secrétaire",
+  "ROI d'un agent IA en entreprise : comment mesurer le retour sur investissement d'une automatisation OpenClaw",
+  "Agent IA pour les pharmacies : gestion des ordonnances récurrentes, alertes rupture et fidélisation patients",
+  "Agent IA pour les cabinets d'audit : automatiser la collecte de pièces, la relance client et la production de rapports",
+  "OpenClaw vs ChatGPT Operator : pourquoi les entreprises choisissent des agents locaux plutôt que des agents cloud",
+  "Agent IA pour les éditeurs de logiciels : support client tier-1, tickets auto-triés et escalade intelligente",
+  "Agent IA pour les agences de relations presse : veille médias, rédaction de communiqués et suivi de retombées",
+  "Comment orchestrer plusieurs agents IA avec OpenClaw : architecture multi-agents pour les équipes opérationnelles",
+  "Agent IA pour les offices notariaux : instruction des dossiers de succession et suivi des actes authentiques",
+  "Agent IA pour les écoles privées : inscription, relances parents et reporting pédagogique automatisés",
+  "Agent IA pour les cabinets de podologie : planification, rappels et suivi des prescriptions orthopédiques",
+  "Sécurité des agents IA en entreprise : les 5 erreurs de configuration critiques à éviter avec OpenClaw",
+  "Agent IA pour les régies publicitaires : optimisation campagnes, reporting client et relances automatiques",
+  "De Make à OpenClaw : retour d'expérience d'une migration d'automatisation pour une PME de 50 personnes",
+  "Agent IA pour les experts judiciaires : automatiser la collecte de preuves, la rédaction de rapports et la facturation",
+  "Agent IA pour les courtiers en crédit : qualification dossier, relances banques et suivi client temps réel",
+  "Comment créer un agent IA de SAV multicanal avec OpenClaw : email, WhatsApp et téléphone dans un seul workflow",
+  "Agent IA pour les opticiens : renouvellement d'ordonnance, rappels de contrôle et fidélisation client",
+  "Agent IA pour les cabinets de chirurgie esthétique : consultations pré-op, relances post-soin et conformité HAS",
+  "OpenClaw et n8n ensemble : comment combiner les deux outils pour des workflows IA hybrides",
+  "Agent IA pour les distributeurs automobiles : leads entrants, relances essai et suivi SAV après-vente",
+  "Agent IA pour les avocats fiscalistes : veille jurisprudentielle, alertes réglementaires et rédaction de memos",
+  "Agent IA pour les assureurs dommages : instruction sinistres, coordination experts et gestion des recours",
+  "Comment former son équipe à travailler avec des agents IA OpenClaw sans résistance au changement",
+  "Agent IA pour les cabinets d'ostéopathie : gestion du planning, relances et suivi des protocoles patients",
+  "Agent IA pour les mairies rurales : automatiser les démarches administratives et réduire la charge des agents",
+  "OpenClaw en 2026 : état de l'art, nouvelles fonctionnalités et feuille de route pour les entreprises françaises",
 ];
 
 const dayIndex = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 2));
-const topic = TOPICS[dayIndex % TOPICS.length];
-console.log(`📝 Sujet : ${topic}`);
+const startIndex = dayIndex % TOPICS.length;
 
 async function generateArticle(topic) {
   const prompt = `Tu es un expert en agents IA autonomes et en SEO français. Rédige un article de blog professionnel pour claws.fr, la première agence française spécialisée dans l'installation d'OpenClaw.
@@ -173,17 +204,36 @@ function gitPush(slug) {
 }
 
 (async () => {
-  try {
-    console.log("🤖 Génération de l'article...");
-    const article = await generateArticle(topic);
-    console.log(`📄 Titre : ${article.title}`);
-    const injected = injectPost(article);
-    if (!injected) process.exit(0);
-    gitPush(article.slug);
-    console.log(`slug: ${article.slug}`);
-    console.log(`\n🎉 Push OK : https://claws.fr/blog/${article.slug}`);
-  } catch (err) {
-    console.error("❌ Erreur :", err.message);
-    process.exit(1);
+  let attempted = 0;
+  let published = false;
+
+  while (attempted < TOPICS.length) {
+    const topicIndex = (startIndex + attempted) % TOPICS.length;
+    const topic = TOPICS[topicIndex];
+    console.log(`📝 Tentative ${attempted + 1} — Sujet : ${topic}`);
+
+    try {
+      console.log("🤖 Génération de l'article...");
+      const article = await generateArticle(topic);
+      console.log(`📄 Titre : ${article.title}`);
+      const injected = injectPost(article);
+      if (injected) {
+        gitPush(article.slug);
+        console.log(`slug: ${article.slug}`);
+        console.log(`\n🎉 Push OK : https://claws.fr/blog/${article.slug}`);
+        published = true;
+        break;
+      }
+      // Slug déjà publié, on essaie le sujet suivant
+      attempted++;
+    } catch (err) {
+      console.error("❌ Erreur :", err.message);
+      process.exit(1);
+    }
+  }
+
+  if (!published) {
+    console.log("⚠️  Tous les sujets ont déjà été publiés. Ajoutez de nouveaux sujets dans TOPICS.");
+    process.exit(0);
   }
 })();
