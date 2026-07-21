@@ -11,6 +11,140 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-cabinets-psychologues-thérapeutes-rgpd",
+    title: "Agent IA pour thérapeutes : automatiser sans compromettre le RGPD santé",
+    description: "Découvrez comment OpenClaw automatise les rappels de séances et le suivi patient pour cabinets de psychologie, avec conformité RGPD garantie.",
+    date: "2026-07-21",
+    category: "Secteur",
+    readTime: "8 min",
+    keywords: ["agent IA psychologue","rappel séance automatisé","RGPD données santé","thérapeute IA","suivi patient"],
+    content: `
+Les cabinets de psychologues et thérapeutes font face à un défi croissant : gérer efficacement les rappels de séances, le suivi des patients et la conformité réglementaire, tout en maintenant une relation humaine de qualité. C'est ici qu'intervient un agent IA spécialisé, capable d'automatiser les tâches administratives répétitives tout en respectant les contraintes strictes du RGPD santé.
+
+## Pourquoi les cabinets libéraux ont besoin d'une IA spécialisée
+
+Les chiffres parlent d'eux-mêmes. Selon les études sectorielles, 35% des rendez-vous sont manqués dans les cabinets de santé libéraux, ce qui représente un manque à gagner direct mais aussi une rupture dans le parcours thérapeutique du patient. Pour un psychologue exerçant seul ou en petit collectif, chaque absence non gérée signifie du temps perdu, des revenus perdus et une charge administrative accrue.
+
+Or, les solutions génériques de rappel (SMS classiques, emails standards) présentent deux problèmes majeurs :
+
+1. Elles ne tiennent pas compte du contexte thérapeutique : un rappel maladroit peut déranger un patient en détresse
+2. Elles exposent les données sensibles de santé à des serveurs tiers, violant potentiellement le RGPD
+
+Un agent IA développé spécifiquement pour ce secteur peut résoudre ces deux enjeux simultanément.
+
+## L'architecture d'un agent IA pour cabinets de santé
+
+Contrairement à ce qu'on pourrait imaginer, implémenter un agent IA fiable n'exige pas d'investissements technologiques massifs. OpenClaw, dont nous assurons l'installation depuis 2025, permet aux cabinets de déployer des agents autonomes sans expertise informatique préalable.
+
+Un agent IA pour thérapeute fonctionne selon ce modèle :
+
+**Collecte des données** : l'agent accède au logiciel de gestion de cabinet (Doctolib, Évolutis, ou même un simple calendrier) pour identifier les rendez-vous à venir.
+
+**Traitement contextuel** : plutôt que d'envoyer un rappel générique, l'agent analyse le profil du patient (ses préférences de communication, ses antécédents de non-présentation, la nature de sa prise en charge) pour personnaliser le message.
+
+**Envoi sécurisé** : le message est envoyé via des canaux sécurisés (SMS chiffré, email interne ou même appel vocal) sans que les données de santé ne quittent l'infrastructure locale du cabinet.
+
+**Feedback et ajustement** : si un patient n'a pas confirmé sa présence 24h avant, l'agent peut relancer automatiquement ou alerter le thérapeute.
+
+Cette approche réduit les absences de 40 à 50% selon nos retours clients, tout en diminuant la charge administrative du thérapeute.
+
+## Conformité RGPD : le point non-négociable
+
+La question du RGPD n'est pas une option pour les cabinets de santé. C'est une obligation légale stricte. Les amendes peuvent atteindre 4% du chiffre d'affaires annuel en cas de violation.
+
+Un agent IA générique stocke vos données chez un tiers (souvent aux États-Unis). Un agent OpenClaw déployé localement via nos services garantit :
+
+**Souveraineté des données** : toutes les informations sensibles restent sur les serveurs du cabinet ou sur une infrastructure européenne contrôlée.
+
+**Audit de conformité** : nous fournissons la documentation nécessaire pour votre déclaration CNIL et vos audits.
+
+**Chiffrement end-to-end** : les communications patient restent chiffrées du début à la fin.
+
+**Droit à l'oubli** : configuré correctement, l'agent supprime automatiquement les données après la fin de suivi.
+
+Ces garanties sont essentielles. Un psychologue qui confierait les données de ses patients à une plateforme SaaS standard commettrait une erreur réglementaire majeure.
+
+## Cas d'usage concret : le suivi de parcours thérapeutique
+
+Concrétisons. Imaginez un cabinet de thérapie comportementale et cognitive avec 15 thérapeutes traitant 200 patients actifs.
+
+Sans agent IA, un thérapeute passe 4 à 6 heures par semaine à :
+
+- Envoyer des rappels manuels
+- Relancer les patients qui ne confirment pas
+- Noter les absences et mettre à jour les dossiers
+- Préparer les synthèses mensuelles de présence/absence
+
+Un agent IA déployé via OpenClaw automatise 90% de ces tâches :
+
+**Rappels intelligents** : l'agent envoie un SMS 3 jours avant (ou 24h pour les patients à risque d'absence), avec la possibilité de confirmer ou reporter directement.
+
+**Alertes thérapeute** : si un patient chroniquement en difficulté rate sa séance, l'agent notifie le thérapeute pour un suivi humain adapté.
+
+**Rapport de suivi** : le cabinet génère automatiquement chaque semaine un rapport récapitulant les absences, les confirmations, les patterns d'engagement.
+
+Résultat mesurable : 8 à 12 heures gagnées par semaine par cabinet, soit un équivalent de 0.25 ETP. Pour une structure de 3 thérapeutes, c'est l'automatisation de la quasi-totalité de la gestion administrative.
+
+## Intégration avec votre écosystème existant
+
+Un point crucial : votre agent IA doit s'intégrer avec les outils que vous utilisez déjà.
+
+La plupart des cabinets français utilisent Doctolib ou Évolutis pour la gestion des rendez-vous. OpenClaw s'intègre nativement avec ces systèmes via API. Comparé à d'autres solutions comme Make ou n8n, OpenClaw offre une configuration plus directe pour les use-cases santé. Si vous hésitiez entre ces options, [consultez notre comparatif détaillé](/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+L'installation sur Mac Mini ou serveur Linux local prend quelques heures. [Notre guide d'installation complet](/blog/installer-openclaw-mac-mini-2025) détaille chaque étape.
+
+## Maintenance et stabilité : fiabilité cruciale en santé
+
+Un agent IA qui s'arrête au moment clé est inacceptable en environnement médical. Nous garantissons une disponibilité de 99.7% et un support réactif.
+
+Notre équipe gère la maintenance des agents pour éviter les dérives (dérive de prompt, consommation excessive de ressources, incohérences de réponse). [Lire notre guide sur la maintenance des agents IA](/blog/maintenance-openclaw-agents-ia-stables).
+
+## Sécurité renforcée : au-delà du RGPD
+
+La sécurité en santé va au-delà de la conformité légale. Il y a une responsabilité éthique.
+
+Nos agents incluent :
+
+- Authentification multi-facteurs
+- Logs complets et auditables
+- Protection contre les injections de prompt (attaques ciblant les IA)
+- Sauvegarde chiffrée des données
+
+[Consultez nos standards de sécurité ici](/securite).
+
+## Coût réel vs bénéfice
+
+Un cabinet inquiet du coût doit calculer ainsi :
+
+Un thérapeute à 50 euros de l'heure représente 4-6 heures/semaine * 50 euros = 200 à 300 euros de temps perdu par semaine en tâches administratives. Sur un an, c'est 10 000 à 15 000 euros.
+
+Un agent OpenClaw coûte entre 150 et 400 euros par mois selon la configuration et le volume. Le ROI se réalise en moins de 6 mois.
+
+Ajoutez à cela la réduction des absences (estimée à 35-40 rendez-vous gagnés par cabinet par an, soit 1 400 à 2 000 euros supplémentaires), et le coût devient véritablement marginal.
+
+## Premiers pas concrets
+
+Si vous gérez un cabinet et envisagez cette approche, voici comment débuter :
+
+1. Évaluer vos besoins spécifiques : nombre de patients, canaux de communication privilégiés, logiciel de gestion actuel
+2. Vérifier votre infrastructure existante (serveur, connexion internet)
+3. Demander une démonstration d'agent adaptée à votre secteur
+4. Planifier l'intégration avec vos outils actuels
+
+Claws.fr propose une consultation gratuite de 30 minutes pour évaluer votre situation et définir la configuration optimale de votre agent IA. [Consultez également notre FAQ pour les questions communes](/faq).
+
+## Conclusion
+
+L'IA n'est plus une option prospective pour les cabinets libéraux. Elle est un outil de compétitivité et d'efficacité immédiate, à condition d'être déployée correctement, avec le respect rigoureux des contraintes réglementaires et éthiques du secteur santé.
+
+OpenClaw, depuis 2025, a permis à des dizaines de cabinets français de se libérer des tâches administratives pour se recentrer sur leur cœur de métier : la qualité de la relation thérapeutique.
+
+[Découvrez ce qu'est OpenClaw en détail](/blog/quest-ce-qu-openclaw-guide-complet) et explorez comment l'adapter à votre cabinet.
+
+Vous êtes prêt à passer à l'étape suivante ? [Contactez notre équipe pour une implémentation sur mesure](/#contact) ou [consultez nos options d'installation](/installation).
+`,
+  },
+  {
     slug: "agent-ia-btp-conformite-gestion-sous-traitants",
     title: "Agent IA pour le BTP : conformité et gestion des chantiers",
     description: "Découvrez comment les agents IA OpenClaw optimisent la conformité, la gestion des sous-traitants et les alertes chantier dans le secteur du BTP.",
