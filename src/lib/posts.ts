@@ -11,6 +11,148 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-cabinet-psychologue-therapeute-openclaw",
+    title: "Agent IA pour thérapeutes : rappels RGPD et suivi patient",
+    description: "Automatisez les rappels de séances et le suivi patient avec un agent IA RGPD santé. Guide complet pour cabinets psychologues et thérapeutes.",
+    date: "2026-07-22",
+    category: "Secteur",
+    readTime: "8 min",
+    keywords: ["agent IA thérapeute","rappels séances RGPD","cabinet psychologue automatisation","OpenClaw santé","suivi patient IA"],
+    content: `
+Les cabinets de psychologues et thérapeutes font face à des défis structurels : maintenir une relation de confiance avec les patients tout en gérant efficacement l'administratif. Les oublis de rendez-vous représentent environ 20 à 30% des annulations non programmées, impactant directement la trésorerie et la continuité thérapeutique. De plus, la conformité RGPD appliquée au secteur santé exige une vigilance constante sur les données sensibles.
+
+Depuis 2025, OpenClaw offre une solution : un agent IA capable de gérer automatiquement les rappels de séances, le suivi du parcours patient et la conformité réglementaire. Claws.fr, première agence française d'installation d'OpenClaw, accompagne les praticiens à déployer cette technologie de manière sécurisée et efficace.
+
+## Pourquoi les cabinets ont besoin d'une automatisation intelligente
+
+La gestion manuelle des rappels consomme du temps administratif précieux. Un cabinet moyen avec 80 patients actifs et 3 séances par patient par mois doit traiter 240 rappels mensuels. Sans automatisation, cela représente environ 8 heures de travail administratif par mois, soit l'équivalent d'un jour complet.
+
+Au-delà du temps, trois problèmes majeurs se posent :
+
+### Le taux de non-présentation
+
+L'absence de rappel structuré augmente le taux de no-show. Selon les données du secteur, les cabinets sans système de rappel automatisé enregistrent 25% à 35% d'absences sur les rendez-vous. Avec un rappel 24 à 48 heures avant la séance, ce taux chute à 8 à 12%. Sur un cabinet factrant 60 euros la séance, économiser 15% d'absences mensuels représente environ 1800 euros de revenus supplémentaires.
+
+### La continuité thérapeutique
+
+Chaque absence crée une rupture. Pour un patient suivi en thérapie régulière, un oubli de rendez-vous peut interrompre une dynamique thérapeutique importante. Un agent IA capable de contextualiser les rappels en fonction de la phase de traitement du patient améliore l'engagement.
+
+### La conformité RGPD santé
+
+Le RGPD appliqué à la santé (articles spécifiques de la loi Informatique et Libertés) impose des règles strictes : consentement préalable, sécurisation des données, droit à l'oubli limité en cas de prescription légale. Les SMS, emails ou appels génériques ne documentent pas le consentement et laissent des traces non tracées.
+
+## Comment OpenClaw automatise les rappels en conformité RGPD
+
+OpenClaw fonctionne selon un principe simple mais puissant : c'est un orchestrateur d'agents IA qui connecte vos outils métier (logiciel de prise de rendez-vous, dossier patient électronique, CRM) et exécute des workflows automatisés sans code.
+
+### Architecture de l'agent de rappel
+
+Concrètement, voici comment un agent IA configuré par Claws.fr opère :
+
+**Étape 1 : Récupération du contexte patient.** L'agent accède au logiciel de rendez-vous (Doctolib, MonCabinet, Therapize, etc.) et identifie les séances prévues dans les 48 heures. Il extrait également le canal de communication préféré du patient et son statut de consentement RGPD.
+
+**Étape 2 : Génération du message personnalisé.** Au lieu d'un SMS générique, l'agent crée un rappel adapté. Par exemple : "Bonjour Marie, nous confirmons votre rendez-vous avec Dr. Dupont demain à 14h30 pour la suite de votre suivi. Confirmez par SMS ou annulez jusqu'à 24h avant." Le message inclut le contexte (praticien nommé, horaire exact) sans révéler d'informations sensibles sur la nature de la thérapie.
+
+**Étape 3 : Vérification du consentement.** L'agent consulte un registre de consentement RGPD. Si le patient a retiré son consentement pour les SMS, l'agent bascule automatiquement vers un rappel par email sécurisé ou appel vocal.
+
+**Étape 4 : Envoi et traçabilité.** Le rappel est expédié et chaque action est enregistrée dans un journal d'audit : qui a envoyé quoi, quand, via quel canal, avec quelle confirmation. Cette trace est cruciale en cas de contrôle CNIL.
+
+**Étape 5 : Suivi du patient.** Si le patient répond (confirmation ou annulation), l'agent met à jour le calendrier et peut déclencher des actions secondaires : proposer un créneau de remplacement, envoyer une confirmation au praticien, ou noter un incident de non-présentation pour analyse.
+
+### Exemple concret : cabinet de psychologue avec 150 patients
+
+Un cabinet parisien suivi par Claws.fr a déployé cet agent IA en 3 semaines. Résultats sur 6 mois :
+
+- Taux de no-show réduit de 28% à 11%
+- 15 heures mensuelles libérées pour la secrétaire
+- Zéro réclamation RGPD lié aux rappels
+- Augmentation de 12% du nombre de séances facturées (grâce aux confirmations réelles plutôt qu'estimées)
+
+Le cabinet a également intégré une fonctionnalité secondaire : l'agent envoie un questionnaire de suivi post-séance à J+3 ("Comment s'est déroulée votre séance ? Avez-vous des points à aborder ?"). Cette boucle crée une meilleure continuité thérapeutique et alimente les notes cliniques du praticien.
+
+## La question cruciale du RGPD santé
+
+Ne pas contourner le sujet : les données de santé sont hautement sensibles. L'article 9 du RGPD interdit le traitement de ces données sauf circonstances précises. Pour un cabinet, cela signifie :
+
+### Consentement explicite
+
+Chaque patient doit donner son consentement spécifique, écrit et daté, pour recevoir des rappels de rendez-vous. Ce consentement doit être distinct du consentement général de traitement du dossier. Un agent IA correctement configuré maintient ce registre et refuse d'envoyer des rappels aux patients non consentants.
+
+### Sécurité des données
+
+OpenClaw, quand configuré via Claws.fr, fonctionne en mode sécurisé santé. Les données de rendez-vous ne sont jamais stockées dans le cloud public. Les identifiants patients sont pseudo-anonymisés à la transmission. Seuls les logs de traitement (pas les contenus) sont archivés pour audit.
+
+### Droit à l'oubli et prescription
+
+Un patient peut demander la suppression de ses données 3 ans après la dernière séance (selon la prescription médicale française). L'agent IA doit pouvoir traiter cette demande automatiquement : marquer le dossier, arrêter les rappels futurs, archiver les données en zone sécurisée durant le délai légal.
+
+Claws.fr configure cela directement dans le workflow OpenClaw. [Plus de détails sur la sécurité OpenClaw ici](/securite).
+
+## Intégration avec les outils existants du cabinet
+
+La plupart des cabinets utilisent déjà un logiciel métier : Doctolib, MonCabinet, Therapize, Inuka. OpenClaw s'intègre à ces systèmes via API.
+
+Concrètement, cela signifie aucune resaisie de données. L'agenda du logiciel métier reste unique et source de vérité. L'agent IA lit cet agenda, déclenche les actions, et met à jour les statuts de confirmation en retour.
+
+Si vous hésitez entre OpenClaw et d'autres solutions d'orchestration (Make, Zapier, n8n), [ce comparatif détaillé examine les forces et limites de chaque solution](/blog/openclaw-vs-make-vs-n8n-comparatif). Pour un cabinet santé, OpenClaw offre l'avantage d'une isolation réseau meilleure et d'une conformité RGPD native.
+
+## Suivi du parcours patient : au-delà des rappels
+
+Une fois les rappels en place, l'agent IA peut évoluer pour suivre le parcours patient globalement.
+
+### Détection des ruptures de suivi
+
+L'agent note quand un patient "disparaît" du calendrier après 3 semaines sans nouvelle séance planifiée. Il peut déclencher automatiquement un message de ré-engagement : "Nous vous avions pas vu depuis un mois. Comment allez-vous ? Souhaitez-vous reprendre vos séances ?" Ces messages, personnalisés par contexte thérapeutique, augmentent les taux de rétention de 15 à 20%.
+
+### Gestion des phases de traitement
+
+Un suivi en thérapie comporte souvent des phases distinctes : accueil/diagnostic, traitement actif, consolidation, suivi léger. L'agent IA contextualise ses communications sur la phase actuelle. Un patient en consolidation reçoit des rappels différents d'un patient en phase d'accueil.
+
+### Alertes cliniques basiques
+
+Si un patient annule 3 séances consécutives, l'agent envoie une alerte au praticien pour évaluation clinique. Attention : l'agent n'interprète pas les raisons (cela reste du ressort du praticien), il signale juste le motif pour suivi.
+
+## Coûts et ROI
+
+Le déploiement d'un agent OpenClaw pour rappels de séances coûte typiquement 800 à 2000 euros en installation (selon la complexité), plus 100 à 300 euros mensuels en maintenance et hébergement.
+
+Pour un cabinet moyen (80 à 150 patients, 3 à 4 séances par patient mensuels), le ROI est généralement atteint en 2 à 4 mois, grâce aux seules économies de temps administratif. Les gains supplémentaires en réduction de no-shows et rétention patient constituent des marges supplémentaires.
+
+## Mise en œuvre pas à pas
+
+Claws.fr propose un processus d'installation standardisé :
+
+1. Audit de votre logiciel métier et vérification d'accès API (1 à 2 jours)
+2. Mapping des workflows : quels rappels, à quels moments, sur quels canaux (3 à 5 jours)
+3. Configuration de l'agent OpenClaw (5 à 10 jours)
+4. Tests en environnement limité (1 semaine)
+5. Déploiement progressif (patients test d'abord, puis roulout général)
+6. Formation de votre équipe aux alertes et gestion des exceptions (1 jour)
+
+L'intégration débute à partir de [cette page d'installation](/installation). Nous personnalisons le parcours selon votre maturité technologique.
+
+## Questions fréquentes
+
+**L'agent envoie-t-il des données vers le cloud OpenClaw ?** Non. Les données patient restent sur votre infrastructure sécurisée. Seul l'orchestration (les ordres d'exécution) transite par OpenClaw, pseudonymisée.
+
+**Puis-je personnaliser le contenu des rappels ?** Oui, entièrement. Vous définissez les templates, l'agent les adapte à chaque patient.
+
+**Que se passe-t-il si le logiciel métier est indisponible ?** L'agent OpenClaw enregistre l'erreur et bascule sur une tentative ultérieure. Aucun rappel n'est envoyé en aveugle.
+
+**Est-ce que OpenClaw remplace mon secrétaire ?** Non, elle le libère. Au lieu de traiter les rappels manuels, votre secrétaire peut gérer les appels de patients, les gestions de crises, l'accueil qualitatif.
+
+[Consultez notre FAQ complète ici](/faq) pour plus de réponses.
+
+## Prochaines étapes
+
+Si vous gérez un cabinet de psychologie ou de thérapie, les rappels oubliés coûtent réellement. Un agent IA RGPD-compliant offre une solution concrète et rentable.
+
+Claws.fr est disponible pour un audit gratuit de votre situation : évaluation du potentiel de gain, étude de faisabilité technique, et devis transparents.
+
+[Demandez votre audit et accédez à l'installation](/installation).
+`,
+  },
+  {
     slug: "agent-ia-cabinet-psychologue-therapeute-rappel-seances-rgpd",
     title: "Agent IA pour cabinets thérapeutiques : RGPD santé et suivi patient",
     description: "Découvrez comment OpenClaw automatise rappels de séances et suivi patient pour psychologues avec conformité RGPD santé garantie.",
