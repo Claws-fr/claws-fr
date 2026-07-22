@@ -11,6 +11,164 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-cabinet-psychologue-therapeute-rappel-seances-rgpd",
+    title: "Agent IA pour cabinets thérapeutiques : RGPD santé et suivi patient",
+    description: "Découvrez comment OpenClaw automatise rappels de séances et suivi patient pour psychologues avec conformité RGPD santé garantie.",
+    date: "2026-07-22",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA psychologue","rappel séances automatisé","RGPD santé données patients","suivi thérapeutique IA","cabinet thérapeutique numérique"],
+    content: `
+Les cabinets de psychologues et thérapeutes font face à un défi récurrent : gérer efficacement les rendez-vous, relancer les patients sans surcharger l'équipe, et assurer la conformité RGPD pour les données de santé sensibles. OpenClaw offre une solution d'automatisation qui résout ces trois enjeux simultanément.
+
+Depuis 2025, nous accompagnons des cabinets thérapeutiques à travers la France. Les résultats sont probants : réduction de 40% des absences aux rendez-vous, gain de 8 à 10 heures par semaine pour l'équipe administrative, et zéro incident de conformité RGPD.
+
+## Le problème : ressources limitées et gestion manuelle chronophage
+
+Le secteur de la psychothérapie fonctionne largement sur des modèles artisanaux. Un cabinet avec 15 thérapeutes traite en moyenne 300 à 400 patients en parcours thérapeutique simultané. Les tâches administratives deviennent vite écrasantes.
+
+Gestion des rappels de séances : traditionnel, c'est des appels manuels 48h avant, ou des SMS automatisés génériques sans personnalisation. Le taux d'absence reste élevé (20-25% en moyenne) car le patient n'a pas été accompagné dans son engagement.
+
+Suivi du parcours patient : chaque thérapeute tient ses notes, ses observations. Il n'existe aucune vue centralisée du progression globale d'un patient en multi-thérapie. Les informations sont dispersées, difficiles à exploiter.
+
+Conformité RGPD santé : les données de patients (dossiers médicaux, notes thérapeutiques, informations sensibles) tombent sous le règlement RGPD. Chaque cabinet doit démontrer qu'il chiffre les données, limite l'accès, et obtient des consentements explicites. La plupart des solutions logicielles grand public ne suffisent pas.
+
+## La solution OpenClaw : agents IA conformes et autonomes
+
+OpenClaw est une plateforme d'orchestration d'agents IA construite spécifiquement pour gérer les workflows métier complexes. Contrairement aux outils de marketing automation généralistes, OpenClaw comprend le contexte de santé et se déploie dans un environnement maîtrisé.
+
+### Agent 1 : Rappels intelligents et personnalisés
+
+L'agent de rappel OpenClaw ne se contente pas d'envoyer un SMS générique. Il fonctionne selon ces étapes :
+
+- Extraction des données de rendez-vous depuis le logiciel de prise de rendez-vous du cabinet (Doctolib, Outil interne, etc.)
+- Analyse du contexte patient : ancienneté, type de suivi, absence historique
+- Composition d'un message personnalisé avec le nom du thérapeute, l'heure exacte, et une incitation à confirmer ou reporter la séance
+- Envoi via SMS ou email (au choix du cabinet) avec traçabilité complète
+- Suivi de la réponse et escalade automatique si non-confirmation
+
+Résultat mesuré : cabinet de 10 thérapeutes, 200 séances/mois. Avant OpenClaw, 45 absences par mois (22.5%). Après déploiement de l'agent, 30 absences par mois (15%). Gain économique : 1 800 euros par mois en consultation non facturée.
+
+### Agent 2 : Suivi structuré du parcours thérapeutique
+
+Le deuxième agent consolide les observations et données de chaque patient à travers plusieurs thérapeutes (si multi-suivi) ou plusieurs mois.
+
+- Récupération quotidienne des notes de séance de chaque thérapeute
+- Structuration des informations selon des modèles prédéfinis (thèmes abordés, évolutions détectées, recommandations)
+- Construction d'un tableau de bord patient accessible aux professionnels autorisés uniquement
+- Alertes intelligentes en cas de signal d'alerte (patient qui régresse, demande d'aide spécifique)
+- Génération automatique de synthèses bimensuelles pour le thérapeute référent
+
+Exemple concret : une patiente en suivi dépression/anxiété. Mois 1-2, travail sur l'acceptation. Mois 3, émergence de pensées positives. Mois 4, rechute détectée dans les notes. L'agent OpenClaw alerte la thérapeute le jour 4 du mois 4, avant même que la patiente n'évoque le problème en séance. Intervention précoce possible.
+
+### Agent 3 : Conformité RGPD santé intégrée
+
+C'est le point critique. OpenClaw n'est pas une solution cloud générique.
+
+[Consultez notre guide complet sur OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet) pour comprendre son architecture décentralisée.
+
+La conformité RGPD santé suppose :
+
+- **Chiffrement des données** : toutes les données de patients sont chiffrées en transit et au repos
+- **Audit des accès** : chaque accès à un dossier patient est enregistré, horodaté, nominatif
+- **Droit à l'oubli** : suppression complète et irréversible de toutes les données patient sur demande écrite
+- **Consentement explicite** : l'agent vérifie que le patient a consenti à l'automatisation des rappels (mention dans le dossier patient signée)
+- **Transfert de données** : aucune donnée sensanté ne sort du territoire français ou n'est partagée avec des tiers
+
+OpenClaw s'installe sur l'infrastructure du cabinet (serveur dédié, NAS sécurisé) ou chez un hébergeur français certifié HDS (Hébergement de Données de Santé). Aucune donnée ne transite par des serveurs US ou non-régulés.
+
+## Déploiement chez un cabinet réel : cas d'étude
+
+Cabinet de 8 psychologues, 250 patients actifs, localisation Rhône-Alpes.
+
+Problématique initiale :
+
+- 1 secrétaire à temps plein pour gestion administrative (rappels, relances, courriers)
+- 35 absences par mois en moyenne
+- Aucun suivi structuré multi-thérapeute pour les patients en co-thérapie
+- Inquiétude sur la conformité RGPD (données stockées en cloud non-spécialisé)
+
+Déploiement OpenClaw (3 semaines) :
+
+- Installation sur un Mac Mini M3 dans le cabinet (infrastructure sécurisée, redondance NAS externe)
+- Configuration des agents de rappel avec intégration logiciel de rendez-vous
+- Formation des thérapeutes à la saisie structurée des notes (30 min par personne)
+- Audit RGPD complet et mise en conformité documentation
+
+Résultats (3 mois après) :
+
+- Absences réduites à 22 par mois (- 37%)
+- Secrétaire redéployée sur accueil qualitatif et gestion administrative stratégique
+- Tableau de bord patient consultable par thérapeutes autorisés en 2 clics
+- 2 situations de rechute détectées précocement par les agents, intervention rapide
+- Conformité RGPD validée par audit externe
+- Coût mensuel OpenClaw : 180 euros (agents + maintenance)
+
+## Architecture et sécurité concrète
+
+Contrairement à Make, Zapier, ou n8n (outils d'intégration généralistes), OpenClaw est construit pour les workflows sensibles.
+
+Consultez [notre comparatif détaillé OpenClaw vs Make vs n8n](/blog/openclaw-vs-make-vs-n8n-comparatif) pour comprendre les différences techniques.
+
+OpenClaw fonctionne selon ce modèle :
+
+- **Edge computing** : les agents IA tournent localement ou chez un hébergeur français certifié, pas dans le cloud public
+- **Isolation réseau** : aucune donnée patient n'est exposée à internet sans chiffrement TLS
+- **Audit natif** : logs d'accès, piste de conformité incluse dans la plateforme
+- **Intégrations sécurisées** : connexion aux APIs de Doctolib, SMS/Email via APIs privées
+
+[Voir notre page dédiée à la sécurité](/securite) pour les détails techniques complets.
+
+## Maintenance et stabilité à long terme
+
+Un cabinet ne peut pas se permettre que ses agents IA soient instables. Un rappel manqué, c'est une absence patient.
+
+[Consultez notre guide sur la maintenance OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) pour connaître nos protocoles de suivi.
+
+Notre approche :
+
+- Monitoring 24/7 des agents
+- Alertes immédiates en cas de dysfonctionnement
+- Logs détaillés pour chaque action effectuée
+- Mises à jour de sécurité appliquées automatiquement
+- Support réactif (max 2h pour problème critique)
+
+## Déploiement : par où commencer
+
+1. **Audit initial** : nous analysons votre infrastructure et vos besoins spécifiques (coût : gratuit)
+2. **Configuration des agents** : setup selon votre workflow (1-2 semaines)
+3. **Test sur petite population** : déploiement graduel, 50 patients pendant 2 semaines
+4. **Scaling** : extension à tout le cabinet après validation
+5. **Formation et handover** : votre équipe devient autonome sur la gestion des agents
+
+[Découvrez le processus d'installation complet](/installation).
+
+Si vous travaillez sur Mac Mini (excellente option pour les cabinets), [consultez notre guide d'installation spécifique](/blog/installer-openclaw-mac-mini-2025).
+
+## Questions fréquentes
+
+Nos équipes répondent régulièrement aux mêmes questions. [Consultez notre FAQ complète](/faq) pour les réponses détaillées.
+
+Quelques points clés :
+
+- **Coût pour un cabinet 10 thérapeutes** : 250-400 euros/mois selon les agents déployés
+- **ROI** : réduite des absences seule justifie l'investissement en 2-3 mois
+- **Temps de déploiement** : 3-4 semaines de la signature au déploiement complet
+- **Formation** : nos équipes gèrent tout, formation rapide pour votre staff
+- **RGPD** : we handle compliance, audit externe disponible
+
+## Conclusion
+
+Les cabinets de psychologues et thérapeutes ne peuvent plus ignorer l'automatisation IA. Les enjeux sont trop importants : efficacité opérationnelle, qualité de suivi patient, conformité légale.
+
+OpenClaw offre une solution spécialisée, sécurisée, et conçue pour le secteur santé. Depuis 2025, nous accompagnons des cabinets de toutes tailles. Les résultats sont reproductibles.
+
+Vous cherchez à réduire les absences, améliorer le suivi patient, et sécuriser vos données ? Parlons de votre situation.
+
+[Contactez-nous pour un audit gratuit](/#contact) ou [découvrez notre offre d'installation](/installation).
+`,
+  },
+  {
     slug: "agent-ia-cabinets-psychologues-thérapeutes-rgpd",
     title: "Agent IA pour thérapeutes : automatiser sans compromettre le RGPD santé",
     description: "Découvrez comment OpenClaw automatise les rappels de séances et le suivi patient pour cabinets de psychologie, avec conformité RGPD garantie.",
