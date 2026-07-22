@@ -164,10 +164,37 @@ Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown autour) :
   return JSON.parse(text);
 }
 
+function extractKeywords(text) {
+  return text
+    .toLowerCase()
+    .replace(/[àâä]/g, "a").replace(/[éèêë]/g, "e").replace(/[îï]/g, "i")
+    .replace(/[ôö]/g, "o").replace(/[ùûü]/g, "u").replace(/ç/g, "c")
+    .split(/[\s\-:,./|]+/)
+    .filter(w => w.length > 3 && !["pour","avec","dans","sans","les","des","une","que","par","sur","aux","agence","agent","openclaw","claws","automatiser","automatisation","guide","comment","comment","utiliser","votre","leur","leur"].includes(w));
+}
+
+function isSimilarTopic(newTitle, postsContent) {
+  const existingTitles = [...postsContent.matchAll(/title: "([^"]+)"/g)].map(m => m[1]);
+  const newKw = new Set(extractKeywords(newTitle));
+  for (const existing of existingTitles) {
+    const existingKw = extractKeywords(existing);
+    const overlap = existingKw.filter(w => newKw.has(w)).length;
+    const similarity = overlap / Math.max(newKw.size, existingKw.length, 1);
+    if (similarity >= 0.45) {
+      console.log(`⚠️  Sujet trop similaire à "${existing}" (overlap ${Math.round(similarity*100)}%), skip.`);
+      return true;
+    }
+  }
+  return false;
+}
+
 function injectPost(article) {
   const postsContent = readFileSync(POSTS_FILE, "utf-8");
   if (postsContent.includes(`slug: "${article.slug}"`)) {
     console.log(`⚠️  Slug "${article.slug}" existe déjà, skip.`);
+    return false;
+  }
+  if (isSimilarTopic(article.title, postsContent)) {
     return false;
   }
 
