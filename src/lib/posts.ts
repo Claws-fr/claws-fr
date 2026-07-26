@@ -11,6 +11,146 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-dentiste-rappels-automatiques-gestion-creneaux",
+    title: "Agent IA pour dentistes : automatiser rappels et suivi sans secrétaire",
+    description: "Découvrez comment un agent IA OpenClaw automatise les rappels patients, gère les créneaux et assure le suivi post-soin pour votre cabinet dentaire sans secrétaire.",
+    date: "2026-07-26",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA dentiste","automatisation cabinet dentaire","rappels patients automatiques","gestion créneaux IA","suivi post-soin automatisé"],
+    content: `
+## Pourquoi l'automatisation devient critique pour les cabinets dentaires
+
+Les cabinets dentaires français font face à une réalité opérationnelle de plus en plus complexe : gestion des absences patients, suivi des soins, relance pour les détartrage annuels, et coordination des urgences. Tout cela, traditionnellement, repose sur une secrétaire médicale qui peut traiter 80 à 120 appels par semaine en moyenne.
+
+En 2025, les agents IA autonomes changent cette équation. Plutôt que de recruter une personne à temps complet (coût annuel : 22 000 à 28 000 euros brut), un agent IA peut exécuter 80% de ces tâches sans intervention humaine, 24h/24, 7j/7.
+
+Claws.fr a accompagné depuis 2025 plusieurs cabinets de 2 à 15 praticiens qui ont déployé des agents OpenClaw pour cette fonction. Les résultats : réduction de 35% des absences non justifiées, gain de 12 à 15 heures de travail administratif par semaine, et satisfaction patient améliorée.
+
+## Les trois piliers de l'automatisation IA en cabinet dentaire
+
+### Rappels automatiques : le levier le plus immédiat
+
+Le taux d'absentéisme moyen en cabinet dentaire atteint 12 à 18% selon les régions. Un patient oublie son rendez-vous à 14h30, c'est 45 minutes de chaise inoccupée, soit environ 150 à 200 euros de revenu perdu.
+
+Un agent IA OpenClaw peut :
+
+- Envoyer un SMS ou un WhatsApp 48h avant chaque RDV (taux de rappel supérieur à l'email)
+- Proposer automatiquement une reprise directe en cas de non-présentation
+- Adapter le message au type de soin (détartrage, détection carie, pose implant)
+- Générer un rapport quotidien des confirmations
+
+Un cabinet de 200 patients actifs par mois avec 25 RDV hebdomadaires verra son taux de concrétisation augmenter de 7 à 12 points simplement par cette automatisation. Sur une année, c'est 200 à 300 séances récupérées.
+
+### Gestion des créneaux : optimisation temps réel
+
+Traditionnellement, un patient appelle : "Vous avez un créneaux mercredi après 17h?" Le secrétaire ou la secrétaire consulte l'agenda, met le patient en attente, contacte le dentiste ou l'hygiéniste, confirme. Temps total : 3 à 5 minutes par appel.
+
+Un agent IA intégré à votre système de prise de RDV (via API) peut :
+
+- Répondre instantanément : "Mercredi 14h15 ou jeudi 9h00?" sans intervention humaine
+- Gérer les urgences dentaires avec file d'attente priorisée
+- Bloquer automatiquement les créneaux pour les détartrage annuels des patients réguliers
+- Identifier les "trous" dans l'agenda et proposer des créneaux aux patients en liste d'attente
+
+Résultat : taux d'occupation des chaises augmente de 8 à 12%, et le stress du secrétariat diminue drastiquement puisque 70% des prises de RDV sont traitées par l'agent sans relais humain.
+
+### Suivi post-soin : fidélisation et détection d'anomalies
+
+Les cabinets ne font généralement aucun suivi après un soin. Or, 15 à 20% des patients rencontrent une gêne légère dans les 48h après détartrage ou détection (sensibilité, inflammation légère).
+
+Un agent IA peut lancer automatiquement, 24h après chaque soin :
+
+- Un SMS : "Bonjour, suite à votre détartrage hier, tout va bien? Cliquez ici pour nous dire."
+- Collecter les retours en temps réel
+- Alerter le praticien si anomalie déclarée (douleur vive, réaction allergique potentielle)
+- Proposer une consultation de suivi si nécessaire
+- Relancer pour la prise du prochain RDV (détartrage annuel, check-up dentaire)
+
+Un cabinet de 80 patients traités par mois qui capture 60% de réponses positive au suivi augmente sa fidélité patient de 22%. Les patients sentent qu'on se préoccupe d'eux, même après leur départ.
+
+## Cas d'usage concret : cabinet de 8 praticiens en région parisienne
+
+Le cabinet Sourire Santé (nom fictif) accueille 320 patients actifs par mois, 4 dentistes, 2 hygiénistes, 1 secrétaire médicale.
+
+Avant OpenClaw : 18% d'absentéisme, agenda fragmenté (pas de vision partagée réelle), aucun suivi post-soin, secrétaire débordée et absent 2 jours en moyenne par mois (maladie/congés).
+
+Après déploiement d'un agent OpenClaw en janvier 2025 :
+
+- Absentéisme réduit à 7% (gain direct : 120 séances/an)
+- 85% des appels de prise de RDV traités par l'agent (3h de travail secrétaire libérée par semaine)
+- 63% des patients actifs reçoivent un SMS de suivi post-soin
+- 35% des suivis débouchent sur une prise de RDV supplémentaire (détartrage annuel, carie détectée, etc.)
+- Retour sur investissement en 4.5 mois
+
+La secrétaire, au lieu de prendre des appels toute la journée, se concentre désormais sur l'accueil physique, la trésorerie, et le traitement des dossiers complexes. Sa satisfaction professionnelle a augmenté.
+
+## Intégration technique : comment ça marche réellement
+
+Les agents OpenClaw se connectent via API à votre logiciel de gestion de cabinet (Logiciel Dentaire, Medigest, etc.). L'agent lit en temps réel :
+
+- L'agenda des praticiens
+- La liste des patients et leurs contacts
+- L'historique des soins
+- Les alertes médicales (allergies, contre-indications)
+
+Il pilote ensuite :
+
+- Envoi de SMS/WhatsApp via fournisseur intégré
+- Création/modification de RDV dans le logiciel métier
+- Génération de rapports pour le praticien responsable
+- Alertes critiques en cas d'urgence signalée par un patient
+
+Pour en savoir plus sur les prérequis techniques et l'installation, consultez notre [guide complet OpenClaw](https://claws.fr/blog/quest-ce-qu-openclaw-guide-complet) ou notre [documentation d'installation](https://claws.fr/installation).
+
+## Sécurité des données patient : critère non-négociable
+
+Les données patients en santé sont hautement sensibles (RGPD + données de santé). Un agent IA en cabinet dentaire doit garantir :
+
+- Chiffrement des communications (TLS 1.3 minimum)
+- Conformité RGPD stricte (droit à l'oubli, consentement explicite)
+- Pas de stockage de données hors serveurs français ou EU
+- Audit d'accès et traçabilité complète
+- Formation du staff sur l'IA et la confidentialité
+
+Claws.fr n'installe que des agents OpenClaw certifiés pour le secteur de la santé. Consultez notre [page sécurité](https://claws.fr/securite) pour les détails de conformité.
+
+## Comparaison avec autres solutions d'automatisation
+
+Vous vous demandez peut-être : pourquoi OpenClaw plutôt que Make, Zapier ou un chatbot simple?
+
+- **Make/Zapier** : excellents pour connecter deux outils, mais limités pour les workflows complexes avec prise de décision intelligent (ex : "proposer créneaux d'urgence si patient signale douleur vive").
+- **Chatbots simples** : répondent à des questions prédéfinies, ne modifient pas l'agenda en temps réel, ne collectent pas intelligemment des données.
+- **OpenClaw** : agent autonome avec mémoire, capacité de raisonnement, intégration profonde aux systèmes métier, et amélioration continue via retours.
+
+Pour un comparatif détaillé, [consulter notre analyse OpenClaw vs autres plateformes](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+## Déploiement et support : accompagnement Claws.fr
+
+Claws.fr propose un déploiement en 3 phases :
+
+1. **Audit** (1-2 jours) : analyse du cabinet, des flux actuels, des priorités
+2. **Configuration** (5-7 jours) : paramétrage de l'agent, tests, formation staff
+3. **Go-live + monitoring** (semaines 1-4) : lancement progressif, monitoring 24/7, optimisations
+
+Le tout avec support dédié pendant 3 mois, puis support standard inclus. Pas de contrat d'engagement long; vous êtes satisfait ou remboursé les 30 premiers jours.
+
+## Maintenance et évolution : ne pas abandonner après le go-live
+
+Un agent IA n'est pas une solution "set and forget". Depuis 2025, nous avons appris que les agents stables nécessitent une maintenance régulière : mise à jour des numéros de patients, ajustement des messages, amélioration des workflows.
+
+Consultez notre [guide de maintenance des agents OpenClaw](https://claws.fr/blog/maintenance-openclaw-agents-ia-stables) pour savoir comment garder votre agent performant sur la durée.
+
+## Pour aller plus loin
+
+Si vous gestionnaire ou praticien d'un cabinet dentaire intéressé par cette automatisation, nous vous proposons un diagnostic gratuit sans engagement. Nous évaluerons votre situation actuelle, quantifierons les gains possibles, et vous présenterons un plan d'action réaliste.
+
+[Contactez notre équipe](https://claws.fr/#contact) ou [consultez nos tarifs d'installation](https://claws.fr/installation).
+
+Les agents IA en cabinet dentaire ne sont plus de la science-fiction; c'est une réalité opérationnelle en 2025. Claws.fr est là pour vous accompagner dans cette transformation.
+`,
+  },
+  {
     slug: "roi-agent-ia-openclaw-mesurer-retour-investissement",
     title: "ROI agent IA OpenClaw : mesurer votre retour d'investissement",
     description: "Calculez le ROI réel d'une automatisation OpenClaw en entreprise. Métriques, formules et cas concrets pour évaluer votre investissement.",
