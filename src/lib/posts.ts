@@ -11,6 +11,157 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "automatiser-prospection-b2b-agent-openclaw",
+    title: "Automatiser sa prospection B2B avec OpenClaw : LinkedIn, email et suivi",
+    description: "Découvrez comment automatiser votre prospection B2B avec un agent OpenClaw. LinkedIn, emails froids et suivi en un seul workflow intelligent.",
+    date: "2026-07-28",
+    category: "Guide",
+    readTime: "7 min",
+    keywords: ["prospection B2B automatisée","agent OpenClaw","LinkedIn automation","email froid automatisé","workflow prospection"],
+    content: `
+## La prospection B2B moderne demande une approche différente
+
+Traditionnellement, la prospection B2B repose sur trois piliers : identifier les prospects sur LinkedIn, envoyer des emails personnalisés, et relancer régulièrement. Le problème ? Ces tâches sont répétitives, chronophages et sujettes aux erreurs humaines. Une équipe commerciale perd en moyenne 40% de son temps sur des actions administratives plutôt que sur des conversations à valeur ajoutée.
+
+Depuis 2025, OpenClaw offre une solution radicalement différente : un agent IA autonome capable de gérer l'ensemble du pipeline de prospection sans intervention humaine. Chez Claws.fr, nous accompagnons nos clients à déployer ces agents depuis le début de l'année, et les résultats parlent d'eux-mêmes.
+
+## Comment fonctionne un agent OpenClaw pour la prospection
+
+Contrairement aux outils d'automation classiques qui exécutent des scripts figés, un agent OpenClaw opère comme un véritable prospect autonome. Il prend des décisions en temps réel, s'adapte aux réponses reçues et optimise son approche.
+
+Voici le workflow type qu'un agent OpenClaw déploie :
+
+### Phase 1 : Identification et enrichissement des prospects
+
+L'agent commence par consulter une liste de prospects ou un critère de recherche (secteur, taille d'entreprise, fonction). Il se connecte à votre CRM ou à une base de données, puis enrichit chaque fiche avec des données publiques : technologies utilisées, changements récents dans l'équipe, actualités de l'entreprise.
+
+Un client du secteur SaaS nous a permis de traiter 500 prospects par semaine, là où son équipe en traitait 80 manuellement. Gain de temps : 520 heures par an.
+
+### Phase 2 : Outreach multi-canal orchestré
+
+L'agent commence par une première prise de contact sur LinkedIn. Il rédige un message personnalisé basé sur le contexte du prospect : son rôle, son secteur, les défis spécifiques de son entreprise. L'approche n'est pas du spam généralisé, mais une véritable contextualisation.
+
+Si le prospect accepte la connexion (ce qui survient dans 25-35% des cas selon nos données), l'agent attend 48 heures, puis envoie un email froid depuis votre adresse. Cet email reprend les éléments de la connexion LinkedIn pour créer une continuité et renforcer la crédibilité.
+
+L'email n'est pas une simple relance commerciale. L'agent peut :
+
+- Inclure un lien vers une ressource spécifique (cas d'usage dans son secteur)
+- Mentionner un événement ou une actualité récente de son entreprise
+- Proposer un appel avec une fenêtre de temps personnalisée
+- Adapter le message selon les données enrichies (budget estimé, cycle de vente probable)
+
+### Phase 3 : Suivi intelligent et relance contextuelle
+
+C'est ici que les agents OpenClaw surpassent les outils classiques. L'agent monitore :
+
+- Les réponses par email (et détecte automatiquement les rejets, les relances automatiques, les réponses positives)
+- L'engagement LinkedIn (clics sur le profil, interactions avec vos posts)
+- Les changements de statut du prospect (nouvelle position, changement d'entreprise)
+
+En fonction de ces signaux, l'agent décide de relancer ou non. Un prospect qui a cliqué sur votre lien mais n'a pas répondu par email reçoit une relance différente d'un prospect qui ignore complètement vos messages.
+
+Notre système permet aussi la détection de "bad leads" : si un prospect marque l'email comme spam trois fois, l'agent cesse automatiquement le suivi pour ce contact et pour les domaines similaires (c'est important pour votre réputation).
+
+## Un cas concret : SaaS de gestion de paie (PME)
+
+L'un de nos clients, éditeur d'un logiciel de paie pour PME, fait face à un problème classique : les décideurs sont difficiles à joindre et le cycle de vente dure 4-6 mois.
+
+Nous avons mis en place un agent OpenClaw configuré ainsi :
+
+1. Identification automatique des PME de 20-200 collaborateurs dans certains secteurs (BTP, distribution, industrie) via LinkedIn Sales Navigator
+2. Premier message LinkedIn personnalisé mentionnant un défi spécifique du secteur
+3. Après acceptation, email mettant en avant un ROI calculé pour leur taille d'entreprise
+4. Relance après 5 jours si pas de réponse, avec un angle différent (cette fois-ci, on mentionne une étude de cas)
+5. Relance après 10 jours avec une offre limitée dans le temps (accès gratuit 30 jours)
+6. Arrêt après la 3e relance sans réponse
+
+Résultats sur 3 mois :
+
+- 1200 prospects contactés (vs. 300 avec l'équipe commerciale seule)
+- 180 réponses positives (15% de taux de réponse, normal pour ce secteur)
+- 45 appels de démonstration planifiés
+- 8 contrats signés (18% de conversion des appels en client)
+- Coût par contact : 2 euros
+- Gain de temps pour l'équipe commerciale : 200 heures/mois
+
+## Les avantages concrets par rapport à une prospection manuelle
+
+### Consistance
+
+Un humain ne peut pas envoyer 1000 emails personnalisés par jour. Un agent OpenClaw, si. Et chaque message sera cohérent avec votre stratégie définie.
+
+### Adaptation en temps réel
+
+Votre équipe propose un nouveau service ? Il suffit de mettre à jour le prompt de l'agent. Les futures relances l'intégreront automatiquement. Avec une approche manuelle, cela demanderait une formation, une mise en place graduelle et des erreurs de transition.
+
+### Données d'optimisation
+
+L'agent génère automatiquement des rapports sur ce qui fonctionne : quel angle d'approche génère le plus de réponses, quel jour envoyer les emails, quel secteur convertit le mieux. Ces insights seraient impossibles à collecter manuellement à cette échelle.
+
+### Disponibilité 24/7
+
+Les prospects ne répondent pas seulement entre 9h et 17h. Votre agent, lui, est disponible tout le temps pour relancer, répondre aux questions simples et qualifier les leads.
+
+## Configuration technique chez Claws.fr
+
+Mettre en place un tel agent demande une expertise spécifique. Vous devez :
+
+1. Configurer l'accès sécurisé à LinkedIn et à vos outils email
+2. Intégrer votre CRM ou votre système de scoring
+3. Définir les prompts du modèle d'IA (les instructions qui guident l'agent)
+4. Mettre en place les guardrails (les limites pour éviter les comportements non souhaités)
+5. Tester le workflow sur un petit groupe de prospects avant le full-scale
+
+Notre accompagnement inclut tout cela. Si vous voulez comprendre les bases d'OpenClaw avant de vous lancer, consultez notre [guide complet sur OpenClaw](https://claws.fr/blog/quest-ce-qu-openclaw-guide-complet).
+
+Pour les questions techniques de maintenance et de stabilité des agents, nous avons aussi rédigé un article détaillé sur la [maintenance des agents OpenClaw](https://claws.fr/blog/maintenance-openclaw-agents-ia-stables).
+
+Si vous comparez OpenClaw avec d'autres solutions comme Make ou N8N, [ce comparatif](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif) vous aidera à comprendre les différences.
+
+## Les pièges à éviter
+
+### Piège 1 : Configuration trop agressive
+
+Envoyer 10 emails de relance en deux semaines va détruire votre réputation et vos taux de délivrabilité. Les limites doivent être définies précisément et respectées par l'agent. Chez Claws.fr, nous recommandons maximum 3 relances espacées de 5-7 jours.
+
+### Piège 2 : Personnalisation insuffisante
+
+Un prospect sent immédiatement quand il reçoit un message générique. Les agents OpenClaw qui ne sont pas bien configurés produisent du spam à grande échelle. La qualité du contexte injecté (données enrichies sur le prospect) est critique.
+
+### Piège 3 : Ignorer le feedback
+
+Si 80% de vos prospects rejettent l'approche, c'est que quelque chose ne va pas. Les agents doivent être itérativement améliorés en fonction des résultats réels, pas seulement lancés une fois.
+
+## Sécurité et conformité
+
+Vous vous demandez peut-être si confier votre prospection à un agent IA est sécurisé. Chez Claws.fr, nous prenons la sécurité très au sérieux. Consultez notre page sur la [sécurité d'OpenClaw](https://claws.fr/securite) pour comprendre comment nous protégeons vos données.
+
+En bref :
+
+- Les accès sont chiffrés et authentifiés
+- Les données des prospects restent sur vos serveurs
+- L'agent n'a accès qu'aux outils strictement nécessaires
+- Un audit de sécurité est réalisé avant chaque déploiement
+
+## Prochaines étapes
+
+Si vous voulez déployer un agent OpenClaw pour votre prospection B2B, nous recommandons :
+
+1. Définir clairement votre ICP (Ideal Customer Profile)
+2. Préparer une liste de 200-300 prospects pour un test pilote
+3. Nous contacter pour un audit de faisabilité
+4. Mettre en place l'agent sur le groupe test
+5. Mesurer les résultats sur 4 semaines
+6. Itérer et scaler progressivement
+
+Pour plus de détails sur l'installation et les configurations possibles, consultez notre page [d'installation](https://claws.fr/installation).
+
+Vous avez des questions ? Notre [FAQ](https://claws.fr/faq) couvre les interrogations les plus fréquentes, et notre équipe est disponible pour un diagnostic personnalisé.
+
+[Contactez-nous dès maintenant](https://claws.fr/#contact) pour discuter de votre stratégie de prospection et explorer comment un agent OpenClaw pourrait transformer votre pipeline commercial.
+`,
+  },
+  {
     slug: "agent-ia-audit-openclaw-collecte-rapports",
     title: "Agent IA pour cabinets d'audit : automatiser pièces et rapports",
     description: "Découvrez comment les agents IA OpenClaw automatisent la collecte de pièces, les relances clients et la production de rapports pour les cabinets d'audit.",
