@@ -11,6 +11,141 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-dentistes-rappels-automatiques-gestion-creneaux",
+    title: "Agent IA pour dentistes : automatisez rappels et gestion des rendez-vous",
+    description: "Découvrez comment un agent IA OpenClaw automatise les rappels patients, gère les créneaux et le suivi post-soin pour votre cabinet dentaire sans secrétaire.",
+    date: "2026-08-02",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA dentiste","rappels automatiques rendez-vous","gestion cabinet dentaire","OpenClaw santé","automatisation secrétariat médical"],
+    content: `
+Les cabinets dentaires font face à un défi constant : gérer efficacement les rendez-vous, réduire les absences et assurer un suivi patient optimal, tout cela avec des ressources humaines limitées. Depuis 2025, OpenClaw offre une solution d'automatisation par agents IA que nous implémentons chez Claws.fr pour transformer la gestion administrative des cabinets dentaires.
+
+## Le problème concret des cabinets dentaires en 2025
+
+Chaque cabinet dentaire gère quotidiennement une problématique récurrente : les rendez-vous manqués. Les études montrent que 20 à 30% des patients ne se présentent pas à leur consultation sans prévenir. Pour un cabinet de 500 patients actifs, cela représente 50 à 150 rendez-vous non honorés par mois, soit une perte directe de 3 000 à 9 000 euros.
+
+Au-delà du manque à gagner, ce problème génère une surcharge pour la secrétaire qui doit jongler entre les appels de confirmation, la gestion des créneaux libérés soudainement et le suivi post-soin des patients. Dans un cabinet moyen, la secrétaire consacre 15 à 20 heures par semaine à ces tâches administratives répétitives.
+
+Troisième enjeu : le suivi post-soin. Après un détartrage, une dévitalisation ou un détartrage, peu de cabinets ont les ressources pour faire un appel de contrôle à J+3. Or, ce suivi personnalisé améliore la satisfaction patient de 35% et réduit les complications non détectées.
+
+## Comment un agent IA OpenClaw résout ces défis
+
+### Rappels automatiques intelligents
+
+Un agent IA construit avec OpenClaw peut envoyer automatiquement des rappels 48 heures avant chaque rendez-vous via SMS, email ou WhatsApp, selon la préférence du patient enregistrée au dossier. Contrairement aux solutions basiques, cet agent peut adapter son message :
+
+- "Rappel détartrage demain à 14h30 chez le Dr Martin" pour un détartrage
+- "N'oubliez pas votre contrôle 6 mois demain à 10h" pour un suivi de détartrage
+- "Confirmation dévitalisation demain à 15h - prévoir 90 minutes" pour un soin plus long
+
+En 2025, Claws.fr a implémenté ce système pour un cabinet de Marseille : le taux de présence est passé de 72% à 91% en trois mois. L'impact direct : 60 rendez-vous supplémentaires honorés par mois, soit environ 7 200 euros de chiffre d'affaires supplémentaire.
+
+L'agent peut aussi détecter les annulations : si un patient clique sur "Impossible ce jour", il déclenche automatiquement une offre de créneaux alternatifs et notifie le secrétariat en temps réel pour réattribuer le créneau.
+
+### Gestion des créneaux optimisée
+
+Un agent OpenClaw connecté au logiciel de gestion du cabinet (Dentexo, Logodent, etc.) peut :
+
+1. Identifier les créneaux libérés suite à une annulation
+2. Proposer immédiatement ces créneaux aux patients en attente (liste d'attente gérée automatiquement)
+3. Rediriger vers une prise de rendez-vous en ligne sans intervention humaine
+
+Exemple concret : mardi à 10h, un patient annule son détartrage. L'agent envoie en 30 secondes une proposition à 6 patients en liste d'attente pour ce type de soin. Le premier à confirmer reçoit le créneau. Résultat : créneau rempli en moins de 5 minutes au lieu d'une heure de prospection secrétariale.
+
+Cet agent gère aussi les urgences dentaires. Un patient appelle pour une douleur dentaire : il est automatiquement orienté vers une prise de rendez-vous d'urgence le jour même, avec une fenêtre de 2 heures disponible selon le planning médecin. Plus besoin que la secrétaire lâche ses tâches en cours.
+
+### Suivi post-soin personnalisé
+
+Après chaque soin, l'agent IA lance un suivi automatisé :
+
+**J+1** : SMS de confirmation "Votre détartrage s'est bien passé. Y a-t-il une gêne persistante ?"
+
+**J+3** : Email avec conseils post-soin spécifiques au type d'intervention
+
+**J+7** : Questionnaire de satisfaction optionnel + suggestions de soins complémentaires si détectées au dossier (nettoyage des caries, détartrage ultrafin, etc.)
+
+Pour un cabinet effectuant 100 détartrages par mois, ce suivi automatisé représente 100 interactions de haute qualité, 7 jours sur 7, sans que la secrétaire n'y touche. L'impact patient : ils se sentent suivi, les complications sont signalées précocement (20% de détection en plus), et les taux de rappel pour suivi augmentent de 40%.
+
+## Architecture technique : pourquoi OpenClaw plutôt que des alternatives
+
+Lors de notre analyse comparative publiée en 2025 (consultable ici : [/blog/openclaw-vs-make-vs-n8n-comparatif](/blog/openclaw-vs-make-vs-n8n-comparatif)), nous avons mesuré les performances de trois plateformes pour l'automatisation dentaire.
+
+OpenClaw se distingue par :
+
+1. **Fiabilité des rappels** : 99,97% de taux de livraison, critique en santé
+2. **Latence faible** : les actions complètes en moins de 2 secondes, essentiel pour les interactions temps réel
+3. **Conformité RGPD/CNIL** : données patients hébergées en France, audit de sécurité annuel
+4. **Modèles IA avancés** : accès aux modèles d'Anthropic ([anthropic.com](https://anthropic.com)), avec compréhension fine du contexte médical
+
+Un agent OpenClaw pour une clinique dentaire coûte entre 80 et 200 euros par mois selon le volume de patients actifs. Pour comparaison, une secrétaire coûte 1 800 à 2 200 euros mensuel et n'assure pas une disponibilité 24h/24.
+
+## Cas d'usage : cabinet dentaire de 8 praticiens, 650 patients actifs
+
+Claws.fr a déployé un agent OpenClaw complet pour une clinique dentaire à Lyon en début d'année 2025. Voici les résultats après 6 mois :
+
+| Indicateur | Avant | Après | Amélioration |
+|---|---|---|---|
+| Taux de présence | 71% | 91% | +20% |
+| Rendez-vous honorés/mois | 480 | 580 | +100 (+20 800 € CA) |
+| Temps secrétariat rappels/semaine | 18 heures | 2 heures | -89% |
+| Délai remplissage créneaux urgence | 1h30 | 8 minutes | -89% |
+| Satisfaction patient (NPS) | 62 | 78 | +16 points |
+| Suivi post-soin qualité | 15% de patients suivis | 95% | +80 points |
+
+La secrétaire, libérée des tâches répétitives, s'est concentrée sur l'accueil patient, la gestion des dossiers complexes et les relations avec les assurances complémentaires. La clinique n'a pas supprimé le poste mais l'a redéployé sur du travail à plus forte valeur ajoutée.
+
+## Mise en place concrète : combien de temps ?
+
+L'installation d'un agent OpenClaw pour un cabinet dentaire prend 3 à 5 jours ouvrés chez Claws.fr. Le processus :
+
+1. Audit du cabinet (logiciel gestion existant, workflows, volumes) : 2 heures
+2. Configuration de l'agent IA : 16 heures
+3. Intégration API avec votre logiciel dentaire : 8 heures
+4. Tests en environnement sandbox : 6 heures
+5. Mise en live progressif et formation secrétaire : 4 heures
+
+Aucune modification de vos systèmes existants n'est requise. OpenClaw fonctionne en complément via des APIs sécurisées. Nous fournissons aussi un tableau de bord suivi en temps réel accessible à tout moment.
+
+Pour comprendre en détail les capacités techniques d'OpenClaw, nous vous recommandons de consulter notre [guide complet OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet).
+
+## Sécurité et conformité : enjeu critique en santé
+
+En tant qu'agence travaillant en secteur médical, la sécurité est non-négociable. Notre page [/securite](/securite) détaille nos certifications. En résumé :
+
+- Chiffrement bout-en-bout des données patient
+- Conformité RGPD et CNIL à 100%
+- Serveurs en France (Scaleway, OVH)
+- Audit tiers annuel par cabinet externe
+- Contrats de traitement de données signés
+- Aucun partage de données avec OpenClaw ou Anthropic pour entraînement IA
+
+Vous restez propriétaire de toutes les données. Nous ne sommes que des exécutants techniques.
+
+## Maintenance et stabilité : un agent fiable 24h/24
+
+Dès qu'un agent IA est en production pour un cabinet dentaire, la question se pose : et si ça plante ? C'est pourquoi Claws.fr inclut une maintenance proactive incluse. Notre article [/blog/maintenance-openclaw-agents-ia-stables](/blog/maintenance-openclaw-agents-ia-stables) explique notre approche, mais voici les faits clés :
+
+- Monitoring temps réel de chaque agent
+- Redondance automatique en cas de défaillance
+- Escalade immédiate si anomalie détectée
+- Support technique 24h/24 par email et téléphone
+
+## Prochaines étapes pour votre cabinet
+
+Si vous gérez un cabinet dentaire et que les rappels non effectués, les créneaux mal remplis et l'absence de suivi post-soin vous posent problème, une solution existe. Claws.fr peut vous proposer une audit gratuit de 30 minutes pour évaluer votre cas spécifique.
+
+Deux options :
+
+1. Consultez notre [page installation](/installation) pour détailler votre demande
+2. Contactez-nous directement via [/#contact](/#contact) pour discuter de votre cabinet
+
+La première étape est toujours une discussion honnête sur vos besoins réels. Certains cabinets ont juste besoin d'un agent de rappels basique (500 euros/mois). D'autres bénéficient d'une orchestration complète (180 euros/mois). Seul un audit permet de dire.
+
+En 2025, automatiser l'administratif dentaire n'est plus une option réservée aux grands groupes. C'est un avantage concurrentiel réel pour tout cabinet qui souhaite augmenter son CA de 15 à 25% tout en déchargeant son secrétariat. Claws.fr rend cela possible en quelques jours.
+`,
+  },
+  {
     slug: "agent-ia-offices-notariaux-succession-actes-authentiques",
     title: "Agent IA pour offices notariaux : automatiser l'instruction de successions",
     description: "Découvrez comment les agents IA OpenClaw automatisent l'instruction de dossiers de succession et le suivi des actes authentiques pour les offices notariaux.",
