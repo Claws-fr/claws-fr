@@ -11,6 +11,154 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-podologie-planification-rappels-prescriptions",
+    title: "Agent IA pour podologues : planification et suivi orthopédique",
+    description: "Découvrez comment automatiser la gestion des cabinets de podologie avec un agent IA OpenClaw : planification, rappels et suivi des prescriptions.",
+    date: "2026-08-04",
+    category: "Cas pratiques",
+    readTime: "8 min",
+    keywords: ["agent IA podologie","automatisation cabinet podologie","OpenClaw podologues","suivi prescriptions orthopédiques","rappels patients podologues"],
+    content: `
+## Pourquoi l'automatisation devient indispensable en podologie
+
+Les cabinets de podologie font face à un défi organisationnel croissant. Entre la gestion des rendez-vous, le suivi des prescriptions orthopédiques, les rappels de contrôle et la relance des patients en retard, les équipes perdent en moyenne 4 à 6 heures par semaine sur des tâches manuelles répétitives.
+
+Cette charge administrative détourne les podologues et leurs assistantes de leur cœur de métier : le diagnostic, la conception d'orthèses et l'accompagnement thérapeutique du patient.
+
+Depuis 2025, claws.fr propose une solution radicale : automatiser ces processus via des agents IA autonomes basés sur OpenClaw. Cette approche ne remplace pas le professionnel, elle le libère du travail administratif pour se concentrer sur la valeur clinique.
+
+## Qu'est-ce qu'un agent IA pour podologie et pourquoi OpenClaw ?
+
+Un agent IA autonome pour podologie est un système qui fonctionne 24/7 pour orchestrer vos workflows critiques sans intervention humaine constante. OpenClaw, dont vous retrouverez [une description détaillée dans notre guide complet](/blog/quest-ce-qu-openclaw-guide-complet), excelle particulièrement pour les secteurs médicaux comme la podologie car il offre une personnalisation profonde et une intégration transparente avec vos logiciels métier.
+
+Contrairement aux solutions génériques, OpenClaw permet de construire un agent capable de :
+
+- Accéder directement à votre logiciel de gestion de cabinet (doctolib, medilog, etc.)
+- Lire les prescriptions dans les dossiers patients
+- Envoyer des relances intelligentes selon des règles métier complexes
+- Mettre à jour automatiquement les statuts de suivi
+- Alerter le podologue sur les cas prioritaires
+
+Claws.fr accompagne les cabinets de podologie depuis 2025 pour installer et optimiser ces agents IA. Notre expertise réside dans la compréhension des enjeux spécifiques du métier.
+
+## Le flux de travail type d'un agent IA en podologie
+
+### Planification intelligente des rendez-vous
+
+Le premier étage de l'automatisation concerne la planification. Un patient souffrant de douleurs plantaires reçoit généralement une orthèse sur-mesure. Cette orthèse nécessite un suivi à 2 semaines, 6 semaines, puis 3 mois pour ajustements progressifs.
+
+Un agent IA peut :
+
+- Détecter automatiquement les prescriptions d'orthèses dans les dossiers patients
+- Calculer les dates de suivi recommandées selon les protocoles cliniques du cabinet
+- Proposer des créneaux libres au patient via SMS ou email
+- Bloquer ces rendez-vous dans l'agenda avant même que l'assistante n'intervienne
+
+Résultat mesurable : un cabinet ayant 150 patients actifs économise environ 8-10 heures par mois sur la seule gestion des planifications de suivi.
+
+### Rappels proactifs et relance de non-présentéisme
+
+Le taux de non-présentation moyen en podologie atteint 12 à 18%. Chaque absence représente un créneau perdu et une rupture thérapeutique pour le patient. Les rappels manuels sont fastidieux mais efficaces s'ils sont réguliers.
+
+Un agent IA OpenClaw gère ce processus ainsi :
+
+- Rappel SMS automatique 48h avant chaque rendez-vous, avec numéro de dossier
+- Relance email 72h après une absence non justifiée
+- Escalade intelligente : après 2 absences, alerte au podologue pour évaluation clinique
+- Tracking des réponses pour ajuster les canaux de communication préférés du patient
+
+Cabinets testés : baisse du non-présentéisme de 35 à 40% après implémentation.
+
+### Suivi intelligent des prescriptions orthopédiques
+
+Les prescriptions orthopédiques sont le cœur du métier. Un patient portant des semelles custom doit être suivi régulièrement : tolérance, usure, évolution de la pathologie. Beaucoup de patients oublient ces contrôles ou ne savent pas qu'ils doivent en programmer un.
+
+L'agent IA met en place un système de suivi multi-critères :
+
+- Extraction automatique de toutes les prescriptions actives du dossier patient
+- Classification selon le type (semelles, chaussures thérapeutiques, correcteurs, etc.)
+- Calendrier de suivi généré automatiquement (3 mois pour semelles custom, 6 mois pour correction progressive, etc.)
+- Notifications échelonnées au patient selon sa préférence canal (SMS, email, WhatsApp)
+- Rapport mensuel au podologue : patients non suivis, prescriptions expirées, nécessité de renouvellement
+
+Cet automatisme assure une conformité clinique tout en renforçant le lien thérapeutique. Le patient ne se sent pas abandonné, mais accompagné de façon structurée.
+
+## Cas d'usage concret : cabinet de 3 podologues
+
+Prenons un exemple réel. Un cabinet urbain de 3 podologues accueille environ 80 à 100 patients par semaine. En moyenne, 40% de la patientèle est en suivi orthopédique actif.
+
+Sans agent IA :
+- Gestion manuelle des relances : 6 heures par semaine (assistante)
+- Oublis de relances : 15 à 20% des patients ne sont pas rappelés régulièrement
+- Rendez-vous de suivi oubliés ou reportés : perte de continuité thérapeutique
+- Facturabilité : certaines prescriptions expirées ne sont pas renouvelées à temps
+
+Avec un agent IA OpenClaw configuré pour ce cabinet :
+- Automatisation complète du cycle de rappel et planification : 0 heure humaine requise
+- Taux de régularité augmenté de 85% (comparé aux 65% en mode manuel)
+- Revenue impact : 15 à 20% de rendez-vous supplémentaires dus à une meilleure compliance patient
+- Qualité clinique : documentation systématique du suivi, alertes sur les cas problématiques
+
+ROI estimé : si chaque rendez-vous supplémentaire génère 45 euros de chiffre, et que l'agent crée 8 à 12 rendez-vous supplémentaires par mois, le gain annuel est de 4 300 à 6 500 euros pour une agence d'installation coûtant moins de 3 000 euros.
+
+## Intégrations techniques avec vos outils existants
+
+Claws.fr maîtrise l'intégration d'OpenClaw avec les principaux logiciels de gestion de cabinets médicaux et paramédicaux :
+
+- Doctolib (synchronisation des rendez-vous, envoi de messages via API)
+- Medilog et Medirest (extraction des prescriptions, mise à jour du dossier)
+- Zmédécom (transmission sécurisée de documents)
+- SMS/Email providers (Twilio, SendGrid) pour les notifications patient
+
+La maîtrise de ces intégrations est cruciale. Un mauvais raccordement peut créer des doublons, des désynchronisations ou des fuites de données sensibles. C'est pourquoi il est important de choisir un partenaire comme claws.fr ayant l'expertise métier.
+
+Pour comprendre comment nous sécurisons ces intégrations, consultez notre [page dédiée à la sécurité](/securite).
+
+## Maintenance et stabilité de l'agent
+
+Déployer un agent IA n'est que le début. La vraie valeur réside dans sa stabilité à long terme. Les workflows médicaux ne tolèrent pas les défaillances : une relance oubliée peut affecter la prise en charge du patient.
+
+Claws.fr inclut avec chaque installation :
+
+- Monitoring 24/7 de l'agent (alertes instantanées en cas de dysfonctionnement)
+- Logs détaillés de chaque action pour traçabilité
+- Optimisations mensuelles basées sur l'usage réel
+- Documentation complète pour votre équipe
+
+Notre [guide sur la maintenance des agents OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) couvre ces aspects en détail.
+
+## OpenClaw vs autres solutions d'automatisation
+
+Vous vous posez peut-être la question : pourquoi OpenClaw plutôt que Make, N8N ou Zapier ? Nous avons publié [un comparatif détaillé](/blog/openclaw-vs-make-vs-n8n-comparatif) couvrant cette question.
+
+En résumé pour la podologie :
+
+- Make est performant pour workflows simples, mais devient onéreux et complexe à maintenance pour une logique métier nuancée
+- N8N offre plus de contrôle, mais nécessite une expertise DevOps interne
+- OpenClaw propose un équilibre unique : puissance d'un vrai agent IA + interface accessible + coût prévisible
+
+Pour un cabinet de podologie, OpenClaw permet de construire des règles complexes (ex: "si prescription > 6 mois ET pas de suivi ET patient n'a pas répondu aux 2 derniers SMS, alors alerte podologue en priorité") sans intervention d'un développeur à chaque ajustement.
+
+## Questions pratiques : FAQ et prochaines étapes
+
+Consultez notre [FAQ complète](/faq) pour les questions techniques courantes. Les sujets les plus fréquents :
+
+- Combien de temps prend l'installation ? (2-3 jours en général)
+- Mes données de patients restent-elles confidentielles ? (Oui, chiffrement bout-à-bout)
+- Puis-je modifier l'agent après l'installation ? (Bien sûr, c'est conçu pour ça)
+
+## Démarrer votre automatisation
+
+Si vous dirigez un cabinet de podologie ou êtes professionnel des soins du pied, le moment est venu d'explorer comment OpenClaw peut transformer votre gestion administrative.
+
+Claws.fr propose [une installation complète](/installation) incluant configuration, formation de l'équipe et 3 mois de support. Lors de votre consultation initiale, nous auditrons vos processus actuels et proposerons un plan d'automatisation adapté à votre taille et vos spécificités métier.
+
+[Contactez-nous pour une démonstration gratuite](/#contact). Nous vous montrerons l'agent en action sur un workflow simplifié de votre cabinet, sans engagement.
+
+Pour explorer davantage OpenClaw et ses capacités, consultez [le guide complet sur la plateforme](https://openclaw.ai) et [les ressources d'Anthropic](https://www.anthropic.com) sur les agents IA fiables en production.
+`,
+  },
+  {
     slug: "agent-ia-ecoles-privees-inscription-relances-reporting",
     title: "Agent IA pour écoles privées : automatiser inscriptions et reporting",
     description: "Découvrez comment OpenClaw automatise les inscriptions, relances parents et reporting pédagogique dans les écoles privées avec un agent IA intelligent.",
