@@ -11,6 +11,134 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "migration-make-openclaw-pme-50-personnes",
+    title: "Migration Make vers OpenClaw : cas pratique PME 50 salariés",
+    description: "Retour d'expérience complet : comment une PME a migré de Make à OpenClaw en 2025. Gains mesurés, défis et leçons apprises.",
+    date: "2026-08-10",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["migration Make OpenClaw","automatisation PME","OpenClaw 2025","alternative Make","agents IA autonomes"],
+    content: `
+Depuis 2025, Claws.fr accompagne les entreprises françaises dans leur transition vers OpenClaw, une plateforme d'automatisation nouvelle génération. Parmi nos clients, une PME de distribution B2B avec 50 salariés représente un cas d'étude particulièrement instructif. Son passage de Make à OpenClaw révèle des enseignements précis sur les enjeux réels d'une migration d'automatisation en environnement professionnel.
+
+## Le contexte : une PME saturée par ses workflows Make
+
+Cette entreprise de distribution exploitait Make depuis trois ans pour orchestrer ses processus critiques : synchronisation CRM-ERP, génération de factures, gestion des commandes clients. Progressivement, l'équipe IT (deux personnes) a rencontré des frictions devenues problématiques.
+
+Leur infrastructure incluait environ 40 scénarios Make maintenus manuellement. Chaque ajustement demandait une intervention humaine. Les coûts d'exécution grimpaient chaque trimestre. Plus grave encore : aucun scenario ne disposait de capacités décisionnelles autonomes. Un formulaire de commande atypique déclenchait une erreur, puis nécessitait une correction manuelle.
+
+L'équipe finance estimait perdre 8 à 10 heures par semaine sur des tâches de déboggage et de surveillance. Le directeur général visait une solution capable de "penser par elle-même".
+
+## Pourquoi OpenClaw ?
+
+La décision de migrer vers OpenClaw répondait à trois critères explicites.
+
+D'abord, OpenClaw intègre nativement des agents IA autonomes capables de prendre des décisions en contexte. Contrairement à Make, qui fonctionne sur des règles rigides (SI condition = X, ALORS action Y), OpenClaw laisse les agents analyser des situations complexes et ajuster leur comportement sans intervention.
+
+Deuxièmement, les coûts d'exécution. Make facture à la transaction. OpenClaw propose un modèle plus prévisible pour les volumes élevés. Pour une PME traitant 2 500 commandes mensuelles, cette différence était chiffrée à 40 % d'économies annuelles.
+
+Troisièmement, la scalabilité. L'entreprise prévoyait une croissance de 30 % sur deux ans. OpenClaw s'ajuste plus fluidement aux augmentations de charge.
+
+## La phase de préparation
+
+Claws.fr a entamé un audit complet des 40 scénarios Make existants. Catégorisation par criticité, analyse des dépendances, documentation des règles métier implicites. Cette étape a duré trois semaines (60 heures de consulting).
+
+Résultat : sur les 40 scénarios, 32 étaient candidats à une refonte immédiate, 6 nécessitaient une adaptation légère, et 2 resteraient en Make pour une période transitoire.
+
+L'équipe IT a aussi identifié les points de friction majeurs : les cas limites (commandes incomplètes, clients sans données fiscales complètes, prix hors barème) représentaient 12 % des transactions et causaient 80 % des blocages.
+
+## L'implémentation : trois mois, trois phases
+
+### Phase 1 : infrastructure et agents critiques (semaines 1-4)
+
+Installation d'OpenClaw sur une infrastructure de test. Configuration des connecteurs vers le CRM (Pipedrive), l'ERP (Sage 100) et la base de données clients. Création du premier agent IA : "Agent Commandes", responsable de l'ingestion et de la classification des demandes.
+
+Cet agent a appris à distinguer les commandes standards (traitement immédiat) des commandes complexes (escalade vers l'équipe commerce). Taux de classification correcte : 94 % dès la semaine 3.
+
+### Phase 2 : agents métier et automatisation des règles (semaines 5-10)
+
+Déploiement de quatre agents spécialisés :
+
+- Agent Facturation : génération de factures, vérification des adresses, détection des anomalies clients.
+- Agent Stock : vérification des disponibilités, suggestion de alternatives, notification des ruptures.
+- Agent Paiements : rapprochement automatique, détection des impayés, relance progressive.
+- Agent Reporting : agrégation des KPIs quotidiens, alertes sur les seuils.
+
+Chaque agent s'entraîne sur 3 à 4 semaines de données historiques. Les premiers résultats montrent une autonomie opérationnelle : 78 % des transactions sont traitées sans intervention humaine.
+
+### Phase 3 : parallélisation et cutover (semaines 11-12)
+
+Les deux systèmes tournent en parallèle pendant deux semaines. Les résultats OpenClaw sont comparés à ceux de Make. Écarts constatés : moins de 2 % (corrections mineures de règles métier).
+
+Le cutover définitif intervient un jeudi soir à 19h, en dehors des heures de travail. Rollback automatique prévu en cas d'anomalie critique.
+
+## Les résultats mesurés (trois mois post-migration)
+
+### Réduction du travail manuel
+
+Le temps consacré à la surveillance et au déboggage des workflows passe de 8-10 heures par semaine à 2-3 heures. L'équipe IT retrouve du temps pour des projets à plus forte valeur ajoutée.
+
+### Economies financières
+
+- Coûts d'exécution Make : 850 euros/mois (estimation annuelle).
+- Coûts OpenClaw : 480 euros/mois pour la même charge.
+- Amortissement du consulting de migration : 8 000 euros sur 18 mois.
+- Bilan : 4 440 euros d'économies annuelles brutes.
+
+### Amélioration opérationnelle
+
+Le traitement des cas limites passe de 12 % de friction à 3 % seulement. Les agents OpenClaw gèrent désormais les commandes incomplètes en proposant des corrections intelligentes (suggestion de produit alternatif si rupture, normalisation des adresses client incohérentes).
+
+Le temps de résolution des incidents facturés clients diminue de 72 heures à 12 heures en moyenne.
+
+### Scalabilité validée
+
+La première hausse de volume intervient en mois 4 (pic saisonnier, +28 %). OpenClaw absorbe sans surcoût ni dégradation de performance. Make aurait généré des surcharges facturées.
+
+## Les défis rencontrés et comment les gérer
+
+### Le changement organisationnel
+
+L'équipe commerce a dû s'adapter à l'autonomie des agents. Certains collaborateurs voyaient leurs vérifications manuelles supplantées par l'IA. Un accompagnement pédagogique a été nécessaire pour expliquer que les agents libéraient du temps pour des tâches de négociation et de relation client.
+
+### La maintenance des agents
+
+Contrairement aux règles statiques de Make, les agents OpenClaw évoluent. Il faut les monitorer, ajuster leurs paramètres, évaluer leur performance. Claws.fr a mis en place une veille hebdomadaire pendant trois mois, puis mensuelle.
+
+### Les données historiques
+
+Nettoyer les données historiques Make avant de les ingérer dans OpenClaw a pris deux semaines supplémentaires (non prévu initialement). Les entreprises en migration doivent anticiper cette phase.
+
+## Leçons clés pour les PME
+
+Si vous envisagez une migration depuis Make vers OpenClaw, voici ce que cette PME a appris.
+
+Premièrement, l'audit préalable n'est pas optionnel. Cartographier précisément vos workflows, identifier les cas limites, documenter les règles métier tacites : ces étapes paraissent longues mais évitent des débordements de planning.
+
+Deuxièmement, prévoir un accompagnement humain. Les agents IA gagnent en autonomie, mais demandent un cadrage initial et un suivi régulier. Le budget consulting représente 10 à 15 % du coût total du projet ; c'est un investissement, pas une dépense.
+
+Troisièmement, mesurer l'impact réel en parallèle. Comparer Make et OpenClaw sur deux semaines vous donnera des données concrètes, bien plus utiles que des promesses commerciales.
+
+Quatrièmement, accepter que la migration prenne du temps. Trois mois pour une PME de 50 personnes avec 40 scénarios, c'est raisonnable. Les projets précipités génèrent des problèmes post-implémentation coûteux.
+
+## Et maintenant ?
+
+Cette PME continue d'affiner ses agents OpenClaw. Le prochain objectif : intégrer un agent de prévision des commandes, capable d'anticiper les demandes clients saisonnières pour optimiser le stock.
+
+Si vous explorez OpenClaw ou envisagez une migration depuis une autre plateforme d'automatisation, Claws.fr peut vous accompagner dès la phase de diagnostic. Notre expérience couvre les trois dimensions essentielles : l'infrastructure technique, la configuration des agents IA, et l'adoption organisationnelle.
+
+Pour mieux comprendre comment OpenClaw se positionne par rapport à ses concurrents, consultez notre [comparatif OpenClaw, Make et n8n](/blog/openclaw-vs-make-vs-n8n-comparatif). Vous souhaitez en savoir plus sur les capacités techniques d'OpenClaw ? Découvrez notre [guide complet OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet).
+
+La maintenance régulière des agents est aussi un élément clé du succès long terme. Nous avons documenté les bonnes pratiques dans notre article sur la [maintenance d'OpenClaw pour des agents stables](/blog/maintenance-openclaw-agents-ia-stables).
+
+Le succès d'une migration dépend surtout de la qualité de l'accompagnement initial. Pour discuter de votre contexte spécifique et obtenir un diagnostic personnalisé, [contactez-nous](/blog/installer-openclaw-mac-mini-2025) ou consultez nos options d'[installation](/installation) et de [sécurité](/securite).
+
+Vous avez des questions techniques ou organisationnelles ? Nos [FAQ](/faq) couvrent les cas les plus fréquents.
+
+La transition vers OpenClaw n'est pas une simple migration technique : c'est une opportunité de repenser vos processus d'automatisation autour d'une intelligence réelle. Cette PME de distribution en est la preuve.
+`,
+  },
+  {
     slug: "agent-ia-regies-publicitaires-optimisation-reporting",
     title: "Agent IA pour régies publicitaires : automatiser l'optimisation et le reporting",
     description: "Découvrez comment les agents IA OpenClaw optimisent les campagnes publicitaires, génèrent des rapports clients et automatisent les relances.",
