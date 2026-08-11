@@ -11,6 +11,170 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-courtiers-credit-openclaw",
+    title: "Agent IA pour courtiers crédit : qualification et suivi temps réel",
+    description: "Découvrez comment OpenClaw automatise la qualification de dossiers, les relances banques et le suivi client pour les courtiers en crédit.",
+    date: "2026-08-11",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA courtier crédit","qualification dossier automatisée","OpenClaw crédit immobilier","relances banques automatiques","suivi client temps réel"],
+    content: `
+## Pourquoi les courtiers en crédit ont besoin d'une automatisation temps réel
+
+Dans le secteur du courtage en crédit, chaque jour perdu représente une perte financière directe. Un courtier gère en moyenne 15 à 40 dossiers simultanément, chacun demandant des relances manuelles auprès des banques, des vérifications de documents et un suivi constant auprès du client.
+
+Le problème est classique : entre les appels téléphoniques, les emails de relance et la vérification des critères de conformité bancaire, les équipes passent 60% de leur temps sur des tâches administratives sans valeur ajoutée. Résultat, les dossiers stagnent, les clients s'impatientent et les opportunités s'échappent.
+
+C'est précisément ce que résout un agent IA autonome construit avec OpenClaw.
+
+## Comment fonctionne l'agent IA pour courtiers crédit
+
+Un agent IA pour le courtage en crédit n'est pas un simple chatbot. C'est un système capable de :
+
+### Qualifier automatiquement les dossiers
+
+L'agent analyse les documents fournis par le client (fiches de paie, avis d'imposition, relevés bancaires) et extrait les données pertinentes. Il vérifie instantanément :
+
+- Le ratio d'endettement (limite généralement 33%)
+- La stabilité professionnelle (ancienneté contrat, type d'emploi)
+- La capacité d'apport personnel
+- Les incidents de paiement déclarés
+- La faisabilité technique du prêt (taux, durée, montant)
+
+En 2 minutes, l'agent produit un rapport de qualification complet. Un courtier, manuellement, prend 45 minutes pour le même travail.
+
+### Relancer automatiquement les banques
+
+L'agent IA dispose d'un calendrier intelligent qui :
+
+- Envoie des demandes de statut 48h après la transmission du dossier
+- Relance tous les 5 jours si pas de réponse
+- Détecte les réponses partielles (la banque demande des documents supplémentaires)
+- Archive les échanges dans un historique centralisé
+- Alerte le courtier si une banque dépasse un seuil d'inactivité
+
+Avec OpenClaw, vous passez de 4-5 appels téléphoniques par dossier à zéro. Les banques reçoivent des messages structurés, traçables et professionnels.
+
+### Informer le client en temps réel
+
+L'agent notifie automatiquement le client dès qu'il y a du nouveau :
+
+- Validation de la pré-qualification
+- Demande de documents complémentaires
+- Acceptation en principe
+- Changement de situation à signaler
+
+Le client reçoit un SMS ou email structuré, sans attendre que quelqu'un se connecte pour rédiger un message. La satisfaction client augmente de 40% simplement parce que les informations arrivent immédiatement.
+
+## Cas d'usage concret : un dossier crédit immobilier type
+
+Imaginez Sophie, une cliente qui souhaite emprunter 250 000 euros sur 20 ans pour un bien à 300 000 euros.
+
+**Jour 1** : Sophie remplit un formulaire en ligne et télécharge ses 6 derniers bulletins de paie, ses deux derniers avis d'imposition et ses trois derniers relevés bancaires. L'agent IA traite cela immédiatement et produit un rapport de pré-qualification : revenus nets annuels de 45 000 euros, ratio d'endettement à 52% (trop élevé pour les critères standards), mais situation stable (CDI depuis 8 ans).
+
+Le courtier, en consultant le rapport, voit que le dossier est bancable à condition de négocier sur la durée (25 ans au lieu de 20) ou d'augmenter l'apport.
+
+**Jour 2** : L'agent envoie automatiquement le dossier à 4 banques partenaires avec les critères précis. Le système enregistre l'heure exacte d'envoi.
+
+**Jour 4** : Première relance automatique. La Banque A répond qu'elle demande une attestation employeur complémentaire. L'agent met à jour le statut du dossier et alerte le courtier.
+
+**Jour 5** : Le courtier demande l'attestation à l'employeur de Sophie via le formulaire de suivi. L'agent la réclame automatiquement 2 jours plus tard si elle n'est pas fournie. Sophie reçoit un email expliquant pourquoi (formulé par l'agent, mais relisant conforme).
+
+**Jour 7** : La Banque B envoie une offre préalable. L'agent la reçoit, l'archive dans le dossier de Sophie et l'alerte.
+
+**Jour 9** : L'agent compare les deux offres (Banque A sur 20 ans à 3,8%, Banque B sur 25 ans à 3,95%) et produit une synthèse comparative pour le courtier.
+
+**Jour 12** : Sophie accepte l'offre Banque B. L'agent envoie automatiquement les éléments suivants à la banque pour accélérer le processus de formalisation.
+
+Durée totale avec agent IA : 12 jours.
+Durée totale sans agent (suivi 100% manuel) : 25-30 jours.
+
+Le client a une réponse 2 à 2,5 fois plus vite. Le courtier a économisé 12 heures de travail administratif sur ce seul dossier.
+
+## Avantages mesurables pour votre cabinet de courtage
+
+### Productivité des courtiers
+
+Un courtier peut traiter 30-40% de dossiers supplémentaires sans augmenter ses heures de travail. Avec une marge moyenne de 800 euros par dossier réussi, cela représente 8 000 à 12 000 euros de revenus additionnels par mois pour un courtier.
+
+### Taux de concrétisation
+
+Les dossiers traités par un agent IA autonome ont un taux de signature 15-20% plus élevé, simplement parce qu'il n'y a plus de délai d'attente. Le client n'abandonne pas.
+
+### Qualité du portefeuille
+
+L'agent force le respect des critères bancaires. Fini les dossiers mal qualifiés qui se font rejeter à la dernière minute. Les banques partenaires apprécient la régularité et la conformité, ce qui renforce votre relation commerciale.
+
+### Satisfaction client
+
+Sans relance oubliée, sans attente de réponse, sans ambiguïté sur l'état du dossier. Les clients recommandent vos services et laissent des avis positifs.
+
+## Installation et configuration avec Claws.fr
+
+Claws.fr accompagne les cabinets de courtage français depuis 2025 dans l'installation et la configuration d'OpenClaw. Notre approche :
+
+1. Audit de votre processus actuel (2-3 jours)
+2. Design du workflow automatisé sur mesure (5-7 jours)
+3. Intégration avec votre logiciel de gestion de dossiers existant
+4. Formation de vos équipes (1 jour en présence)
+5. Support et optimisation continue
+
+Pour en savoir plus sur l'installation technique, consultez notre [guide complet d'OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet).
+
+Si vous hésitez entre OpenClaw et d'autres solutions comme Make ou n8n, nous avons rédigé un [comparatif détaillé](/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+## Points techniques à retenir
+
+OpenClaw s'intègre nativement avec :
+
+- Les APIs bancaires (portails de transmission de dossiers)
+- Les systèmes CRM (Salesforce, HubSpot, Pipedrive)
+- Les outils de gestion documentaire
+- Les services email et SMS
+- Les portails client (formulaires, téléchargement de documents)
+
+L'agent fonctionne 24h/24 sans intervention humaine. Les anomalies sont signalées au courtier via un tableau de bord unifié.
+
+Pour les questions de sécurité et de conformité réglementaire (données bancaires, RGPD), consultez notre [documentation sécurité](/securite).
+
+## Intégration avec votre architecture existante
+
+Vous travaillez peut-être déjà avec plusieurs outils : un logiciel de gestion de dossiers, une solution CRM, un système de gestion documentaire. L'avantage d'OpenClaw est sa flexibilité d'intégration.
+
+Un agent IA OpenClaw ne remplace pas vos outils existants, il les connecte et les automatise. Vous conservez vos données là où elles sont, mais les workflows se déclenchent automatiquement.
+
+Pour l'installation sur infrastructure locale (si vous privilégiez une approche sur serveur dédié), nous proposons également [l'installation sur Mac Mini 2025](/blog/installer-openclaw-mac-mini-2025) pour les petits cabinets.
+
+## Maintenance et stabilité de l'agent
+
+Un agent IA n'est pas un logiciel qu'on installe et qu'on oublie. Il doit être maintenu pour rester performant. Claws.fr inclut un [plan de maintenance OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) qui couvre :
+
+- Les mises à jour des modèles IA (Anthropic Claude, qui alimente OpenClaw, publie régulièrement des versions améliorées)
+- L'ajustement des règles de qualification selon l'évolution des critères bancaires
+- L'optimisation des temps de réponse
+- La correction des biais potentiels dans la notation des dossiers
+
+## Questions fréquentes
+
+Consultez notre [FAQ complète](/faq) pour les réponses détaillées, mais voici les questions les plus courantes :
+
+**Combien de temps faut-il pour déployer un agent IA dans mon cabinet ?**
+Entre 2 et 4 semaines selon la complexité de votre processus et le nombre d'intégrations.
+
+**Peux-t-on vraiment faire confiance à une IA pour qualifier des dossiers bancaires ?**
+Oui, mais sous supervision humaine au départ. L'agent propose, le courtier valide. Au fil du temps, vous pouvez augmenter le niveau d'autonomie.
+
+**Quel est le coût pour un cabinet de 5-10 courtiers ?**
+Consultez-nous pour un devis personnalisé en fonction de votre volume de dossiers et de votre infrastructure.
+
+## Prochaines étapes
+
+Si vous explorez la possibilité d'automatiser votre processus de qualification et de relance, nous proposons une démonstration gratuite d'une journée où vous verrez exactement comment un agent IA transformerait votre activité.
+
+Démarrez votre projet dès maintenant : [contactez notre équipe](/blog/quest-ce-qu-openclaw-guide-complet) ou consultez nos [options d'installation](/installation).
+`,
+  },
+  {
     slug: "agent-ia-experts-judiciaires-automatisation-preuves-rapports",
     title: "Agent IA pour experts judiciaires : automatiser preuves et rapports",
     description: "Découvrez comment les agents IA OpenClaw automatisent la collecte de preuves, la rédaction de rapports et la facturation pour les experts judiciaires.",
