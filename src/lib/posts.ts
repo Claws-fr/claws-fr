@@ -11,6 +11,146 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-assureurs-dommages-instruction-sinistres",
+    title: "Agent IA pour assureurs dommages : instruction et recours",
+    description: "Découvrez comment un agent IA autonome optimise l'instruction des sinistres, la coordination d'experts et la gestion des recours pour les assureurs dommages.",
+    date: "2026-08-29",
+    category: "Cas pratiques",
+    readTime: "8 min",
+    keywords: ["agent IA assurance dommages","instruction sinistres automatisée","gestion recours assurance","coordination experts IA","OpenClaw assurance"],
+    content: `
+## L'instruction des sinistres, un processus chronophage que l'IA peut transformer
+
+Dans le secteur de l'assurance dommages, l'instruction d'un sinistre implique une succession d'étapes rigides et répétitives. Entre la réception de la déclaration, la validation des documents, la programmation des visites d'experts, le suivi des dossiers et la gestion administrative des recours, les équipes perdent en moyenne 30 à 40% de leur temps sur des tâches à faible valeur ajoutée.
+
+Les cabinets d'experts indépendants, les coordinateurs de sinistres et les gestionnaires de recours font face à une pression croissante pour réduire les délais de traitement. Or, chaque jour de retard représente une insatisfaction client et potentiellement des contentieux supplémentaires.
+
+C'est exactement pour ces situations que les agents IA autonomes comme OpenClaw, disponibles depuis 2025, offrent une alternative efficace. Contrairement aux simples chatbots ou aux solutions RPA basiques, un agent IA peut orchestrer des workflows complexes, prendre des décisions contextuelles et piloter des outils métier sans intervention humaine constante.
+
+Claws.fr, première agence française spécialisée dans l'installation d'OpenClaw depuis 2025, accompagne désormais les assureurs dommages à déployer ces agents pour transformer leur chaîne d'instruction.
+
+## Cas d'usage 1 : Triage et instruction automatisée des dossiers
+
+### Le défi métier
+
+Un sinistre dommages débute toujours par l'enregistrement de la déclaration. Cette première étape détermine la qualité du reste du processus. Or, les déclarations arrivent sous des formats hétérogènes : formulaires papier numérisés, emails, portails en ligne, appels téléphoniques transcris. Chaque dossier doit être validé, catégorisé (vol, incendie, dégâts des eaux, responsabilité civile, etc.) et acheminé vers le bon gestionnaire.
+
+En pratique, un gestionnaire humain consacre 1 à 2 heures par dossier pour cette phase, rien que pour structurer l'information. Sur un portefeuille de 500 sinistres par mois, cela représente 500 à 1000 heures de travail administratif.
+
+### La solution avec OpenClaw
+
+Un agent IA autonome peut :
+
+- Extraire les données critiques (assuré, bien sinistré, date du sinistre, type de garantie) à partir de documents non structurés avec une précision de 95%+
+- Valider la complétude des dossiers et envoyer automatiquement des demandes de pièces manquantes via email
+- Catégoriser les sinistres selon la nature du risque et la complexité estimée
+- Pré-affecter les dossiers aux gestionnaires appropriés selon des règles métier définies
+- Démarrer les workflows suivants sans attendre une validation manuelle
+
+L'impact mesurable : réduction de 70% du temps de traitement initial, passage de 1h30 à 25 minutes par dossier en moyenne.
+
+## Cas d'usage 2 : Coordination des experts et pilotage des visites
+
+### Le problème de coordination
+
+Une fois le sinistre instructible, il faut programmer la visite d'un expert. Cette tâche apparemment simple se complexifie rapidement :
+
+- Consultation d'un portefeuille d'experts selon leur localisation géographique, leur spécialité et leur disponibilité
+- Échange d'emails multiples pour trouver des créneaux compatibles
+- Notification à l'assuré et coordination de son accès au bien
+- Gestion des reports et des annulations d'dernière minute
+- Suivi de la remise du rapport d'expertise
+
+Chaque coordination génère en moyenne 8 à 12 interactions manuelles. Avec plusieurs experts impliqués (expert mandataire, expert tiers, expert structure, etc.), ce nombre explose rapidement.
+
+### L'automatisation par agent IA
+
+Un agent IA orchestrant votre système CRM, votre base d'experts et votre calendrier peut :
+
+- Identifier automatiquement les experts disponibles correspondant aux critères du sinistre
+- Envoyer des demandes de disponibilité standardisées et consolider les réponses
+- Proposer des créneaux à l'assuré via SMS ou email avec confirmation automatique
+- Envoyer des rappels de rendez-vous 48h avant la visite
+- Relancer automatiquement les experts pour la transmission du rapport (avec SLA défini)
+- Créer les tâches de suivi dans votre système de gestion
+
+Résultat opérationnel : un cycle de coordination qui prenait 4 à 5 jours se déploie en 24 heures. Le taux d'experts répondant passe de 60% à 85%. Les absences à la visite chutent de 15% à 3%.
+
+## Cas d'usage 3 : Gestion des recours et recouvrement
+
+### Enjeu stratégique sous-estimé
+
+La gestion des recours est souvent la phase négligée du cycle de sinistre. Pourtant, pour une grande compagnie d'assurance dommages, les recours non engagés représentent des millions d'euros abandonnés chaque année.
+
+Un recours suppose :
+
+- D'identifier les tiers responsables et leurs assureurs
+- De lancer les procédures de mise en demeure dans les délais légaux
+- D'archiver les dossiers et les expertises pertinentes
+- De suivre les négociations et les réclamations auprès des assureurs tiers
+- De monitorer les prescriptions légales
+
+La complexité augmente avec les recours multi-responsables (accident de circulation impliquant 3+ véhicules, sinistres de copropriété, etc.).
+
+### Automatisation intelligente des recours
+
+Un agent IA peut :
+
+- Analyser le rapport d'expertise et identifier automatiquement les éléments de responsabilité d'un tiers
+- Consulter les registres d'immatriculation, les bases SIREN et les données publiques pour identifier les tiers responsables
+- Générer et envoyer les lettres de mise en demeure dans les délais requis (responsabilité civile : 2 ans, etc.)
+- Tracker les réponses reçues et alerte en cas de non-réponse aux délais
+- Consolider les dossiers de recours pour envoi aux avocats ou aux services spécialisés
+- Anticiper les prescriptions en créant des tâches de relance avant la date limite
+
+Impact chiffré : augmentation du taux de recours engagés de 60% à 85%, réduction du délai d'engagement de 30 jours à 3 jours.
+
+## Architecture technique recommandée
+
+Pour déployer efficacement un agent IA dans un processus d'assurance dommages, vous devez intégrer :
+
+- Un système de gestion de sinistres (SGRC) ou un module de votre SI existant
+- Une base de données d'experts avec géolocalisation et spécialités
+- Un outil de communication (email, SMS, portail web)
+- Des données de tiers (immatriculations, SIRET, adresses)
+- Un système documentaire pour archiver les pièces justificatives
+
+OpenClaw, plateforme native d'agents IA, s'intègre nativement avec les APIs modernes. Pour comprendre comment comparer cette solution avec d'autres frameworks d'automatisation, consultez notre [comparatif détaillé OpenClaw vs Make vs N8N](/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+La sécurité est primordiale en assurance. Vos données de sinistres contiennent des données personnelles sensibles. Claws.fr garantit que tous les agents déployés respectent les normes RGPD et les exigences de conformité du secteur. Pour en savoir plus, consultez nos [standards de sécurité](/securite).
+
+## Gains métier attendus
+
+En consolidant ces trois cas d'usage, une compagnie d'assurance dommages peut anticiper :
+
+- Réduction du délai moyen de traitement d'un sinistre de 45 jours à 22 jours
+- Diminution de 40% du coût opérationnel par sinistre traité
+- Augmentation de la satisfaction client (NPS +15 points)
+- Amélioration du taux d'engagement des recours de 25 points
+- Libération de 1500 à 2000 heures/an par gestionnaire pour des tâches à forte valeur ajoutée (validation d'expertise, négociation contentieuse)
+
+## Point clé : l'agent IA ne remplace pas, il amplifie
+
+Un agent IA autonome n'est pas un remplacement de gestionnaire de sinistre. C'est un multiplicateur de productivité qui automatise les routines et libère les équipes pour se concentrer sur les décisions complexes, les situations litigieuses et la relation client.
+
+Dans 80% des sinistres, le processus est entièrement standard et prévisible. Un agent peut traiter cette majorité sans intervention. Les 20% restants (contestations, expertise particulière, enjeux élevés) restent sous supervision humaine et apportent la valeur réelle.
+
+## Premiers pas vers l'automatisation
+
+Si vous dirigez une compagnie d'assurance dommages ou un cabinet de gestion de sinistres et que vous envisagez d'automatiser votre chaîne d'instruction, trois étapes essentielles :
+
+1. Cartographier vos processus actuels et identifier les goulets d'étranglement (la majorité des opportunités se concentrent sur le triage initial et la coordination d'experts)
+2. Évaluer la maturité de vos données et de vos intégrations SI
+3. Déployer un agent pilote sur un segment de sinistres pour valider le modèle avant un déploiement à grande échelle
+
+Claws.fr propose un [guide complet sur OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet) pour vous familiariser avec la technologie. Nous accompagnons aussi les questions de stabilité et de maintenance : consultez notre [guide de maintenance pour les agents IA](/blog/maintenance-openclaw-agents-ia-stables).
+
+Pour discuter de votre contexte spécifique et d'une implémentation adaptée, [contactez nos experts](/contact) ou découvrez nos [services d'installation](/installation).
+
+La transformation digitale du secteur de l'assurance dommages ne fait que commencer. Les agences qui agissent en 2025 prendront une avance décisive sur la réduction des coûts et l'amélioration de l'expérience client.
+`,
+  },
+  {
     slug: "agent-ia-avocats-fiscalistes-veille-alertes",
     title: "Agent IA pour avocats fiscalistes : automatiser veille et alertes",
     description: "Découvrez comment les agents IA OpenClaw automatisent la veille jurisprudentielle et les alertes réglementaires pour les cabinets d'avocats fiscalistes.",
