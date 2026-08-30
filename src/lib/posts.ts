@@ -1639,15 +1639,13 @@ Cette étape prend environ 2 heures pour un utilisateur sans expérience techniq
 
 Un workflow est une séquence de décisions. Par exemple :
 
-```
-Demande reçue
-  -> Extraire le type de problème
-  -> Si FAQ -> chercher dans la base
-    -> Si réponse trouvée -> envoyer et fermer
-    -> Sinon -> router vers équipe
-  -> Si problème technique -> router vers support
-  -> Si réclamation -> router et copier le manager
-```
+    Demande reçue
+      -> Extraire le type de problème
+      -> Si FAQ -> chercher dans la base
+        -> Si réponse trouvée -> envoyer et fermer
+        -> Sinon -> router vers équipe
+      -> Si problème technique -> router vers support
+      -> Si réclamation -> router et copier le manager
 
 OpenClaw fournit une interface visuelle pour construire ces arbres. Les workflows peuvent être aussi simples ou complexes que vous le souhaitez.
 
