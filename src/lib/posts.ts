@@ -11,6 +11,146 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "nino-assistant-ia-personnel-telegram",
+    title: "Nino : avoir un vrai assistant IA personnel sur Telegram en 2026",
+    description: "Nino par Claws est un assistant IA personnel qui vit dans votre Telegram : votre bot, votre mémoire, vos données en Europe. 7 jours d'essai gratuit, en ligne en 2 minutes.",
+    date: "2026-08-30",
+    category: "Produit",
+    readTime: "7 min",
+    keywords: ["assistant IA personnel Telegram", "Nino assistant IA", "bot Telegram IA", "OpenClaw assistant personnel", "Claws assistant IA"],
+    content: `
+# Nino : avoir un vrai assistant IA personnel sur Telegram en 2026
+
+Un assistant IA personnel sur Telegram qui retient tout, agit pour vous et travaille même la nuit : c'est ce que propose [Nino by Claws](https://nino.claws.fr). Pas un chatbot générique partagé avec des milliers d'utilisateurs. Votre bot, votre personnalité, votre mémoire.
+
+*Mis à jour : août 2026*
+
+---
+
+## Ce qui différencie Nino d'un chatbot classique
+
+ChatGPT oublie. Chaque conversation repart de zéro. Vous re-expliquez votre contexte, vos projets, vos préférences à chaque session. C'est un outil, pas un assistant.
+
+Nino fonctionne différemment. Il retient ce que vous lui dites, s'en souvient la semaine suivante, et agit à partir de ce contexte. Si vous lui dites "mon client Durand attend un devis", il peut vous rappeler trois jours plus tard que vous ne l'avez pas envoyé. Il prend l'initiative.
+
+Trois différences structurelles :
+
+**Votre bot, pas le leur.** Vous créez un bot Telegram via BotFather en 30 secondes. Vous choisissez son nom, sa photo, son style. C'est votre bot. Nino y vit, mais il vous appartient.
+
+**Une mémoire longue durée.** Nino retient vos préférences, vos contacts, vos projets en cours, le contexte de vos échanges. Plus vous l'utilisez, plus il devient pertinent.
+
+**Il agit, il n'attend pas.** Rappels, veille web, tri et rédaction d'emails, briefings du matin, actions programmées. Il enchaîne les tâches en autonomie, même quand vous dormez.
+
+---
+
+## En ligne en 2 minutes, sans technique
+
+L'installation ne nécessite aucun serveur, aucun code. Trois étapes suffisent :
+
+### 1. Créez votre bot Telegram
+
+Ouvrez BotFather sur Telegram, tapez /newbot, choisissez un nom. Vous recevez un token en 30 secondes.
+
+### 2. Collez le token dans Nino
+
+Sur [nino.claws.fr](https://nino.claws.fr), collez le token. Nino vérifie votre bot en direct et prépare votre assistant.
+
+### 3. Parlez-lui, c'est parti
+
+Écrivez dans votre Telegram comme à un collègue. Il apprend, retient, et agit.
+
+---
+
+## Pour qui Nino est fait
+
+### Entrepreneurs et dirigeants
+
+Briefing du matin avec les priorités de la journée, relances clients, veille concurrents, suivi de tâches. Nino agit comme un chief of staff qui ne dort pas.
+
+### Freelances et indépendants
+
+Devis, factures, prospection, rappels d'échéances URSSAF, suivi des paiements. Les tâches administratives qui consomment 2 à 4 heures par semaine peuvent passer en automatique.
+
+### Consultants
+
+Notes de réunion, synthèse de documents, recherches, reporting client. Dictez à Nino après un call, il structure et envoie.
+
+### Créateurs de contenu
+
+Idées, repurposing, veille tendances, planning de publication. Nino peut préparer un brief hebdomadaire chaque lundi matin avec les angles à couvrir.
+
+### Professionnels de santé libérale
+
+Rappels de tournée, coordination administrative, suivi de dossiers. Données hébergées en Europe, aucun entraînement sur vos données.
+
+---
+
+## Ce que Nino peut faire concrètement
+
+Voici des exemples réels d'utilisation rapportés par les utilisateurs actuels :
+
+- "Rappelle-moi d'appeler mon comptable demain à 9h" : Nino envoie le rappel à 9h le lendemain.
+- "Résume-moi mes emails non lus" : Nino lit votre boîte Gmail et livre un résumé priorisé.
+- "Je veux surveiller les articles sur l'automatisation IA chaque semaine" : Nino configure une veille et envoie un digest le vendredi.
+- "Prépare un devis pour le client Martin, même structure que le dernier" : Nino reprend le modèle, adapte, envoie pour validation.
+
+---
+
+## Données et confidentialité
+
+Nino est bâti sur OpenClaw, technologie open source. Chaque assistant tourne dans un espace isolé, hébergé en Europe. Aucun entraînement sur vos données. Export et suppression disponibles quand vous le souhaitez.
+
+C'est la différence fondamentale avec les assistants des grandes plateformes américaines : vos données restent sous votre contrôle.
+
+---
+
+## Tarification
+
+[Nino](https://nino.claws.fr) propose trois plans :
+
+**Solo à 9 euros HT par mois** : 200 tâches par mois, rappels, veille, recherches web, lecture et rédaction d'emails. Idéal pour commencer.
+
+**Pro à 29 euros HT par mois** : 800 tâches par mois, modèle puissant avec raisonnement avancé, connexions Gmail, Agenda, Drive et Notion, actions autonomes programmées. Le plan le plus choisi.
+
+**Business à 79 euros HT par mois** : 2 500 tâches par mois, plusieurs assistants pour une équipe, clé API dédiée possible, intégrations sur mesure.
+
+Essai gratuit 7 jours, sans engagement, résiliable en un clic. Aucune carte requise pour démarrer.
+
+---
+
+## Pourquoi construire Nino sur OpenClaw
+
+OpenClaw est le framework agent sur lequel repose toute l'offre Claws. Nino en est l'application la plus accessible : zéro configuration technique, interface naturelle via Telegram, mémoire persistante et actions autonomes.
+
+Pour les entreprises qui veulent aller plus loin, passer agents métier sur mesure, automatisation Make ou n8n, ou flotte d'agents pour une équipe entière, Claws accompagne le déploiement. [Prenez contact avec nous](/contact).
+
+---
+
+## FAQ
+
+**Qu'est-ce que Nino exactement ?**
+Nino est un assistant IA personnel qui vit dans votre propre bot Telegram. Il retient votre contexte, agit de façon autonome et traite vos emails, rappels et recherches en votre nom. Il est développé par Claws, référence francophone OpenClaw.
+
+**Nino est-il différent de ChatGPT ?**
+Oui. ChatGPT ne retient rien entre les sessions et n'agit pas de façon autonome. Nino a une mémoire longue durée, peut déclencher des actions programmées et se connecte à vos outils (Gmail, Agenda, Notion). C'est un agent, pas un chatbot.
+
+**Où sont hébergées mes données avec Nino ?**
+Les données sont hébergées en Europe. Aucune donnée n'est utilisée pour entraîner des modèles. Vous pouvez exporter ou supprimer vos données à tout moment.
+
+**Nino fonctionne-t-il sans application à installer ?**
+Oui. Nino vit dans Telegram, que vous avez probablement déjà. Aucune application supplémentaire, aucun serveur, aucun code. Vous créez un bot BotFather en 30 secondes et Nino s'y installe.
+
+**Quelle est la différence entre le plan Solo et le plan Pro ?**
+Le plan Solo à 9 euros couvre les usages de base : rappels, veille, emails, 200 tâches par mois. Le plan Pro à 29 euros ajoute un modèle plus puissant, les connexions Gmail/Agenda/Drive/Notion et les actions autonomes programmées, pour 800 tâches par mois.
+
+**Peut-on utiliser Nino pour une équipe ?**
+Oui, le plan Business à 79 euros HT permet plusieurs assistants pour une équipe, avec une clé API dédiée et des intégrations sur mesure.
+
+**Comment démarrer avec Nino ?**
+Rendez-vous sur [nino.claws.fr](https://nino.claws.fr), créez votre bot Telegram via BotFather, collez le token, et votre assistant est en ligne. L'essai gratuit dure 7 jours, aucune carte requise.
+`,
+  },
+  {
     slug: "agent-ia-assureurs-dommages-instruction-sinistres",
     title: "Agent IA pour assureurs dommages : instruction et recours",
     description: "Découvrez comment un agent IA autonome optimise l'instruction des sinistres, la coordination d'experts et la gestion des recours pour les assureurs dommages.",
