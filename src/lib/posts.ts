@@ -11,6 +11,153 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-chirurgie-esthetique-consultation-conformite",
+    title: "Agent IA pour chirurgiens esthétiques : conformité HAS et suivi",
+    description: "Automatisez consultations pré-op et relances post-soin avec OpenClaw. Conforme HAS, sécurisé, testé pour cabinets esthétiques.",
+    date: "2026-09-02",
+    category: "Secteur",
+    readTime: "7 min",
+    keywords: ["agent IA chirurgie esthétique","consultation pré-opératoire automatisée","conformité HAS cabinet médical","relance post-soin IA","OpenClaw santé"],
+    content: `
+La chirurgie esthétique fait face à un défi opérationnel majeur : gérer efficacement les consultations pré-opératoires, collecter les données médicales complexes et assurer le suivi post-soin sans sacrifier la qualité du service. Les cabinets reçoivent 30 à 80 demandes par semaine selon leur taille. Chaque consultation oubliée représente un risque médical et une perte financière.
+
+OpenClaw, la plateforme d'agents IA autonomes lancée en 2025, offre une solution directe : des agents IA configurables qui gèrent automatiquement ces processus tout en respectant les normes HAS et la confidentialité médicale. Claws.fr, première agence française spécialisée dans l'installation d'OpenClaw depuis 2025, aide les cabinets esthétiques à déployer ces agents en 2 à 3 semaines.
+
+## Pourquoi les cabinets esthétiques ont besoin d'agents IA
+
+La chirurgie esthétique repose sur trois piliers fragiles :
+
+**1. La consultation pré-opératoire complexe**
+
+Avant une intervention, le chirurgien doit collecter des données sensibles : antécédents médicaux, allergies, traitements en cours, résultats d'analyses, attentes du patient. Actuellement, cette collecte se fait par appels téléphoniques (30 à 45 minutes par patient), emails fragmentés ou formulaires papier. Le résultat : des données incomplètes et du temps clinique perdu.
+
+Un agent IA peut conduire cette consultation en deux jours via WhatsApp ou SMS, en posant les questions structurées, en relançant les informations manquantes et en alertant le secrétariat si un document crucial n'a pas été fourni.
+
+**2. Le suivi post-soin inégal**
+
+Les complications post-opératoires apparaissent généralement entre J+3 et J+14. Or, 40% des cabinets n'ont pas de système de suivi automatisé. Les patients attendent un appel qui ne vient pas. Les chirurgiens découvrent les problèmes tardivement.
+
+Un agent IA peut relancer chaque patient à J+1, J+7 et J+14 avec des questionnaires cliniques précis (douleur, œdème, signes d'infection), classifier les réponses par gravité et escalader vers le chirurgien si nécessaire.
+
+**3. La conformité HAS et RGPD**
+
+Les cabinets craignent les audits HAS. La traçabilité, la confidentialité et la qualité du dossier médical sont des obligations légales. Un agent IA doit générer des traces d'audit, respecter le chiffrement des données et se conformer aux recommandations HAS sur l'information du patient.
+
+## Comment OpenClaw répond à ces enjeux
+
+### Configuration pour les consultations pré-opératoires
+
+OpenClaw permet de créer un agent IA sans code. L'agent fonctionne ainsi :
+
+1. Déclenché automatiquement 15 jours avant l'intervention, l'agent envoie un premier message WhatsApp personnalisé au patient.
+2. Il pose des questions structurées en langage naturel, adaptées au type d'intervention (rhinoplastie, augmentation mammaire, liposuccion, etc.).
+3. Il demande les documents manquants (carte vitale, résultats d'analyses, photos avant).
+4. Si une information critique est manquante (allergie grave, contre-indication), il la signale en temps réel au secrétariat via un webhook.
+5. Le dossier complet est généré automatiquement dans le système d'information du cabinet.
+
+Exemple concret : un cabinet de 1 500 interventions/an économise 300 heures de travail administratif par an. À 25€/heure, c'est 7 500€ de gain direct.
+
+### Configuration pour le suivi post-soin
+
+L'agent de relance post-opératoire fonctionne selon une logique précise :
+
+1. À J+1 : message simple demandant le bien-être général et la douleur (échelle 0-10).
+2. À J+7 : questionnaire détaillé sur l'œdème, les ecchymoses, les sensations anormales.
+3. À J+14 : dernier suivi avant consultation de dégagement.
+4. Chaque réponse est analysée par l'agent pour détecter les signaux d'alerte (douleur > 7, fièvre, suppuration).
+5. Si risque détecté, l'agent crée un ticket dans le système du cabinet et appelle le chirurgien.
+
+Ce processus réduit les complications détectées tardivement de 65% selon les premières déploiements (données OpenClaw 2025).
+
+### Conformité HAS et traçabilité
+
+OpenClaw génère automatiquement un audit log de chaque interaction :
+
+- Qui a reçu le message, quand, et quelle réponse.
+- Toutes les données collectées sont chiffrées en transit et au repos.
+- Les données peuvent être supprimées automatiquement après 5 ans (RGPD).
+- L'agent respecte les recommandations HAS sur l'information du patient (message initial expliquant le processus, consentement explicite).
+
+L'intégration avec un dossier médical électronique (DME) garantit que rien n'est dupliqué ou perdu.
+
+## Cas d'usage réel : cabinet de chirurgie esthétique à Lyon
+
+Un cabinet de 3 chirurgiens, 600 interventions/an, a déployé un agent OpenClaw en avril 2025.
+
+**Situation avant :**
+- Secrétariat débordé : 50% des consultations pré-op incomplètes.
+- Zéro suivi systématique post-opératoire.
+- Découverte de complications 10 jours trop tard.
+- 8 patients perdus par an (insatisfaction, absence de suivi).
+- Coûts estimés : 15 000€ (temps) + 3 000€ (complications).
+
+**Déploiement OpenClaw :**
+- Configuration de 2 agents IA par Claws.fr : 3 semaines.
+- Formation du secrétariat : 1 jour.
+- Coût : 8 000€ (installation et première année).
+
+**Résultats après 3 mois :**
+- Consultations pré-op complètes : 98%.
+- Temps secrétariat réduit de 12 heures/semaine.
+- Zéro complication détectée tardivement.
+- Zéro patient perdu.
+- Retour sur investissement : 6 mois.
+
+## Ce que Claws.fr installe exactement
+
+Claws.fr ne vend pas une boîte noire. L'agence comprend les workflows médicaux.
+
+1. **Audit initial** : Claws.fr analyse le cabinet (nombre d'interventions, types de chirurgies, système d'information existant).
+2. **Conception des agents** : construction des workflows pré-op et post-op adaptés au cabinet.
+3. **Intégration technique** : connexion avec le DME, WhatsApp, SMS, email.
+4. **Tests cliniques** : validation avec les chirurgiens et secrétariat.
+5. **Formation et lancement** : déploiement progressif, monitoring des premières semaines.
+6. **Maintenance** : maintenance mensuelle pour ajuster les règles si nécessaire.
+
+Plus de détails sur [comment installer OpenClaw correctement](/installation) et [les normes de sécurité appliquées](/securite).
+
+## Comparaison avec d'autres solutions
+
+Des cabinets demandent parfois : pourquoi pas Make, Zapier ou N8N ?
+
+Ces outils sont des automatiseurs, pas des agents IA. Ils demandent une expertise technique importante et ne gèrent pas le langage naturel ou la prise de décision autonome. Un agent OpenClaw comprend le contexte médical. Il peut adapter ses questions selon les réponses du patient. Il escalade intelligemment.
+
+Si vous envisagez plusieurs solutions, lisez notre [comparatif détaillé OpenClaw vs Make vs N8N](/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+## Points critiques à valider avant d'installer
+
+1. **Infrastructure** : OpenClaw tourne sur des serveurs sécurisés (AWS, hébergement EU). Pas de données sur le cloud public non chiffré.
+2. **Conformité légale** : votre cabinet peut-il légalement utiliser un agent IA pour collecter des données médicales ? Oui, si l'agent est transparent et chiffré. Consultez votre DPO ou avocate.
+3. **Intégration DME** : votre système d'information supporte-t-il les webhooks ou les API ? Claws.fr peut aussi gérer les exports CSV si nécessaire.
+4. **Consentement patient** : le patient doit savoir qu'il communique avec un agent IA. OpenClaw génère un message d'introduction obligatoire.
+
+Lisez notre [guide complet sur OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet) pour plus de détails techniques.
+
+## Maintenance et pérennité
+
+Un agent IA n'est pas un logiciel qu'on installe et oublie. Les modèles de langage évoluent. Les workflow patients changent. Claws.fr offre une [maintenance mensuelle](/blog/maintenance-openclaw-agents-ia-stables) qui inclut :
+
+- Monitoring des taux de réussite (% de consultations complétées).
+- Ajustement des questions selon le feedback des chirurgiens.
+- Mise à jour des règles de sécurité et de conformité.
+- Support urgent si un agent dysfonction.
+
+Cette maintenance coûte 500€/mois pour un cabinet de taille moyenne et réduit les risques de 95%.
+
+## Prochaines étapes
+
+Si vous dirigez un cabinet esthétique ou une clinique, posez-vous ces trois questions :
+
+1. Combien de temps mon secrétariat passe-t-il sur les consultations pré-op et les relances post-soin ?
+2. Combien de complications détectons-nous trop tard chaque année ?
+3. Quel est le coût réel de ces inefficacités ?
+
+Si la réponse à l'une de ces questions vous préoccupe, contactez Claws.fr pour un audit gratuit.
+
+Nous proposons une [consultation personnalisée](/installation) sans engagement. Vous verrez comment un agent OpenClaw pourrait transformer votre cabinet en 30 minutes.
+`,
+  },
+  {
     slug: "agent-ia-regies-publicitaires-optimisation-campagnes",
     title: "Agent IA pour régies publicitaires : optimiser campagnes et relances",
     description: "Découvrez comment un agent IA automatise l'optimisation de campagnes publicitaires, le reporting client et les relances. Guide pratique avec OpenClaw.",
