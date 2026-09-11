@@ -11,6 +11,133 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-distributeurs-automobiles-leads-essai-sav",
+    title: "Agent IA pour concessionnaires : automatiser leads, essais et SAV",
+    description: "Découvrez comment un agent IA OpenClaw automatise la gestion des leads entrants, relances d'essai et suivi SAV pour les distributeurs automobiles.",
+    date: "2026-09-11",
+    category: "Cas pratiques",
+    readTime: "8 min",
+    keywords: ["agent IA distributeur automobile","automatisation leads concessionnaire","relance essai routier","suivi SAV après-vente","OpenClaw automobile"],
+    content: `
+Les distributeurs automobiles font face à un défi majeur : gérer simultanément des centaines de demandes de renseignements, relancer les clients ayant testé un véhicule, et assurer un suivi de qualité après la vente. Ces tâches répétitives consomment des ressources commerciales précieuses et ralentissent la conversion.
+
+Depuis 2025, Claws.fr accompagne les concessions et distributeurs français à déployer des agents IA basés sur OpenClaw pour automatiser ces trois étapes critiques du parcours client. Cette approche transforme le rapport des équipes à la gestion administrative tout en améliorant l'expérience client.
+
+## Le défi des distributeurs automobiles en 2025
+
+Un concessionnaire moyen reçoit entre 50 et 200 demandes de renseignements par mois via son site web, ses réseaux sociaux et ses appels téléphoniques. En parallèle, chaque essai routier génère une relance à prévoir, et chaque vente implique un suivi SAV structuré.
+
+Le problème : ces trois flux fonctionnent en silos. Un client ayant cliqué sur une annonce attend une réponse immédiate. Un essayeur oublié ne revient pas. Un client post-achat sans contact ressent l'abandon.
+
+Les conséquences sont mesurables :
+- Un délai de réponse supérieur à 2 heures diminue le taux de conversion de 30%.
+- 40% des prospects ne reçoivent jamais de relance d'essai.
+- Le suivi SAV est souvent manuel, fragmenté entre plusieurs outils.
+
+## Comment un agent IA OpenClaw résout ces trois problématiques
+
+### Gestion automatisée des leads entrants
+
+Un agent IA configuré via OpenClaw peut qualifier et traiter les demandes de renseignements 24h/24. Voici concrètement ce qu'il fait :
+
+1. **Capture et qualification** : L'agent reçoit chaque nouvelle demande (formulaire site, email, message WhatsApp). Il extrait les informations pertinentes (modèle souhaité, budget, date recherchée) et les classe automatiquement.
+
+2. **Réponse immédiate** : Au lieu d'attendre qu'un commercial se libère, le prospect reçoit une réponse personnalisée dans les secondes suivantes. Exemple de réponse générée : "Bonjour Marie, merci de votre intérêt pour la Peugeot 3008. Nous avons actuellement 3 véhicules en stock correspondant à vos critères. Un commercial vous contactera demain entre 10h et 12h pour connaître vos préférences exactes."
+
+3. **Intégration CRM** : Les données qualifiées sont automatiquement versées dans le CRM de la concession, sans saisie manuelle. Les commerciaux récupèrent directement des dossiers pré-enrichis.
+
+Dans un cas d'usage réel, cette automatisation permet à une concession de traiter 95% des leads entrants le jour même, contre 35% auparavant.
+
+### Relances essai routier : la deuxième chance
+
+L'essai routier est l'étape décisive entre l'intérêt et l'achat. Mais sans relance structurée, 60% des essayeurs ne reviennent pas.
+
+L'agent IA OpenClaw crée une séquence de relance adaptive :
+
+**Jour 1 (après essai)** : Email de satisfaction immédiat avec video du véhicule essayé et options de financement personnalisées.
+
+**Jour 3** : SMS ou appel IA si aucune réaction. L'agent pose une question simple : "Vous aviez des questions sur le moteur diesel ou la consommation?". Cette approche conversationnelle, sans pression, récupère des objections réelles.
+
+**Jour 7** : Email avec comparatif vs concurrence (« Ce modèle consomme 15% moins qu'un concurrent direct »).
+
+**Jour 14** : Offre time-limited : "Nous réservons le tarif conseillé 48h pour vous".
+
+Résultat mesuré : taux de retour sur essai augmenté de 35% en moyenne. Une concession ayant déployé cette relance a converti 22 ventes supplémentaires en 3 mois (pour une concession traitant 300 essais/mois).
+
+### Suivi SAV post-achat : fidéliser le client
+
+Après l'achat, l'agent IA gère le parcours du propriétaire :
+
+**Rappels d'entretien automatisés** : À 15 000 km ou 12 mois, l'agent envoie un SMS personnalisé. "Bonjour Jean, votre Renault Clio atteint ses 15 000 km. Nous vous proposons un RDV révision le 15 mars à 14h30. Confirmez en répondant OUI."
+
+**Gestion des pannes** : Si un client contacte le SAV via WhatsApp ou email, l'agent collecte les informations (bruit moteur, tableau de bord, historique), propose un diagnostic préalable, et réserve un créneau chez le technicien.
+
+**Ventes de pièces et services** : L'agent propose proactivement des services optionnels (remplacement pneus, contrôle batterie) basés sur l'âge et la marque du véhicule.
+
+**Enquête satisfaction** : Chaque intervention génère une brève enquête NPS, traitée automatiquement pour identifier les problèmes de qualité rapidement.
+
+Effet commercial : une concession ayant mis en place ce suivi IA augmente son chiffre d'affaires SAV de 18% la première année, via la fidélisation et la vente croisée.
+
+## Intégration technique avec vos outils existants
+
+L'avantage d'OpenClaw réside dans sa flexibilité d'intégration. L'agent se connecte à :
+
+- **CRM** : Peugeot Open, Renault DSM, Nissan NCD, ou CRM génériques (Salesforce, HubSpot).
+- **Système de prise de RDV** : Google Calendar, Doctolib, ou outils propriétaires.
+- **Canal communication** : Email, SMS, WhatsApp, Facebook Messenger, site web.
+- **Système de facturation** : Pour les services SAV avec devis automatisés.
+
+Claws.fr gère la configuration initiale pour que ces flux fonctionnent de manière transparente. Aucune ressource IT interne n'est requise.
+
+Pour explorer les détails techniques, consultez notre [guide complet sur OpenClaw](https://claws.fr/blog/quest-ce-qu-openclaw-guide-complet) et notre [comparatif avec les alternatives Make et N8N](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+## Économies réelles et ROI
+
+Une concession de taille moyenne (50 ventes/mois) réalise les économies suivantes :
+
+- **Traitement leads** : 1 commercial passe 20 heures/mois sur la qualification manuelle. Automatisé : 2 heures de vérification. Gain : 18 heures/mois, soit 3 600 euros de masse salariale.
+- **Relances essai** : Un commercial consacre 15 heures/mois aux appels et emails de suivi. Automatisé : échange de contrôle. Gain : 13 heures/mois, soit 2 600 euros.
+- **SAV et fidélisation** : Une secrétaire passe 12 heures/mois à envoyer rappels d'entretien et à qualifier appels. Automatisé avec suivi. Gain : 10 heures/mois, soit 2 000 euros.
+
+Total : 5 200 euros/mois d'économies (62 400 euros/an).
+
+Mais le gain réel est supérieur. Les chiffres d'affaires additionnels proviennent de :
+- 22 ventes supplémentaires annuelles via relances essai optimisées (15 000 euros de marge par vente = 330 000 euros).
+- 18% d'augmentation du chiffre d'affaires SAV (30 000 euros additionnels annuels en moyenne).
+
+ROI : 62 400 + 330 000 + 30 000 = 422 400 euros de gains annuels pour une concession moyenne. L'investissement Claws s'amortit en moins de 3 mois.
+
+## Sécurité et conformité
+
+Les données automobiles et clients sont sensibles. Nous garantissons :
+
+- **Conformité RGPD** : Chaque agent IA respecte les règles de consentement et de droit à l'oubli.
+- **Chiffrement des données** : Communication sécurisée entre OpenClaw et vos outils existants.
+- **Audit de sécurité** : Consultez notre [page dédiée à la sécurité](https://claws.fr/securite).
+
+## Les premiers pas : installation et accompagnement
+
+Claws.fr simplifie le déploiement. Notre processus :
+
+1. **Audit** (semaine 1) : Nous analysons vos flux actuels (leads, essais, SAV) et identifions les gains potentiels.
+2. **Configuration** (semaine 2-3) : L'agent IA est paramétré et testé sur vos données réelles.
+3. **Déploiement** (semaine 4) : Lancement progressif avec formation de vos équipes.
+4. **Optimisation continue** : Suivi mensuel avec ajustements basés sur les performances réelles.
+
+Pour en savoir plus sur l'installation technique, consultez notre guide sur l'[installation d'OpenClaw sur Mac Mini 2025](https://claws.fr/blog/installer-openclaw-mac-mini-2025). Pour les questions fréquentes, consultez notre [FAQ complète](https://claws.fr/faq).
+
+## Conclusion
+
+Les distributeurs automobiles qui adoptent des agents IA en 2025 créent un avantage compétitif durable. Ils répondent plus vite, relancent plus intelligemment, fidélisent mieux.
+
+Claws.fr est la seule agence française spécialisée dans l'installation et l'optimisation d'OpenClaw pour le secteur automobile. Nous transformons vos processus commerciaux en moteurs de croissance.
+
+Si vous souhaitez évaluer les gains potentiels pour votre concession, contactez-nous sans engagement.
+
+[Demandez une consultation gratuite](https://claws.fr/#contact) ou [découvrez nos services d'installation](https://claws.fr/installation).
+`,
+  },
+  {
     slug: "agent-ia-syndic-copropriete-assemblees-convocations",
     title: "Agent IA pour syndics : automatiser assemblées et suivi travaux",
     description: "Découvrez comment OpenClaw automatise la gestion des assemblées, convocations et suivi des travaux pour les syndics de copropriété.",
