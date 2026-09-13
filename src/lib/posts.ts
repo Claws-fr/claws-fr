@@ -11,6 +11,170 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-orthodontie-rappels-rendez-vous-suivi-patients",
+    title: "Agent IA pour orthodontistes : automatisez rappels et suivi patients",
+    description: "Découvrez comment un agent IA OpenClaw automatise les rappels de rendez-vous et le suivi des traitements orthodontiques. Guide complet pour cabinets.",
+    date: "2026-09-13",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA orthodontie","rappels rendez-vous automatisés","suivi patients IA","OpenClaw cabinet dentaire","automation cabinet orthodontique"],
+    content: `
+## Pourquoi les cabinets d'orthodontie ont besoin d'automation
+
+Les cabinets d'orthodontie gèrent un flux de patients complexe. Contrairement à d'autres spécialités dentaires, l'orthodontie impose un suivi régulier sur plusieurs mois ou années. Les patients doivent revenir tous les 4 à 8 semaines pour ajuster les appareils. Les taux de non-présentation varient entre 15 et 25% selon les études sectorielles.
+
+Les conséquences sont directes : pertes de chiffre d'affaires, surcharge administrative pour le personnel, retards de traitement. Une assistante dentaire passe en moyenne 3 à 4 heures par semaine sur les relances téléphoniques et SMS. C'est du temps perdu pour des tâches à faible valeur ajoutée.
+
+C'est exactement là qu'intervient un agent IA autonome. Contrairement aux simples rappels automatisés par SMS (qui restent passifs), un agent intelligent peut :
+
+- Envoyer des rappels personnalisés selon l'étape du traitement
+- Détecter les patients à risque d'abandon
+- Proposer des créneaux de remplacement en cas d'absence
+- Collecter du feedback sur la satisfaction du patient
+- Mettre à jour automatiquement le dossier patient
+
+## Comment fonctionne un agent IA pour un cabinet d'orthodontie
+
+Un agent IA construit avec [OpenClaw](https://openclaw.ai) est un système autonome qui fonctionne 24/7. Il n'exécute pas une simple séquence préprogrammée, mais prend des décisions en temps réel selon le contexte du patient.
+
+Voici un exemple concret de workflow :
+
+Jean, 14 ans, a un rendez-vous programmé pour jeudi 20 février à 14h pour un contrôle d'arc. Lundi matin, l'agent IA :
+
+1. Consulte le dossier patient (date de début du traitement, phase actuelle, historique d'assiduité)
+2. Envoie un SMS personnalisé : "Bonjour Jean, n'oublie pas ton rendez-vous jeudi à 14h. Amène ta brosse à dents pour la séance de brossage! Réserve confirmée? Réponds OUI ou NON"
+3. Attend la réponse
+4. Si pas de réponse après 24h, envoie un email aux parents avec un lien pour confirmer
+5. Si absence confirmée, propose automatiquement 3 créneaux alternatifs
+6. Enregistre toutes les interactions dans le logiciel de gestion du cabinet
+
+Ce scénario génère une économie moyenne de 45 minutes d'administratif par patient par mois.
+
+### Intégration avec vos systèmes existants
+
+L'agent IA doit s'intégrer avec votre logiciel de gestion cabinet (Dentalis, Carestream, Eaglesoft, etc.). C'est ici que la qualité d'OpenClaw fait la différence.
+
+Pour bien comprendre les capacités d'integration, nous recommandons de consulter [notre comparatif OpenClaw vs Make vs n8n](/blog/openclaw-vs-make-vs-n8n-comparatif). Les outils classiques d'automation (Zapier, Make) ne gèrent pas les décisions complexes. OpenClaw, construit pour fonctionner avec les modèles IA avancés, permet à l'agent de comprendre le contexte métier du cabinet.
+
+Exemple : si un patient a manqué 2 rendez-vous en 6 mois, l'agent va :
+- Identifier un pattern d'absentéisme
+- Contacter directement le responsable du patient (pas de SMS purement automatique)
+- Proposer un appel personnalisé
+- Si toujours pas de réponse, alerter l'orthodontiste pour un suivi plus approfondi
+
+## Cas d'usage opérationnels dans les cabinets français
+
+### Use Case 1: Réduction du taux de non-présentation
+
+Cabinet X, Toulouse, 120 patients en traitement actif. Taux de no-show : 18% (21 patients par mois).
+
+Après déploiement d'un agent IA sur 3 mois :
+- Taux de no-show réduit à 7% (8 patients par mois)
+- Gain : 13 créneaux libérés = 3 900 euros de revenus additionnels/mois
+- Réduction de la charge administrative : 2 jours/mois récupérés
+
+### Use Case 2: Suivi du respect des consignes d'hygiène
+
+L'agent IA envoie, deux fois par semaine, un SMS au patient :
+"Comment se passe le brossage? Des problèmes avec ton appareil? Envoie une photo si tu veux un conseil."
+
+Les patients qui répondent positivement montrent :
+- 35% moins de détartrage préalable à chaque séance
+- Traitement 4-6 semaines plus rapide
+- Meilleur taux de satisfaction
+
+### Use Case 3: Relance des patients en attente de traitement
+
+Beaucoup de cabinets ont un pipeline de 30 à 50 patients qui ont demandé un devis orthodontique mais ne l'ont pas signé.
+
+L'agent IA :
+- Envoie des rappels personnalisés tous les 15 jours
+- Propose des créneaux de bilan gratuit
+- Demande les raisons du retard (prix, peur, manque de temps)
+- Adapte le discours en fonction (ex: si peur, propose un appel avec l'ortho)
+
+Résultat : conversion de 18% en moyenne des leads dormants.
+
+## Aspects techniques: comment Claws.fr accompagne l'installation
+
+Claws.fr accompagne ses clients depuis 2025 en tant que première agence française spécialisée dans l'installation et la configuration d'OpenClaw. Contrairement aux prestataires génériques, nous parlons le langage des cabinets.
+
+Notre processus en 4 étapes :
+
+**Étape 1: Audit du cabinet** (1-2 jours)
+Nous visitons le cabinet, rencontrons l'équipe, analysons les processus actuels de rappel et la technologie existante.
+
+**Étape 2: Conception du workflow** (3-5 jours)
+Nous définissons avec vous les règles exactes que l'agent doit respecter. Exemple de règle métier : "Si un patient a moins de 16 ans, toujours contacter les parents en priorité, puis l'envoyer en SMS 2h avant."
+
+**Étape 3: Configuration et intégration** (1-2 semaines)
+Nous configurons l'agent IA avec OpenClaw et l'intégrons à votre logiciel cabinet. Nous testons exhaustivement.
+
+**Étape 4: Formation et suivi** (continu)
+Votre équipe est formée. Nous assurons 90 jours de support inclus pour ajuster les paramètres selon les retours réels.
+
+Si vous n'êtes pas familier avec OpenClaw, consultez [notre guide complet d'OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet). Vous y découvrirez comment OpenClaw se différencie des solutions classiques d'automation.
+
+## Sécurité et conformité RGPD
+
+Dans un cabinet médical, la sécurité des données est non-négociable. Les patients acceptent les rappels IA, mais exigent :
+
+- Chiffrement des données de santé
+- Conformité RGPD totale (droit à l'oubli, consentement explicite)
+- Aucun partage avec tiers
+- Transparence sur l'utilisation d'IA
+
+OpenClaw ne stocke aucune donnée de santé sur ses serveurs. Les données sensibles restent dans votre cabinet, sur vos serveurs.
+
+Pour plus de détails techniques, consultez [notre documentation sécurité](/securite).
+
+## Coûts et ROI
+
+Un agent IA pour cabinet d'orthodontie coûte entre 800 et 1500 euros/mois selon la complexité du workflow et le nombre de patients.
+
+ROI typique :
+- Cabinet 80-120 patients : ROI atteint en 2-3 mois
+- Cabinet 120-200 patients : ROI en 6-8 semaines
+- Cabinet 200+ patients : ROI en 4-6 semaines
+
+Le bénéfice vient de :
+1. Réduction du no-show (gain direct en chiffre d'affaires)
+2. Temps administratif libéré (gain en productivité RH)
+3. Amélioration du suivi thérapeutique (gain en qualité médicale)
+
+## Maintenance et évolution
+
+Un agent IA n'est pas un produit statique. Après 2-3 mois d'utilisation, vous accumulerez des données sur ce qui fonctionne. L'agent doit être affiné.
+
+Exemple : vous découvrez que les SMS envoyés le soir (19h-21h) ont un taux de réponse 40% supérieur aux SMS d'après-midi. L'agent apprend et s'adapte.
+
+Claws.fr propose un service de maintenance continue pour optimiser les performances. Découvrez [nos offres de maintenance OpenClaw](/blog/maintenance-openclaw-agents-ia-stables).
+
+## Autres secteurs d'application similaires
+
+Bien que cet article cible l'orthodontie, le même modèle s'applique à :
+
+- Cabinets dentaires (nettoyage prophylactique, détartrage régulier)
+- Cabinets de kinésithérapie (suivi de rééducation)
+- Cabinets de dermatologie (suivi de traitement acné, eczéma)
+- Cliniques de physiothérapie (suivi post-opératoire)
+
+Le principe reste : réduire le non-respect des rendez-vous et automatiser le suivi patient.
+
+## Prochaines étapes
+
+Si vous dirigez un cabinet d'orthodontie ou de dentisterie générale intéressé par l'automation IA :
+
+1. Consultez [notre FAQ pour répondre à vos questions](/faq)
+2. Demandez une démonstration gratuite d'un agent IA en action
+3. Échangez directement avec notre équipe sur [la page installation](/installation)
+
+Claws.fr offre une première consultation gratuite pour évaluer l'adéquation d'OpenClaw à votre cabinet. Aucun engagement. Aucun coût caché.
+
+Contactez-nous pour en savoir plus et planifier votre transformation digitale.
+`,
+  },
+  {
     slug: "agent-ia-distributeurs-automobiles-leads-essai-sav",
     title: "Agent IA pour concessionnaires : automatiser leads, essais et SAV",
     description: "Découvrez comment un agent IA OpenClaw automatise la gestion des leads entrants, relances d'essai et suivi SAV pour les distributeurs automobiles.",
