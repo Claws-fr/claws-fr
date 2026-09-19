@@ -239,7 +239,7 @@ function injectPost(article) {
     readTime: "${article.readTime}",
     keywords: ${JSON.stringify(article.keywords)},
     content: \`
-${article.content}
+${article.content.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${")}
 \`,
   },`;
 

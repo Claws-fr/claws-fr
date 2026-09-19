@@ -82,14 +82,14 @@ Temps de première réponse : de 4.2 heures à 3 minutes. Satisfaction client (C
 
 La méthode la plus courante. n8n exécute un noeud HTTP POST vers un endpoint OpenClaw (hébergé sur votre infrastructure ou sur le cloud). Le payload contient :
 
-```
+\`\`\`
 {
   "context": "données du client et du contexte",
   "agent_type": "support_l1",
   "timeout_ms": 5000,
   "trace_id": "unique pour auditabilité"
 }
-```
+\`\`\`
 
 OpenClaw traite et retourne la décision avec un score de confiance. n8n branche ensuite sur ce score : au-dessus de 0.85, action automatique directe ; entre 0.70 et 0.85, action avec notification d'un humain pour validation ; en-dessous de 0.70, escalade humaine complète.
 
