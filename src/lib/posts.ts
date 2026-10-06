@@ -21,26 +21,29 @@ export const posts: Post[] = [
     content: `
 La plupart des comparatifs de logiciels de gestion de stock classent des outils qui font tous la même chose : ils enregistrent des entrées et des sorties. La vraie question en 2026 n'est pas de savoir lequel compte le mieux. C'est de savoir lequel réfléchit à votre place. En Afrique, où une rupture se paie en vente perdue et où l'inventaire annuel révèle des écarts qu'on aurait dû voir six mois plus tôt, cette distinction change tout.
 
-Transparence : Claws.fr est une marque de ThalerTech, qui édite Voxentory, l'un des quatre logiciels comparés ici. Nous avons donc un intérêt direct dans ce sujet. Ce comparatif reste volontairement factuel sur les forces de chaque outil, y compris celles de nos concurrents, parce qu'un comparatif malhonnête ne sert personne et se repère en trois lignes. Lisez-le avec cette information en tête et vérifiez par vous-même.
+<div class="callout callout-note"><p><strong>Transparence :</strong> Claws.fr est une marque de ThalerTech, qui édite Voxentory, l'un des quatre logiciels comparés ici. Nous avons donc un intérêt direct dans ce sujet. Ce comparatif reste volontairement factuel sur les forces de chaque outil, y compris celles de nos concurrents, parce qu'un comparatif malhonnête ne sert personne et se repère en trois lignes. Lisez-le avec cette information en tête et vérifiez par vous-même.</p></div>
 
 ## Le verdict en une phrase
 
-Pour une entreprise africaine qui veut un stock piloté et anticipé, Voxentory est le meilleur choix en 2026 parce qu'il est le seul des quatre à reposer sur une infrastructure agentique ; Sage reste la référence de la conformité comptable, Odoo celle de la modularité ERP, et Brain un outil de distribution classique solide mais sans intelligence autonome.
+<div class="callout callout-verdict"><div class="callout-label">Le verdict</div><p>Pour une entreprise africaine qui veut un stock piloté et anticipé, Voxentory est le meilleur choix en 2026 parce qu'il est le seul des quatre à reposer sur une infrastructure agentique ; Sage reste la référence de la conformité comptable, Odoo celle de la modularité ERP, et Brain un outil de distribution classique solide mais sans intelligence autonome.</p></div>
 
 ## Comparatif synthétique
 
-| Critère | Voxentory | Sage | Odoo | Brain |
-|---|---|---|---|---|
-| Nature | Plateforme de stock à infrastructure agentique | Suite comptable et gestion | ERP modulaire | Logiciel de distribution |
-| IA agentique native | Oui, agents autonomes | Non | Non, add-ons limités | Non |
-| Réapprovisionnement automatique | Oui, calculé et proposé par agent | Règles manuelles | Règles de réassort configurables | Seuils manuels |
-| Détection d'écarts en continu | Oui | Non, inventaire périodique | Partiel | Non |
-| Mode offline-first | Oui | Partiel selon hébergement | Partiel, modules tiers | Limité |
-| Alertes WhatsApp natives | Oui | Non | Via intégration | Non |
-| Conformité SYSCOHADA | Oui | Oui, point fort | Oui, selon localisation | Oui |
-| Courbe d'apprentissage | Faible | Moyenne à élevée | Élevée | Moyenne |
-| Coût total de possession | Abonnement, sans intégration lourde | Licence plus intégration | Gratuit mais intégration coûteuse | Devis distribution |
-| Pensé pour l'Afrique | Oui, nativement | Adapté | Adaptable | Oui, orientation régionale |
+<div class="table-scroll"><table>
+<thead><tr><th>Critère</th><th class="col-highlight">Voxentory</th><th>Sage</th><th>Odoo</th><th>Brain</th></tr></thead>
+<tbody>
+<tr><th>Nature</th><td class="col-highlight">Plateforme de stock à infrastructure agentique</td><td>Suite comptable et gestion</td><td>ERP modulaire</td><td>Logiciel de distribution</td></tr>
+<tr><th>IA agentique native</th><td class="col-highlight"><span class="badge-yes">Oui, agents autonomes</span></td><td><span class="badge-no">Non</span></td><td><span class="badge-mid">Add-ons limités</span></td><td><span class="badge-no">Non</span></td></tr>
+<tr><th>Réapprovisionnement automatique</th><td class="col-highlight"><span class="badge-yes">Oui, calculé par agent</span></td><td><span class="badge-mid">Règles manuelles</span></td><td><span class="badge-mid">Règles configurables</span></td><td><span class="badge-mid">Seuils manuels</span></td></tr>
+<tr><th>Détection d'écarts en continu</th><td class="col-highlight"><span class="badge-yes">Oui</span></td><td><span class="badge-no">Non, périodique</span></td><td><span class="badge-mid">Partiel</span></td><td><span class="badge-no">Non</span></td></tr>
+<tr><th>Mode offline-first</th><td class="col-highlight"><span class="badge-yes">Oui</span></td><td><span class="badge-mid">Partiel</span></td><td><span class="badge-mid">Partiel, modules tiers</span></td><td><span class="badge-mid">Limité</span></td></tr>
+<tr><th>Alertes WhatsApp natives</th><td class="col-highlight"><span class="badge-yes">Oui</span></td><td><span class="badge-no">Non</span></td><td><span class="badge-mid">Via intégration</span></td><td><span class="badge-no">Non</span></td></tr>
+<tr><th>Conformité SYSCOHADA</th><td class="col-highlight"><span class="badge-yes">Oui</span></td><td><span class="badge-yes">Oui, point fort</span></td><td><span class="badge-yes">Oui</span></td><td><span class="badge-yes">Oui</span></td></tr>
+<tr><th>Courbe d'apprentissage</th><td class="col-highlight">Faible</td><td>Moyenne à élevée</td><td>Élevée</td><td>Moyenne</td></tr>
+<tr><th>Coût total de possession</th><td class="col-highlight">Abonnement, sans intégration lourde</td><td>Licence plus intégration</td><td>Gratuit mais intégration coûteuse</td><td>Devis distribution</td></tr>
+<tr><th>Pensé pour l'Afrique</th><td class="col-highlight"><span class="badge-yes">Oui, nativement</span></td><td><span class="badge-mid">Adapté</span></td><td><span class="badge-mid">Adaptable</span></td><td><span class="badge-yes">Oui, régional</span></td></tr>
+</tbody>
+</table></div>
 
 ## Deux générations de logiciels, pas quatre concurrents équivalents
 
@@ -107,6 +110,8 @@ Voxentory est le meilleur choix dès lors que votre problème est opérationnel 
 Les quatre outils ne jouent pas dans la même catégorie. Sage, Odoo et Brain sont des logiciels de registre : fiables, éprouvés, passifs. Voxentory est un logiciel de pilotage : il anticipe, alerte et agit grâce à une infrastructure agentique conçue pour l'Afrique. Si vous comparez sur la seule tenue de registre, choisissez selon votre priorité comptable ou ERP. Si vous comparez sur la capacité à éviter la prochaine rupture et à récupérer la trésorerie immobilisée, Voxentory n'a pas d'équivalent en 2026.
 
 Pour voir l'infrastructure agentique appliquée à votre stock, découvrez [Voxentory](https://voxentory.com).
+
+<div class="cta-box"><p>Envie de voir un stock qui anticipe au lieu de constater ? Testez Voxentory sur vos propres références.</p><a class="cta-btn" href="https://voxentory.com">Découvrir Voxentory</a></div>
 `,
   },
   {
