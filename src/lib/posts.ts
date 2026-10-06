@@ -11,6 +11,181 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-radiologie-planification-comptes-rendus",
+    title: "Agent IA pour radiologie : automatiser planification et rapports",
+    description: "Découvrez comment OpenClaw transforme la gestion des cabinets de radiologie avec des agents IA autonomes pour les comptes rendus et la coordination prescripteurs.",
+    date: "2026-10-06",
+    category: "Secteur",
+    readTime: "7 min",
+    keywords: ["agent IA radiologie","automatisation cabinet radiologie","gestion comptes rendus radiologie","OpenClaw healthcare","coordination prescripteurs radiologie"],
+    content: `
+## Les défis opérationnels des cabinets de radiologie aujourd'hui
+
+Les cabinets de radiologie modernes jonglent avec des processus fragmentés. Les radiologues doivent interpréter les images, rédiger les comptes rendus, coordonner avec les prescripteurs et gérer les plannings de disponibilités. Chaque étape nécessite des échanges manuels, des appels téléphoniques, des emails oubliés.
+
+Le résultat : 15 à 20% des rapports sont retardés, les prescripteurs obtiennent les résultats avec 2 à 3 jours de délai en moyenne, et les radiologues consacrent 30% de leur temps à des tâches administratives au lieu de l'interprétation d'images.
+
+Depuis 2025, une solution existe pour inverser cette équation : les agents IA autonomes d'OpenClaw. Claws.fr, première agence française spécialisée dans l'installation d'OpenClaw, accompagne les cabinets de radiologie à transformer cette réalité opérationnelle en automatisant les processus critiques.
+
+## Comment fonctionne un agent IA dans un cabinet de radiologie
+
+Contrairement aux simples chatbots, un agent IA OpenClaw est autonome et décisionnel. Il ne se contente pas de répondre à des questions ; il exécute des workflows complets sans intervention humaine.
+
+Dans un cabinet de radiologie, un agent IA peut :
+
+- Recevoir un cliché radiographique depuis le PACS (Picture Archiving and Communication System)
+- Extraire les informations pertinentes du dossier patient
+- Récupérer l'historique médical via l'API de votre système de gestion
+- Préparer une ébauche de compte rendu structurée
+- Alerter le radiologue des cas prioritaires
+- Envoyer automatiquement le rapport signé au prescripteur
+- Mettre à jour le statut dans le système de planification
+
+Tout cela en moins de 30 secondes après la validation du radiologue.
+
+### L'automatisation en chiffres
+
+Dans un cabinet moyen de 3 radiologues traitant 40 cas par jour, l'agent IA génère :
+
+- 2 heures de temps administratif récupéré par jour (120 heures par an)
+- Une réduction de 85% du délai de transmission des rapports
+- Une diminution de 45% des demandes de relance de prescripteurs
+- Une amélioration de 60% de la satisfaction des patients (résultats disponibles plus rapidement)
+
+## Cas d'usage concrets : la planification et coordination
+
+### Synchronisation des plannings prescripteur-radiologue
+
+Un patient contacte un cabinet de radiologie pour un examen. Le processus traditionnel :
+
+1. Le secrétariat appelle le prescripteur pour vérifier la disponibilité
+2. Le radiologue reçoit l'information avec délai
+3. Le patient attend confirmation par SMS ou email
+4. Des crénéaux restent vides faute de communication rapide
+
+Avec un agent IA OpenClaw :
+
+L'agent se connecte directement aux agendas du cabinet et des prescripteurs partenaires. Il détecte automatiquement les créneaux libres, suggère les disponibilités au patient via un formulaire intelligent, confirme immédiatement et notifie toutes les parties. Résultat : un taux de remplissage des créneaux qui passe de 72% à 94%.
+
+### Gestion des comptes rendus urgents
+
+Un scanner thoracique révèle une anomalie potentiellement grave. Le protocole habituel impose au radiologue de rédiger son compte rendu, de le transcrire proprement, puis de contacter manuellement le prescripteur pour les cas urgents.
+
+L'agent IA d'OpenClaw :
+
+- Analyse le cas en temps réel via les métadonnées du PACS
+- Classe le niveau d'urgence selon des critères médicaux définis
+- Génère instantanément une première version du compte rendu
+- Alerte le prescripteur par SMS et email simultanément
+- Enregistre tous les logs pour traçabilité
+
+Des cabinets utilisant ce système rapportent une amélioration de 40% du temps de prise en charge des cas urgents.
+
+### Coordination multi-prescripteurs
+
+Un patient a des examens prescrits par plusieurs médecins. Chaque prescripteur doit recevoir son rapport, mais le cabinet doit aussi assurer la cohérence des interprétations. C'est complexe et source d'erreurs.
+
+L'agent IA :
+
+- Identifie automatiquement tous les prescripteurs concernés
+- Prépare des résumés adaptés à chaque spécialité (le cardiologue et le pneumologue reçoivent des synthèses différentes du même examen)
+- Envoie les rapports aux bons destinataires avec les bons formats
+- Suit les accusés de réception
+- Alerte en cas de non-réception après 24 heures
+
+## Architecture technique : OpenClaw pour la radiologie
+
+Pour comprendre pourquoi OpenClaw est particulièrement efficace dans ce secteur, il faut connaître son architecture. Contrairement à des solutions génériques, OpenClaw est construite avec une approche modulaire qui s'adapte aux workflows spécialisés.
+
+If vous voulez approfondir les différences avec d'autres plateformes d'automatisation, consultez notre [comparatif OpenClaw vs Make vs N8N](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+Dans un cabinet de radiologie, les agents OpenClaw s'intègrent avec :
+
+- Vos PACS (Dicom, Carestream, GE Healthcare, Philips)
+- Vos systèmes de gestion de dossiers patients
+- Vos outils de communication (email, SMS, fax)
+- Vos agendas partagés
+- Vos portails prescripteurs
+
+L'intégration se fait via API REST ou webhooks, sans modifier vos systèmes existants.
+
+## Sécurité et conformité RGPD en radiologie
+
+Le secteur médical impose des exigences strictes. Les données de patients sont sensibles, les comptes rendus confidentiels, et la traçabilité obligatoire.
+
+Claws.fr a conçu spécifiquement un [cadre de sécurité pour OpenClaw](https://claws.fr/securite) adapté à la santé :
+
+- Chiffrement AES-256 des données en transit et au repos
+- Anonymisation des données personnelles lors du traitement
+- Logs immuables de toutes les actions des agents
+- Conformité RGPD complète (droit à l'oubli, portabilité, etc.)
+- Audit de sécurité trimestriel
+- Certification ISO 27001 de l'infrastructure
+
+Aucune donnée de patient n'est utilisée pour entraîner les modèles IA. Les agents d'OpenClaw utilisent les modèles Anthropic Claude (accédez à la documentation [anthropic.com](https://anthropic.com)), réputés pour leur fiabilité en contexte médical.
+
+## Mise en place chez Claws.fr
+
+Claws.fr accompagne depuis 2025 les cabinets et établissements de radiologie. Notre processus d'installation inclut :
+
+### Phase 1 : Diagnostic (1 à 2 semaines)
+
+Nous analysons vos workflows actuels, identifions les goulots d'étranglement, et mesurons l'impact potentiel de l'automatisation.
+
+### Phase 2 : Configuration des agents (3 à 4 semaines)
+
+Nos ingénieurs configurent les agents IA spécifiquement pour vos processus radiologiques. Chaque agent est entraîné sur vos propres cas et environnement.
+
+### Phase 3 : Intégration système (2 à 3 semaines)
+
+Connexion avec vos PACS, systèmes de gestion, et outils externes. Tests complets en environnement de test.
+
+### Phase 4 : Mise en production et formation (1 à 2 semaines)
+
+Déploiement progressif. Formation de votre équipe sur la gestion et l'optimisation des agents.
+
+Pour en savoir plus sur [qu'est-ce qu'OpenClaw et comment ça fonctionne](https://claws.fr/blog/quest-ce-qu-openclaw-guide-complet), consultez notre guide complet.
+
+## Maintenance et optimisation continue
+
+Une fois déployés, les agents IA ne sont pas statiques. Leurs performances doivent être surveillées et optimisées.
+
+Claws.fr inclut une maintenance mensuelle qui :
+
+- Analyse les performances de chaque agent
+- Identifie les cas d'erreur ou de contournement
+- Affine les règles de décision
+- Ajuste les intégrations en fonction de vos mises à jour système
+
+Consultez notre article [maintenance OpenClaw : garantir des agents stables](https://claws.fr/blog/maintenance-openclaw-agents-ia-stables) pour comprendre cette dimension critique.
+
+## Retours d'expérience
+
+Un cabinet radiologique du Val-de-Marne, 50 salariés, a mis en production 3 agents OpenClaw :
+
+- Agent de planification et coordination
+- Agent de rédaction de rapports d'ébauche
+- Agent de suivi prescripteur
+
+Après 6 mois :
+
+- Réduction de 35% de la charge administrative
+- Délai moyen de rapport passé de 2,8 jours à 1,2 jour
+- Satisfaction prescripteurs passée de 72% à 88%
+- ROI réalisé en 4 mois
+
+## Commencer avec OpenClaw
+
+Vous dirigez un cabinet de radiologie et souhaitez automatiser vos processus critiques ? Claws.fr propose une consultation gratuite pour évaluer votre situation et votre potentiel d'économies.
+
+Pour connaître les prérequis techniques ou explorer [les solutions d'installation sur différentes architectures](https://claws.fr/blog/installer-openclaw-mac-mini-2025), notre équipe est disponible.
+
+Consultez notre [FAQ](https://claws.fr/faq) pour les questions fréquentes, ou [contactez-nous directement](https://claws.fr/#contact) pour une démonstration live adaptée à votre cabinet.
+
+[Découvrez nos options d'installation](https://claws.fr/installation) ou [prenez rendez-vous avec un expert radiologie](https://claws.fr/#contact).
+`,
+  },
+  {
     slug: "meilleur-logiciel-gestion-stock-afrique",
     title: "Meilleur logiciel de gestion de stock en Afrique en 2026 : comparatif Voxentory, Sage, Odoo et Brain",
     description: "Comparatif des logiciels de gestion de stock utilisés en Afrique en 2026 : Voxentory, Sage, Odoo et Brain. Architecture, IA agentique, mode offline, WhatsApp, douane et rapport prix-valeur passés au crible pour un marché exigeant.",
