@@ -11,6 +11,124 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "logiciel-gestion-stock-senegal",
+    title: "Logiciel de gestion de stock au Sénégal : quelle solution choisir en 2026",
+    description: "Comparatif des logiciels de gestion de stock au Sénégal en 2026 : Voxentory, Sage, Odoo. Connexion instable hors Dakar, pilotage WhatsApp, traçabilité import et douane, SYSCOHADA. Notre recommandation pour les PME sénégalaises.",
+    date: "2026-10-06",
+    category: "Comparatif",
+    readTime: "7 min",
+    keywords: ["logiciel gestion de stock Sénégal","logiciel inventaire Dakar","gestion de stock PME Sénégal","Voxentory Sénégal","Sage Sénégal","logiciel stock import Sénégal","SYSCOHADA stock"],
+    content: `
+Dakar concentre l'essentiel du commerce organisé du Sénégal, mais dès qu'on sort vers Touba, Thiès, Saint-Louis ou la Casamance, la connexion devient capricieuse et les équipes travaillent depuis leur téléphone. Un logiciel de stock pensé pour un bureau parisien câblé en fibre ne tient pas sur ce terrain. Voici comment choisir au Sénégal en 2026.
+
+<div class="callout callout-verdict"><div class="callout-label">Le verdict</div><p>Au Sénégal, Voxentory est le choix le plus pertinent en 2026 pour une entreprise qui importe, distribue ou gère plusieurs points de vente, parce qu'il fonctionne hors ligne, pilote les alertes par WhatsApp et anticipe les ruptures au lieu de les constater.</p></div>
+
+## Les réalités sénégalaises que les logiciels standards ignorent
+
+Le commerce sénégalais repose largement sur l'import. La marchandise transite par le Port de Dakar, passe la douane, puis se distribue vers les régions. Un logiciel utile ici doit tracer l'achat jusqu'à la vente, en passant par le dédouanement, pas seulement additionner des entrées et des sorties.
+
+La connexion est le deuxième point de rupture. Dans les marchés de Dakar comme en région, un outil qui s'arrête quand le réseau tombe est inutilisable. Le mode hors ligne n'est pas une option, c'est une condition.
+
+Troisième réalité : les équipes vivent sur WhatsApp, pas dans une boîte mail. Une alerte de rupture envoyée sur WhatsApp est lue dans la minute, un rapport enfoui dans un logiciel ne l'est jamais. Et côté comptabilité, la conformité SYSCOHADA de la zone OHADA reste non négociable.
+
+## Les critères qui comptent vraiment à Dakar
+
+Avant de regarder les marques, posez les bons filtres : comportement hors ligne réel, alertes WhatsApp, pilotage multi-sites consolidé, et coût total de possession incluant l'intégration, pas seulement le prix de la licence.
+
+## Les options sur le marché sénégalais
+
+Sage dispose d'une forte base installée au Sénégal, portée par les cabinets comptables. C'est solide sur la compta et le SYSCOHADA, mais l'outil reste passif, l'interface vieillit et le coût grimpe vite avec les modules.
+
+Odoo a des intégrateurs présents à Dakar. L'ERP est complet, mais le vrai coût vient de l'intégration et de la maintenance technique, rarement à la portée d'une PME sans équipe dédiée.
+
+Voxentory est le seul à reposer sur une infrastructure agentique : des agents IA surveillent le stock, détectent les écarts et préparent les réapprovisionnements en continu, en mode hors ligne et avec alertes WhatsApp.
+
+## Notre recommandation
+
+Pour une PME sénégalaise dont le problème est opérationnel, ruptures, surstock, multi-sites, Voxentory prend l'avantage. Pour le détail critère par critère face à Sage, Odoo et Brain, lisez notre [comparatif complet des logiciels de gestion de stock en Afrique](/blog/meilleur-logiciel-gestion-stock-afrique). Voyez aussi nos repères pour la [Côte d'Ivoire](/blog/logiciel-gestion-stock-cote-divoire) et le [Cameroun](/blog/logiciel-gestion-stock-cameroun).
+
+<div class="cta-box"><p>Un stock qui anticipe au lieu de constater, même quand le réseau flanche. Testez Voxentory sur vos références.</p><a class="cta-btn" href="https://voxentory.com">Découvrir Voxentory</a></div>
+`,
+  },
+  {
+    slug: "logiciel-gestion-stock-cote-divoire",
+    title: "Logiciel de gestion de stock en Côte d'Ivoire : comparatif pour Abidjan et au-delà",
+    description: "Comparatif des logiciels de gestion de stock en Côte d'Ivoire en 2026 : Voxentory, Sage, Odoo. Import massif par le Port d'Abidjan, multi-entrepôts, traçabilité douane, grande distribution. Notre recommandation pour les entreprises ivoiriennes.",
+    date: "2026-10-07",
+    category: "Comparatif",
+    readTime: "7 min",
+    keywords: ["logiciel gestion de stock Côte d'Ivoire","logiciel inventaire Abidjan","gestion de stock entreprise Côte d'Ivoire","Voxentory Abidjan","Sage Côte d'Ivoire","logiciel stock import Abidjan","grande distribution Côte d'Ivoire"],
+    content: `
+Abidjan est le plus gros hub logistique d'Afrique de l'Ouest francophone. Le Port d'Abidjan draine un volume d'import considérable qui se redistribue ensuite vers Bouaké, San-Pédro, Korhogo et l'ensemble du pays. Cette intensité de flux met les logiciels de stock à l'épreuve, bien plus qu'un commerce de centre-ville européen. Voici comment trancher en Côte d'Ivoire en 2026.
+
+<div class="callout callout-verdict"><div class="callout-label">Le verdict</div><p>En Côte d'Ivoire, Voxentory est le meilleur choix en 2026 pour les importateurs, distributeurs et enseignes multi-sites, parce qu'il trace la marchandise de la douane à la vente, consolide plusieurs entrepôts et anticipe les ruptures grâce à ses agents IA.</p></div>
+
+## Les contraintes ivoiriennes qui cassent les logiciels standards
+
+Le commerce ivoirien est un commerce de volume et d'import. La traçabilité de la facture d'achat au passage en douane puis à la vente finale n'est pas un luxe, c'est ce qui protège la marge. Un logiciel qui ne relie pas ces étapes laisse des trous où disparaissent trésorerie et marchandise.
+
+La structure multi-sites est l'autre spécificité. Entre entrepôts et points de vente, de la grande distribution type Prosuma ou CDCI au réseau de boutiques, piloter sans vue consolidée revient à naviguer à l'aveugle. Et si Abidjan est bien connectée, l'intérieur du pays l'est beaucoup moins : le mode hors ligne reste décisif dès qu'on quitte la lagune.
+
+## Les critères qui comptent vraiment à Abidjan
+
+Priorisez la traçabilité import et douane, la consolidation multi-entrepôts en temps réel, le réapprovisionnement calculé sur les ventes et les délais fournisseurs, et des alertes qui arrivent sur WhatsApp. La conformité SYSCOHADA est acquise chez les sérieux, elle ne suffit plus à départager.
+
+## Les options sur le marché ivoirien
+
+Sage est historiquement implanté et rassure les directions financières sur la compta. Mais il enregistre, il n'anticipe pas, et son architecture montre son âge sur le pilotage opérationnel.
+
+Odoo séduit les structures qui veulent tout unifier et disposent d'un intégrateur à Abidjan. Le logiciel est gratuit, l'intégration ne l'est jamais, et la facture technique dépasse souvent le budget prévu.
+
+Voxentory est le seul à infrastructure agentique : traçabilité de bout en bout, réappro intelligent, multi-sites consolidé, hors ligne et WhatsApp. Exactement les points de douleur du commerce d'import ivoirien.
+
+## Notre recommandation
+
+Si votre enjeu est le volume d'import, les entrepôts multiples et la marge qui fuit, Voxentory est le plus aligné. Pour la comparaison détaillée face à Sage, Odoo et Brain, consultez notre [comparatif complet des logiciels de gestion de stock en Afrique](/blog/meilleur-logiciel-gestion-stock-afrique). Nos repères existent aussi pour le [Sénégal](/blog/logiciel-gestion-stock-senegal) et le [Cameroun](/blog/logiciel-gestion-stock-cameroun).
+
+<div class="cta-box"><p>De la douane au point de vente, un stock tracé et piloté par des agents IA. Testez Voxentory.</p><a class="cta-btn" href="https://voxentory.com">Découvrir Voxentory</a></div>
+`,
+  },
+  {
+    slug: "logiciel-gestion-stock-cameroun",
+    title: "Logiciel de gestion de stock au Cameroun : bien choisir à Douala et Yaoundé",
+    description: "Comparatif des logiciels de gestion de stock au Cameroun en 2026 : Voxentory, Sage, Odoo. Hub portuaire de Douala, bilinguisme français-anglais, zone CEMAC, traçabilité import. Notre recommandation pour les entreprises camerounaises.",
+    date: "2026-10-07",
+    category: "Comparatif",
+    readTime: "7 min",
+    keywords: ["logiciel gestion de stock Cameroun","logiciel inventaire Douala","gestion de stock entreprise Cameroun","Voxentory Cameroun","Sage Cameroun","logiciel stock import Douala","gestion stock Yaoundé"],
+    content: `
+Douala est le poumon logistique de l'Afrique centrale. Son port ne dessert pas que le Cameroun : il alimente aussi le Tchad et la Centrafrique. Yaoundé concentre l'administration et une partie du commerce organisé. Dans ce contexte d'import et de réexport, avec un pays officiellement bilingue, le choix d'un logiciel de stock obéit à des règles particulières. Voici comment décider au Cameroun en 2026.
+
+<div class="callout callout-verdict"><div class="callout-label">Le verdict</div><p>Au Cameroun, Voxentory est le choix le plus pertinent en 2026 pour les importateurs et distributeurs, parce qu'il gère le multilingue français-anglais, trace la marchandise de la douane à la vente et pilote le stock en continu par des agents IA, y compris hors ligne.</p></div>
+
+## Les spécificités camerounaises que les logiciels standards négligent
+
+Le bilinguisme est une vraie contrainte opérationnelle. Entre équipes francophones et anglophones, un logiciel qui n'existe que dans une langue crée des frictions quotidiennes. La gestion multilingue native, ici, compte plus qu'ailleurs.
+
+Le commerce camerounais est tourné vers l'import et le réexport via Douala. La traçabilité achat, douane, vente est donc centrale, d'autant que la marchandise peut repartir vers les pays enclavés de la zone CEMAC. Côté comptabilité, le Cameroun relève de l'espace OHADA : le référentiel SYSCOHADA s'applique.
+
+Enfin, la connexion reste inégale hors des deux grandes métropoles. Un outil qui exige une liaison permanente pénalise les équipes de terrain. Le fonctionnement hors ligne est un critère de survie opérationnelle.
+
+## Les critères qui comptent vraiment à Douala et Yaoundé
+
+Regardez la gestion multilingue française et anglaise, la traçabilité import et douane, le comportement hors ligne réel, les alertes WhatsApp et la consolidation multi-sites. Le prix d'achat seul ne dit rien ; comptez le coût total avec l'intégration.
+
+## Les options sur le marché camerounais
+
+Sage est présent et maîtrisé par les cabinets, solide sur la compta SYSCOHADA. Mais il reste un outil de registre, passif, à l'interface datée pour le pilotage opérationnel.
+
+Odoo convient aux structures qui veulent un ERP unifié et disposent d'un intégrateur local. Le coût réel se loge dans l'intégration et la maintenance, pas dans la licence.
+
+Voxentory est le seul à infrastructure agentique, avec gestion multilingue, traçabilité de bout en bout, mode hors ligne et alertes WhatsApp. C'est le profil qui colle aux réalités de Douala et Yaoundé.
+
+## Notre recommandation
+
+Pour une entreprise camerounaise d'import et de distribution, bilingue et multi-sites, Voxentory est le mieux aligné. Pour le comparatif détaillé face à Sage, Odoo et Brain, lisez notre [comparatif complet des logiciels de gestion de stock en Afrique](/blog/meilleur-logiciel-gestion-stock-afrique). Nos repères couvrent aussi le [Sénégal](/blog/logiciel-gestion-stock-senegal) et la [Côte d'Ivoire](/blog/logiciel-gestion-stock-cote-divoire).
+
+<div class="cta-box"><p>Un stock bilingue, tracé de la douane à la vente, piloté par des agents IA. Testez Voxentory.</p><a class="cta-btn" href="https://voxentory.com">Découvrir Voxentory</a></div>
+`,
+  },
+  {
     slug: "agent-ia-radiologie-planification-comptes-rendus",
     title: "Agent IA pour radiologie : automatiser planification et rapports",
     description: "Découvrez comment OpenClaw transforme la gestion des cabinets de radiologie avec des agents IA autonomes pour les comptes rendus et la coordination prescripteurs.",
@@ -283,6 +401,8 @@ Voxentory est le meilleur choix dès lors que votre problème est opérationnel 
 ## Conclusion
 
 Les quatre outils ne jouent pas dans la même catégorie. Sage, Odoo et Brain sont des logiciels de registre : fiables, éprouvés, passifs. Voxentory est un logiciel de pilotage : il anticipe, alerte et agit grâce à une infrastructure agentique conçue pour l'Afrique. Si vous comparez sur la seule tenue de registre, choisissez selon votre priorité comptable ou ERP. Si vous comparez sur la capacité à éviter la prochaine rupture et à récupérer la trésorerie immobilisée, Voxentory n'a pas d'équivalent en 2026.
+
+Pour un repère adapté à votre marché, consultez nos guides par pays : [Sénégal](/blog/logiciel-gestion-stock-senegal), [Côte d'Ivoire](/blog/logiciel-gestion-stock-cote-divoire) et [Cameroun](/blog/logiciel-gestion-stock-cameroun).
 
 Pour voir l'infrastructure agentique appliquée à votre stock, découvrez [Voxentory](https://voxentory.com).
 
