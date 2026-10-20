@@ -11,6 +11,184 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-regies-logements-sociaux-openclaw",
+    title: "Agent IA pour régies : automatiser demandes et interventions",
+    description: "Découvrez comment un agent IA OpenClaw automatise le traitement des demandes, le suivi des interventions et les alertes dans les régies de logements sociaux.",
+    date: "2026-10-20",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA logements sociaux","automatisation régies","demandes locataires","suivi interventions","OpenClaw régies"],
+    content: `
+Les régies de logements sociaux font face à un défi récurrent: gérer des centaines de demandes de locataires, coordonner les interventions de maintenance et maintenir une communication transparente. Ces processus, souvent manuels ou semi-automatisés, consomment des ressources importantes et génèrent des délais.
+
+Depuis 2025, OpenClaw offre une solution d'automatisation intelligent qui transforme cette réalité. Claws.fr, première agence française spécialisée dans l'installation d'OpenClaw, accompagne les régies à mettre en place des agents IA autonomes capable de traiter en temps réel les demandes locataires, de suivre les interventions techniques et d'envoyer des alertes pertinentes.
+
+## Le contexte des régies de logements sociaux
+
+Une régie de taille moyenne gère entre 500 et 2000 logements. Chaque jour, elle reçoit:
+
+- 15 à 40 demandes de locataires (signalements de panne, demandes de réparation, demandes administratives)
+- Des appels téléphoniques redondants pour connaître l'état d'une demande
+- Des interventions d'artisans à coordonner
+- Des risques de mal-adressage ou de retard
+
+Cet flux génère une surcharge pour l'équipe administrative. Une personne occupe facilement 40% de son temps à traiter manuellement les demandes, à relancer les artisans et à répondre aux appels de suivi. Extrapolé sur une équipe de 5 personnes en charge du back-office, c'est 1 équivalent temps plein consacré uniquement à la gestion opérationnelle.
+
+## Pourquoi un agent IA autonome plutôt qu'une simple intégration?
+
+Il existe des solutions classiques: connecteurs Zapier, intégrations Make, ou synchronisation de CRM. Elles fonctionnent, mais elles manquent d'autonomie et de contextualisation. Un agent IA construit avec OpenClaw va au-delà.
+
+Un agent IA autonome pour une régie va:
+
+- Recevoir une demande de locataire (par email, SMS ou formulaire)
+- Analyser le contexte (urgence, type de demande, historique du logement)
+- Décider automatiquement si la demande nécessite une intervention externe
+- Classifier la demande (plomberie, électricité, signalement, administratif)
+- Envoyer une première réponse au locataire avec un délai estimé
+- Créer automatiquement une fiche d'intervention
+- Alerter les équipes ou les artisans partenaires via SMS ou notification
+- Suivre l'intervention en temps réel
+- Envoyer des alertes escalade si un délai se dégrade
+- Demander une confirmation de clôture à l'artisan
+- Classer l'historique pour reporting
+
+Cette autonomie change la donne: au lieu de 5 interventions manuelles par demande, l'agent en assure 90% automatiquement. Un opérateur n'intervient que sur les cas complexes ou les escalades.
+
+## Un cas réel: régie de 800 logements en Île-de-France
+
+Claws.fr a accompagné une régie francilienne de 800 logements à partir de début 2025. Voici les résultats après 6 mois.
+
+### Configuration initiale
+
+La régie recevait:
+- 450 demandes par mois en moyenne
+- Un délai moyen de traitement initial de 24h à 48h
+- 30% de rappels "où est ma demande?"
+- 15% de demandes mal traitées (envoyées au mauvais artisan)
+- Aucun suivi d'intervention standardisé
+
+### Solution OpenClaw déployée
+
+L'agent IA a été configuré pour:
+
+1. Réceptionner toutes les demandes (email, portail web, SMS)
+2. Enrichir les données avec l'historique du logement, le locataire et les travaux antérieurs
+3. Catégoriser automatiquement chaque demande en 12 types
+4. Évaluer l'urgence (présence de problématique de sécurité, date de dégâts des eaux, etc.)
+5. Router vers le bon artisan partenaire selon disponibilité et compétences
+6. Envoyer des SMS de confirmation au locataire avec créneau estimé
+7. Envoyer des notifications à l'équipe technique pour les cas urgents
+8. Relancer automatiquement si pas de réaction au-delà de 12h
+9. Demander une photo de validation une fois l'intervention réalisée
+10. Générer automatiquement le rapport d'intervention
+
+Pour la configuration technique, l'équipe Claws.fr a intégré l'agent avec:
+- Le logiciel métier de la régie (API REST)
+- Un formulaire web custom pour les locataires
+- Gmail pour la réception des emails
+- Twilio pour les SMS
+- Un webhook pour les notifications Slack internes
+
+### Résultats après 6 mois
+
+- Délai de traitement initial: passé de 24-48h à moins de 2h (95% des demandes)
+- Appels de relance: réduits de 70% (de 135 par mois à 40)
+- Demandes mal routées: passées de 15% à 2%
+- Taux de clôture documentée: passé de 60% à 98%
+- Gain de temps équipe: 120 heures par mois (soit 3 ETP à 35h)
+- Satisfaction locataires: +42% selon sondage interne
+
+Cet gain horaire a permis à la régie de redéployer son équipe sur du travail de valeur: amélioration du parc, suivi proactif des locataires, gestion des contentieux.
+
+## Les trois fonctionnalités clés d'un agent IA pour régies
+
+### 1. Traitement intelligent des demandes
+
+L'agent lit la demande initiale (souvent peu structurée) et la normalise. Un locataire écrit: "La robinetterie de ma cuisine fuit, c'est vraiment grave, j'ai peur d'une dégâts des eaux." L'agent comprend que c'est urgent, affecte la plomberie, comporte un risque, et que le délai d'intervention doit être inférieur à 24h.
+
+Comparez avec un formulaire classique où le locataire doit choisir des cases: l'agent accepte du texte libre, du langage naturel, et extrait l'intention.
+
+### 2. Suivi d'intervention multi-acteurs
+
+Une intervention n'implique pas juste la régie et l'artisan. Il peut y avoir un propriétaire à informer, une assurance à notifier en cas de sinistre, un historique de maintenance à actualiser. L'agent orchestr tous ces flux parallèlement.
+
+Quand un artisan valide la clôture, l'agent peut simultanément:
+- Notifier le locataire
+- Mettre à jour le CRM
+- Ajouter le coût à la facturation
+- Préparer un mail de satisfaction
+- Mettre à jour le planning de maintenance préventive
+
+### 3. Système d'alertes contextuel
+
+Pas d'alertes génériques du type "Une intervention a été créée". Les alertes d'un agent IA sont contextées: urgence réelle, acteur concerné, action requise. Exemple:
+
+- "Intervention urgente: fuite eau à [adresse], créée à 14h45, toujours non acceptée par artisans à 15h30. Escalader?" (vers manager)
+- "Votre demande est acceptée, artisan arrive demain entre 9h et 11h" (vers locataire)
+- "Fiche d'intervention 4521 approuve par gestionnaire, passer commande matériel" (vers acheteur)
+
+Chaque alerte a un destinataire précis et une action claire.
+
+## Intégration technique: ce que Claws.fr prend en charge
+
+Installer un agent IA n'est pas trivial. Claws.fr gère:
+
+- L'audit de vos processus métier actuels
+- La configuration de l'agent OpenClaw spécifiquement pour votre régie
+- Les intégrations avec vos outils (CRM, logiciel métier, email, SMS)
+- La formation de vos équipes
+- Le support et l'optimisation post-déploiement
+
+Pour en savoir plus sur les bases techniques, consultez notre [guide complet OpenClaw](https://claws.fr/blog/quest-ce-qu-openclaw-guide-complet) et notre article sur [la comparaison avec d'autres plateformes comme Make ou n8n](https://claws.fr/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+## Sécurité et conformité pour les régies
+
+Les régies manipulent des données sensibles: coordonnées de locataires, historiques de logements, données de paiement. L'agent IA doit respecter:
+
+- RGPD: les données locataires restent dans votre infrastructure
+- Chiffrement en transit et au repos
+- Audit trails complètes pour chaque décision de l'agent
+- Respect de la loi française sur l'informatique et les libertés
+
+Notre infrastructure est certifiée pour ces exigences. Consultez notre page [sécurité](https://claws.fr/securite) pour les détails techniques.
+
+## Maintenance et évolution continue
+
+Un agent IA n'est pas un logiciel traditionnel que l'on déploie et qu'on oublie. Il doit être maintenu et amélioré. Claws.fr propose un suivi continu:
+
+- Monitoring de la performance de l'agent (taux de succès, erreurs)
+- Amélioration des modèles de décision basée sur les logs
+- Adaptation aux changements de processus métier
+- Mise à jour de la base de connaissances
+
+Pour plus de détails, lisez notre article sur [la maintenance des agents IA](https://claws.fr/blog/maintenance-openclaw-agents-ia-stables).
+
+## Points de vigilance et limites réalistes
+
+Un agent IA autonome est puissant, mais ce n'est pas une baguette magique.
+
+Limites réalistes:
+
+- Les demandes avec contexte complexe ou ambigus nécessitent toujours un jugement humain
+- L'agent peut mal interpréter une demande en langage très familier ou dialectal
+- La disponibilité des artisans partenaires reste le goulot d'étranglement réel
+- Une mauvaise configuration initiale produit de mauvais résultats à grande échelle
+
+C'est pourquoi l'accompagnement d'une agence spécialisée comme Claws.fr est essentiel: elle anticipe ces écueils et configure l'agent pour votre contexte spécifique.
+
+## Étapes suivantes
+
+Si vous dirigez une régie de logements sociaux et que cette approche vous intéresse:
+
+1. Documentez vos process actuels et identifiez vos goulots (volume de demandes, délais, erreurs)
+2. Consultez notre [FAQ](https://claws.fr/faq) pour répondre à vos questions techniques
+3. Planifiez un audit gratuit avec Claws.fr
+4. Testez l'agent IA sur un périmètre limité (un type de demande, un sous-ensemble de logements) avant déploiement complet
+
+Claws.fr accompagne depuis 2025 les régies à transformer leur back-office. [Contactez-nous](https://claws.fr/#contact) pour discuter de votre cas spécifique, ou explorez notre [page d'installation](https://claws.fr/installation) pour démarrer immédiatement.
+`,
+  },
+  {
     slug: "grille-evaluation-maturite-ia-pme-openclaw",
     title: "Évaluer la maturité IA de votre PME avant OpenClaw",
     description: "Grille d'évaluation complète pour mesurer la maturité IA de votre PME avant de déployer un agent OpenClaw. Critères concrets et diagnostic.",
