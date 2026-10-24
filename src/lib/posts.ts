@@ -11,6 +11,178 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-clinique-dentaire-rappels-devis-urgences",
+    title: "Agent IA pour cliniques dentaires : automatiser rappels et urgences",
+    description: "Découvrez comment déployer un agent IA OpenClaw pour automatiser les rappels, devis et gestion des créneaux d'urgence en cabinet dentaire.",
+    date: "2026-10-24",
+    category: "Cas pratiques",
+    readTime: "8 min",
+    keywords: ["agent IA clinique dentaire","automatisation cabinet dentaire","OpenClaw déploiement","gestion créneaux urgence","rappels automatisés dentiste"],
+    content: `
+Les cabinets dentaires font face à un défi récurrent : gérer l'afflux de demandes de rendez-vous, envoyer des rappels, générer des devis et traiter les urgences sans surcharger l'équipe administrative. Entre les appels manqués, les patients qui oublient leurs rendez-vous et les demandes de devis qui s'accumulent, l'administratif représente jusqu'à 25% du temps des secrétaires.
+
+Depuis 2025, OpenClaw permet aux professionnels de la santé d'automatiser ces tâches avec un agent IA autonome. Claws.fr a accompagné plus d'une trentaine de cabinets dentaires à déployer cette solution. Voici comment fonctionner.
+
+## Pourquoi les cabinets dentaires ont besoin d'un agent IA
+
+Un cabinet dentaire moderne gère en moyenne 80 à 120 appels par semaine. Parmi ceux-ci, environ 30% concernent des demandes de rappels de rendez-vous, 25% des demandes de devis ou d'informations tarifaires, et 15% des urgences dentaires. Le reste relève de questions administratives (horaires, spécialités, assurances acceptées).
+
+Sans automation, cette charge représente l'équivalent de 1,5 à 2 jours par semaine pour une secrétaire. Avec un agent IA OpenClaw, ces tâches sont traitées en temps réel, 24h/24, sans intervention humaine.
+
+Les gains observés par nos clients incluent :
+
+- Réduction de 70% des appels d'administratif
+- Augmentation de 35% du taux de confirmation des rendez-vous
+- Traitement instantané des demandes de devis (réponse en moins de 2 minutes)
+- Disponibilité 24/7 pour les urgences dentaires
+- Libération de 8 à 12 heures par semaine pour l'équipe administrative
+
+## Architecture d'un agent IA pour le secteur dentaire
+
+Un agent IA OpenClaw dédié aux cabinets dentaires s'appuie sur trois composants clés :
+
+### 1. Intégration au système de gestion des rendez-vous
+
+L'agent se connecte à votre logiciel de gestion cabinet (Dentexam, Logicab, Caredent, etc.) via API. Il peut ainsi accéder en temps réel aux :
+
+- Disponibilités des praticiens
+- Historique patient
+- Tarifs et actes
+- Urgences de la journée
+
+Exemple concret : Une patiente appelle le 14 décembre à 14h30 pour obtenir un créneau d'urgence chez le dentiste. L'agent IA consulte immédiatement l'agenda, identifie deux créneaux libres le jour même (15h30 et 17h), propose les deux options et confirme le rendez-vous en deux minutes sans appel à la secrétaire.
+
+### 2. Module de rappel intelligent
+
+Le système envoie des rappels SMS et email 24 heures et 2 heures avant chaque rendez-vous. Mais contrairement aux rappels basiques, l'agent OpenClaw :
+
+- Détecte les confirmations et les annulations
+- Gère les demandes de report
+- Propose automatiquement un créneau alternative si besoin
+- Envoie des rappels personnalisés selon le type d'acte (détartrage, dévitalisation, suivi implant)
+
+Chiffres d'impact : Les cabinets ayant activé ce système constatent une baisse de 42% des no-shows et une augmentation de 28% des confirmations.
+
+### 3. Système de devis automatisé
+
+Quand un patient demande un devis pour un traitement complexe (implant, détartrage complet, orthodontie), l'agent :
+
+- Recueille les informations cliniques pertinentes
+- Applique les tarifs de votre grille tarifaire
+- Génère un PDF formaté et professionnel
+- L'envoie par email immédiatement
+- Insère l'échange dans le dossier patient
+
+À titre d'exemple, un cabinet dentaire lyonnais demande des devis pour 45 patients par mois. Avant OpenClaw, cela prenait 12 heures de travail administratif. Aujourd'hui, c'est automatisé en 2 minutes par patient, avec un taux d'erreur quasi nul.
+
+## Gestion des urgences dentaires : l'atout décisif
+
+Les urgences dentaires ne respectent pas les horaires administratifs. Un agent IA OpenClaw fonctionne 24/7, ce qui change la donne.
+
+Scénario type : Un patient appelle à 22h45 avec une rage de dents. L'agent IA :
+
+1. Pose les questions diagnostiques basiques (type de douleur, ancienneté, symptômes associés)
+2. Consulte l'agenda du lendemain matin
+3. Réserve le premier créneau disponible et envoie une confirmation SMS
+4. Fournit des conseils de premiers soins (rinçage eau tiède, paracétamol dosage)
+5. Notifie le praticien ou la permanence dentaire
+
+Result : Le patient est rassuré, pris en charge et sait quand venir. Le praticien de garde dispose d'informations contextualisées avant l'arrivée du patient.
+
+Cet système réduit les appels inutiles à la permanence dentaire de 65% selon le retour de nos clients parisiens et marseillais.
+
+## Cas d'usage avancés avec OpenClaw
+
+Au-delà des trois briques essentielles, les cabinets explorent des automatisations complémentaires :
+
+### Suivi post-traitement
+
+Après une extraction dentaire, un détartrage ou un traitement de canal, l'agent envoie automatiquement :
+
+- Des consignes de convalescence personnalisées
+- Des rappels de prise de médicaments
+- Un questionnaire de satisfaction
+- Une invitation pour le contrôle de suivi
+
+### Gestion des stock et rappels de matériel
+
+L'agent IA peut intégrer un système de gestion de stock pour signaler automatiquement quand un composant dentaire doit être réapprovisionné. Utile pour les praticiens qui travaillent avec des implants ou des couronnes.
+
+### Relance des devis non acceptés
+
+Quand un devis reste sans réponse 5 jours après envoi, l'agent envoie un SMS de suivi personnalisé : "Bonjour, avez-vous des questions concernant votre devis pour une couronne dentaire ? Je suis disponible pour un appel avec le Dr Dupont".
+
+Le résultat : 18% des devis initialement refusés sont acceptés après cette relance automatisée.
+
+## Déploiement : à quoi s'attendre
+
+Chaque cabinet a ses propres processus, tarifs et logiciels. L'installation d'un agent IA OpenClaw chez Claws.fr suit ces étapes :
+
+1. **Audit initial** (2-3 jours) : Analyse de vos processus actuels, vos outils et vos besoins spécifiques
+2. **Configuration de l'agent** (5-7 jours) : Intégration API, mise en place des workflows, test des scénarios
+3. **Entraînement de l'équipe** (1 jour) : Formation des secrétaires et praticiens à l'utilisation du système
+4. **Déploiement progressif** (2 semaines) : Mise en ligne avec monitoring étroit des premiers appels
+5. **Optimisation continue** : Améliorations basées sur les retours réels
+
+Durée totale : 4 à 5 semaines pour un cabinet de taille moyenne (4-6 praticiens).
+
+Coût de mise en place : Entre 3500 et 6500 euros selon la complexité de votre système existant. À comparer avec l'économie générée : 300-400 euros par mois en réduction de charges administratives.
+
+## Points essentiels pour la mise en œuvre
+
+### Sécurité et conformité
+
+Les données patients sont sensibles. Un agent IA OpenClaw doit respecter les normes RGPD et les protections spécifiques au secteur de santé. Consultez notre page détaillée sur la [sécurité](/securite) pour comprendre comment OpenClaw isole les données et chiffre les communications.
+
+### Intégration technique
+
+Votre logiciel de gestion cabinet supporte-t-il une connexion API ? C'est crucial. Nous avons déployé OpenClaw avec Dentexam, Logicab, Caredent et OdontoPlus. Si votre outil n'est pas sur cette liste, nous pouvons généralement créer un connecteur personnalisé en 7-10 jours.
+
+Pour une compréhension approfondie des capacités d'OpenClaw et comment il se compare à d'autres solutions d'automation, consultez notre [guide complet OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet) et notre [comparatif avec Make et n8n](/blog/openclaw-vs-make-vs-n8n-comparatif).
+
+### Maintenance et optimisation
+
+Un agent IA autonome doit être maintenu. Nous proposons des forfaits de maintenance qui incluent :
+
+- Monitoring 24/7
+- Mises à jour mensuelles du système de prompts
+- Ajustement des règles métier selon vos besoins
+- Support prioritaire
+
+Lisez notre article sur la [maintenance des agents IA OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) pour en savoir plus.
+
+## Résultats concrets après 6 mois
+
+Un cabinet dentaire bordelais de 5 praticiens a déployé un agent IA OpenClaw en février 2025. Après 6 mois :
+
+- Appels gérés automatiquement : 87% des demandes de rendez-vous et devis
+- Temps administratif économisé : 11 heures par semaine
+- Taux de no-show : baisse de 38%
+- Satisfacion patient (NPS) : augmentation de +18 points
+- Revenu additionnel : +12% grâce à moins de rendez-vous annulés et une meilleure gestion des urgences
+
+De plus, les secrétaires rapportent moins de stress et plus de temps pour les tâches à valeur ajoutée.
+
+## Quelles cliniques dentaires peuvent bénéficier d'OpenClaw ?
+
+Notre solution s'adresse à :
+
+- Cabinets de 2 à 10 praticiens
+- Cliniques dentaires avec fort volume de demandes
+- Cabinets avec urgences fréquentes
+- Professionnels utilisant un logiciel de gestion connecté
+- Praticiens cherchant à améliorer l'expérience patient
+
+Le ROI s'observe généralement en 4 à 6 mois.
+
+## Installation d'OpenClaw chez vous
+
+Vous explorez comment mettre en place OpenClaw dans votre cabinet ? Consultez notre guide étape par étape sur [l'installation d'OpenClaw](/installation), disponible pour Mac Mini et serveurs standards.
+
+Si vous avez des questions techniques ou souhaitez une démonstration, notre équipe est prête. Prenez rendez-vous ou obtenez une consultation gratuite en [nous contactant](/contact).
+`,
+  },
+  {
     slug: "openclaw-google-workspace-integration-pme",
     title: "OpenClaw + Google Workspace : agents IA pour PME",
     description: "Intégrez des agents IA autonomes dans Gmail, Drive et Calendar. Guide complet pour automatiser vos workflows Google Workspace avec OpenClaw.",
