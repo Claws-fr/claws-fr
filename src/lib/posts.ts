@@ -11,6 +11,193 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "agent-ia-cabinets-radiologie-planification-comptes-rendus",
+    title: "Agent IA pour radiologie : planification et comptes rendus automatisés",
+    description: "Découvrez comment un agent IA OpenClaw optimise la planification, les comptes rendus et la coordination dans les cabinets de radiologie.",
+    date: "2026-10-29",
+    category: "Cas pratiques",
+    readTime: "7 min",
+    keywords: ["agent IA radiologie","automatisation comptes rendus médicaux","planification cabinets radiologie","OpenClaw santé","coordination prescripteurs"],
+    content: `
+Les cabinets de radiologie font face à un défi majeur : gérer simultanément l'afflux de patients, la production de comptes rendus détaillés et la coordination avec les prescripteurs. Chaque examen demande une documentation précise, un suivi administratif rigoureux et une communication fluide entre structures médicales. C'est là qu'un agent IA autonome change fundamentalement le modèle opérationnel.
+
+Chez Claws.fr, nous accompagnons depuis 2025 les cabinets de radiologie à déployer des agents OpenClaw capables d'automatiser ces flux complexes. Cet article vous présente comment cette technologie s'applique concrètement à votre pratique.
+
+## Comprendre les enjeux opérationnels des cabinets de radiologie
+
+Un cabinet de radiologie gère quotidiennement :
+
+- De 80 à 150 examens par jour en moyenne, selon sa taille et sa spécialisation
+- Des comptes rendus qui doivent être rédigés dans les 24 à 48 heures
+- Des demandes de modification ou de précision des prescripteurs
+- L'archivage et la transmission aux structures demandeurs
+- La gestion des urgences et des priorités médicales
+
+Le coût invisible de cette gestion manuelle est considérable. Un radiologue dédié passe entre 6 et 9 heures par semaine sur des tâches administratives pures : tri des demandes, vérification des données du patient, envoi des comptes rendus, relance des dossiers incomplets.
+
+Cela représente 25 à 35% du temps productif d'un praticien, soit l'équivalent d'une journée complète perdue chaque semaine. En termes financiers, pour un cabinet de 4 radiologues, cela correspond à une perte annuelle estimée à 60 000 à 90 000 euros.
+
+## Comment un agent IA OpenClaw optimise la planification
+
+### Triage et priorisation automatique des demandes
+
+Un agent OpenClaw connecté à votre système de gestion de dossiers patients peut analyser chaque demande d'examen en quelques secondes. Il extrait :
+
+- La nature de l'examen (radiographie, scanner, IRM, échographie)
+- Le degré d'urgence médical (urgence, semi-urgence, programmé)
+- Les antécédents pertinents du patient
+- Les contre-indications potentielles (allergie au produit de contraste, grossesse, implants)
+- La cohérence entre la demande et le diagnostic suspecté
+
+Résultat concret : au lieu de faire ce tri manuellement, votre équipe administrative reçoit chaque matin une liste classée et validée. Les examens urgents sont immédiatement remontés. Les demandes incohérentes sont signalées pour vérification auprès du prescripteur.
+
+Un cabinet parisien de 3 radiologues nous a rapporté qu'après installation d'OpenClaw, le délai moyen d'exécution des urgences est passé de 2h30 à 45 minutes.
+
+### Optimisation des créneaux et ressources
+
+L'agent synchronise les demandes avec votre planning d'équipements. Il prend en compte :
+
+- La durée moyenne de chaque type d'examen
+- La disponibilité des équipements (radiographe, manipulateur spécialisé en scanner, etc.)
+- Les besoins de préparation du patient (jeûne, injection de produit de contraste)
+- Les incompatibilités temporelles (un patient claustrophobe en IRM demande plus de temps)
+
+L'agent propose alors des créneaux optimisés et envoie automatiquement les instructions de préparation au patient par SMS ou email. Aucune surcharge manuellement gérée, aucun créneau vide involontaire.
+
+## Automatisation des comptes rendus : au-delà de la simple saisie
+
+### Structuration assistée et gain de temps
+
+La rédaction d'un compte rendu radiologique est un exercice chronophage. Le radiologue doit :
+
+- Décrire chaque structure anatomique observée
+- Noter les variantes normales
+- Identifier et décrire les anomalies
+- Proposer un diagnostic ou des diagnostics différentiels
+- Recommander des examens complémentaires si nécessaire
+- Rédiger tout cela en langage médical précis, compréhensible par le prescripteur
+
+Un agent OpenClaw configure pour votre cabinet agit comme assistant structurant :
+
+1. Il reçoit les images et les données du patient
+2. Il génère un squelette de rapport structuré (anamnèse, technique, résultats, conclusion)
+3. Le radiologue le complète oralement ou par dictée
+4. L'agent met en forme automatiquement, vérifie la cohérence interne et ajoute les recommandations standards
+5. Le document final est prêt en 15-20 minutes au lieu de 35-45 minutes
+
+Gain de productivité mesuré : 40 à 55% de temps gagné par rapport à la rédaction classique.
+
+### Contrôle qualité automatisé
+
+L'agent vérifie également :
+
+- L'absence d'informations contradictoires dans le rapport
+- La présence de tous les éléments cliniques demandés par le prescripteur
+- La conformité avec les normes de description radiologique
+- Les doublons ou erreurs patentes (exemple : « lésion stable » et « lésion progressive » dans le même document)
+
+Ces vérifications réduisent les allers-retours avec les prescripteurs de 30 à 45%.
+
+## Coordination intelligente avec les prescripteurs
+
+### Communication automatisée et traçable
+
+Un agent OpenClaw gère la communication bidirectionnelle avec les structures prescripteurs :
+
+- Accusé de réception de la demande au médecin prescripteur
+- Transmission automatique du compte rendu via les canaux sécurisés (messagerie sécurisée, portail patient, intégration directe au dossier patient informatisé du prescripteur)
+- Signalement des anomalies ou demandes incomplètes
+- Relance automatique si le prescripteur n'a pas récupéré le résultat après 3 jours
+- Archivage centralisé de toutes les communications
+
+Cet historique traçable est crucial pour la conformité légale et facilite grandement la gestion des réclamations ou des recherches rétrospectives.
+
+### Gestion des demandes de précision
+
+Il est fréquent que le prescripteur revienne avec des questions : « Quelle est la taille exacte de cette lésion ? », « Peut-on affirmer qu'il n'y a pas de ganglions hypertrophiés ? ». 
+
+L'agent peut automatiquement :
+
+1. Extraire les mesures du rapport existant
+2. Proposer une réponse structurée en quelques secondes
+3. Générer un document complémentaire signé électroniquement
+4. Transmettre au prescripteur avec traçabilité complète
+
+Ce processus réduit de 60% le délai de résolution des demandes de précision, transformant un échange qui prenait 2-3 jours en un processus de quelques heures.
+
+## Intégration technique et sécurité
+
+Un agent IA n'est utile que s'il s'intègre parfaitement à votre environnement existant. Les solutions OpenClaw déployées par Claws.fr se connectent à :
+
+- Vos systèmes de gestion de dossiers patients (PACS, RIS)
+- Vos outils de communication sécurisée
+- Vos bases de données administratives
+- Votre système de facturation
+
+La sécurité des données médicales est non-négociable. Tous nos déploiements respectent :
+
+- La conformité RGPD complète
+- Les normes HDS (Hébergement de Données de Santé)
+- Le chiffrement de bout en bout des communications
+- L'audit traçable de chaque action automatisée
+
+Pour en savoir plus sur nos pratiques de sécurité, consultez notre [section dédiée à la sécurité](/securite).
+
+## Cas de déploiement réel
+
+Un cabinet de radiologie lyonnais comptant 5 radiologues et 12 techniciens a implémenté un agent OpenClaw en janvier 2025 :
+
+**Avant :**
+- Délai moyen de production d'un compte rendu : 38 minutes
+- Nombre de comptes rendus par jour : 110 à 120
+- Demandes de précision non résolues en 24h : 15-20% des cas
+- Temps administratif pur par radiologue par semaine : 8 heures
+
+**Après (3 mois) :**
+- Délai moyen de production : 22 minutes (réduction de 42%)
+- Nombre de comptes rendus par jour : 140 à 155 (gain de capacité de 25%)
+- Demandes de précision non résolues en 24h : 3-5% (réduction de 75%)
+- Temps administratif pur par radiologue par semaine : 2 heures (réduction de 75%)
+- Satisfaction des prescripteurs : amélioration de 35 points (mesure par sondage)
+
+Ce cabinet n'a pas augmenté ses effectifs. Il a simplement libéré du temps expert pour se concentrer sur ce qui compte : l'analyse radiologique complexe et la relation patient.
+
+## Comparaison avec d'autres approches
+
+Si vous envisagez d'automatiser vos flux radiologiques, vous avez plusieurs options : des logiciels de workflow classiques, des solutions de dictée vocale, ou un agent IA comme OpenClaw. Pour une analyse détaillée de ces alternatives, nous avons rédigé un [comparatif complet OpenClaw vs Make vs N8N](/blog/openclaw-vs-make-vs-n8n-comparatif) qui couvre aussi les spécificités sectorielles.
+
+En résumé, les agents IA offrent une adaptabilité et une autonomie que les workflow statiques ne peuvent pas égaler. L'agent apprend de chaque interaction et améliore continuellement son assistance.
+
+## Déploiement et accompagnement chez Claws.fr
+
+Si ce scénario vous intéresse, voici comment nous procédons :
+
+1. **Audit de votre infrastructure** : nous analysons vos systèmes actuels, vos flux critiques et vos points de friction
+2. **Design de l'agent** : nous concevons ensemble un agent adapté à votre organisation
+3. **Installation et intégration** : déploiement sécurisé et conforme
+4. **Formation et accompagnement** : votre équipe maîtrise complètement le système
+5. **Maintenance et amélioration continue** : nous veillons au bon fonctionnement et optimisons les performances (pour plus détails, voir notre guide sur la [maintenance des agents OpenClaw](/blog/maintenance-openclaw-agents-ia-stables))
+
+Pour comprendre les fondamentaux d'OpenClaw avant de vous engager, vous pouvez consulter notre [guide complet qu'est-ce qu'OpenClaw](/blog/quest-ce-qu-openclaw-guide-complet).
+
+## Questions fréquentes
+
+Vous vous demandez peut-être comment OpenClaw se configure sur votre infrastructure technique. Si vous utilisez des Mac Mini pour certains traitements, nous avons publié un guide d'[installation d'OpenClaw sur Mac Mini 2025](/blog/installer-openclaw-mac-mini-2025).
+
+Autres questions courantes ? Consultez notre [FAQ complète](/faq) qui couvre les aspects techniques, légaux et opérationnels.
+
+## Conclusion
+
+L'automatisation intelligente des processus radiologiques n'est plus une perspective futuriste. Elle est opérationnelle depuis 2025 et accessible aux cabinets de toutes tailles.
+
+Un agent IA autonome comme OpenClaw ne remplace pas le radiologue. Il libère son expertise. Il élimine les frictions administratives, accélère les délais, améliore la qualité et renforce la collaboration avec les prescripteurs.
+
+Pour vos patients, cela signifie des résultats plus rapides et mieux documentés. Pour votre cabinet, cela signifie une meilleure rentabilité et une équipe moins stressée.
+
+Êtes-vous prêt à explorer comment cette technologie peut transformer votre cabinet ? [Contactez-nous](/contact) ou découvrez directement nos [options d'installation](/installation). Nous analyserons votre situation spécifique et vous proposerons une approche sur mesure.
+`,
+  },
+  {
     slug: "agent-ia-veille-reglementaire-openclaw",
     title: "Agent IA veille réglementaire : guide complet OpenClaw",
     description: "Créez un agent IA autonome de veille réglementaire sectorielle avec OpenClaw. Guide méthodologique complet, cas d'usage et implémentation.",
